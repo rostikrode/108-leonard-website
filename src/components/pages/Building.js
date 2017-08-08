@@ -44,7 +44,7 @@ export default class Building extends Component {
       slidesToScroll: 1,
       arrow: true,
       responsive: [{ 
-          breakpoint: 768, 
+          breakpoint: 1024, 
           settings: 'unslick' 
       }]
     };

@@ -10,6 +10,16 @@
   height: 100vh;
   min-width: 12em;
 }
+@media (max-width: 1365px) {
+  .App-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 900;
+    transform: translateX(-100%);
+  }
+}
 
 .App-header h2 {
   font-size: 1.3em;

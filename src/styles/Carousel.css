@@ -48,6 +48,7 @@
   color: #979797;
 }
 .custom-arrow {
+  display: none;
   z-index: 909; 
   height: auto;
   width: 3em;
@@ -56,6 +57,11 @@
   box-shadow: none;
   border: none;
   border-radius: 0;
+}
+@media (min-width: 1024px) {
+  .custom-arrow {
+    display: inline-block;
+  }
 }
 .custom-arrow.fade {
   opacity: 0.5;
@@ -159,7 +165,7 @@
 }
 
 /** MOBILE VIEW for SLIDESHOW  */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .slick-intro-slide .inner {
     display: flex;
     flex-flow: column-reverse nowrap;

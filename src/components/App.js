@@ -11,11 +11,26 @@ import NotFound from './pages/NotFound';
 
 import '../styles/App.css';
 
+const MobileHeader = () => {
+  return (
+    <div className="mobile-header">
+      <div className="ham-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h4 className="title">108 LEONARD</h4>
+    </div>
+  );
+}
+
 const App = () => {
   return (
     <div className="App">
       <Header />
-      <main>
+      <main>  
+        <MobileHeader />
         <Switch>
           <Route strict exact path="/" component={Home} /> 
           <Route strict exact path="/building" component={Building} />

@@ -34,25 +34,27 @@ export default class Header extends Component {
 
   render() {
     return (
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-        <nav>
-          <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
-            <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
-              <NavLink className="nav-anchor" activeClassName="active" strict exact to="/">Home</NavLink>
-            </li>
-            <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
-              <NavLink className="nav-anchor" activeClassName="active" strict exact to="/building">Building</NavLink>
-            </li>
-            <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
-              <NavLink className="nav-anchor" activeClassName="active" strict exact to="/residences">Residences</NavLink>
-            </li>
-          </ul>
-            {/*<VelocityComponent {...animationProps} ref={(velocity)=> this.velocity = velocity}>
-              <span className="underline" ref={(lineElement)=>this.lineElement = lineElement}></span>
-            </VelocityComponent> */}
-        </nav>
+      <header>
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to React</h2>
+          <nav>
+            <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
+              <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
+                <NavLink className="nav-anchor" activeClassName="active" strict exact to="/">Home</NavLink>
+              </li>
+              <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
+                <NavLink className="nav-anchor" activeClassName="active" strict exact to="/building">Building</NavLink>
+              </li>
+              <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
+                <NavLink className="nav-anchor" activeClassName="active" strict exact to="/residences">Residences</NavLink>
+              </li>
+            </ul>
+              {/*<VelocityComponent {...animationProps} ref={(velocity)=> this.velocity = velocity}>
+                <span className="underline" ref={(lineElement)=>this.lineElement = lineElement}></span>
+              </VelocityComponent> */}
+          </nav>
+        </div>
       </header>
     );
   }

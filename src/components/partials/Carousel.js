@@ -16,12 +16,14 @@ export default class Carousel extends Component {
 
   componentDidMount() {
     /** dynamically setting the next arrow location based on the length of the dots */
-    setTimeout(() => {
-      let length = document.querySelector('.slick-slider .slick-dots').getBoundingClientRect().width;
-      let nextArrow = document.querySelector('.custom-arrow.next-arrow');
-      console.log(nextArrow);
-      nextArrow.style.left = `calc(3em + ${length}px)`;
-    }, 100);
+    
+      setTimeout(() => {
+        if (document.querySelector('.slick-slider .slick-dots') !== null) {
+          let length = document.querySelector('.slick-slider .slick-dots').getBoundingClientRect().width;
+          let nextArrow = document.querySelector('.custom-arrow.next-arrow');
+          nextArrow.style.left = `calc(3em + ${length}px)`;
+        }
+      }, 100);
   }
 
   next() {
