@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+main {
+  flex: 1;
+  width: auto;
+  height: 100%;
+}
