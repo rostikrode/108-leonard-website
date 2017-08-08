@@ -2,10 +2,12 @@
 
 ## TODO:
 
-* A slideshow page - insert next page arrow on last slide
-* A availability page
+* Slideshow page - work on mouse scroll
+* Availability page
+* Fonts in - all formats 
+* Full site styling
 
-Reference: https://drive.google.com/file/d/0B2HuicNd_kGHLTRZanhZcHdTUEk/view
+Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design
 
 ---
 

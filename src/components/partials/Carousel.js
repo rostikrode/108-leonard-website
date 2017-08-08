@@ -7,13 +7,6 @@ import '../../styles/Carousel.css';
 import next_arrow from '../../assets/next_arrow.svg';
 import prev_arrow from '../../assets/prev_arrow.svg';
 
-// const PrevButton = (props) => {
-//   return <button onClick={props.onClick} className="custom-arrow prev-arrow" {...props}>~</button>
-// }
-// const NextButton = (props) => {
-//   return <button onClick={props.onClick} className="custom-arrow next-arrow" {...props}>~</button>
-// }
-
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
