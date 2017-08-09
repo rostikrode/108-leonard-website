@@ -21,13 +21,13 @@ export default class Building extends Component {
     var slides = [
       {
         src: '/images/building/ph1.jpg',
-        caption: 'Caption 1'
+        caption: 'Property'
       }, {
         src: '/images/building/ph2.jpg',
         caption: 'Caption 2'
       },{
         src: '/images/building/ph3.jpg',
-        caption: 'Caption 3'
+        caption: 'Entrance'
       },{
         src: '/images/building/ph4.jpg',
         caption: 'Caption 4'

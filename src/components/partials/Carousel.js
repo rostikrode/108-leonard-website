@@ -16,7 +16,7 @@ export default class Carousel extends Component {
 
   componentDidMount() {
     /** dynamically setting the next arrow location based on the length of the dots */
-    
+
       setTimeout(() => {
         if (document.querySelector('.slick-slider .slick-dots') !== null) {
           let length = document.querySelector('.slick-slider .slick-dots').getBoundingClientRect().width;

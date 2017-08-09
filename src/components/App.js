@@ -1,44 +1,88 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-
-import Header from './partials/Header';
-
-import Home from './pages/Home';
-import Building from './pages/Building';
-import Residences from './pages/Residences';
-
 import NotFound from './pages/NotFound';
-
+import Header from './partials/Header';
 import '../styles/App.css';
 
-const MobileHeader = () => {
-  return (
-    <div className="mobile-header">
-      <div className="ham-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <h4 className="title">108 LEONARD</h4>
-    </div>
-  );
-}
+import Amenities from './pages/Amenities';
+import Availability from './pages/Availability';
+import Building from './pages/Building';
+import Contact from './pages/Contact';
+import CrownCollection from './pages/CrownCollection';
+import Residences from './pages/Residences';
+import Tribeca from './pages/Tribeca';
+
+const PAGES = [{
+  'title': 'Building',
+  'component': Building,
+  'slug': '/',
+  'prefixed': '/',
+  'subnavs': [
+    'Property',
+    'Entrance'
+  ]}, {
+    'title': 'Residences',
+    'component': Residences,
+    'slug': '/residences',
+    'prefixed': '/residences/',
+    'subnavs': [
+      'Interiors',
+      'Kitchens',
+      'Bathrooms',
+      'Landmarked Residences'
+  ]}, {
+    'title': 'Crown Collection',
+    'component': CrownCollection,
+    'slug': '/crown-collection',
+    'prefixed': '/crown-collection/',
+    'subnavs': [
+      '14th Floor',
+      '15th Floor',
+      'Crown House',
+      'Cupola',
+      'Clocktower'
+  ]}, {
+    'title': 'Availability',
+    'component': Availability,
+    'slug': '/availability',
+    'prefixed': '/availability/',
+    'subnavs': []
+  }, {
+    'title': 'Amenities',
+    'component': Amenities,
+    'slug': '/amenities',
+    'prefixed': '/amenities/',
+    'subnavs': [
+      'Entertaining',
+      'Wellness',
+      'Outdoor'
+  ]}, {
+    'title': 'Tribeca',
+    'component': Tribeca,
+    'slug': '/tribeca',
+    'prefixed': '/tribeca/',
+    'subnavs': [
+      'Neighborhood',
+      'Map'
+  ]}, {
+    'title': 'Contact',
+    'component': Contact,
+    'slug': '/contact',
+    'prefixed': '/contact/',
+    'subnavs': []
+}];
 
 const App = () => {
+  const routeComponents = PAGES.map((page, key) => <Route exact path={page.slug} component={page.component} key={key} />);
+  const routeRedirects = PAGES.map((i, key) => <Redirect key={key} from={i.prefixed} to={i.slug} />);
+  
   return (
     <div className="App">
-      <Header />
+      <Header pages={PAGES} />
       <main>  
-        <MobileHeader />
         <Switch>
-          <Route strict exact path="/" component={Home} /> 
-          <Route strict exact path="/building" component={Building} />
-          <Route strict exact path="/residences" component={Residences} />
-          
-          <Redirect from="/building/" to="/building" />
-          <Redirect from="/residences/" to="/residences" />
-
+          {routeComponents}
+          {routeRedirects}
           <Route component={NotFound} />
         </Switch>
       </main>

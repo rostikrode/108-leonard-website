@@ -1,6 +1,96 @@
-.App-header {
+.mobile-header {
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  top: 0; left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  z-index: 901;
+}
+.mobile-header .title {
+  margin: 0;
+  width: 100%;
+  background: #fff;
+  padding: 1em 0;
+}
+@media (min-width: 1024px) {
+  .mobile-header .title {
+    display: none;
+  }
+}
+@media (min-width: 1366px) {
+  .mobile-header {
+    display: none;
+  }
+}
+/** animating hamburger nav for mobile */
+.ham-nav {
+  width: 35px;
+  height: 25px;
+  position: absolute;
+  top: 0; left: 0;
+  margin: 13px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 909;
+}
+.ham-nav span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 0px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+.ham-nav span:nth-child(1) {
+  top: 0px;
+}
+
+.ham-nav span:nth-child(2),.ham-nav span:nth-child(3) {
+  top: 10px;
+}
+
+.ham-nav span:nth-child(4) {
+  top: 20px;
+}
+
+.ham-nav.open span:nth-child(1) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+
+.ham-nav.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.ham-nav.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.ham-nav.open span:nth-child(4) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+@media (min-width: 1366px) {
+  .ham-nav {
+    display: none;
+  }
+}
+/** animating hamburger nav for mobile */
+
+.app-header {
   background-color: #222;
-  padding: 0 2em;
+  padding: 0 32px;
   color: white;
   display: flex;
   flex-flow: column nowrap;
@@ -8,24 +98,37 @@
   align-items: center;
   position: relative;
   height: 100vh;
-  min-width: 12em;
+  width: calc(100% - 64px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  transform: translateX(-100%);
+  transition: transform 500ms ease-in-out;
 }
-@media (max-width: 1365px) {
-  .App-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 900;
-    transform: translateX(-100%);
+.app-header.open {
+  transform: translateX(0);
+}
+@media (min-width: 1024px) {
+  .app-header {
+    width: 12em;
+  }
+}
+@media (min-width: 1365px) {
+  .app-header {
+    transform: translateX(0);
+    position: relative;
+    top: unset;
+    left: unset;
+    
   }
 }
 
-.App-header h2 {
+.app-header h2 {
   font-size: 1.3em;
 }
 
-.App-logo {
+.app-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 3em;
   padding: 2em;
@@ -50,6 +153,7 @@
 .nav-anchor {
   color: white;
   text-decoration: none;
+  font-weight: 100;
 }
 .nav-anchor:hover {
   color: lightgray;
@@ -58,36 +162,29 @@
   color: gray;
 }
 
+.nav-subnav {
+  list-style: none;
+  margin: 0;
+}
+
 .nav-anchor.active {
-  /* border-bottom: 1px solid #fff; */
+  font-weight: 900;
 }
 
-.underline-rails {
-  width: 100%;
-  height: 2px;
-  position: relative;
-  left: 0;
+.nav-anchor.active + .nav-subnav  li {
+  height: 1.5em;
+  opacity: 1;
 }
-.underline {
-  height: 1px;
-  width: 6rem;
-  background-color: #fff; 
-  position: absolute;
-  top:0; left: 0;
-  margin-left: -20px;
+.nav-subnav  li {
+  font-size: 0.7em; 
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  transition: height 200ms ease-in-out, opacity 200ms ease-in-out;
+  color: grey;
+  cursor: pointer;
 }
-@media (min-width: 400px) {
-  .underline {
-    width: 8rem;
-  }
-}
-@media (min-width: 768px) {
-  .underline {
-    width: 10rem;
-  }
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.nav-subnav  li.active {
+  color: #fff;
 }

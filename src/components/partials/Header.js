@@ -1,61 +1,113 @@
 import React, { Component } from 'react';
-// import { VelocityComponent } from 'velocity-react';
+import { VelocityComponent } from 'velocity-react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import '../../styles/Header.css';
-
-// var animationProps;
-
+ 
 export default class Header extends Component {
-  // componentDidMount() {
-  //   this.getInitLeft();
-
-  //   window.addEventListener('resize', ()=>{ this.getInitLeft()});
-  // }
-
-  // getInitLeft() {
-  //   var hleft = Math.round(this.listElement.querySelector('.nav-anchor-wrapper a.active').parentNode.getBoundingClientRect().left);
-  
-  //   this.lineElement.style.left = `${hleft}px`;
-  // }
-
-  onNavItemClick(e) {
-    // var left = Math.round(e.currentTarget.getBoundingClientRect().left);
-
-    // animationProps = {
-    //   duration: 500,
-    //   easing: 'ease-in-out',
-    //   animation: {
-    //     left: `${left}px`
-    //   }
-    // };
-    // this.velocity.runAnimation(animationProps);
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: '',
+      activeSub: ''
+    }
   }
+  onNavItemClick(e) {
+    this.setState({
+        clickedNav: true
+      });
+    
+    if(this.state.open === 'open') {
+      this.setState({
+        open: ''
+      });
 
+    } else {
+      this.setState({
+        open: 'open'
+      });
+    }
+
+    /** removing subnav active class  */
+    if(e.target.nextSibling.children.length > 0) {
+      document.getElementsByClassName('nav-subnav-item')[0].classList.add('active');
+      let allsubs = document.getElementsByClassName('nav-subnav-item');
+      for(let i = 0; i < allsubs.length; i++) {
+        allsubs[i].classList.remove('active');
+      }
+    }
+  }
+  
+  onSubClick(e) {
+    // let subnav = e.target.getAttribute('data-id');
+
+    let allsubs = document.getElementsByClassName('nav-subnav-item');
+    for(let i = 0; i < allsubs.length; i++) {
+      allsubs[i].classList.remove('active');
+    }
+    e.target.classList.add('active');
+
+    this.openMobileMenu();
+  }
+  
+  openMobileMenu() {
+    if(this.state.open === 'open') {
+      this.setState({
+        open: ''
+      });
+    } else {
+      this.setState({
+        open: 'open'
+      });
+    }
+  }
   render() {
     return (
-      <header>
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <header className="header">
+        <div className="mobile-header">
+          <div className={`ham-nav ${this.state.open}`} onClick={()=>{this.openMobileMenu()}}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <VelocityComponent animation={{ opacity: this.state.open === 'open' ? 0 : 1 }} duration={200}>
+            <h4 className="title">108 LEONARD</h4>
+          </VelocityComponent>
+        </div>
+        <div className={`app-header ${this.state.open}`}>
+          <img src={logo} className="app-logo" alt="logo" />
+          <h2>108 Leonard</h2>
           <nav>
             <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
-              <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
-                <NavLink className="nav-anchor" activeClassName="active" strict exact to="/">Home</NavLink>
-              </li>
-              <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
-                <NavLink className="nav-anchor" activeClassName="active" strict exact to="/building">Building</NavLink>
-              </li>
-              <li className="nav-anchor-wrapper" onClick={(e)=>{this.onNavItemClick(e)}}>
-                <NavLink className="nav-anchor" activeClassName="active" strict exact to="/residences">Residences</NavLink>
-              </li>
+
+            {Object.entries(this.props.pages).map((p, key) => {
+                return (
+                  <li key={key} className="nav-anchor-wrapper">
+                    <NavLink id={`nav-anchor-${key}`} className="nav-anchor" onClick={(e)=>{this.onNavItemClick(e)}} activeClassName="active" strict exact to={p[1].slug}>{p[1].title}</NavLink>
+                    
+                    {p[1].subnavs ?
+                      <ul className="nav-subnav">
+                        {Object.entries(p[1].subnavs).map((sub, k) => {
+                          return (
+                            <li role="button" key={k} 
+                              data-id={sub[1]}
+                              className={`nav-subnav-item`}
+                              style={{transitionDelay: 100*k+'ms'}}
+                              onClick={(e)=>{this.onSubClick(e)}}>
+                              {sub[1]}
+                            </li>  
+                          );
+                        })}
+                      </ul>
+                    :''}
+                  </li>  
+                );
+              })}
             </ul>
-              {/*<VelocityComponent {...animationProps} ref={(velocity)=> this.velocity = velocity}>
-                <span className="underline" ref={(lineElement)=>this.lineElement = lineElement}></span>
-              </VelocityComponent> */}
           </nav>
         </div>
       </header>
     );
-  }
+  };
 }

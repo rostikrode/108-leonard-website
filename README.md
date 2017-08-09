@@ -2,10 +2,22 @@
 
 ## TODO:
 
-* Slideshow page - work on mouse scroll
+* check out notes in notebook for animation notes
+* make dev site link (cloudfront for dynamic react?)
+* Slideshow
+  * mouse scroll
+  * on subnav click, slider go to subnav slide
+  * when get to subnav slide, activate subnav in navigation 
+    * and put in and activate header subnav for mobile
 * Availability page
+  * layout
+  * fill with data
+  * filtering
+  * selection and population of share form
 * Fonts in - all formats 
 * Full site styling
+* more info on and program cms popup
+* form
 
 Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design
 
