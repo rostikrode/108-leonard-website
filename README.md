@@ -9,6 +9,7 @@
   * on subnav click, slider go to subnav slide
   * when get to subnav slide, activate subnav in navigation 
     * and put in and activate header subnav for mobile
+  * slide captions fade in and out (velocity)
 * Availability page
   * layout
   * fill with data
@@ -18,8 +19,25 @@
 * Full site styling
 * more info on and program cms popup
 * form
+* [bonus] fade page components in and out on page navigation
 
 Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design
+
+## NOTES:
+
+* mobile + desktop - lazy load images
+* mobile menu slide in from left (and 95% opacity)
+* mobile subsections like apple's calendar titles (bump up)
+* Floorplan - plugin as overlay
+* button roll over state - dim blue on hover - full blue on click
+* Availability - native scroll with bottom blue arrow (Grant want's scrolljack/fake inline scroll, Jason and me do not)
+* Contact form - all one form (not split up)
+* Animated intro incoming - leads to home page (building)
+* Slideshow pages - first slide always title w/ text + half image 
+  * nav opens up on page click in nav but subsections are not lit up yet
+* Slideshow pages slide slides with scroll as well as swipe and arrow click
+* On last slide, go to next page (show text somewhere for this...?)
+* Slideshow pagination shows all images in all sections
 
 ---
 

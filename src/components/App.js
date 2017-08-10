@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
@@ -72,22 +72,25 @@ const PAGES = [{
     'subnavs': []
 }];
 
-const App = () => {
-  const routeComponents = PAGES.map((page, key) => <Route exact path={page.slug} component={page.component} key={key} />);
-  const routeRedirects = PAGES.map((i, key) => <Redirect key={key} from={i.prefixed} to={i.slug} />);
-  
-  return (
-    <div className="App">
-      <Header pages={PAGES} />
-      <main>  
-        <Switch>
-          {routeComponents}
-          {routeRedirects}
-          <Route component={NotFound} />
-        </Switch>
-      </main>
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    const routeComponents = PAGES.map((page, key) => {
+      var DynComp = page.component;
+      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp /> )} />)
+    });
+    const routeRedirects = PAGES.map((i, key) => <Redirect key={key} from={i.prefixed} to={i.slug} />);
+    
+    return (
+      <div className="App">
+        <Header pages={PAGES} />
+        <main>  
+          <Switch>
+            {routeComponents}
+            {routeRedirects}
+            <Route component={NotFound} />
+          </Switch>
+        </main>
+      </div>
+    );
+  }
 }
-
-export default App;
