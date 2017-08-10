@@ -42,14 +42,22 @@ export default class Carousel extends Component {
     this.slider.slickPrev()
   }
   onWindowScroll() {
+    var sections = document.getElementsByClassName('slick-section');
     window.addEventListener('scroll', () => {
-      console.log(document.body.scrollTop);
+      // console.log(window.pageYOffset);
+      for(let i = 0; i < sections.length; i++) {
+        var topOffset = sections[i].getBoundingClientRect().top;
+        var bottomOffset = topOffset + sections[i].getBoundingClientRect().height;
+        if((window.pageYOffset >= topOffset) && (window.pageYOffset <= bottomOffset)) {
+          var section = sections[i].getAttribute('data-section');
+          this.activateSubnav(section);
+        }
+      }
       /** TODO: activate Subnav when scroll to appropriate section  */
     });
   }
-  activateSubnav() {
+  activateSubnav(section) {
     /** sub section in nav - make active when passing over section. */
-    var section = document.querySelector('.slick-slide.slick-active').getAttribute('data-section');
     var subnavs = document.getElementsByClassName('nav-subnav-item');
     for(let i = 0; i < subnavs.length; i++) {
       var subnavId = subnavs[i].getAttribute('data-id'); 
@@ -94,14 +102,15 @@ export default class Carousel extends Component {
           this.btnNext.classList.remove('fade');
           this.btnPrev.classList.remove('fade');
         }
-        this.activateSubnav();
+        var section = document.querySelector('.slick-slide.slick-active').getAttribute('data-section');
+        this.activateSubnav(section);
       }
     }
 
     return (
       <div className="slider-parent">
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
-          <div key="intro" className="slick-intro-slide" data-section={this.props.intro.newsection}>
+          <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.intro.newsection}>
             <div className="inner">
               <div className="caption-wrapper">
                 <h1>{this.props.intro.intro.title}</h1>
@@ -115,7 +124,7 @@ export default class Carousel extends Component {
 
           {Object.entries(this.props.content).map((slide, key) => {
             return (
-              <Element key={key} data-section={slide[1].newsection}>
+              <Element key={key} data-section={slide[1].newsection} className="slick-section">
                 <div className="inner">
                   <img src={slide[1].src} alt={slide[1].caption}/>
                   <p className="caption" >{slide[1].caption}</p>
