@@ -10,7 +10,7 @@ import prev_arrow from '../../assets/prev_arrow.svg';
 
 var Element = Scroll.Element;
 var scroll = Scroll.animateScroll;
-
+// var newsections;
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +18,7 @@ export default class Carousel extends Component {
     this.previous = this.previous.bind(this)
     this.activateSubnav = this.activateSubnav.bind(this)
     this.onSubNavClick = this.onSubNavClick.bind(this)
+    this.onMouseWheelScroll = this.onMouseWheelScroll.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
   }
 
@@ -32,7 +33,10 @@ export default class Carousel extends Component {
     }, 100);
       
     this.onSubNavClick();
-    this.onWindowScroll();
+    window.addEventListener('scroll', this.onWindowScroll);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onWindowScroll);
   }
 
   next() {
@@ -41,21 +45,32 @@ export default class Carousel extends Component {
   previous() {
     this.slider.slickPrev()
   }
+
   onWindowScroll() {
-    var sections = document.getElementsByClassName('slick-section');
-    window.addEventListener('scroll', () => {
-      // console.log(window.pageYOffset);
-      for(let i = 0; i < sections.length; i++) {
-        var topOffset = sections[i].getBoundingClientRect().top;
-        var bottomOffset = topOffset + sections[i].getBoundingClientRect().height;
-        if((window.pageYOffset >= topOffset) && (window.pageYOffset <= bottomOffset)) {
-          var section = sections[i].getAttribute('data-section');
-          this.activateSubnav(section);
-        }
+    var sectionHeaders = document.getElementsByClassName('newsection'); 
+    for(var i = 0; i < sectionHeaders.length; i++) {
+      var s = sectionHeaders[i];
+      var sTop = s.getBoundingClientRect().top;
+      
+      /** going down */
+      if(sTop <= 80) {
+        var sTitle = s.getAttribute('data-section');
+        this.activateSubnav(sTitle);
       }
-      /** TODO: activate Subnav when scroll to appropriate section  */
-    });
+    }
+    if (document.querySelector('.slick-intro-slide').getBoundingClientRect().bottom >= 80) {
+      this.activateSubnav('');
+    }
   }
+
+  onMouseWheelScroll(e) {
+    if (document.querySelector('.slider-parent .slick-initialized')) {
+      e.preventDefault();
+      e.persist();
+      (e.deltaY < 0 ) ? this.previous() : this.next();
+    }
+  }
+
   activateSubnav(section) {
     /** sub section in nav - make active when passing over section. */
     var subnavs = document.getElementsByClassName('nav-subnav-item');
@@ -81,8 +96,10 @@ export default class Carousel extends Component {
           this.slider.slickGoTo(slideIndex);
         } else {
           /** mobile version that doesn't have a slider */
-          var section = document.querySelector(`div[data-section="${index}"]`); 
-          scroll.scrollTo(section.offsetTop); 
+          var section = document.querySelector(`.newsection[data-section="${index}"]`); 
+          if (section)
+            scroll.scrollTo(section.offsetTop + 40);
+          
         }
       });
     }
@@ -108,24 +125,27 @@ export default class Carousel extends Component {
     }
 
     return (
-      <div className="slider-parent">
+      <div className="slider-parent" onWheel={this.onMouseWheelScroll}>
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
-          <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.intro.newsection}>
+          <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.intro.section}>
             <div className="inner">
               <div className="caption-wrapper">
                 <h1>{this.props.intro.intro.title}</h1>
                 <p>{this.props.intro.intro.para}</p>
               </div>
               <div className="image-wrapper">
-                <img src={this.props.intro.introImage} alt={this.props.intro.intro}/>
+                <img src={this.props.intro.introImage} alt={this.props.intro.introImageCaption}/>
               </div>
             </div>
           </div>  
 
           {Object.entries(this.props.content).map((slide, key) => {
             return (
-              <Element key={key} data-section={slide[1].newsection} className="slick-section">
+              <Element key={key} data-section={slide[1].section} className="slick-section">
                 <div className="inner">
+                  {slide[1].newsection ? 
+                      <h3 data-section={slide[1].section} className="newsection mobile-section">{this.props.intro.page} |  {slide[1].section}</h3>
+                    : ''}
                   <img src={slide[1].src} alt={slide[1].caption}/>
                   <p className="caption" >{slide[1].caption}</p>
                 </div>

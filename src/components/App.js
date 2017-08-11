@@ -71,7 +71,6 @@ const PAGES = [{
     'prefixed': '/contact/',
     'subnavs': []
 }];
-
 export default class App extends Component {
   render() {
     const routeComponents = PAGES.map((page, key) => {
