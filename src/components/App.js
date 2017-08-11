@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, /*Redirect*/ } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
 import '../styles/App.css';
@@ -77,7 +77,7 @@ export default class App extends Component {
       var DynComp = page.component;
       return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp /> )} />)
     });
-    const routeRedirects = PAGES.map((i, key) => <Redirect key={key} from={i.prefixed} to={i.slug} />);
+    //const routeRedirects = PAGES.map((i, key) => <Redirect key={key} from={i.prefixed} to={i.slug} />);
     
     return (
       <div className="App">
@@ -85,7 +85,8 @@ export default class App extends Component {
         <main>  
           <Switch>
             {routeComponents}
-            {routeRedirects}
+            
+            {/* Not working correctly: {routeRedirects} - redirects to last page */}
             <Route component={NotFound} />
           </Switch>
         </main>

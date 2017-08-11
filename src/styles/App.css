@@ -24,3 +24,28 @@ section {
     padding-top: 0;
   }
 }
+
+.building-page,
+.residences-page,
+.crown-collection-page,
+.amenities-page,
+.tribeca-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.building-page .App-carousel,
+.building-page .App-intro,
+.residences-page .App-carousel,
+.residences-page .App-intro
+.crown-collection-page .App-carousel,
+.crown-collection-page .App-intro
+.amenities-page .App-carousel,
+.amenities-page .App-intro
+.tribeca-page .App-carousel,
+.tribeca-page .App-intro {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;  
+}

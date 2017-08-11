@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from '../partials/Carousel';
 
-import '../../styles/Building.css';
-
 export default class Building extends Component {
   componentDidMount() {
     document.title = "Building Page";
@@ -31,12 +29,27 @@ export default class Building extends Component {
         section: 'Property',
         newsection: false,
         caption: 'Caption 2'
-      },{
+      }, {
+        src: '/images/building/ph2.jpg',
+        section: 'Property',
+        newsection: false,
+        caption: 'Caption 2'
+      }, {
         src: '/images/building/ph3.jpg',
         section: 'Entrance',
         newsection: true,
         caption: 'Entrance - Caption 3'
-      },{
+      }, {
+        src: '/images/building/ph3.jpg',
+        section: 'Entrance',
+        newsection: false,
+        caption: 'Entrance - Caption 3'
+      }, {
+        src: '/images/building/ph4.jpg',
+        section: 'Entrance',
+        newsection: false,
+        caption: 'Caption 4'
+      }, {
         src: '/images/building/ph4.jpg',
         section: 'Entrance',
         newsection: false,
@@ -61,7 +74,7 @@ export default class Building extends Component {
 
     return (
       <section className="building-page">
-        <Carousel className="App-carousel" settings={settings} intro={intro} content={slides} activeSection={this.props.activeSub} extPage={['Residences', '/residences']} />
+        <Carousel className="App-carousel" settings={settings} intro={intro} content={slides} activeSection={this.props.activeSub} nextPage={['Residences', '/residences']} />
       </section>
     );
   }

@@ -39,6 +39,7 @@ export default class Carousel extends Component {
     window.removeEventListener('scroll', this.onWindowScroll);
   }
 
+  /** custom button events needed for custom buttons */
   next() {
     this.slider.slickNext()
   }
@@ -46,6 +47,7 @@ export default class Carousel extends Component {
     this.slider.slickPrev()
   }
 
+  /** on mobile, on window scroll, when scrolling up to a new section, trigger than section to animate in, in the header (fake MacOS calendar style) */
   onWindowScroll() {
     var sectionHeaders = document.getElementsByClassName('newsection'); 
     for(var i = 0; i < sectionHeaders.length; i++) {
@@ -63,6 +65,7 @@ export default class Carousel extends Component {
     }
   }
 
+  /** functionality to change slides on mousewheel  */
   onMouseWheelScroll(e) {
     if (document.querySelector('.slider-parent .slick-initialized')) {
       e.preventDefault();
@@ -71,8 +74,8 @@ export default class Carousel extends Component {
     }
   }
 
-  activateSubnav(section) {
-    /** sub section in nav - make active when passing over section. */
+  /** sub section in nav - make active when passing over section. */
+  activateSubnav(section) { 
     var subnavs = document.getElementsByClassName('nav-subnav-item');
     for(let i = 0; i < subnavs.length; i++) {
       var subnavId = subnavs[i].getAttribute('data-id'); 
@@ -83,8 +86,9 @@ export default class Carousel extends Component {
       }
     }
   }
+
+  /** forcing  goToSlide on nav click event from here */
   onSubNavClick() {
-    /** forcing  goToSlide nav click event from here */
     var navs = document.getElementsByClassName('nav-subnav-item')
     for(let i = 0; i < navs.length; i++) {
       navs[i].addEventListener('click', (e) => {
@@ -93,7 +97,8 @@ export default class Carousel extends Component {
         if (slide) {
           /** desktop version, that has a carousel */
           var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
-          this.slider.slickGoTo(slideIndex);
+          if(this.slider !== null) 
+            this.slider.slickGoTo(slideIndex);
         } else {
           /** mobile version that doesn't have a slider */
           var section = document.querySelector(`.newsection[data-section="${index}"]`); 
@@ -108,6 +113,13 @@ export default class Carousel extends Component {
   render() {
     const moreSettings = {
       arrows: false,
+      beforeChange: () => {
+        /** to fade out captions */
+        var allCaps = document.querySelectorAll(`.slick-slide .inner .caption`);
+        for(let i = 0; i < allCaps.length; i++) {
+          allCaps[i].classList.add('fade-out');
+        }
+      },
       afterChange: (slide) => {
         if(slide === this.props.content.length) {
           this.btnPrev.classList.remove('fade');
@@ -121,6 +133,12 @@ export default class Carousel extends Component {
         }
         var section = document.querySelector('.slick-slide.slick-active').getAttribute('data-section');
         this.activateSubnav(section);
+
+        /** to fade in captions */
+        var currentCap = document.querySelector(`.slick-slide.slick-active .inner .caption`);
+        if(currentCap) {
+          currentCap.classList.remove('fade-out');
+        }
       }
     }
 
@@ -132,6 +150,7 @@ export default class Carousel extends Component {
               <div className="caption-wrapper">
                 <h1>{this.props.intro.intro.title}</h1>
                 <p>{this.props.intro.intro.para}</p>
+                <span className="caption"></span>
               </div>
               <div className="image-wrapper">
                 <img src={this.props.intro.introImage} alt={this.props.intro.introImageCaption}/>

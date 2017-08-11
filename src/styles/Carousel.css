@@ -110,6 +110,12 @@
   right: 2em; 
   bottom: 0;
   margin: 0.5em;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
+
+.slick-slide .inner .caption.fade-out {
+  opacity: 0;
 }
 
 .slick-intro-slide {
@@ -122,11 +128,11 @@
   justify-content: center;
   align-items: center;
 }
-.slick-intro-slide .inner .mobile-section {
+.inner .mobile-section {
   display: block;
 }
 @media (min-width: 1024px) {
-  .slick-intro-slide .inner .mobile-section {
+  .inner .mobile-section {
     display: none;
   } 
 }
