@@ -148,12 +148,12 @@ export default class Carousel extends Component {
           <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.intro.section}>
             <div className="inner">
               <div className="caption-wrapper">
-                <h1>{this.props.intro.intro.title}</h1>
-                <p>{this.props.intro.intro.para}</p>
+                <h1>{this.props.intro.title}</h1>
+                <p>{this.props.intro.para}</p>
                 <span className="caption"></span>
               </div>
               <div className="image-wrapper">
-                <img src={this.props.intro.introImage} alt={this.props.intro.introImageCaption}/>
+                <img src={this.props.introImage} alt={this.props.introImageCaption}/>
               </div>
             </div>
           </div>  

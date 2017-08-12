@@ -4,26 +4,32 @@ import NotFound from './pages/NotFound';
 import Header from './partials/Header';
 import '../styles/App.css';
 
-import Amenities from './pages/Amenities';
+import CarouselPage from './pages/CarouselPage';
 import Availability from './pages/Availability';
-import Building from './pages/Building';
 import Contact from './pages/Contact';
-import CrownCollection from './pages/CrownCollection';
-import Residences from './pages/Residences';
-import Tribeca from './pages/Tribeca';
+
+import buildingJSON from './data/building.json';
+import amenitiesJSON from './data/amenities.json';
+import availabilityJSON from './data/availability.json';
+import contactJSON from './data/contact.json';
+import crowncollectionJSON from './data/crowncollection.json';
+import residencesJSON from './data/residences.json';
+import tribecaJSON from './data/tribeca.json';
 
 const PAGES = [{
   'title': 'Building',
-  'component': Building,
+  'component': CarouselPage,
   'slug': '/',
+  'data': buildingJSON,
   'prefixed': '/',
   'subnavs': [
     'Property',
     'Entrance'
   ]}, {
     'title': 'Residences',
-    'component': Residences,
+    'component': CarouselPage,
     'slug': '/residences',
+    'data': residencesJSON,
     'prefixed': '/residences/',
     'subnavs': [
       'Interiors',
@@ -32,8 +38,9 @@ const PAGES = [{
       'Landmarked Residences'
   ]}, {
     'title': 'Crown Collection',
-    'component': CrownCollection,
+    'component': CarouselPage,
     'slug': '/crown-collection',
+    'data': crowncollectionJSON,
     'prefixed': '/crown-collection/',
     'subnavs': [
       '14th Floor',
@@ -45,12 +52,14 @@ const PAGES = [{
     'title': 'Availability',
     'component': Availability,
     'slug': '/availability',
+    'data': availabilityJSON,
     'prefixed': '/availability/',
     'subnavs': []
   }, {
     'title': 'Amenities',
-    'component': Amenities,
+    'component': CarouselPage,
     'slug': '/amenities',
+    'data': amenitiesJSON,
     'prefixed': '/amenities/',
     'subnavs': [
       'Entertaining',
@@ -58,8 +67,9 @@ const PAGES = [{
       'Outdoor'
   ]}, {
     'title': 'Tribeca',
-    'component': Tribeca,
+    'component': CarouselPage,
     'slug': '/tribeca',
+    'data': tribecaJSON,
     'prefixed': '/tribeca/',
     'subnavs': [
       'Neighborhood',
@@ -68,6 +78,7 @@ const PAGES = [{
     'title': 'Contact',
     'component': Contact,
     'slug': '/contact',
+    'data': contactJSON,
     'prefixed': '/contact/',
     'subnavs': []
 }];
@@ -75,7 +86,7 @@ export default class App extends Component {
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
-      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp /> )} />)
+      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} /> )} />)
     });
     //const routeRedirects = PAGES.map((i, key) => <Redirect key={key} from={i.prefixed} to={i.slug} />);
     

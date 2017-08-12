@@ -2,6 +2,7 @@
 
 ## TODO:
 
+* CarouselPage.js - pass all props instead of selectively and update Carousel.js to match 
 * make dev site link (cloudfront for dynamic react?)
 * some indication or a way to proceeed to next page after last slide of current page (NavLink)
   * ASK: which section goes to which page - only slideshow pages to slideshow pages or in order?
