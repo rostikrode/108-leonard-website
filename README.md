@@ -13,7 +13,6 @@
 * Full site styling
 * more info on and program cms popup
 * form
-* maybe somehow combine all the slideshow pages into 1 component with diff data?
 * [bonus] fade page components in and out on page navigation
 
 Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web
@@ -22,18 +21,12 @@ Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-de
 ## NOTES:
 
 * mobile + desktop - lazy load images
-* mobile menu slide in from left (and 95% opacity)
-* ~~mobile subsections like apple's calendar titles (bump up)~~
 * Floorplan - plugin as overlay
 * button roll over state - dim blue on hover - full blue on click
 * Availability - native scroll with bottom blue arrow (Grant want's scrolljack/fake inline scroll, Jason and me do not)
 * Contact form - all one form (not split up)
 * Animated intro incoming - leads to home page (building)
-* ~~Slideshow pages - first slide always title w/ text + half image~~
-  * ~~nav opens up on page click in nav but subsections are not lit up yet~~
-* ~~Slideshow pages slide slides with scroll as well as swipe and arrow click~~
 * On last slide, go to next page (show text somewhere for this...?)
-* ~~Slideshow pagination shows all images in all sections~~
 
 ---
 
