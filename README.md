@@ -1,8 +1,12 @@
 # React Website for 108 Leonard full website
 
+**temporary deploy:** `aws s3 cp build s3://108leonard.full.dbxd.com --recursive`
+
 ## TODO:
 
 * make dev site link (cloudfront for dynamic react?)
+  * with Travis testing and deployment
+  * also double check dev URL
 * some indication or a way to proceeed to next page after last slide of current page (NavLink)
   * ASK: which section goes to which page - only slideshow pages to slideshow pages or in order?
 * Availability page
