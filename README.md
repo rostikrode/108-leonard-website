@@ -4,7 +4,10 @@
 
 ## TODO:
 
-* make dev site link (cloudfront for dynamic react?)
+* Mobile bug - hamburger menu doesn't always work.
+* Mobile bug - intro image missing
+* Mobile Safari - get Mobile Chrome's fast scrolling
+* aws site link
   * with Travis testing and deployment
   * also double check dev URL
 * some indication or a way to proceeed to next page after last slide of current page (NavLink)
