@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { VelocityComponent } from 'velocity-react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
+import logoText from '../../assets/108_leonard_text.svg';
 import '../../styles/Header.css';
 
 var title;
@@ -80,13 +81,9 @@ export default class Header extends Component {
       });
     }
 
-    /** removing subnav active class  */
-    if(e.target.nextSibling.children.length > 0) {
-      document.getElementsByClassName('nav-subnav-item')[0].classList.add('active');
-      let allsubs = document.getElementsByClassName('nav-subnav-item');
-      for(let i = 0; i < allsubs.length; i++) {
-        allsubs[i].classList.remove('active');
-      }
+    let allsubs = document.getElementsByClassName('nav-subnav-item');
+    for(let i = 0; i < allsubs.length; i++) {
+      allsubs[i].classList.remove('active');
     }
   }
   
@@ -127,7 +124,7 @@ export default class Header extends Component {
           </div>
           <VelocityComponent animation={{ opacity: this.state.open === 'open' ? 0 : 1 }} duration={200}>
             <div className="navigation-titles">            
-                <h4 className="title">108 LEONARD</h4>
+                <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>
                   <h3 className="come-in sub-title">{this.state.currPage ? this.state.currPage : title} {this.state.currSec ? ` | ${this.state.currSec}` : ''} </h3>
             </div>
           </VelocityComponent>
@@ -141,9 +138,9 @@ export default class Header extends Component {
             {Object.entries(this.props.pages).map((p, key) => {
                 return (
                   <li key={key} className="nav-anchor-wrapper">
-                    <NavLink activeClassName="active" id={`nav-anchor-${key}`} className="nav-anchor" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to={p[1].slug}>{p[1].title}</NavLink>
+                    <NavLink data-type={p[1].subnavs.length > 0 ? "carousel" : "" } activeClassName="active" id={`nav-anchor-${key}`} className="nav-anchor" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to={p[1].slug}>{p[1].title}</NavLink>
                     
-                    {p[1].subnavs ?
+                    {p[1].subnavs.length > 0 ?
                       <ul className="nav-subnav">
                         {Object.entries(p[1].subnavs).map((sub, k) => {
                           return (

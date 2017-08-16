@@ -14,6 +14,7 @@ var scroll = Scroll.animateScroll;
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
+
     this.next = this.next.bind(this)
     this.previous = this.previous.bind(this)
     this.activateSubnav = this.activateSubnav.bind(this)
@@ -23,6 +24,11 @@ export default class Carousel extends Component {
   }
 
   componentDidMount() { 
+    /** meta data for page */
+    document.title = this.props.metaTitle;
+    document.getElementsByTagName('meta').description.content = this.props.metaDescription;
+    document.querySelector("link[rel='canonical']").href = window.location.href;
+
     /** dynamically setting the next arrow location based on the length of the dots */
     setTimeout(() => {
       if (document.querySelector('.slick-slider .slick-dots') !== null) {
@@ -113,6 +119,7 @@ export default class Carousel extends Component {
   render() {
     const moreSettings = {
       arrows: false,
+      initialSlide: 0,
       beforeChange: () => {
         /** to fade out captions */
         var allCaps = document.querySelectorAll(`.slick-slide .inner .caption`);
@@ -121,7 +128,7 @@ export default class Carousel extends Component {
         }
       },
       afterChange: (slide) => {
-        if(slide === this.props.content.length) {
+        if(slide === this.props.slides.length) {
           this.btnPrev.classList.remove('fade');
           this.btnNext.classList.add('fade');
         } else if (slide === 0) {
@@ -145,7 +152,7 @@ export default class Carousel extends Component {
     return (
       <div className="slider-parent" onWheel={this.onMouseWheelScroll}>
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
-          <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.intro.section}>
+          <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.section}>
             <div className="inner">
               <div className="caption-wrapper">
                 <h1>{this.props.intro.title}</h1>
@@ -158,12 +165,12 @@ export default class Carousel extends Component {
             </div>
           </div>  
 
-          {Object.entries(this.props.content).map((slide, key) => {
+          {Object.entries(this.props.slides).map((slide, key) => {
             return (
               <Element key={key} data-section={slide[1].section} className="slick-section">
                 <div className="inner">
                   {slide[1].newsection ? 
-                      <h3 data-section={slide[1].section} className="newsection mobile-section">{this.props.intro.page} |  {slide[1].section}</h3>
+                      <h3 data-section={slide[1].section} className="newsection mobile-section">{this.props.page} |  {slide[1].section}</h3>
                     : ''}
                   <img src={slide[1].src} alt={slide[1].caption}/>
                   <p className="caption" >{slide[1].caption}</p>

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import { Switch, Route, /*Redirect*/ } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
 import '../styles/App.css';
 
-import CarouselPage from './pages/CarouselPage';
+import Carousel from './pages/Carousel';
 import Availability from './pages/Availability';
 import Contact from './pages/Contact';
 
@@ -18,19 +18,17 @@ import tribecaJSON from './data/tribeca.json';
 
 const PAGES = [{
   'title': 'Building',
-  'component': CarouselPage,
+  'component': Carousel,
   'slug': '/',
   'data': buildingJSON,
-  'prefixed': '/',
   'subnavs': [
     'Property',
     'Entrance'
   ]}, {
     'title': 'Residences',
-    'component': CarouselPage,
+    'component': Carousel,
     'slug': '/residences',
     'data': residencesJSON,
-    'prefixed': '/residences/',
     'subnavs': [
       'Interiors',
       'Kitchens',
@@ -38,10 +36,9 @@ const PAGES = [{
       'Landmarked Residences'
   ]}, {
     'title': 'Crown Collection',
-    'component': CarouselPage,
+    'component': Carousel,
     'slug': '/crown-collection',
     'data': crowncollectionJSON,
-    'prefixed': '/crown-collection/',
     'subnavs': [
       '14th Floor',
       '15th Floor',
@@ -53,24 +50,21 @@ const PAGES = [{
     'component': Availability,
     'slug': '/availability',
     'data': availabilityJSON,
-    'prefixed': '/availability/',
     'subnavs': []
   }, {
     'title': 'Amenities',
-    'component': CarouselPage,
+    'component': Carousel,
     'slug': '/amenities',
     'data': amenitiesJSON,
-    'prefixed': '/amenities/',
     'subnavs': [
       'Entertaining',
       'Wellness',
       'Outdoor'
   ]}, {
     'title': 'Tribeca',
-    'component': CarouselPage,
+    'component': Carousel,
     'slug': '/tribeca',
     'data': tribecaJSON,
-    'prefixed': '/tribeca/',
     'subnavs': [
       'Neighborhood',
       'Map'
@@ -79,16 +73,14 @@ const PAGES = [{
     'component': Contact,
     'slug': '/contact',
     'data': contactJSON,
-    'prefixed': '/contact/',
     'subnavs': []
 }];
 export default class App extends Component {
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
-      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} /> )} />)
+      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} activeSection={this.props.activeSub} /> )} />)
     });
-    //const routeRedirects = PAGES.map((i, key) => <Redirect key={key} from={i.prefixed} to={i.slug} />);
     
     return (
       <div className="App">
@@ -96,8 +88,6 @@ export default class App extends Component {
         <main>  
           <Switch>
             {routeComponents}
-            
-            {/* Not working correctly: {routeRedirects} - redirects to last page */}
             <Route component={NotFound} />
           </Switch>
         </main>

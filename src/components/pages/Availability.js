@@ -6,7 +6,6 @@ export default class Availability extends Component {
     document.title = "Availability Page";
     document.getElementsByTagName('meta').description.content = "Availability page of the website.";
     document.querySelector("link[rel='canonical']").href = window.location.href;
-
   }
 
   render() {
