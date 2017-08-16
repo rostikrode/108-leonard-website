@@ -4,9 +4,10 @@
   "metaDescription": "Tribeca page of website",
   "intro": {
     "title": "TRIBECA VOLORRUM",
-    "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+    "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
+    "caption": "Caption"
   },
-  "introImage": "/images/building/ph1.jpg",
+  "introImage": "/images/building/ph0.jpg",
   "introImageCaption": "intro image",
   "section": "Intro",
   "slides": [

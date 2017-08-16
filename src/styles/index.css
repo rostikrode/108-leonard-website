@@ -234,8 +234,99 @@
 }
 
 /** General */
+a:focus,
+button:focus,
+[role="button"]:focus {
+	outline: 0;
+	outline: none;
+}
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Caecilia LT Std';
+	font-family: 'Caecilia LT Std';
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;	
+}
+
+.serif {
+	font-family: 'Caecilia LT Std', serif;
+	font-weight: normal;
+	letter-spacing: 1px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #000;
+}
+.serif-bold {
+	font-family: 'Caecilia LT Std', serif;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 10px;
+	color: #000;
+}
+.sans {
+	font-family: 'Calibre', sans;
+	font-weight: normal;
+	font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.sans-medium {
+	font-family: 'Calibre', sans;
+	font-weight: 500;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.sans-bold {
+	font-family: 'Calibre', sans;
+	font-weight: bold;	
+	font-size: 15px;
+}
+.sans-light {
+	font-family: 'Calibre', sans;
+	font-weight: 300;	
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.sans-light-bold {
+	font-family: 'Calibre', sans;
+	font-weight: 600;	
+	font-size: 10px;
+}
+.link {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 3px;
+}
+.link:focus, 
+.link:hover,
+.link:active {
+	font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+	.sans, .sans-bold {
+		font-size: 13px;
+	}	
+}
+@media (min-width: 1920px) {
+	.sans, .sans-bold {
+		font-size: 15px;
+	}
+	.sans-medium, 
+	.sans-light,
+	.sans-light-bold, 
+	.link {
+		font-size: 11px;
+	}	
+	.serif {
+		letter-spacing: 1px;
+    line-height: 22px;
+    font-size: 15px;
+	}
+	.serif-bold {
+		font-size: 12px;
+	}
 }

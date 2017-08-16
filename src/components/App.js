@@ -7,6 +7,9 @@ import '../styles/App.css';
 import Carousel from './pages/Carousel';
 import Availability from './pages/Availability';
 import Contact from './pages/Contact';
+import Team from './pages/Team';
+import Press from './pages/Press';
+import Legal from './pages/Legal';
 
 import buildingJSON from './data/building.json';
 import amenitiesJSON from './data/amenities.json';
@@ -15,6 +18,9 @@ import contactJSON from './data/contact.json';
 import crowncollectionJSON from './data/crowncollection.json';
 import residencesJSON from './data/residences.json';
 import tribecaJSON from './data/tribeca.json';
+import teamJSON from './data/team.json';
+import pressJSON from './data/press.json';
+import legalJSON from './data/legal.json';
 
 const PAGES = [{
   'title': 'Building',
@@ -74,7 +80,7 @@ const PAGES = [{
     'slug': '/contact',
     'data': contactJSON,
     'subnavs': []
-}];
+  }];
 export default class App extends Component {
   render() {
     const routeComponents = PAGES.map((page, key) => {
@@ -88,6 +94,10 @@ export default class App extends Component {
         <main>  
           <Switch>
             {routeComponents}
+
+            <Route exact path="/team" render={(props) => ( <Team {...teamJSON} activeSection={this.props.activeSub} /> )} />
+            <Route exact path="/press" render={(props) => ( <Press {...pressJSON} activeSection={this.props.activeSub} /> )} />
+            <Route exact path="/legal" render={(props) => ( <Legal {...legalJSON} activeSection={this.props.activeSub} /> )} />
             <Route component={NotFound} />
           </Switch>
         </main>

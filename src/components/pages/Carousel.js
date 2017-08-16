@@ -21,6 +21,7 @@ export default class Carousel extends Component {
     this.onSubNavClick = this.onSubNavClick.bind(this)
     this.onMouseWheelScroll = this.onMouseWheelScroll.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
+    this.onOrientationChange = this.onOrientationChange.bind(this)
   }
 
   componentDidMount() { 
@@ -34,15 +35,21 @@ export default class Carousel extends Component {
       if (document.querySelector('.slick-slider .slick-dots') !== null) {
         let length = document.querySelector('.slick-slider .slick-dots').getBoundingClientRect().width;
         let nextArrow = document.querySelector('.custom-arrow.next-arrow');
-        nextArrow.style.left = `calc(3em + ${length}px)`;
+        if (window.matchMedia("(min-width: 1366px)").matches) {
+          nextArrow.style.left = `calc(80px + ${length}px)`;
+        } else {
+          nextArrow.style.left = `calc(3em + ${length}px)`;
+        }
       }
     }, 100);
       
     this.onSubNavClick();
     window.addEventListener('scroll', this.onWindowScroll);
+    window.addEventListener('orientationchange', this.onOrientationChange);
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onWindowScroll);
+    window.removeEventListener('orientationchange', this.onOrientationChange);
   }
 
   /** custom button events needed for custom buttons */
@@ -51,6 +58,13 @@ export default class Carousel extends Component {
   }
   previous() {
     this.slider.slickPrev()
+  }
+
+  /** switch between carousel and scrolling list for portrait vs landscape */
+  onOrientationChange() {
+    setTimeout(() => {
+      window.location.reload()
+    }, 100);
   }
 
   /** on mobile, on window scroll, when scrolling up to a new section, trigger than section to animate in, in the header (fake MacOS calendar style) */
@@ -155,13 +169,13 @@ export default class Carousel extends Component {
           <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.section}>
             <div className="inner">
               <div className="caption-wrapper">
-                <h1>{this.props.intro.title}</h1>
-                <p>{this.props.intro.para}</p>
-                <span className="caption"></span>
+                <h1 className="sans-bold">{this.props.intro.title}</h1>
+                <p className="serif">{this.props.intro.para}</p>
               </div>
               <div className="image-wrapper">
                 <img src={this.props.introImage} alt={this.props.introImageCaption}/>
               </div>
+              <span className="caption serif-bold">{this.props.intro.caption}</span>
             </div>
           </div>  
 
@@ -170,10 +184,10 @@ export default class Carousel extends Component {
               <Element key={key} data-section={slide[1].section} className="slick-section">
                 <div className="inner">
                   {slide[1].newsection ? 
-                      <h3 data-section={slide[1].section} className="newsection mobile-section">{this.props.page} |  {slide[1].section}</h3>
+                      <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
                     : ''}
                   <img src={slide[1].src} alt={slide[1].caption}/>
-                  <p className="caption" >{slide[1].caption}</p>
+                  <p className="caption serif-bold" >{slide[1].caption}</p>
                 </div>
               </Element>  
             );

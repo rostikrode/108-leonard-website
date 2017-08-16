@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ComingSoon from '../partials/ComingSoon';
 // import '../../styles/Contact.css';
 
 export default class Contact extends Component {
@@ -11,9 +12,7 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <p className="App-intro">
-        Contact page here.
-      </p>
+      <ComingSoon page="Contact" />
     );
   }
 }
