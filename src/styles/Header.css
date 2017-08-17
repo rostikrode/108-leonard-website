@@ -6,7 +6,7 @@
   align-items: center;
   top: 0; left: 0;
   width: 100%;
-  height: 111px;
+  height: 93px;
   background-color: transparent;
   z-index: 901;
 }
@@ -25,7 +25,8 @@
 .mobile-header .navigation-titles .sub-title {
   margin: 0;
   padding-top: 32px;
-  padding-bottom: 18px;
+  /* padding-bottom: 18px; */
+  padding-bottom: 0;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -75,16 +76,24 @@
   }
 }
 /** animating hamburger nav for mobile */
+.ham-nav-button {
+  position: fixed;
+  top: 0; left: 0;
+  cursor: pointer;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  z-index: 910;
+  padding: 0;
+  margin: 0;
+}
+
 .ham-nav {
   width: 20px;
   height: 20px;
-  position: fixed;
-  top: 0; left: 0;
   margin: 20px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
-  cursor: pointer;
-  z-index: 910;
 }
 .ham-nav span {
   display: block;
@@ -160,14 +169,14 @@
   z-index: 905;
   transform: translateX(-100%);
   transition: transform 500ms ease-in-out;
+  overflow-y: auto;
 }
 .app-header.open {
   transform: translateX(0);
 }
 @media (min-width: 480px) and (max-width: 768px) and (orientation: landscape) {
   .app-header {
-    height: 100%;
-    overflow-y: auto;
+    height: (100vh - 64px);
   }
 }
 @media (min-width: 1024px) {
@@ -297,6 +306,11 @@
 }
 .footer-pages a:hover {
   font-weight: 600;
+}
+@media (min-width: 480px) and (max-width: 768px) and (orientation: landscape) {
+  .footer {
+    padding-bottom: 20px;
+  }
 }
 @media (min-width: 480px) {
   .footer-pages {

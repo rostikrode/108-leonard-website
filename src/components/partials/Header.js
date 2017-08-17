@@ -115,12 +115,14 @@ export default class Header extends Component {
   render() {
     return (
       <header className="header">
-        <div className={`ham-nav ${this.state.open}`} onClick={()=>{this.openMobileMenu()}}>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <button className="ham-nav-button" onClick={()=>{this.openMobileMenu()}}>
+          <div className={`ham-nav ${this.state.open}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
         <div className="mobile-header">
           <div className="navigation-titles">            
               <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>

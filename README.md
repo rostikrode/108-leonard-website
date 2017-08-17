@@ -4,14 +4,13 @@
 
 ## TODO:
 
-* Mobile bug - hamburger menu doesn't always work.
-* Mobile bug - intro image missing
-* Mobile Safari - get Mobile Chrome's fast scrolling
 * aws site link
   * with Travis testing and deployment
   * also double check dev URL
+* mobile + desktop - lazy load images
 * some indication or a way to proceeed to next page after last slide of current page (NavLink)
   * ASK: which section goes to which page - only slideshow pages to slideshow pages or in order?
+
 * Availability page
   * layout
   * fill with data
@@ -27,7 +26,6 @@ Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-de
 
 ## NOTES:
 
-* mobile + desktop - lazy load images
 * Floorplan - plugin as overlay
 * button roll over state - dim blue on hover - full blue on click
 * Availability - native scroll with bottom blue arrow (Grant want's scrolljack/fake inline scroll, Jason and me do not)

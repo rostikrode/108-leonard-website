@@ -25,6 +25,8 @@ export default class Carousel extends Component {
   }
 
   componentDidMount() { 
+    window.scrollTo(0,0);
+
     /** meta data for page */
     document.title = this.props.metaTitle;
     document.getElementsByTagName('meta').description.content = this.props.metaDescription;
@@ -80,7 +82,7 @@ export default class Carousel extends Component {
         this.activateSubnav(sTitle);
       }
     }
-    if (document.querySelector('.slick-intro-slide').getBoundingClientRect().bottom >= 80) {
+    if (document.querySelector('.slick-intro-slide').getBoundingClientRect().bottom >= 93) {
       this.activateSubnav('');
     }
   }
