@@ -22,7 +22,6 @@ export default class Carousel extends Component {
     this.onMouseWheelScroll = this.onMouseWheelScroll.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
-    this.removeElement = this.removeElement.bind(this)
   }
 
   componentDidMount() { 
@@ -134,31 +133,6 @@ export default class Carousel extends Component {
     }
   }
 
-  removeElement(e) {
-    e.target.remove();
-  }
-  loadSlide(slideIndex) {
-    if (slideIndex > 0) {
-      var lazySlide, loader, imageEl, imageSrc, image;
-      lazySlide = document.querySelector(`.slick-lazy-slide[data-index="${slideIndex}"]`);
-      loader = lazySlide.querySelector('.inner .loading');
-      imageEl = lazySlide.querySelector('.inner .lazy-image');
-      imageSrc = imageEl.getAttribute('data-src');
-      imageEl.setAttribute('src', imageSrc);
-      image = new Image();                  
-      image.onload = () => {
-        if(loader) {
-          loader.classList.add('hide');
-        }
-        imageEl.classList.add('show');
-      }
-      image.onerror = () => {
-        console.log(`image load error, image: ${imageSrc}`);
-      };
-      image.src = imageSrc;
-    }
-  }
-
   render() {
     const moreSettings = {
       arrows: false,
@@ -169,10 +143,6 @@ export default class Carousel extends Component {
         for(let i = 0; i < allCaps.length; i++) {
           allCaps[i].classList.add('fade-out');
         }
-
-         /** lazy loading images */
-        console.log(currentSlide, nextSlide);
-        this.loadSlide(nextSlide);
       },
       afterChange: (slide) => {
         if(slide === this.props.slides.length) {
@@ -215,17 +185,15 @@ export default class Carousel extends Component {
 
           {Object.entries(this.props.slides).map((slide, key) => {
             return (
-              <Element key={key} data-section={slide[1].section} className="slick-section slick-lazy-slide">
+              <Element key={key} data-section={slide[1].section} className="slick-section">
                 <div className="inner">
                   {slide[1].newsection ? 
                       <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
                     : ''}
                     
-                    <i className='loading' onTransitionEnd={this.removeElement}></i>
-                      <img className="lazy-image" data-src={slide[1].src} alt={slide[1].caption}/>
+                    {/* TODO: !!! USE react-image !!! */}
+                    <img src={slide[1].src} alt={slide[1].caption}/>
                     
-
-                  
                   <p className="caption serif-bold" >{slide[1].caption}</p>
                 </div>
               </Element>  

@@ -15,7 +15,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "react-lazyload": "^2.2.7",
     "react-router-dom": "^4.1.1",
     "react-scroll": "^1.5.4",
     "react-slick": "^0.14.11",
