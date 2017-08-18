@@ -139,7 +139,6 @@ export default class Carousel extends Component {
           var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
           if(this.slider !== null) 
             this.slider.slickGoTo(slideIndex);
-            this.loadSlide(slideIndex);
         } else {
           /** mobile version that doesn't have a slider */
           var section = document.querySelector(`.newsection[data-section="${index}"]`); 
