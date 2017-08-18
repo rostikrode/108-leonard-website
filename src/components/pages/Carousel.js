@@ -22,6 +22,7 @@ export default class Carousel extends Component {
     this.onMouseWheelScroll = this.onMouseWheelScroll.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
+    this.removeElement = this.removeElement.bind(this)
   }
 
   componentDidMount() { 
@@ -121,6 +122,7 @@ export default class Carousel extends Component {
           var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
           if(this.slider !== null) 
             this.slider.slickGoTo(slideIndex);
+            this.loadSlide(slideIndex);
         } else {
           /** mobile version that doesn't have a slider */
           var section = document.querySelector(`.newsection[data-section="${index}"]`); 
@@ -132,16 +134,45 @@ export default class Carousel extends Component {
     }
   }
 
+  removeElement(e) {
+    e.target.remove();
+  }
+  loadSlide(slideIndex) {
+    if (slideIndex > 0) {
+      var lazySlide, loader, imageEl, imageSrc, image;
+      lazySlide = document.querySelector(`.slick-lazy-slide[data-index="${slideIndex}"]`);
+      loader = lazySlide.querySelector('.inner .loading');
+      imageEl = lazySlide.querySelector('.inner .lazy-image');
+      imageSrc = imageEl.getAttribute('data-src');
+      imageEl.setAttribute('src', imageSrc);
+      image = new Image();                  
+      image.onload = () => {
+        if(loader) {
+          loader.classList.add('hide');
+        }
+        imageEl.classList.add('show');
+      }
+      image.onerror = () => {
+        console.log(`image load error, image: ${imageSrc}`);
+      };
+      image.src = imageSrc;
+    }
+  }
+
   render() {
     const moreSettings = {
       arrows: false,
       initialSlide: 0,
-      beforeChange: () => {
+      beforeChange: (currentSlide, nextSlide) => {
         /** to fade out captions */
         var allCaps = document.querySelectorAll(`.slick-slide .inner .caption`);
         for(let i = 0; i < allCaps.length; i++) {
           allCaps[i].classList.add('fade-out');
         }
+
+         /** lazy loading images */
+        console.log(currentSlide, nextSlide);
+        this.loadSlide(nextSlide);
       },
       afterChange: (slide) => {
         if(slide === this.props.slides.length) {
@@ -162,6 +193,7 @@ export default class Carousel extends Component {
         if(currentCap) {
           currentCap.classList.remove('fade-out');
         }
+
       }
     }
 
@@ -175,7 +207,7 @@ export default class Carousel extends Component {
                 <p className="serif">{this.props.intro.para}</p>
               </div>
               <div className="image-wrapper">
-                <img src={this.props.introImage} alt={this.props.introImageCaption}/>
+                <img className="intro-image" src={this.props.introImage} alt={this.props.introImageCaption}/>
               </div>
               <span className="caption serif-bold">{this.props.intro.caption}</span>
             </div>
@@ -183,12 +215,17 @@ export default class Carousel extends Component {
 
           {Object.entries(this.props.slides).map((slide, key) => {
             return (
-              <Element key={key} data-section={slide[1].section} className="slick-section">
+              <Element key={key} data-section={slide[1].section} className="slick-section slick-lazy-slide">
                 <div className="inner">
                   {slide[1].newsection ? 
                       <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
                     : ''}
-                  <img src={slide[1].src} alt={slide[1].caption}/>
+                    
+                    <i className='loading' onTransitionEnd={this.removeElement}></i>
+                      <img className="lazy-image" data-src={slide[1].src} alt={slide[1].caption}/>
+                    
+
+                  
                   <p className="caption serif-bold" >{slide[1].caption}</p>
                 </div>
               </Element>  
@@ -198,7 +235,7 @@ export default class Carousel extends Component {
         <button ref={(el) => this.btnPrev = el } onClick={this.previous} className="custom-arrow prev-arrow fade">
           <img src={prev_arrow} alt="arrow to take you to previous slide"/>
         </button>
-        <button ref={(el) => this.btnNext = el } onClick={this.next} className="custom-arrow next-arrow">
+        <button ref={(el) => this.btnNext = el } onClick={this.next} className="custom-arrow next-arrow">          
           <img src={next_arrow} alt="arrow to take you to next slide"/>
         </button>
         {/* <button className={ `next-page-button ${this.props.buttonClass}` }><a href={this.props.nextPage[1]}>To {this.props.nextPage[0]}</a></button> */}
