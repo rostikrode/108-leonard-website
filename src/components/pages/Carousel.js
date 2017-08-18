@@ -38,8 +38,8 @@ export default class Carousel extends Component {
 
     /** meta data for page */
     document.title = this.props.metaTitle;
-    document.getElementsByTagName('meta').description.content = this.props.metaDescription;
-    document.querySelector("link[rel='canonical']").href = window.location.href;
+    document.getElementsByTagName('meta').description ? document.getElementsByTagName('meta').description.content = this.props.metaDescription : '';
+    document.querySelector("link[rel='canonical']") ? document.querySelector("link[rel='canonical']").href = window.location.href : '';
 
     /** dynamically setting the next arrow location based on the length of the dots */
     setTimeout(() => {
