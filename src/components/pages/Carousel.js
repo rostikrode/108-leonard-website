@@ -46,6 +46,20 @@ export default class Carousel extends Component {
     }
 
     /** dynamically setting the next arrow location based on the length of the dots */
+    this.resizeDots();
+      
+    this.onSubNavClick();
+    window.addEventListener('scroll', this.onWindowScroll);
+    window.addEventListener('orientationchange', this.onOrientationChange);
+    window.addEventListener('resize', this.resizeDots);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onWindowScroll);
+    window.removeEventListener('orientationchange', this.onOrientationChange);
+    window.removeEventListener('resize', this.resizeDots);
+  }
+
+  resizeDots () {
     setTimeout(() => {
       if (document.querySelector('.slick-slider .slick-dots') !== null) {
         let length = document.querySelector('.slick-slider .slick-dots').getBoundingClientRect().width;
@@ -56,17 +70,8 @@ export default class Carousel extends Component {
           nextArrow.style.left = `calc(3em + ${length}px)`;
         }
       }
-    }, 100);
-      
-    this.onSubNavClick();
-    window.addEventListener('scroll', this.onWindowScroll);
-    window.addEventListener('orientationchange', this.onOrientationChange);
+    }, 0);
   }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.onWindowScroll);
-    window.removeEventListener('orientationchange', this.onOrientationChange);
-  }
-
   /** custom button events needed for custom buttons */
   next() {
     this.slider.slickNext()
