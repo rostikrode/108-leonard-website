@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import Scroll from 'react-scroll';
+import Img from 'react-image';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -10,7 +11,14 @@ import prev_arrow from '../../assets/prev_arrow.svg';
 
 var Element = Scroll.Element;
 var scroll = Scroll.animateScroll;
-// var newsections;
+
+const Loader = () => {
+  return (
+    <div className="loading-wrapper"><i className="loading"></i></div>
+  );
+}
+
+
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +30,7 @@ export default class Carousel extends Component {
     this.onMouseWheelScroll = this.onMouseWheelScroll.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
+    this.onChange = this.onChange.bind(this)
   }
 
   componentDidMount() { 
@@ -132,6 +141,9 @@ export default class Carousel extends Component {
       });
     }
   }
+  onChange(isVisible) {
+    console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
+  }
 
   render() {
     const moreSettings = {
@@ -191,8 +203,7 @@ export default class Carousel extends Component {
                       <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
                     : ''}
                     
-                    {/* TODO: !!! USE react-image !!! */}
-                    <img src={slide[1].src} alt={slide[1].caption}/>
+                    <Img src={slide[1].src} loader={<Loader />} alt={slide[1].caption} />
                     
                   <p className="caption serif-bold" >{slide[1].caption}</p>
                 </div>
