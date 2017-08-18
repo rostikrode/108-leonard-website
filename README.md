@@ -4,10 +4,6 @@
 
 ## TODO:
 
-* aws site link
-  * with Travis testing and deployment
-  * also double check dev URL
-  * 404 page to throw 404 error
 * some indication or a way to proceeed to next page after last slide of current page (NavLink)
   * ASK: which section goes to which page - only slideshow pages to slideshow pages or in order?
 
@@ -19,6 +15,9 @@
 * Full site styling
 * more info on and program cms popup
 * form
+
+* [bonus] 404 page to throw 404 error
+* [bonus] lazy load images as they appear on screen
 
 Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web
 Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design
