@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React, {Component} from 'react';
 import Slider from 'react-slick';
 import Scroll from 'react-scroll';
