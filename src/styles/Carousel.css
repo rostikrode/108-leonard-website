@@ -28,7 +28,10 @@
 } 
 .slick-dots {
   position: absolute;
-  display: block;
+  display: flex !important;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   width: auto;
   list-style: none;
   text-align: center;
@@ -39,13 +42,18 @@
   z-index: 909;
   height: 16px;
 }
+@media (min-width: 1366px) {
+  .slick-dots {
+    bottom: 1em;
+  }
+}
 .slick-dots .slick-active button {
   background-color: #000;
   border-color: #000;
 }
 .slick-dots li {
   height: 8px;
-  vertical-align: middle;
+  vertical-align: baseline;
 }
 .slick-dots li button {
   width: 4px;
@@ -77,6 +85,7 @@
   box-shadow: none;
   border: none;
   border-radius: 0;
+  margin-bottom: 0;
 }
 @media (min-width: 1024px) {
   .custom-arrow {
@@ -103,7 +112,7 @@
 .next-arrow {
   bottom: 0;
   padding: 0.45rem; padding-bottom: 0;
-  padding-left: 0.3em;
+  padding-left: 1.3em;
 }
 
 .slick-slide  {
@@ -228,7 +237,7 @@
     display: none;
   } 
   .slick-intro-slide .inner {
-    padding-top: 32px;
+    padding-top: 52px;
   }
 }
 
