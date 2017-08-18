@@ -42,11 +42,6 @@
   z-index: 909;
   height: 16px;
 }
-@media (min-width: 1366px) {
-  .slick-dots {
-    bottom: 1em;
-  }
-}
 .slick-dots .slick-active button {
   background-color: #000;
   border-color: #000;
