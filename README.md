@@ -1,6 +1,6 @@
 # React Website for 108 Leonard full website
 
-**temporary deploy:** `yarn build && aws s3 cp build s3://108leonard.full.dbxd.com --recursive`
+108leonard.full.dbxd.com
 
 ## TODO:
 
