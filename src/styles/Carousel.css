@@ -117,6 +117,9 @@
   .prev-arrow {
     left: 15px;
   }
+  .slick-dots {
+    bottom: 0;
+  }
   .next-arrow, .prev-arrow {
     bottom: 0px;
   }

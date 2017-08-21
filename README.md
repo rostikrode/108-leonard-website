@@ -4,6 +4,8 @@
 
 ## TODO:
 
+* domain name - 108leonard-fullsite.dev.dbxd.com (use hyphen naming system)
+* On last slide, go to next page  - follow navigation order (Availability has nothing)
 * Availability page
   * layout
   * fill with data
@@ -26,7 +28,6 @@ Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-de
 * Availability - native scroll with bottom blue arrow (Grant want's scrolljack/fake inline scroll, Jason and me do not)
 * Contact form - all one form (not split up)
 * Animated intro incoming - leads to home page (building)
-* On last slide, go to next page (show text somewhere for this...?)
 
 ---
 
