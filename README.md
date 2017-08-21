@@ -4,9 +4,6 @@
 
 ## TODO:
 
-* some indication or a way to proceeed to next page after last slide of current page (NavLink)
-  * ASK: which section goes to which page - only slideshow pages to slideshow pages or in order?
-
 * Availability page
   * layout
   * fill with data

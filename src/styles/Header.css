@@ -87,6 +87,11 @@
   padding: 0;
   margin: 0;
 }
+@media (min-width: 1024px) {
+  .ham-nav-button {
+    left: 12px;
+  }
+}
 
 .ham-nav {
   width: 20px;
