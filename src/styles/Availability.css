@@ -1,0 +1,37 @@
+.availability-page {
+  padding: 18px;
+}
+.filter-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 92px;
+  left: 18px;
+  width: 100%;
+  background-color: #FFF;
+  z-index: 800;
+}
+.filter-button-wrapper button {
+  margin-top: 18px;
+}
+.filter-button-wrapper button:first-child {
+  margin-right: 5px;
+}
+
+@media (min-width:1024px) {
+  .availability-page {
+    padding: 32px;
+  }
+  .filter-button-wrapper {
+    top: 0;
+    left: 0;
+  }
+  .filter-button-wrapper button {
+    margin-top: 52px;
+  }
+  .filter-button-wrapper button:first-child {
+    margin-left: 32px;
+  }
+}

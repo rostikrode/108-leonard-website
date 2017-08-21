@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import ComingSoon from '../partials/ComingSoon';
-// import '../../styles/Availability.css';
+import List from '../partials/List';
+import Button from '../partials/Button';
+import '../../styles/Availability.css';
 
 export default class Availability extends Component {
   componentDidMount() {
@@ -11,7 +12,13 @@ export default class Availability extends Component {
 
   render() {
     return (
-      <ComingSoon page="Availability" />
+      <div className="availability-page">
+        <div className="filter-button-wrapper">
+          <Button name="Filter" />
+          <Button name="Share" disabled />
+        </div>
+        <List />
+      </div>
     );
   }
 }

@@ -1,1 +1,43 @@
-{}
+[
+  {
+      "residence": "13-A",
+      "bedrooms": 3,
+      "baths": 3,
+      "price": 1000000,
+      "interior": 1000,
+      "monthlycc": 100,
+      "monthlytaxes": 200
+  },{
+      "residence": "13-B",
+      "bedrooms": 2,
+      "baths": 1.5,
+      "price": 5000000,
+      "interior": 3000,
+      "monthlycc": 100,
+      "monthlytaxes": 200
+  },{
+      "residence": "13-C",
+      "bedrooms": 2,
+      "baths": 2,
+      "price": 150000000,
+      "interior": 1005,
+      "monthlycc": 100,
+      "monthlytaxes": 200
+  },{
+      "residence": "13-D",
+      "bedrooms": 4,
+      "baths": 5,
+      "price": 14000000,
+      "interior": 10000,
+      "monthlycc": 100,
+      "monthlytaxes": 200
+  },{
+      "residence": "13-E",
+      "bedrooms": 1,
+      "baths": 2.5,
+      "price": 6000000,
+      "interior": 5000,
+      "monthlycc": 100,
+      "monthlytaxes": 200
+  }
+]
