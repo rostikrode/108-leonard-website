@@ -1,10 +1,9 @@
 # React Website for 108 Leonard full website
 
-108leonard.full.dbxd.com
+108leonard-full.dev.dbxd.com
 
 ## TODO:
 
-* domain name - 108leonard-fullsite.dev.dbxd.com (use hyphen naming system)
 * On last slide, go to next page  - follow navigation order (Availability has nothing)
 * Availability page
   * layout
