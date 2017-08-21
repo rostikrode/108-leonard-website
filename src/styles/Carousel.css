@@ -99,7 +99,40 @@
   padding: 0.45rem; padding-bottom: 0;
   padding-left: 1.3em;
 }
+.next-button {
+  color: rgb(0,0,0);
+  background-color: #FFF;
+  padding: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+.next-button span {
+  padding-right: 3px;
+  display: block;
+  line-height: 11px;
+}
+.next-button.fadein {
+  opacity: 1;
+  pointer-events: all;
+}
+.next-button:hover span,
+.next-button:active span {
+  font-weight: bold;
+  color: rgb(0,0,0);
+}
 @media (min-width: 1024px) {
+  .next-button {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    padding: 6px 3px 3px 3px;
+    opacity: 0;
+    pointer-events: none;
+    justify-content: center;
+    transition: opacity 300ms ease-in, pointer-events 0ms linear 301ms;
+  }
   .slick-dots {
     bottom: 3px;
   }

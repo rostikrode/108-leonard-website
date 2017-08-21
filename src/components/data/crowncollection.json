@@ -97,6 +97,6 @@
         "settings": "unslick" 
     }]
   },
-  "nextPageTitle": "Amenities",
-  "nextPageSlug": "/amenities/"
+  "nextPageTitle": "Availability",
+  "nextPageSlug": "/availability/"
 }

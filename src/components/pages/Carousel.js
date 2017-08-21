@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { NavLink } from 'react-router-dom';
 import Slider from 'react-slick';
 import Scroll from 'react-scroll';
 import Img from 'react-image';
@@ -15,6 +16,15 @@ var scroll = Scroll.animateScroll;
 const Loader = () => {
   return (
     <div className="loading-wrapper"><i className="loading"></i></div>
+  );
+}
+
+const NextPage = (props) => {
+  return (
+    <NavLink className="nav-anchor sans next-button" strict exact to={props.nextPageSlug}>
+      <span>{props.nextPageTitle}</span>
+      <img src={next_arrow} alt="arrow to take you to next carousel page"/>
+    </NavLink>
   );
 }
 
@@ -168,12 +178,20 @@ export default class Carousel extends Component {
         if(slide === this.props.slides.length) {
           this.btnPrev.classList.remove('fade');
           this.btnNext.classList.add('fade');
+
+          /** show the next slideshow page button on last slide */
+          document.querySelector('.next-button').classList.add('fadein');
         } else if (slide === 0) {
           this.btnNext.classList.remove('fade');
           this.btnPrev.classList.add('fade');
+
+          /** dont't show the next slideshow page button on last slide */
+          document.querySelector('.next-button').classList.remove('fadein');
         } else {
           this.btnNext.classList.remove('fade');
           this.btnPrev.classList.remove('fade');
+          /** don't show the next slideshow page button on last slide */
+          document.querySelector('.next-button').classList.remove('fadein');
         }
         var section = document.querySelector('.slick-slide.slick-active').getAttribute('data-section');
         this.activateSubnav(section);
@@ -183,7 +201,6 @@ export default class Carousel extends Component {
         if(currentCap) {
           currentCap.classList.remove('fade-out');
         }
-
       }
     }
 
@@ -225,7 +242,8 @@ export default class Carousel extends Component {
         <button ref={(el) => this.btnNext = el } onClick={this.next} className="custom-arrow next-arrow">          
           <img src={next_arrow} alt="arrow to take you to next slide"/>
         </button>
-        {/* <button className={ `next-page-button ${this.props.buttonClass}` }><a href={this.props.nextPage[1]}>To {this.props.nextPage[0]}</a></button> */}
+        
+        <NextPage {...this.props} />
       </div>
     );
   }

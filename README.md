@@ -4,7 +4,7 @@
 
 ## TODO:
 
-* On last slide, go to next page  - follow navigation order (Availability has nothing)
+* style the last-slide-next-page button
 * Availability page
   * layout
   * fill with data
