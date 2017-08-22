@@ -81,25 +81,70 @@ const PAGES = [{
     'data': contactJSON,
     'subnavs': []
   }];
+
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: '',
+      section: ''
+    }
+  }
+  componentDidUpate() {
+    // remove any leftover active sub pages
+    let allsubs = document.getElementsByClassName('nav-subnav-item');
+    for(let i = 0; i < allsubs.length; i++) {
+      allsubs[i].classList.remove('active');
+    }
+  }
+  componentDidMount() {
+    // get current page title
+    var url = window.location.pathname;
+    PAGES.forEach((index, key) => {
+      if(url === index.slug) {
+        this.setState({
+          page: index.title
+        });
+      }
+    });
+  }
+  onNextButton(nextTitle) {
+    this.setState({
+      page: nextTitle,
+      section: ''
+    });
+  }
+  newPage(title) {
+    this.setState({
+      page: title,
+      section: ''
+    });
+  }
+  newSection(title) {
+    this.setState({
+      section: title
+    });
+  }
+  
+
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
-      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} activeSection={this.props.activeSub} /> )} />)
+      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} onNextButton={this.onNextButton.bind(this)} /> )} />)
     });
     
     return (
       <div className="App">
-        <Header pages={PAGES} />
+        <Header pages={PAGES} page={this.state.page} newPage={this.newPage.bind(this)} section={this.state.section} newSection={this.newSection.bind(this)} />
         <main>  
           <Switch>
             <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`}/>} />
 
             {routeComponents}
 
-            <Route exact path="/team/" render={(props) => ( <Team {...teamJSON} activeSection={this.props.activeSub} /> )} />
-            <Route exact path="/press/" render={(props) => ( <Press {...pressJSON} activeSection={this.props.activeSub} /> )} />
-            <Route exact path="/legal/" render={(props) => ( <Legal {...legalJSON} activeSection={this.props.activeSub} /> )} />
+            <Route exact path="/team/" render={(props) => ( <Team {...teamJSON} /> )} />
+            <Route exact path="/press/" render={(props) => ( <Press {...pressJSON} /> )} />
+            <Route exact path="/legal/" render={(props) => ( <Legal {...legalJSON} /> )} />
             
             <Route path="/404/" component={NotFound} />
             <Redirect from='*' to='/404/' />

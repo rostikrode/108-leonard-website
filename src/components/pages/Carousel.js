@@ -21,8 +21,8 @@ const Loader = () => {
 
 const NextPage = (props) => {
   return (
-    <NavLink className="nav-anchor sans next-button" strict exact to={props.nextPageSlug}>
-      <span>{props.nextPageTitle}</span>
+    <NavLink className="nav-anchor serif-bold next-button" strict exact to={props.nextPageSlug} onClick={() => {props.nextButton(props.nextPageTitle)}}>
+      <span>Go to {props.nextPageTitle}</span>
       <img src={next_arrow} alt="arrow to take you to next carousel page"/>
     </NavLink>
   );
@@ -40,11 +40,12 @@ export default class Carousel extends Component {
     this.onMouseWheelScroll = this.onMouseWheelScroll.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
-    this.onChange = this.onChange.bind(this)
   }
 
   componentDidMount() { 
-    window.scrollTo(0,0);
+    setTimeout(() => {
+      window.scrollTo(0,0);
+    }, 100);
 
     /** meta data for page */
     document.title = this.props.metaTitle;
@@ -74,10 +75,13 @@ export default class Carousel extends Component {
       if (document.querySelector('.slick-slider .slick-dots') !== null) {
         let length = document.querySelector('.slick-slider .slick-dots').getBoundingClientRect().width;
         let nextArrow = document.querySelector('.custom-arrow.next-arrow');
+        let nextButton = document.querySelector('.next-button');
         if (window.matchMedia("(min-width: 1366px)").matches) {
           nextArrow.style.left = `calc(80px + ${length}px)`;
+          nextButton.style.left = `calc(80px + ${length}px)`;
         } else {
           nextArrow.style.left = `calc(3em + ${length}px)`;
+          nextButton.style.left = `calc(5em + ${length}px)`;
         }
       }
     }, 0);
@@ -159,8 +163,15 @@ export default class Carousel extends Component {
       });
     }
   }
-  onChange(isVisible) {
-    console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
+
+  onNextButton(nextTitle) {
+    // remove any leftover active sub pages
+    var allsubs = document.getElementsByClassName('nav-subnav-item');
+    for(var i = 0; i < allsubs.length; i++) {
+      allsubs[i].classList.remove('active');
+    }
+
+    this.props.onNextButton(nextTitle);
   }
 
   render() {
@@ -243,7 +254,7 @@ export default class Carousel extends Component {
           <img src={next_arrow} alt="arrow to take you to next slide"/>
         </button>
         
-        <NextPage {...this.props} />
+        <NextPage {...this.props} nextButton={this.onNextButton.bind(this)} />
       </div>
     );
   }
