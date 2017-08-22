@@ -109,12 +109,12 @@ export default class Carousel extends Component {
       var sTop = s.getBoundingClientRect().top;
       
       /** going down */
-      if(sTop <= 80) {
+      if(sTop <= 70) {
         var sTitle = s.getAttribute('data-section');
         this.activateSubnav(sTitle);
       }
     }
-    if (document.querySelector('.slick-intro-slide').getBoundingClientRect().bottom >= 93) {
+    if (document.querySelector('.slick-intro-slide').getBoundingClientRect().bottom >= 102) {
       this.activateSubnav('');
     }
   }

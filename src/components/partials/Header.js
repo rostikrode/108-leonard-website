@@ -9,8 +9,7 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: '',
-      currSec: ''
+      open: ''
     }
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
   }
@@ -83,10 +82,6 @@ export default class Header extends Component {
   }
   
   onSubClick(e) {
-    this.setState({
-      currSec: ` | ${e.target.getAttribute('data-id')}`
-    });
-
     let allsubs = document.getElementsByClassName('nav-subnav-item');
     for(let i = 0; i < allsubs.length; i++) {
       allsubs[i].classList.remove('active');
