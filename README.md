@@ -4,29 +4,46 @@
 
 ## TODO:
 
-* style the last-slide-next-page button
+## internal comments (first)
+
+* header - less space b/w 108 LEONARD and title, and more space on bottom of that title (18px both)
+* blur mobile menu background
+* try to perfect calendar bumping on mobile scroll?
+* mobile - page in menu click - scroll to top
+* mobile header fade-ups replace with just a normal fade
+* More letter spacing on slide-intro paragraph - like in nav and logo
+* More dampening on scroll to advance slideshow (not scroll thru two images)
+  *  get left and right scrolling too?
+* Fix bug - on page click, make sure slideshow advances to very first intro slide
+
+## general todo (second)
+
 * Availability page
   * layout
   * fill with data
+  * floorplan plugin in floorplan overlay
   * filtering
   * selection and population of share form
+  * test
 * Full site styling
 * more info on and program cms popup
 * form
 
+## bonuses (third)
+
 * [bonus] 404 page to throw 404 error
 * [bonus] lazy load images as they appear on screen
 
-Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web
-Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design
-
-## NOTES:
+## notes
 
 * Floorplan - plugin as overlay
-* button roll over state - dim blue on hover - full blue on click
 * Availability - native scroll with bottom blue arrow (Grant want's scrolljack/fake inline scroll, Jason and me do not)
 * Contact form - all one form (not split up)
 * Animated intro incoming - leads to home page (building)
+
+
+Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web
+Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design
 
 ---
 
