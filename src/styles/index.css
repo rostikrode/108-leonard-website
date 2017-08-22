@@ -282,18 +282,20 @@ body {
 	font-family: 'Calibre', sans;
 	font-weight: bold;	
 	font-size: 15px;
+	letter-spacing: 3px;
 }
 .sans-light {
 	font-family: 'Calibre', sans;
 	font-weight: 300;	
 	font-size: 10px;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 3px;
 }
 .sans-light-bold {
 	font-family: 'Calibre', sans;
 	font-weight: 600;	
 	font-size: 10px;
+	letter-spacing: 3px;
 }
 .link {
 	text-decoration: none;
