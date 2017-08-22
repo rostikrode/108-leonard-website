@@ -20,6 +20,10 @@
   margin-right: 5px;
 }
 
+.list-wrapper {
+  padding-top: 44px;
+}
+
 @media (min-width:1024px) {
   .availability-page {
     padding: 32px;
@@ -29,9 +33,24 @@
     left: 0;
   }
   .filter-button-wrapper button {
-    margin-top: 52px;
+    margin-top: 93px;
   }
   .filter-button-wrapper button:first-child {
     margin-left: 32px;
+  }
+  .list-wrapper {
+    padding-top: 93px;
+  }
+}
+
+@media (min-width:1366px) {
+  .filter-button-wrapper {
+    position: absolute;
+  }
+  .filter-button-wrapper button {
+    margin-top: 32px;
+  }
+  .list-wrapper {
+    padding-top: 50px;
   }
 }

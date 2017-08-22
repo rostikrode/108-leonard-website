@@ -1,0 +1,48 @@
+.filter {
+  position: relative;
+}
+
+.floating-filter {
+  position: fixed;
+  top: calc(92px + 25px + 44px);
+  left: 18px;
+  padding: 18px;
+  background-color: #FFF;
+  border: 1px solid #000;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+  transform: translateY(-310%);
+  opacity: 0;
+  transition: transform 400ms ease-in, opacity 300ms ease-in 250ms;
+}
+.floating-filter.slide-in-down {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header-filter {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .floating-filter {
+    left: 32px;
+  }
+  .header-filter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  } 
+}
+
+@media (min-width: 1366px) {
+  .floating-filter {
+    position: absolute;
+    left: 0; top: 0;
+    transform: translateY(-250%);
+  }
+}

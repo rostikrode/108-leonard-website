@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Filter from '../partials/Filter';
 import List from '../partials/List';
 import Button from '../partials/Button';
 import '../../styles/Availability.css';
@@ -17,7 +18,10 @@ export default class Availability extends Component {
           <Button name="Filter" />
           <Button name="Share" disabled />
         </div>
-        <List />
+        <div className="list-wrapper">
+          <Filter />
+          <List />
+        </div>
       </div>
     );
   }

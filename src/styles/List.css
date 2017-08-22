@@ -1,3 +1,5 @@
-.list {
-  padding-top: 44px;
+@media (min-width: 1366px) {
+  .list {
+    overflow-y: auto;
+  }
 }

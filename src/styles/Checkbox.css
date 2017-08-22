@@ -79,6 +79,7 @@ input[type="checkbox"]:disabled + label {
   input[type="checkbox"]:not(:checked) + label:before,
   input[type="checkbox"]:checked + label:before {
     margin-top: 10px;
+    top: 0;
   }
   input[type="checkbox"]:not(:checked) + label,
   input[type="checkbox"]:checked + label {
