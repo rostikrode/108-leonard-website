@@ -4,9 +4,24 @@
 
 ## TODO:
 
+## internal comments (first)
+
+* header - less space b/w 108 LEONARD and title, and more space on bottom of that title (18px both)
+* blur mobile menu background
+* try to perfect calendar bumping on mobile scroll?
+* mobile - page in menu click - scroll to top
+* mobile header fade-ups replace with just a normal fade
+* More letter spacing on slide-intro paragraph - like in nav and logo
+* More dampening on scroll to advance slideshow (not scroll thru two images)
+  *  get left and right scrolling too?
+* Fix bug - on page click, make sure slideshow advances to very first intro slide
+
+## general todo (second)
+
 * Availability page
   * layout
   * fill with data
+  * floorplan plugin in floorplan overlay
   * filtering
   * selection and population of share form
   * test
@@ -14,16 +29,12 @@
 * more info on and program cms popup
 * form
 
-## internal comments
-
-* More letter spacing on slide-intro paragraph - like in nav and logo
-* More dampening on scroll to advance slideshow (not scroll thru two images)
-* Fix bug - on page click, make sure slideshow advances to very first intro slide
+## bonuses (third)
 
 * [bonus] 404 page to throw 404 error
 * [bonus] lazy load images as they appear on screen
 
-## NOTES:
+## notes
 
 * Floorplan - plugin as overlay
 * Availability - native scroll with bottom blue arrow (Grant want's scrolljack/fake inline scroll, Jason and me do not)
