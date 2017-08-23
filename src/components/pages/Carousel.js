@@ -10,6 +10,8 @@ import '../../styles/Carousel.css';
 import next_arrow from '../../assets/next_arrow.svg';
 import prev_arrow from '../../assets/prev_arrow.svg';
 
+var debounce = require('throttle-debounce/debounce');
+
 var Element = Scroll.Element;
 var scroll = Scroll.animateScroll;
 
@@ -21,8 +23,8 @@ const Loader = () => {
 
 const NextPage = (props) => {
   return (
-    <NavLink className="nav-anchor sans next-button" strict exact to={props.nextPageSlug}>
-      <span>{props.nextPageTitle}</span>
+    <NavLink className="nav-anchor serif-bold next-button" strict exact to={props.nextPageSlug} onClick={() => {props.nextButton(props.nextPageTitle)}}>
+      <span>Go to {props.nextPageTitle}</span>
       <img src={next_arrow} alt="arrow to take you to next carousel page"/>
     </NavLink>
   );
@@ -37,14 +39,14 @@ export default class Carousel extends Component {
     this.previous = this.previous.bind(this)
     this.activateSubnav = this.activateSubnav.bind(this)
     this.onSubNavClick = this.onSubNavClick.bind(this)
-    this.onMouseWheelScroll = this.onMouseWheelScroll.bind(this)
+    this.onNavClick = this.onNavClick.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
-    this.onChange = this.onChange.bind(this)
   }
-
   componentDidMount() { 
-    window.scrollTo(0,0);
+    setTimeout(() => {
+      window.scrollTo(0,0);
+    }, 100);
 
     /** meta data for page */
     document.title = this.props.metaTitle;
@@ -59,6 +61,7 @@ export default class Carousel extends Component {
     this.resizeDots();
       
     this.onSubNavClick();
+    this.onNavClick();
     window.addEventListener('scroll', this.onWindowScroll);
     window.addEventListener('orientationchange', this.onOrientationChange);
     window.addEventListener('resize', this.resizeDots);
@@ -74,20 +77,25 @@ export default class Carousel extends Component {
       if (document.querySelector('.slick-slider .slick-dots') !== null) {
         let length = document.querySelector('.slick-slider .slick-dots').getBoundingClientRect().width;
         let nextArrow = document.querySelector('.custom-arrow.next-arrow');
+        let nextButton = document.querySelector('.next-button');
         if (window.matchMedia("(min-width: 1366px)").matches) {
           nextArrow.style.left = `calc(80px + ${length}px)`;
+          nextButton.style.left = `calc(80px + ${length}px)`;
         } else {
           nextArrow.style.left = `calc(3em + ${length}px)`;
+          nextButton.style.left = `calc(5em + ${length}px)`;
         }
       }
     }, 0);
   }
   /** custom button events needed for custom buttons */
   next() {
-    this.slider.slickNext()
+    if (this.slider)
+      this.slider.slickNext()
   }
   previous() {
-    this.slider.slickPrev()
+    if (this.slider)
+      this.slider.slickPrev()
   }
 
   /** switch between carousel and scrolling list for portrait vs landscape */
@@ -105,22 +113,40 @@ export default class Carousel extends Component {
       var sTop = s.getBoundingClientRect().top;
       
       /** going down */
-      if(sTop <= 80) {
+      if(sTop <= 70) {
         var sTitle = s.getAttribute('data-section');
         this.activateSubnav(sTitle);
       }
     }
-    if (document.querySelector('.slick-intro-slide').getBoundingClientRect().bottom >= 93) {
+    if (document.querySelector('.slick-intro-slide').getBoundingClientRect().bottom >= 102) {
       this.activateSubnav('');
     }
   }
 
   /** functionality to change slides on mousewheel  */
-  onMouseWheelScroll(e) {
+  debounceEventHandler(...args) {
+    const debounced = debounce(...args)
+    return function(e) {
+      e.persist()
+      return debounced(e)
+    }
+  }
+  onMouseWheelScroll(e, that) {
+    e.preventDefault();
+    e.persist();
+
     if (document.querySelector('.slider-parent .slick-initialized')) {
-      e.preventDefault();
-      e.persist();
-      (e.deltaY < 0 ) ? this.previous() : this.next();
+      if (e.deltaY < 0 ) {
+        that.previous() 
+      } else if (e.deltaY > 0 ) {
+         that.next();
+      }
+      
+      if(e.deltaX < 0) {
+        that.previous();
+      } else if (e.deltaX > 0) {
+        that.next();
+      }
     }
   }
 
@@ -134,6 +160,21 @@ export default class Carousel extends Component {
       } else {
         subnavs[i].classList.remove('active');
       }
+    }
+  }
+
+  /** forcing  nav click to go to first slide */
+  onNavClick() {
+    var navs = document.getElementsByClassName('nav-anchor');
+    for(let i = 0; i < navs.length; i++) {
+      navs[i].addEventListener('click', (e) => {
+        var slide = document.querySelectorAll(`.slick-slide`);
+        if (slide.length > 0) {
+          if(this.slider) {
+            this.slider.slickGoTo(0);
+          }
+        }
+      });
     }
   }
 
@@ -153,20 +194,28 @@ export default class Carousel extends Component {
           /** mobile version that doesn't have a slider */
           var section = document.querySelector(`.newsection[data-section="${index}"]`); 
           if (section)
-            scroll.scrollTo(section.offsetTop + 40);
-          
+            scroll.scrollTo(section.offsetTop + 40, {
+              duration: 1000,
+              smooth: true
+            });
         }
       });
     }
   }
-  onChange(isVisible) {
-    console.log('Element is now %s', isVisible ? 'visible' : 'hidden');
+
+  onNextButton(nextTitle) {
+    // remove any leftover active sub pages
+    var allsubs = document.getElementsByClassName('nav-subnav-item');
+    for(var i = 0; i < allsubs.length; i++) {
+      allsubs[i].classList.remove('active');
+    }
+
+    this.props.onNextButton(nextTitle);
   }
 
   render() {
     const moreSettings = {
       arrows: false,
-      initialSlide: 0,
       beforeChange: (currentSlide, nextSlide) => {
         /** to fade out captions */
         var allCaps = document.querySelectorAll(`.slick-slide .inner .caption`);
@@ -205,7 +254,7 @@ export default class Carousel extends Component {
     }
 
     return (
-      <div className="slider-parent" onWheel={this.onMouseWheelScroll}>
+      <div className="slider-parent" onWheel={this.debounceEventHandler(100, (e) => this.onMouseWheelScroll(e, this))}>
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
           <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.section}>
             <div className="inner">
@@ -243,7 +292,7 @@ export default class Carousel extends Component {
           <img src={next_arrow} alt="arrow to take you to next slide"/>
         </button>
         
-        <NextPage {...this.props} />
+        <NextPage {...this.props} nextButton={this.onNextButton.bind(this)} />
       </div>
     );
   }

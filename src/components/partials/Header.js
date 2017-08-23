@@ -5,15 +5,11 @@ import brochure from '../../assets/brochure.svg';
 import logoText from '../../assets/108_leonard_text.svg';
 import '../../styles/Header.css';
 
-var title;
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: '',
-      currPage: 'Building',
-      currSec: '',
-      componentThere: false
+      open: ''
     }
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
   }
@@ -34,41 +30,41 @@ export default class Header extends Component {
     window.removeEventListener('scroll', this.sectionOnScroll);
   }
 
-  sectionOnScroll() {
-    if(document.querySelector('.nav-subnav-item.active')) {
-      var current = document.querySelector('.nav-subnav-item.active').getAttribute('data-id');
-      /** on new subtitle... */
-      if(current !== this.state.currSec) {
-        document.querySelector('.sub-title').classList.remove('come-in');
-        document.querySelector('.sub-title').classList.add('go-away');
-        setTimeout(() => {
-          this.setState({
-            currSec: current
-          });
-          document.querySelector('.sub-title').classList.remove('go-away');
-          document.querySelector('.sub-title').classList.add('come-in');
-        }, 300);
+  sectionOnScroll(e) {
+    setTimeout(() => {
+      if(document.querySelector('.nav-subnav-item.active')) {
+        var current = document.querySelector('.nav-subnav-item.active').getAttribute('data-id');
+        /** on new subtitle... */
+        if(current !== this.props.section) {
+          this.props.newSection(current);
+        }
+      } else {
+        if(this.props.section !== '') {
+          this.props.newSection('');
+        }
+      }
+    }, 100);
+  }
 
-      }
-    } else {
-      if(this.state.currSec !== '') {
-        document.querySelector('.sub-title').classList.remove('come-in');
-        document.querySelector('.sub-title').classList.add('go-away');
-        setTimeout(() => {
-          this.setState({
-            currSec: ''
-          });
-          document.querySelector('.sub-title').classList.remove('go-away');
-          document.querySelector('.sub-title').classList.add('come-in');
-        }, 300);
-      }
-    }
+  scrollToTop(scrollDuration) {
+    const scrollHeight = window.scrollY,
+          scrollStep = Math.PI / ( scrollDuration / 15 ),
+          cosParameter = scrollHeight / 2;
+    var   scrollCount = 0,
+          scrollMargin;
+    var scrollInterval = setInterval( function() {
+        if ( window.scrollY !== 0 ) {
+          scrollCount = scrollCount + 1;  
+          scrollMargin = cosParameter - cosParameter * Math.cos( scrollCount * scrollStep );
+          window.scrollTo( 0, ( scrollHeight - scrollMargin ) );
+        } else {
+          clearInterval(scrollInterval); 
+        } 
+      }, 15 );
   }
 
   onNavItemClick(e) {
-    this.setState({
-      currPage: e.target.text
-    });
+    this.props.newPage(e.target.text);
 
     if(this.state.open === 'open') {
       this.setState({
@@ -81,17 +77,17 @@ export default class Header extends Component {
       });
     }
 
-    let allsubs = document.getElementsByClassName('nav-subnav-item');
-    for(let i = 0; i < allsubs.length; i++) {
+    // remove any leftover active sub pages
+    var allsubs = document.getElementsByClassName('nav-subnav-item');
+    for(var i = 0; i < allsubs.length; i++) {
       allsubs[i].classList.remove('active');
     }
+
+    /** scroll to top on mobile */
+    this.scrollToTop(1000);
   }
   
   onSubClick(e) {
-    this.setState({
-      currSec: e.target.getAttribute('data-id')
-    });
-
     let allsubs = document.getElementsByClassName('nav-subnav-item');
     for(let i = 0; i < allsubs.length; i++) {
       allsubs[i].classList.remove('active');
@@ -126,7 +122,7 @@ export default class Header extends Component {
         <div className="mobile-header">
           <div className="navigation-titles">            
               <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>
-                <h3 className="come-in sub-title sans-light-bold">{this.state.currPage ? this.state.currPage : title} {this.state.currSec ? ` | ${this.state.currSec}` : ''} </h3>
+                <h3 ref={ (el) => this.subTitle = el} className="come-in sub-title sans-light-bold">{this.props.page} {this.props.section ? `| ${this.props.section}` : ''}</h3>
           </div>
         </div>
         <div className={`app-header ${this.state.open}`}>
