@@ -19,6 +19,7 @@
     "react-router-dom": "^4.1.1",
     "react-scroll": "^1.5.4",
     "react-slick": "^0.14.11",
+    "throttle-debounce": "^1.0.1",
     "velocity-react": "^1.3.3"
   }
 }

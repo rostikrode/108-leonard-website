@@ -234,6 +234,12 @@
 }
 
 /** General */
+@media (min-width: 1366px) and (min-height: 768px) {
+	html {
+		overflow: hidden;
+	}
+}
+
 a:focus,
 button:focus,
 [role="button"]:focus {

@@ -36,28 +36,31 @@ export default class Header extends Component {
         var current = document.querySelector('.nav-subnav-item.active').getAttribute('data-id');
         /** on new subtitle... */
         if(current !== this.props.section) {
-          /** on new subtitle... */
-          document.querySelector('.sub-title').classList.remove('come-in');
-          document.querySelector('.sub-title').classList.add('go-away');
           this.props.newSection(current);
-          setTimeout(() => {
-            document.querySelector('.sub-title').classList.remove('go-away');
-            document.querySelector('.sub-title').classList.add('come-in');
-          }, 300);
-
         }
       } else {
         if(this.props.section !== '') {
-          document.querySelector('.sub-title').classList.remove('come-in');
-          document.querySelector('.sub-title').classList.add('go-away');
           this.props.newSection('');
-          setTimeout(() => {
-            document.querySelector('.sub-title').classList.remove('go-away');
-            document.querySelector('.sub-title').classList.add('come-in');
-          }, 300);
         }
       }
     }, 100);
+  }
+
+  scrollToTop(scrollDuration) {
+    const scrollHeight = window.scrollY,
+          scrollStep = Math.PI / ( scrollDuration / 15 ),
+          cosParameter = scrollHeight / 2;
+    var   scrollCount = 0,
+          scrollMargin;
+    var scrollInterval = setInterval( function() {
+        if ( window.scrollY !== 0 ) {
+          scrollCount = scrollCount + 1;  
+          scrollMargin = cosParameter - cosParameter * Math.cos( scrollCount * scrollStep );
+          window.scrollTo( 0, ( scrollHeight - scrollMargin ) );
+        } else {
+          clearInterval(scrollInterval); 
+        } 
+      }, 15 );
   }
 
   onNavItemClick(e) {
@@ -79,6 +82,9 @@ export default class Header extends Component {
     for(var i = 0; i < allsubs.length; i++) {
       allsubs[i].classList.remove('active');
     }
+
+    /** scroll to top on mobile */
+    this.scrollToTop(1000);
   }
   
   onSubClick(e) {

@@ -10,6 +10,8 @@ import '../../styles/Carousel.css';
 import next_arrow from '../../assets/next_arrow.svg';
 import prev_arrow from '../../assets/prev_arrow.svg';
 
+var debounce = require('throttle-debounce/debounce');
+
 var Element = Scroll.Element;
 var scroll = Scroll.animateScroll;
 
@@ -37,11 +39,10 @@ export default class Carousel extends Component {
     this.previous = this.previous.bind(this)
     this.activateSubnav = this.activateSubnav.bind(this)
     this.onSubNavClick = this.onSubNavClick.bind(this)
-    this.onMouseWheelScroll = this.onMouseWheelScroll.bind(this)
+    this.onNavClick = this.onNavClick.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
   }
-
   componentDidMount() { 
     setTimeout(() => {
       window.scrollTo(0,0);
@@ -60,6 +61,7 @@ export default class Carousel extends Component {
     this.resizeDots();
       
     this.onSubNavClick();
+    this.onNavClick();
     window.addEventListener('scroll', this.onWindowScroll);
     window.addEventListener('orientationchange', this.onOrientationChange);
     window.addEventListener('resize', this.resizeDots);
@@ -88,10 +90,12 @@ export default class Carousel extends Component {
   }
   /** custom button events needed for custom buttons */
   next() {
-    this.slider.slickNext()
+    if (this.slider)
+      this.slider.slickNext()
   }
   previous() {
-    this.slider.slickPrev()
+    if (this.slider)
+      this.slider.slickPrev()
   }
 
   /** switch between carousel and scrolling list for portrait vs landscape */
@@ -120,11 +124,29 @@ export default class Carousel extends Component {
   }
 
   /** functionality to change slides on mousewheel  */
-  onMouseWheelScroll(e) {
+  debounceEventHandler(...args) {
+    const debounced = debounce(...args)
+    return function(e) {
+      e.persist()
+      return debounced(e)
+    }
+  }
+  onMouseWheelScroll(e, that) {
+    e.preventDefault();
+    e.persist();
+
     if (document.querySelector('.slider-parent .slick-initialized')) {
-      e.preventDefault();
-      e.persist();
-      (e.deltaY < 0 ) ? this.previous() : this.next();
+      if (e.deltaY < 0 ) {
+        that.previous() 
+      } else if (e.deltaY > 0 ) {
+         that.next();
+      }
+      
+      if(e.deltaX < 0) {
+        that.previous();
+      } else if (e.deltaX > 0) {
+        that.next();
+      }
     }
   }
 
@@ -138,6 +160,21 @@ export default class Carousel extends Component {
       } else {
         subnavs[i].classList.remove('active');
       }
+    }
+  }
+
+  /** forcing  nav click to go to first slide */
+  onNavClick() {
+    var navs = document.getElementsByClassName('nav-anchor');
+    for(let i = 0; i < navs.length; i++) {
+      navs[i].addEventListener('click', (e) => {
+        var slide = document.querySelectorAll(`.slick-slide`);
+        if (slide.length > 0) {
+          if(this.slider) {
+            this.slider.slickGoTo(0);
+          }
+        }
+      });
     }
   }
 
@@ -157,8 +194,10 @@ export default class Carousel extends Component {
           /** mobile version that doesn't have a slider */
           var section = document.querySelector(`.newsection[data-section="${index}"]`); 
           if (section)
-            scroll.scrollTo(section.offsetTop + 40);
-          
+            scroll.scrollTo(section.offsetTop + 40, {
+              duration: 1000,
+              smooth: true
+            });
         }
       });
     }
@@ -177,7 +216,6 @@ export default class Carousel extends Component {
   render() {
     const moreSettings = {
       arrows: false,
-      initialSlide: 0,
       beforeChange: (currentSlide, nextSlide) => {
         /** to fade out captions */
         var allCaps = document.querySelectorAll(`.slick-slide .inner .caption`);
@@ -216,7 +254,7 @@ export default class Carousel extends Component {
     }
 
     return (
-      <div className="slider-parent" onWheel={this.onMouseWheelScroll}>
+      <div className="slider-parent" onWheel={this.debounceEventHandler(100, (e) => this.onMouseWheelScroll(e, this))}>
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
           <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.section}>
             <div className="inner">
