@@ -234,7 +234,7 @@
 }
 
 /** General */
-@media (min-width: 1366px) and (min-height: 768px) {
+@media (min-width: 1024px) and (min-height: 768px) {
 	html {
 		overflow: hidden;
 	}
@@ -315,14 +315,54 @@ body {
 	font-weight: bold;
 }
 
+.floorplan-button span {
+  font-size: 14px;
+}
+.res {
+  letter-spacing: 1px;
+  line-height: 44px;
+  font-size: 34px;
+  margin: 0;
+}
+.label, .filter-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+.info {
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
 @media (min-width: 1024px) {
+	.res {
+		font-size: 18px;
+	}
 	.sans, .sans-bold {
 		font-size: 13px;
 	}	
 }
+@media (min-width: 1366px) {
+	.sans, .label {
+		font-size: 10px;
+	}
+	.res,.info {
+		font-size: 20px;
+	}
+	.floorplan-button span {
+		font-size: 12px;
+	}
+}
 @media (min-width: 1920px) {
 	.sans, .sans-bold {
 		font-size: 15px;
+	}
+	.res,.info {
+		font-size: 24px;
+	}
+	.floorplan-button span {
+		font-size: 14px;
 	}
 	.sans-medium, 
 	.sans-light,

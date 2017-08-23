@@ -7,7 +7,8 @@
 ## general todo (second)
 
 * Availability page
-  * layout
+  * ~~layout~~
+  * IE - has a scroll thing
   * fill with data
   * floorplan plugin in floorplan overlay
   * filtering

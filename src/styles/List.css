@@ -1,5 +1,12 @@
+@media (min-width: 1024px) {
+  .list {
+    overflow-y: auto;
+    height: calc(100vh - 300px);
+  }
+}
 @media (min-width: 1366px) {
   .list {
     overflow-y: auto;
+    height: calc(100vh - 220px);
   }
 }

@@ -3,6 +3,7 @@ import Filter from '../partials/Filter';
 import List from '../partials/List';
 import Button from '../partials/Button';
 import '../../styles/Availability.css';
+import down_arrow_large from '../../assets/down_arrow_large.svg';
 
 export default class Availability extends Component {
   componentDidMount() {
@@ -22,6 +23,7 @@ export default class Availability extends Component {
           <Filter />
           <List />
         </div>
+        <img src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>
       </div>
     );
   }

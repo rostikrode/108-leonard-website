@@ -1,111 +1,122 @@
-.list-item {
-  border-bottom: 1px solid #A1C6CF; 
-  padding-top: 30px; 
-  padding-bottom: 30px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.list-item-section .label {
-  font-size: 12px;
-  letter-spacing: 2px;
-  line-height: 12px;
-  text-transform: uppercase;
-  margin-top: 35px;
-  margin-bottom: 4px;
-
-}
-.list-item-section .info {
-  letter-spacing: 1px;
-  font-size: 24px;
-}
-
-.title-bed-bath {
-  flex: 1 1 0%;
-}
-
-.title-bed-bath h4 {
-  letter-spacing: 1px;
-  line-height: 44px;
-  font-size: 24px;
-  margin: 0;
-}
-
 .hide-for-mobile {
   display: none;
-}
-
-.interior-prices-floorplan {
-  display: flex;
-  flex-flow: column-reverse nowrap;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 .floorplan-button {
   height: 44px;
   padding: 15px 10px 10px 10px;
 }
-.floorplan-button span {
-  font-size: 14px;
+.floorplan-button.list-cell {
+  align-items: center;
 }
 
-@media (min-width: 480px) {
-  .checkbox {
-    flex: 0 0 15%;
-  } 
-  .list-item-section {
-    flex: 0 0 35%;
-  } 
+.list-row {
+  padding: 30px 0;
+  border-bottom: 1px solid #A1C6CF;
+  display: flex;
+  flex-flow: column wrap;
+  height: 300px;
+  justify-content: center;
 }
+.list-cell.check-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 35px;
+  height: 44px;
+}
+.list-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.list-cell.hide-for-mobile {
+  display: none;
+}
+
+.checkbox {
+  padding-right: 0;
+  height: 44px;
+}
+
+.label {
+	margin-top: 0;
+	margin-bottom: 4px;
+}
+
+.info {
+  margin-top: 14px;
+  margin-bottom: 35px;
+}
+
+.floorplan-button.desktop {
+  display: none;
+}
+.floorplan-button.mobile {
+  display: flex;
+  margin-bottom: 35px;
+  max-width: 200px;
+}
+.mobile-padding {
+  padding-left: 44px;
+}
+
 @media (min-width: 1024px) {
+  .mobile-padding {
+    padding-left: 0;
+  }
+
   .checkbox {
-    flex: none;
-    flex-grow: 0;
+    padding-right: 20px;
   }
 
-  .list-item {
-    align-items: center;
-  }
-
-  .list-item-section {
-    flex: none;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } 
-  .list-item-section, 
-  .interior-prices-floorplan,
-  .title-bed-bath,
-  .info-subsection {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .list-item-section .label-with-info,
-  .info-subsection {
-    min-width: 80px;
-  }
-  .list-item-section h4 {
-    min-width: 50px;
-  }
-  .info-subsection {
-    flex-grow: 1;
+  .label {
+    display: none;
   }
 
   .label, .info {
     text-align: center;
   }
+
+  .list-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+  }
+  .list-cell {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;
+  }
+  .floorplan-button.desktop {
+    display: flex;
+  }
+  .floorplan-button.mobile {
+    display: none;
+  }
 }
 
 @media (min-width: 1366px) {
+  .list-cell.hide-for-mobile {
+    display: flex;
+  }
+
   .hide-for-mobile {
     display: block;
+  }
+
+  .floorplan-button {
+    padding: 10px 5px 5px 5px;
+  }
+}
+@media(min-width: 1920px) {
+  .floorplan-button {
+    padding: 15px 10px 10px 10px;
   }
 }
