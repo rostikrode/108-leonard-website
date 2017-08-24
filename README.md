@@ -8,7 +8,7 @@
 
 * Availability page
   * ~~layout~~
-  * IE - has a scroll thing
+  * IE - has a scroll thing bug
   * fill with data
   * floorplan plugin in floorplan overlay
   * filtering
