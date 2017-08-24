@@ -74,29 +74,6 @@ export default class Availability extends Component {
     this.setState({
       residences: newSort
     });
-
-  //   if ($filter.find('.down-triangle').hasClass('up-facing')) {
-  //     // has up class, sort it down
-  //     resData.sort(
-  //         function(a, b){
-  //             return a[filter]-b[filter];
-  //         }
-  //     );
-  // } else if ($filter.find('.down-triangle').hasClass('down-facing')) {
-  //     // has down class, sort it up
-  //     resData.sort(
-  //         function(a, b){
-  //             return b[filter]-a[filter];
-  //         }
-  //     );
-  // } else {
-  //     // has no class, sort it down by default
-  //     resData.sort(
-  //         function(a, b){
-  //             return a[filter]-b[filter];
-  //         }
-  //     );
-    // }
   }
 
   render() {
