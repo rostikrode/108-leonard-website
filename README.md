@@ -8,10 +8,11 @@
 
 * Availability page
   * ~~layout~~
-  * IE - has a scroll thing bug
-  * fill with data
-  * floorplan plugin in floorplan overlay
+  * ~~IE - has a scroll thing bug~~
+  * ~~fill with data~~
+  * ~~sorting~~
   * filtering
+  * floorplan plugin in floorplan overlay
   * selection and population of share form
   * test
 * Full site styling

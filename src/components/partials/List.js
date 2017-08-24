@@ -9,12 +9,11 @@ export default class List extends Component {
   render() {
     return (
       <div className="list">
-        <ListItem index="0" />
-        <ListItem index="1" />
-        <ListItem index="2" />
-        <ListItem index="4" />
-        <ListItem index="5" />
-        <ListItem index="6" />
+        {Object.entries(this.props.residences).map((residence, key) => {
+          return (
+            <ListItem key={key} index={key} {...residence[1]} />
+          );
+        })}
       </div>
     );
   }
