@@ -19,7 +19,14 @@ main {
 @media (min-width: 1024px) {
   main {
     padding-top: 0;
+    overflow: hidden;
   }
+}
+
+@media (min-width: 1024px) and (min-height: 767px) {
+	main {
+		overflow: hidden;
+	}
 }
 
 .carousel-page {

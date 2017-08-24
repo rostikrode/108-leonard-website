@@ -36,11 +36,6 @@
   display: none;
 }
 
-.checkbox {
-  padding-right: 0;
-  height: 44px;
-}
-
 .label {
 	margin-top: 0;
 	margin-bottom: 4px;
@@ -94,6 +89,14 @@
     align-items: center;
     min-width: 80px;
   }
+
+  .list-cell.list-cell.check-cell {
+    margin-bottom: 0;
+  }
+  .info {
+    margin: 0;
+  }
+  
   .floorplan-button.desktop {
     display: flex;
   }

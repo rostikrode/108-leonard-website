@@ -12,6 +12,10 @@
   justify-content: center;
   align-items: center;
 }
+.button:hover,
+.button:active {
+  cursor: pointer;
+}
 
 .button span {
   text-align: center;

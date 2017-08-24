@@ -1,5 +1,10 @@
 .checkbox {
-  padding-top: 6px;
+  padding-right: 0;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 0;
 }
 
 /* Base for label styling */
@@ -31,7 +36,7 @@ input[type="checkbox"]:checked + label:before {
   left:0; top: 2px;
   width: 22px; height: 22px;
   margin-right: 22px;
-  margin-top: 22px;
+  margin-top: 6px;
   border: 1px solid #A1C6CF;
   background: lighten(#C9C7C4, 5%);
   border-radius: 0;
