@@ -14,18 +14,44 @@
   background-color: #FFF;
   border: 1px solid #000;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   z-index: 900;
-  transform: translateY(-310%);
-  opacity: 0;
-  transition: transform 400ms ease-in, opacity 300ms ease-in 250ms;
 }
-.floating-filter.slide-in-down {
+.floating-filter.show {
   transform: translateY(0);
   opacity: 1;
+  transition: transform 0ms linear, opacity 250ms ease-in 10ms;
 }
+.floating-filter.hide {
+  transform: translateY(-1000%);
+  opacity: 0;
+  transition: opacity 250ms ease-out, transform 0ms ease-in 301ms;
+}
+
+.floating-filter-checkbox-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 0;
+}
+.floating-filter-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 9px;
+}
+.floating-filter-item .checkbox {
+  padding-right: 3px;
+}
+.floating-filter-item span {
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 
 .header-filter,
 .header-filter.list-row {
@@ -84,6 +110,5 @@
   .floating-filter {
     position: absolute;
     left: 0; top: 0;
-    transform: translateY(-250%);
   }
 }

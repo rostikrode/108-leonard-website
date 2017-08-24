@@ -9,8 +9,10 @@ export default class Availability extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      residences: this.props.residences
+      residences: this.props.residences,
+      filterOverlay: false
     }
+    this.onFilterClick = this.onFilterClick.bind(this);
   }
   
   componentDidMount() {
@@ -42,7 +44,7 @@ export default class Availability extends Component {
         }
     }
     return b[i]? -1:0;
-}
+  }
 
   onFilterColumn(filter, arrow) {
     var newSort;
@@ -76,15 +78,27 @@ export default class Availability extends Component {
     });
   }
 
+  onFilterClick() {
+    if (this.state.filterOverlay) {
+      this.setState({
+        filterOverlay: false
+      });
+    } else {
+      this.setState({
+        filterOverlay: true
+      });
+    }
+  }
+
   render() {
     return (
       <div className="availability-page">
         <div className="filter-button-wrapper">
-          <Button name="Filter" />
+          <Button name="Filter" onClick={this.onFilterClick} />
           <Button name="Share" disabled />
         </div>
         <div className="list-wrapper">
-          <Filter onFilterColumn={this.onFilterColumn.bind(this)} />
+          <Filter filterOverlay={this.state.filterOverlay} onFilterColumn={this.onFilterColumn.bind(this)} />
           <List residences={this.state.residences} />
         </div>
         <img src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>
