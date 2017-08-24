@@ -10,7 +10,8 @@ export default class Availability extends Component {
     super(props);
     this.state = {
       residences: this.props.residences,
-      filterOverlay: false
+      filterOverlay: false,
+      filtersArray: []
     }
     this.onFilterClick = this.onFilterClick.bind(this);
   }
@@ -51,7 +52,7 @@ export default class Availability extends Component {
     var that = this;
     // sort ASC
     if (arrow === 'up') { 
-      newSort = this.props.residences.sort(
+      newSort = this.state.residences.sort(
         function(a, b){
           if (filter === 'residence') {
             return that.naturalSorter(a[filter], b[filter]);
@@ -62,7 +63,7 @@ export default class Availability extends Component {
       );
     } else {
       //sort DESC
-      newSort = this.props.residences.sort(
+      newSort = this.state.residences.sort(
         function(a, b){
           if (filter === 'residence') {
             return that.naturalSorter(b[filter], a[filter]);
@@ -78,7 +79,9 @@ export default class Availability extends Component {
     });
   }
 
-  onFilterClick() {
+  onFilterClick(e) {
+    e.currentTarget.classList.toggle('blue');
+
     if (this.state.filterOverlay) {
       this.setState({
         filterOverlay: false
@@ -90,6 +93,24 @@ export default class Availability extends Component {
     }
   }
 
+  onFilterItem(filter, checked) {
+    if(checked) {
+      this.setState({
+        filtersArray: this.state.filtersArray.concat(filter)
+      });
+    } else {
+      this.setState({
+        filtersArray: this.state.filtersArray.filter(function(i) { return i !== filter })
+      });
+    }
+  }
+
+  sendResidences(resArray) {
+    this.setState({
+      residences: resArray
+    });
+  }
+
   render() {
     return (
       <div className="availability-page">
@@ -98,7 +119,7 @@ export default class Availability extends Component {
           <Button name="Share" disabled />
         </div>
         <div className="list-wrapper">
-          <Filter filterOverlay={this.state.filterOverlay} onFilterColumn={this.onFilterColumn.bind(this)} />
+          <Filter filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
           <List residences={this.state.residences} />
         </div>
         <img src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>

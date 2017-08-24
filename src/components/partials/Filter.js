@@ -9,6 +9,8 @@ export default class Filter extends Component {
     super(props);
 
     this.onFilterColumn = this.onFilterColumn.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
+    this.onViewClick = this.onViewClick.bind(this);
   }
 
   onFilterColumn(e) {
@@ -32,6 +34,82 @@ export default class Filter extends Component {
     this.props.onFilterColumn(e.currentTarget.dataset.filter, thisArrow.className);
   }
 
+  handleCheck(e) {
+    this.props.onFilterItem(e.currentTarget.value, e.currentTarget.checked);
+  }
+
+  onViewClick() {
+    var newSort = [];
+    var miniArray = [];
+    var filter = this.props.filtersArray;
+
+    var filterBeds = (el) =>  {
+      var quantityInt = parseInt(quantity, 10);
+
+      if (el.bedrooms === quantityInt) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    var filterPrice = (el) => {
+      var splitQ = quantity.split('-');      
+      var rstart = parseInt(splitQ[0], 10) * 1000000;
+      var rend = splitQ.length > 1 ? parseInt(splitQ[1], 10) * 1000000: '';
+      
+      if (rend !== '') {
+        if ((el.price <= rend) && (el.price >= rstart)) {
+          return true;
+        } else {
+          return false;
+        }
+      } else {
+        if (el.price >= rstart) {
+          return true;  
+        } else {
+          return false;
+        }
+      }
+    }
+    
+    for(var f in filter) {
+      var quantity = filter[f].split('_')[0];
+      var type = filter[f].split('_')[1];
+      
+      switch(type) {
+        case 'bed':
+          miniArray.push(this.props.residences.filter(filterBeds));
+          break;
+        case 'crowncollection':
+          miniArray.push(this.props.residences);
+          break;
+        case 'price':
+          miniArray.push(this.props.residences.filter(filterPrice));
+          break;
+        default:
+          console.log('ERROR - filter is not found');
+          miniArray.push(this.props.residences);
+          break;
+      }
+    }
+
+    for(var m in miniArray) {
+      newSort.push(miniArray[m]);
+    }
+     /**
+      this needs work, because sometimes NewSort has a lot of entries. 
+      need to get newSort to just be one array of entries without any blank arrays
+      */
+    console.log(newSort, newSort.length);
+
+    if(newSort.length > 0) {
+      this.props.sendResidences(newSort[0]);
+    } else {
+      this.props.sendResidences(this.props.residences);
+    }
+    
+  }
+
   render() {
     return (
       <div className="filter">
@@ -39,50 +117,50 @@ export default class Filter extends Component {
           <div className="floating-filter-checkbox-wrapper">
             <div className="floating-filter-group">
               <div className="floating-filter-item">  
-                <Checkbox value="1-bed" handleCheck={this.handleCheck} index="filter-checkbox-0" />
+                <Checkbox value="1_bed" handleCheck={this.handleCheck} index="filter-checkbox-0" />
                 <span className="serif">1 Bedroom</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="2-bed" handleCheck={this.handleCheck} index="filter-checkbox-1" />
+                <Checkbox value="2_bed" handleCheck={this.handleCheck} index="filter-checkbox-1" />
                 <span className="serif">2 bedroom</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="3-bed" handleCheck={this.handleCheck} index="filter-checkbox-2" />
+                <Checkbox value="3_bed" handleCheck={this.handleCheck} index="filter-checkbox-2" />
                 <span className="serif">3 bedroom</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="4-bed" handleCheck={this.handleCheck} index="filter-checkbox-3" />
+                <Checkbox value="4_bed" handleCheck={this.handleCheck} index="filter-checkbox-3" />
                 <span className="serif">4 bedroom</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="crown-collection" handleCheck={this.handleCheck} index="filter-checkbox-4" />
+                <Checkbox value="0_crowncollection" handleCheck={this.handleCheck} index="filter-checkbox-4" />
                 <span className="serif">crown collection</span>
               </div>
             </div>
             <div className="floating-filter-group">
               <div className="floating-filter-item">
-                <Checkbox value="$1-2M" handleCheck={this.handleCheck} index="filter-checkbox-5" />
+                <Checkbox value="1-2_price" handleCheck={this.handleCheck} index="filter-checkbox-5" />
                 <span className="serif">$1-2M</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="$2-3M" handleCheck={this.handleCheck} index="filter-checkbox-6" />
+                <Checkbox value="2-3_price" handleCheck={this.handleCheck} index="filter-checkbox-6" />
                 <span className="serif">$2-3M</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="$3-4M" handleCheck={this.handleCheck} index="filter-checkbox-7" />
+                <Checkbox value="3-4_price" handleCheck={this.handleCheck} index="filter-checkbox-7" />
                 <span className="serif">$3-4M</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="$4-5M" handleCheck={this.handleCheck} index="filter-checkbox-8" />
+                <Checkbox value="4-5_price" handleCheck={this.handleCheck} index="filter-checkbox-8" />
                 <span className="serif">$4-5M</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="$5M" handleCheck={this.handleCheck} index="filter-checkbox-9" />
-                <span className="serif">$5M</span>
+                <Checkbox value="5_price" handleCheck={this.handleCheck} index="filter-checkbox-9" />
+                <span className="serif">$5M+</span>
               </div>
             </div>
           </div>
-          <Button name="View" />
+          <Button name="View" onClick={this.onViewClick} />
         </div>
         
         <div className="header-filter list-row">

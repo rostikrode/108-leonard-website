@@ -22,7 +22,7 @@
   width: 100%;
 }
 
-.button:active {
+.button:active, .button.blue {
   background-color: #A1C6CF;
 }
 

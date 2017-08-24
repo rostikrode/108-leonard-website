@@ -11,7 +11,7 @@
   * ~~IE - has a scroll thing bug~~
   * ~~fill with data~~
   * ~~sorting~~
-  * filtering
+  * filtering - almost
   * floorplan plugin in floorplan overlay
   * selection and population of share form
   * test
