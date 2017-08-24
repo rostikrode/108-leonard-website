@@ -39,7 +39,6 @@ export default class Filter extends Component {
   }
 
   onViewClick() {
-    var newSort = [];
     var miniArray = [];
     var filter = this.props.filtersArray;
 
@@ -93,17 +92,14 @@ export default class Filter extends Component {
       }
     }
 
+    var newSort = [];
     for(var m in miniArray) {
-      newSort.push(miniArray[m]);
+      newSort = newSort.concat(miniArray[m]);
     }
-     /**
-      this needs work, because sometimes NewSort has a lot of entries. 
-      need to get newSort to just be one array of entries without any blank arrays
-      */
-    console.log(newSort, newSort.length);
-
+    console.log(newSort);
+    /** !!! check for duplicates in array !!! */
     if(newSort.length > 0) {
-      this.props.sendResidences(newSort[0]);
+      this.props.sendResidences(newSort);
     } else {
       this.props.sendResidences(this.props.residences);
     }
