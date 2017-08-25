@@ -24,12 +24,17 @@
       "src": "/images/4_crown_collection/ph.png",
       "section": "14th Floor",
       "newsection": false,
-      "caption": "14th Floor - Caption 2"
+      "caption": "14th Floor - Caption 3"
     }, {
       "src": "/images/4_crown_collection/ph.png",
       "section": "15th Floor",
       "newsection": true,
-      "caption": "14th Floor - Caption 3"
+      "caption": "14th Floor - Caption 1"
+    }, {
+      "src": "/images/4_crown_collection/ph.png",
+      "section": "15th Floor",
+      "newsection": false,
+      "caption": "15th Floor - Caption 2"
     }, {
       "src": "/images/4_crown_collection/ph.png",
       "section": "15th Floor",
@@ -37,44 +42,39 @@
       "caption": "15th Floor - Caption 3"
     }, {
       "src": "/images/4_crown_collection/ph.png",
-      "section": "15th Floor",
-      "newsection": false,
-      "caption": "15th Floor - Caption 4"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
       "section": "Crown House",
       "newsection": true,
-      "caption": "Crown House - Caption 4"
+      "caption": "Crown House - Caption 1"
     }, {
       "src": "/images/4_crown_collection/ph.png",
       "section": "Crown House",
       "newsection": false,
-      "caption": "Crown House - Caption 4"
+      "caption": "Crown House - Caption 2"
     },{
       "src": "/images/4_crown_collection/ph.png",
       "section": "Cupola",
       "newsection": true,
-      "caption": "Cuppola - Caption 4"
+      "caption": "Cuppola - Caption 1"
     }, {
       "src": "/images/4_crown_collection/ph.png",
       "section": "Cupola",
       "newsection": false,
-      "caption": "Cuppola - Caption 4"
+      "caption": "Cuppola - Caption 2"
     }, {
       "src": "/images/4_crown_collection/ph.png",
       "section": "Clocktower",
       "newsection": true,
-      "caption": "Clocktower - Caption 4"
+      "caption": "Clocktower - Caption 1"
     }, {
       "src": "/images/4_crown_collection/ph.png",
       "section": "Clocktower",
       "newsection": false,
-      "caption": "Clocktower - Caption 4"
+      "caption": "Clocktower - Caption 2"
     },{
       "src": "/images/4_crown_collection/ph.png",
       "section": "Clocktower",
       "newsection": false,
-      "caption": "Clocktower - Caption 4"
+      "caption": "Clocktower - Caption 3"
     },{
       "src": "/images/4_crown_collection/ph.png",
       "section": "Clocktower",
