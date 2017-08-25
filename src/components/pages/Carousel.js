@@ -270,7 +270,7 @@ export default class Carousel extends Component {
               <div className="image-wrapper">
                 <img className="intro-image" src={this.props.introImage} alt={this.props.introImageCaption}/>
               </div>
-              <span className="caption serif-bold">{this.props.intro.caption}</span>
+              <span className="caption serif-bold">{this.props.introImageCaption}</span>
             </div>
           </div>  
 

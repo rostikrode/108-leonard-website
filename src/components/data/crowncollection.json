@@ -4,83 +4,82 @@
   "metaDescription": "Crown Collection page of website",
   "intro": {
     "title": "CROWN COLLETION VOLORRUM",
-    "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
-    "caption": "Caption"
+    "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
   },
-  "introImage": "/images/building/ph0.jpg",
-  "introImageCaption": "intro image",
+  "introImage": "http://via.placeholder.com/988x1356/A1C6CF/FFFFFF/?text=PH",
+  "introImageCaption": "Crown Collection Intro",
   "section": "Intro",
   "slides": [
     {
-      "src": "/images/building/ph1.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "14th Floor",
       "newsection": true,
-      "caption": "Caption 1"
+      "caption": "14th Floor - Caption 1"
     }, {
-      "src": "/images/building/ph2.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "14th Floor",
       "newsection": false,
-      "caption": "Caption 2"
+      "caption": "14th Floor - Caption 2"
     }, {
-      "src": "/images/building/ph2.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "14th Floor",
       "newsection": false,
-      "caption": "Caption 2"
+      "caption": "14th Floor - Caption 2"
     }, {
-      "src": "/images/building/ph3.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "15th Floor",
       "newsection": true,
-      "caption": "Caption 3"
+      "caption": "14th Floor - Caption 3"
     }, {
-      "src": "/images/building/ph3.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "15th Floor",
       "newsection": false,
-      "caption": "Caption 3"
+      "caption": "15th Floor - Caption 3"
     }, {
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "15th Floor",
       "newsection": false,
-      "caption": "Caption 4"
+      "caption": "15th Floor - Caption 4"
     }, {
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "Crown House",
       "newsection": true,
-      "caption": "Caption 4"
+      "caption": "Crown House - Caption 4"
     }, {
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "Crown House",
       "newsection": false,
-      "caption": "Caption 4"
+      "caption": "Crown House - Caption 4"
     },{
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "Cupola",
       "newsection": true,
-      "caption": "Caption 4"
+      "caption": "Cuppola - Caption 4"
     }, {
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "Cupola",
       "newsection": false,
-      "caption": "Caption 4"
+      "caption": "Cuppola - Caption 4"
     }, {
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "Clocktower",
       "newsection": true,
-      "caption": "Caption 4"
+      "caption": "Clocktower - Caption 4"
     }, {
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "Clocktower",
       "newsection": false,
-      "caption": "Caption 4"
+      "caption": "Clocktower - Caption 4"
     },{
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "Clocktower",
       "newsection": false,
-      "caption": "Caption 4"
+      "caption": "Clocktower - Caption 4"
     },{
-      "src": "/images/building/ph4.jpg",
+      "src": "/images/4_crown_collection/ph.png",
       "section": "Clocktower",
       "newsection": false,
-      "caption": "Caption 4"
+      "caption": "Clocktower - Caption 4"
     }
   ],
   "settings":{
