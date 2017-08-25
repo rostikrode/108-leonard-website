@@ -5,6 +5,7 @@ import brochure from '../../assets/brochure.svg';
 import logoText from '../../assets/108_leonard_text.svg';
 import '../../styles/Header.css';
 
+var currentPage = '';
 export default class Header extends Component {
   constructor(props) {
     super(props);
@@ -28,6 +29,17 @@ export default class Header extends Component {
   
   componentWillUnmount() {
     window.removeEventListener('scroll', this.sectionOnScroll);
+  }
+
+  componentDidUpdate() {
+    // if new page, remove active classes from subnavs (counts for the next page button too)
+    if(this.props.page !== currentPage) {
+      var allsubnavs = this.nav.querySelectorAll('.nav-subnav-item');
+      for(var i = 0; i < allsubnavs.length; i++) {
+        allsubnavs[i].classList.remove('active');
+      }
+    }
+    currentPage = this.props.page;
   }
 
   sectionOnScroll(e) {
@@ -133,7 +145,7 @@ export default class Header extends Component {
         </div>
         <div className={`app-header ${this.state.open}`}>
           <img src={logo} className="app-logo" alt="logo" />
-          <nav>
+          <nav ref={(el) => this.nav = el}>
             <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
 
             {Object.entries(this.props.pages).map((p, key) => {

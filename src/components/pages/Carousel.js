@@ -68,8 +68,6 @@ export default class Carousel extends Component {
     window.addEventListener('scroll', this.onWindowScroll);
     window.addEventListener('orientationchange', this.onOrientationChange);
     window.addEventListener('resize', this.updateArrowPosition);
-
-    this.props.getSlider(this.slider);
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onWindowScroll);
@@ -217,12 +215,6 @@ export default class Carousel extends Component {
   }
 
   onNextButton(nextTitle) {
-    // remove any leftover active sub pages
-    var allsubs = document.getElementsByClassName('nav-subnav-item');
-    for(var i = 0; i < allsubs.length; i++) {
-      allsubs[i].classList.remove('active');
-    }
-
     this.props.onNextButton(nextTitle);
   }
 

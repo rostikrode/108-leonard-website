@@ -16,7 +16,7 @@
   * selection and population of share form
   * test
 * replace all document instances with ref
-  * Carousel.js mostly done (need to do the nav ones (with props from Header and refs))
+  * Carousel.js mostly done (2 more nav-subnav-items left)
   * all other pages
 * Full site styling
 * more info on and program cms popup

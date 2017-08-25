@@ -88,8 +88,8 @@ export default class App extends Component {
     this.state = {
       page: '',
       section: '',
-      slider: '',
-      navClicked: false
+      navClicked: false,
+      navElRef: ''
     }
   }
   componentDidUpate() {
@@ -109,6 +109,11 @@ export default class App extends Component {
         });
       }
     });
+    if(this.navElRef) {
+      this.setState({
+        navElRef: this.navElRef
+      })
+    }
   }
   onNextButton(nextTitle) {
     this.setState({
@@ -127,29 +132,22 @@ export default class App extends Component {
       section: title
     });
   }
-  getSlider(slider) {
-    if(slider) {
-      this.setState({
-        slider: slider
-      });
-    }
-  }
   onNavClick(clicked) {
-      this.setState({
-        navClicked: true
-      });
+    this.setState({
+      navClicked: true
+    });
   }
   
 
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
-      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} onNextButton={this.onNextButton.bind(this)} getSlider={this.getSlider.bind(this)} navClicked={this.state.navClicked} /> )} />)
+      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} onNextButton={this.onNextButton.bind(this)} navClicked={this.state.navClicked} navElement={this.state.navElRef} /> )} />)
     });
     
     return (
       <div className="App">
-        <Header pages={PAGES} page={this.state.page} newPage={this.newPage.bind(this)} section={this.state.section} newSection={this.newSection.bind(this)} slider={this.state.slider} onNavClick={this.onNavClick.bind(this)} />
+        <Header pages={PAGES} page={this.state.page} newPage={this.newPage.bind(this)} section={this.state.section} newSection={this.newSection.bind(this)} slider={this.state.slider} onNavClick={this.onNavClick.bind(this)} navEl={el=>this.navElRef = el} />
         <main>  
           <Switch>
             <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`}/>} />
