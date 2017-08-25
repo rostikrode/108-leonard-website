@@ -96,8 +96,13 @@ export default class Filter extends Component {
     for(var m in miniArray) {
       newSort = newSort.concat(miniArray[m]);
     }
+    
+    // checking for and removing duplicates from array
+    newSort = newSort.filter((el, position) => {
+      return newSort.indexOf(el) === position;
+    });
     console.log(newSort);
-    /** !!! check for duplicates in array !!! */
+
     if(newSort.length > 0) {
       this.props.sendResidences(newSort);
     } else {
