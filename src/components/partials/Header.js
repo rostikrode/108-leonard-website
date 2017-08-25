@@ -64,8 +64,14 @@ export default class Header extends Component {
   }
 
   onNavItemClick(e) {
-    this.props.newPage(e.target.text);
+    // send a click signal thru App, and to Carousel
+    var url = e.target.getAttribute('href');
+    var currUrl = window.location.pathname;    
+    if(url === currUrl) {
+      this.props.onNavClick(true);
+    }
 
+    this.props.newPage(e.target.text);
     if(this.state.open === 'open') {
       this.setState({
         open: ''

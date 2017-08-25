@@ -92,6 +92,13 @@ export default class Availability extends Component {
       });
     }
   }
+  onViewClick(open) {
+    // closing the filter overlay when clicking on view btn as well
+    this.btnElement.classList.toggle('blue');
+    this.setState({
+      filterOverlay: open
+    });
+  }
 
   onFilterItem(filter, checked) {
     if(checked) {
@@ -115,11 +122,11 @@ export default class Availability extends Component {
     return (
       <div className="availability-page">
         <div className="filter-button-wrapper">
-          <Button name="Filter" onClick={this.onFilterClick} />
+          <Button btnEl={el=>this.btnElement = el} name="Filter" onClick={this.onFilterClick} idClass="filter-button" />
           <Button name="Share" disabled />
         </div>
         <div className="list-wrapper">
-          <Filter filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
+          <Filter onViewClick={this.onViewClick.bind(this)} filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
           <List residences={this.state.residences} />
         </div>
         <img src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>

@@ -101,14 +101,13 @@ export default class Filter extends Component {
     newSort = newSort.filter((el, position) => {
       return newSort.indexOf(el) === position;
     });
-    console.log(newSort);
 
     if(newSort.length > 0) {
       this.props.sendResidences(newSort);
     } else {
       this.props.sendResidences(this.props.residences);
     }
-    
+    this.props.onViewClick(false);
   }
 
   render() {
@@ -169,7 +168,7 @@ export default class Filter extends Component {
               <span className="sans filter-label">Residence</span>
               <img src={down_arrow_small} alt="downward arrow icon" />
             </button>
-            <button data-filter="bedrooms" className="margin filter-row list-cell" onClick={this.onFilterColumn}>
+            <button data-filter="bedrooms" className="more-margin margin filter-row list-cell" onClick={this.onFilterColumn}>
               <span className="sans filter-label">Beds</span>
               <img src={down_arrow_small} alt="downward arrow icon" />
             </button>
@@ -177,7 +176,7 @@ export default class Filter extends Component {
               <span className="sans filter-label">Baths</span>
               <img src={down_arrow_small} alt="downward arrow icon" />
             </button>
-            <button data-filter="interior" className="margin filter-row list-cell" onClick={this.onFilterColumn}>
+            <button data-filter="interior" className="more-margin margin filter-row list-cell" onClick={this.onFilterColumn}>
               <span className="sans filter-label">Interior <br/>sq ft/m</span>
               <img src={down_arrow_small} alt="downward arrow icon" />
             </button>

@@ -11,10 +11,13 @@
   * ~~IE - has a scroll thing bug~~
   * ~~fill with data~~
   * ~~sorting~~
-  * filtering - almost
+  * ~~filtering~~
   * floorplan plugin in floorplan overlay
   * selection and population of share form
   * test
+* replace all document instances with ref
+  * Carousel.js mostly done (need to do the nav ones (with props from Header and refs))
+  * all other pages
 * Full site styling
 * more info on and program cms popup
 * form
@@ -34,6 +37,7 @@
 
 
 Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web
+Question Document: https://docs.google.com/document/d/1-Y4RTlJCLQ15iYe9DEKmx2u_GWFvjnBUZUbL5rss00w/edit?ts=5982baa3
 Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design
 
 ---

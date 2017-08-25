@@ -30,7 +30,7 @@ const NextPage = (props) => {
   );
 }
 
-
+var parentSliderEl, sliderButtonNextEl, sliderButtonPrevEl, nextPageButton;
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -48,6 +48,11 @@ export default class Carousel extends Component {
       window.scrollTo(0,0);
     }, 100);
 
+    parentSliderEl = this.sliderParent;
+    nextPageButton = parentSliderEl.childNodes[3];
+    sliderButtonNextEl = this.btnNext;
+    sliderButtonPrevEl = this.btnPrev;
+
     /** meta data for page */
     document.title = this.props.metaTitle;
     if(document.getElementsByTagName('meta').description) {
@@ -58,35 +63,53 @@ export default class Carousel extends Component {
     }
 
     /** dynamically setting the next arrow location based on the length of the dots */
-    this.resizeDots();
+    this.updateArrowPosition();
       
     this.onSubNavClick();
     this.onNavClick();
     window.addEventListener('scroll', this.onWindowScroll);
     window.addEventListener('orientationchange', this.onOrientationChange);
-    window.addEventListener('resize', this.resizeDots);
+    window.addEventListener('resize', this.updateArrowPosition);
+
+    this.props.getSlider(this.slider);
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onWindowScroll);
     window.removeEventListener('orientationchange', this.onOrientationChange);
-    window.removeEventListener('resize', this.resizeDots);
+    window.removeEventListener('resize', this.updateArrowPosition);
   }
 
-  resizeDots () {
-    setTimeout(() => {
-      if (document.querySelector('.slick-slider .slick-dots') !== null) {
-        let length = document.querySelector('.slick-slider .slick-dots').getBoundingClientRect().width;
-        let nextArrow = document.querySelector('.custom-arrow.next-arrow');
-        let nextButton = document.querySelector('.next-button');
-        if (window.matchMedia("(min-width: 1366px)").matches) {
-          nextArrow.style.left = `calc(80px + ${length}px)`;
-          nextButton.style.left = `calc(80px + ${length}px)`;
-        } else {
-          nextArrow.style.left = `calc(3em + ${length}px)`;
-          nextButton.style.left = `calc(5em + ${length}px)`;
+  componentDidUpdate() {
+    if(this.props.navClicked) {
+      setTimeout(()=>{
+        console.log('i updated!', this.props.navClicked);
+        this.slider.slickGoTo(0);
+      }, 800);
+      
+    }
+  }
+
+  updateArrowPosition () {
+    if (window.matchMedia("(min-width: 1024px)").matches) {      
+      setTimeout(() => {
+        if (parentSliderEl) {
+          var dots = parentSliderEl.children[0].querySelector('.slick-dots');
+          if (dots !== null) {
+            let length = dots.getBoundingClientRect().width;
+            let nextArrow = sliderButtonNextEl;
+            let nextButton = parentSliderEl.childNodes[3];
+  
+            if (window.matchMedia("(min-width: 1366px)").matches) {
+              nextArrow.style.left = `calc(80px + ${length}px)`;
+              nextButton.style.left = `calc(80px + ${length}px)`;
+            } else {
+              nextArrow.style.left = `calc(30px + ${length}px)`;
+              nextButton.style.left = `calc(30px + ${length}px)`;
+            }
+          }
         }
-      }
-    }, 0);
+      }, 100);
+    }
   }
   /** custom button events needed for custom buttons */
   next() {
@@ -107,7 +130,7 @@ export default class Carousel extends Component {
 
   /** on mobile, on window scroll, when scrolling up to a new section, trigger than section to animate in, in the header (fake MacOS calendar style) */
   onWindowScroll() {
-    var sectionHeaders = document.getElementsByClassName('newsection'); 
+    var sectionHeaders = parentSliderEl.querySelectorAll('.newsection'); 
     for(var i = 0; i < sectionHeaders.length; i++) {
       var s = sectionHeaders[i];
       var sTop = s.getBoundingClientRect().top;
@@ -118,7 +141,7 @@ export default class Carousel extends Component {
         this.activateSubnav(sTitle);
       }
     }
-    if (document.querySelector('.slick-intro-slide').getBoundingClientRect().bottom >= 102) {
+    if (this.introSlide.getBoundingClientRect().bottom >= 102) {
       this.activateSubnav('');
     }
   }
@@ -134,18 +157,19 @@ export default class Carousel extends Component {
   onMouseWheelScroll(e, that) {
     e.preventDefault();
     e.persist();
-
-    if (document.querySelector('.slider-parent .slick-initialized')) {
-      if (e.deltaY < 0 ) {
-        that.previous() 
-      } else if (e.deltaY > 0 ) {
-         that.next();
-      }
-      
-      if(e.deltaX < 0) {
-        that.previous();
-      } else if (e.deltaX > 0) {
-        that.next();
+    if (window.matchMedia("(min-width: 1024px)").matches) {   
+      if (parentSliderEl) {
+        if (e.deltaY < 0 ) {
+          that.previous() 
+        } else if (e.deltaY > 0 ) {
+          that.next();
+        }
+        
+        if(e.deltaX < 0) {
+          that.previous();
+        } else if (e.deltaX > 0) {
+          that.next();
+        }
       }
     }
   }
@@ -164,18 +188,22 @@ export default class Carousel extends Component {
   }
 
   /** forcing  nav click to go to first slide */
-  onNavClick() {
-    var navs = document.getElementsByClassName('nav-anchor');
-    for(let i = 0; i < navs.length; i++) {
-      navs[i].addEventListener('click', (e) => {
-        var slide = document.querySelectorAll(`.slick-slide`);
-        if (slide.length > 0) {
-          if(this.slider) {
-            this.slider.slickGoTo(0);
-          }
-        }
-      });
-    }
+  navClick(slide, slider) {
+    // if (slide.length > 0) {
+    //   if(slider) {
+    //     slider.slickGoTo(0);
+    //   }
+    // }
+  }
+  onNavClick() { 
+    // setTimeout(() => {
+    //   var navs = document.getElementsByClassName('nav-anchor');
+    //   for(let i = 0; i < navs.length; i++) {
+    //     var slide = parentSliderEl.querySelectorAll(`.slick-slide`);
+    //     var slider = this.slider;
+    //     navs[i].addEventListener('click', this.navClick(slide, slider));
+    //   }
+    // }, 100);
   }
 
   /** forcing  goToSlide on nav click event from here */
@@ -184,7 +212,7 @@ export default class Carousel extends Component {
     for(let i = 0; i < navs.length; i++) {
       navs[i].addEventListener('click', (e) => {
         var index = e.target.getAttribute('data-id');
-        var slide = document.querySelector(`.slick-slide[data-section="${index}"]`);
+        var slide = parentSliderEl.querySelector(`.slick-slide[data-section="${index}"]`);
         if (slide) {
           /** desktop version, that has a carousel */
           var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
@@ -192,7 +220,7 @@ export default class Carousel extends Component {
             this.slider.slickGoTo(slideIndex);
         } else {
           /** mobile version that doesn't have a slider */
-          var section = document.querySelector(`.newsection[data-section="${index}"]`); 
+          var section = parentSliderEl.querySelector(`.newsection[data-section="${index}"]`); 
           if (section)
             scroll.scrollTo(section.offsetTop + 40, {
               duration: 1000,
@@ -218,35 +246,35 @@ export default class Carousel extends Component {
       arrows: false,
       beforeChange: (currentSlide, nextSlide) => {
         /** to fade out captions */
-        var allCaps = document.querySelectorAll(`.slick-slide .inner .caption`);
+        var allCaps = parentSliderEl.querySelectorAll(`.slick-slide .inner .caption`);
         for(let i = 0; i < allCaps.length; i++) {
           allCaps[i].classList.add('fade-out');
         }
       },
       afterChange: (slide) => {
         if(slide === this.props.slides.length) {
-          this.btnPrev.classList.remove('fade');
-          this.btnNext.classList.add('fade');
+          sliderButtonPrevEl.classList.remove('fade');
+          sliderButtonNextEl.classList.add('fade');
 
           /** show the next slideshow page button on last slide */
-          document.querySelector('.next-button').classList.add('fadein');
+          nextPageButton.classList.add('fadein');
         } else if (slide === 0) {
-          this.btnNext.classList.remove('fade');
-          this.btnPrev.classList.add('fade');
+          sliderButtonNextEl.classList.remove('fade');
+          sliderButtonPrevEl.classList.add('fade');
 
           /** dont't show the next slideshow page button on last slide */
-          document.querySelector('.next-button').classList.remove('fadein');
+          nextPageButton.classList.remove('fadein');
         } else {
-          this.btnNext.classList.remove('fade');
-          this.btnPrev.classList.remove('fade');
+          sliderButtonNextEl.classList.remove('fade');
+          sliderButtonPrevEl.classList.remove('fade');
           /** don't show the next slideshow page button on last slide */
-          document.querySelector('.next-button').classList.remove('fadein');
+          nextPageButton.classList.remove('fadein');
         }
-        var section = document.querySelector('.slick-slide.slick-active').getAttribute('data-section');
+        var section = parentSliderEl.querySelector('.slick-slide.slick-active').getAttribute('data-section');
         this.activateSubnav(section);
 
         /** to fade in captions */
-        var currentCap = document.querySelector(`.slick-slide.slick-active .inner .caption`);
+        var currentCap = parentSliderEl.querySelector(`.slick-slide.slick-active .inner .caption`);
         if(currentCap) {
           currentCap.classList.remove('fade-out');
         }
@@ -254,9 +282,9 @@ export default class Carousel extends Component {
     }
 
     return (
-      <div className="slider-parent" onWheel={this.debounceEventHandler(100, (e) => this.onMouseWheelScroll(e, this))}>
+      <div ref={c => this.sliderParent = c } className="slider-parent" onWheel={this.debounceEventHandler(100, (e) => this.onMouseWheelScroll(e, this))}>
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
-          <div key="intro" className="slick-intro-slide slick-section" data-section={this.props.section}>
+          <div ref={c => this.introSlide = c } key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
             <div className="inner">
               <div className="caption-wrapper">
                 <h1 className="sans-bold">{this.props.intro.title}</h1>
@@ -271,7 +299,7 @@ export default class Carousel extends Component {
 
           {Object.entries(this.props.slides).map((slide, key) => {
             return (
-              <Element key={key} data-section={slide[1].section} className="slick-section">
+              <Element key={key + 1} data-section={slide[1].section} className="slick-section">
                 <div className="inner">
                   {slide[1].newsection ? 
                       <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
@@ -279,7 +307,7 @@ export default class Carousel extends Component {
                     
                     <Img src={slide[1].src} loader={<Loader />} alt={slide[1].caption} />
                     
-                  <p className="caption serif-bold" >{slide[1].caption}</p>
+                  <p className="caption serif-bold" >{key}{slide[1].caption}</p>
                 </div>
               </Element>  
             );

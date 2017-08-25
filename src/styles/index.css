@@ -332,12 +332,12 @@ body {
 }
 .info {
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 @media (min-width: 1024px) {
 	.res {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.sans, .sans-bold {
 		font-size: 13px;
@@ -348,7 +348,7 @@ body {
 		font-size: 10px;
 	}
 	.res,.info {
-		font-size: 20px;
+		font-size: 14px;
 	}
 	.floorplan-button span {
 		font-size: 12px;

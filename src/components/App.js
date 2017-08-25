@@ -87,7 +87,9 @@ export default class App extends Component {
     super(props);
     this.state = {
       page: '',
-      section: ''
+      section: '',
+      slider: '',
+      navClicked: false
     }
   }
   componentDidUpate() {
@@ -125,17 +127,29 @@ export default class App extends Component {
       section: title
     });
   }
+  getSlider(slider) {
+    if(slider) {
+      this.setState({
+        slider: slider
+      });
+    }
+  }
+  onNavClick(clicked) {
+      this.setState({
+        navClicked: true
+      });
+  }
   
 
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
-      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} onNextButton={this.onNextButton.bind(this)} /> )} />)
+      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} onNextButton={this.onNextButton.bind(this)} getSlider={this.getSlider.bind(this)} navClicked={this.state.navClicked} /> )} />)
     });
     
     return (
       <div className="App">
-        <Header pages={PAGES} page={this.state.page} newPage={this.newPage.bind(this)} section={this.state.section} newSection={this.newSection.bind(this)} />
+        <Header pages={PAGES} page={this.state.page} newPage={this.newPage.bind(this)} section={this.state.section} newSection={this.newSection.bind(this)} slider={this.state.slider} onNavClick={this.onNavClick.bind(this)} />
         <main>  
           <Switch>
             <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`}/>} />

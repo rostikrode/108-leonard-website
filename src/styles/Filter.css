@@ -106,6 +106,9 @@
   .margin {
     margin-left: 20px;
   }
+  .more-margin {
+    margin-left: 50px;
+  }
 
   .floating-filter {
     position: absolute;
