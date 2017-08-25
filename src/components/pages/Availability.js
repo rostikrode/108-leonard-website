@@ -17,6 +17,9 @@ export default class Availability extends Component {
   }
   
   componentDidMount() {
+    setTimeout(() => {
+      window.scrollTo(0,0);
+    }, 100);
     /** meta data for page */
     document.title = this.props.metaTitle;
     if(document.getElementsByTagName('meta').description) {
