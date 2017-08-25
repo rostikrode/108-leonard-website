@@ -39,7 +39,6 @@ export default class Carousel extends Component {
     this.previous = this.previous.bind(this)
     this.activateSubnav = this.activateSubnav.bind(this)
     this.onSubNavClick = this.onSubNavClick.bind(this)
-    this.onNavClick = this.onNavClick.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
   }
@@ -66,7 +65,6 @@ export default class Carousel extends Component {
     this.updateArrowPosition();
       
     this.onSubNavClick();
-    this.onNavClick();
     window.addEventListener('scroll', this.onWindowScroll);
     window.addEventListener('orientationchange', this.onOrientationChange);
     window.addEventListener('resize', this.updateArrowPosition);
@@ -80,12 +78,13 @@ export default class Carousel extends Component {
   }
 
   componentDidUpdate() {
-    if(this.props.navClicked) {
+    // sending to first slide on nav click
+    if(this.props.navClicked && this.slider) {
       setTimeout(()=>{
-        console.log('i updated!', this.props.navClicked);
-        this.slider.slickGoTo(0);
+        if (window.matchMedia("(min-width: 1024px)").matches) {      
+          this.slider.slickGoTo(0);
+        }
       }, 800);
-      
     }
   }
 
@@ -187,47 +186,33 @@ export default class Carousel extends Component {
     }
   }
 
-  /** forcing  nav click to go to first slide */
-  navClick(slide, slider) {
-    // if (slide.length > 0) {
-    //   if(slider) {
-    //     slider.slickGoTo(0);
-    //   }
-    // }
+  /** function to stop linter from complaning about making functions in loops -.- */
+  subNavClickEvent(slide, slider) {
+    return(e) => {
+      var index = e.target.getAttribute('data-id');
+      var slide = parentSliderEl.querySelector(`.slick-slide[data-section="${index}"]`);
+      if (slide) {
+        /** desktop version, that has a carousel */
+        var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
+        if(this.slider !== null) 
+          this.slider.slickGoTo(slideIndex);
+      } else {
+        /** mobile version that doesn't have a slider */
+        var section = parentSliderEl.querySelector(`.newsection[data-section="${index}"]`); 
+        if (section)
+          scroll.scrollTo(section.offsetTop + 40, {
+            duration: 1000,
+            smooth: true
+          });
+      }
+    };
   }
-  onNavClick() { 
-    // setTimeout(() => {
-    //   var navs = document.getElementsByClassName('nav-anchor');
-    //   for(let i = 0; i < navs.length; i++) {
-    //     var slide = parentSliderEl.querySelectorAll(`.slick-slide`);
-    //     var slider = this.slider;
-    //     navs[i].addEventListener('click', this.navClick(slide, slider));
-    //   }
-    // }, 100);
-  }
-
   /** forcing  goToSlide on nav click event from here */
   onSubNavClick() {
     var navs = document.getElementsByClassName('nav-subnav-item')
     for(let i = 0; i < navs.length; i++) {
-      navs[i].addEventListener('click', (e) => {
-        var index = e.target.getAttribute('data-id');
-        var slide = parentSliderEl.querySelector(`.slick-slide[data-section="${index}"]`);
-        if (slide) {
-          /** desktop version, that has a carousel */
-          var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
-          if(this.slider !== null) 
-            this.slider.slickGoTo(slideIndex);
-        } else {
-          /** mobile version that doesn't have a slider */
-          var section = parentSliderEl.querySelector(`.newsection[data-section="${index}"]`); 
-          if (section)
-            scroll.scrollTo(section.offsetTop + 40, {
-              duration: 1000,
-              smooth: true
-            });
-        }
-      });
+      var slider = this.slider;
+      navs[i].addEventListener('click', this.subNavClickEvent(slider));
     }
   }
 
@@ -307,7 +292,7 @@ export default class Carousel extends Component {
                     
                     <Img src={slide[1].src} loader={<Loader />} alt={slide[1].caption} />
                     
-                  <p className="caption serif-bold" >{key}{slide[1].caption}</p>
+                  <p className="caption serif-bold" >{slide[1].caption}</p>
                 </div>
               </Element>  
             );
