@@ -14,6 +14,7 @@
   * ~~filtering~~
   * floorplan plugin in floorplan overlay
   * selection and population of share form
+  * hide down arrow if list isn't scrolling?
   * test
 * replace all document instances with ref
   * Carousel.js mostly done (2 more nav-subnav-items left)

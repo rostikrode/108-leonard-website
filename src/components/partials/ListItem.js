@@ -15,7 +15,7 @@ export default class ListItem extends Component {
   }
 
   handleCheck(e) {
-    console.log(e.target.value);
+    // console.log(e.target.value);
   }
 
   delimitNumbers(str) {
