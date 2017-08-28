@@ -91,6 +91,10 @@ export default class App extends Component {
       navClicked: false,
       navElRef: ''
     }
+
+    this.getPage = this.getPage.bind(this);
+    this.onForwardButtonEvent = this.onForwardButtonEvent.bind(this);
+    this.onBackButtonEvent = this.onBackButtonEvent.bind(this);
   }
   componentDidUpate() {
     // remove any leftover active sub pages
@@ -100,6 +104,19 @@ export default class App extends Component {
     }
   }
   componentDidMount() {
+    window.onpopstate = this.onBackButtonEvent;
+    window.onpushstate = this.onForwardButtonEvent;
+
+    this.getPage();
+
+    if(this.navElRef) {
+      this.setState({
+        navElRef: this.navElRef
+      })
+    }
+  }
+
+  getPage() {
     // get current page title
     var url = window.location.pathname;
     PAGES.forEach((index, key) => {
@@ -109,12 +126,15 @@ export default class App extends Component {
         });
       }
     });
-    if(this.navElRef) {
-      this.setState({
-        navElRef: this.navElRef
-      })
-    }
   }
+  onForwardButtonEvent(e) {
+    console.log('forward!');
+    this.getPage();
+  }
+  onBackButtonEvent(e) {
+    this.getPage();
+  }
+
   onNextButton(nextTitle) {
     this.setState({
       page: nextTitle,

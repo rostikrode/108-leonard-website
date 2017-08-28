@@ -259,7 +259,7 @@ export default class Carousel extends Component {
     }
 
     return (
-      <div ref={c => this.sliderParent = c } className="slider-parent" onWheel={this.debounceEventHandler(45, (e) => this.onMouseWheelScroll(e, this))}>
+      <div ref={c => this.sliderParent = c } className="slider-parent" onWheel={this.debounceEventHandler(65, (e) => this.onMouseWheelScroll(e, this))}>
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
           <div ref={c => this.introSlide = c } key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
             <div className="inner">
