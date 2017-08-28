@@ -12,6 +12,7 @@ export default class ListItem extends Component {
 
     this.handleCheck = this.handleCheck.bind(this);
     this.sqmFormat = this.sqmFormat.bind(this);
+    this.onViewFloorplanClick = this.onViewFloorplanClick.bind(this);
   }
 
   handleCheck(e) {
@@ -26,6 +27,10 @@ export default class ListItem extends Component {
 
   sqmFormat(num) {
     return (this.delimitNumbers(parseInt(num * 0.09290304, 10)));
+  }
+
+  onViewFloorplanClick(e) {
+    this.props.onViewFloorplanClick(e.currentTarget.dataset.id, true);
   }
 
   render() {
@@ -43,7 +48,7 @@ export default class ListItem extends Component {
           <p className="label sans">BATHROOMS</p>
           <p className="info serif">{this.props.baths}</p>
         </div>
-        <Button idClass="list-cell floorplan-button mobile" inverted name="View Floorplan" />
+        <Button idClass="list-cell floorplan-button mobile" inverted dataId={this.props.residence} name="View Floorplan" onClick={this.onViewFloorplanClick} />
         <div className="list-cell label-with-info">
           <p className="label sans">INTERIOR SQ FT/M</p>
           <p className="info serif">{this.delimitNumbers(this.props.interior)}/{this.sqmFormat(this.props.interior)}</p>
@@ -60,7 +65,7 @@ export default class ListItem extends Component {
           <p className="label sans">EST MONTHLY R.E. TAXES</p>
           <p className="info serif">${this.delimitNumbers(this.props.monthlytaxes)}</p>
         </div>
-        <Button idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" />
+        <Button idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" dataId={this.props.residence} onClick={this.onViewFloorplanClick} />
       </div>
     );
   }

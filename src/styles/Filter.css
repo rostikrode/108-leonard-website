@@ -115,3 +115,16 @@
     left: 0; top: 0;
   }
 }
+
+@media (min-width: 1440px) {
+  .margin-centering {
+    margin-left: -20px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  .margin-centering {
+    margin-left: -40px;
+    margin-right: 40px;
+  }
+}
