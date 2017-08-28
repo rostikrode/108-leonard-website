@@ -48,7 +48,7 @@ input[type="checkbox"]:checked + label:before {
 /* checked mark aspect */
 input[type="checkbox"]:not(:checked) + label:after,
 input[type="checkbox"]:checked + label:after {
-  content: '\002714';
+  content: '\002713';
   position: absolute;
   top: 15px;
   left: 3px;
@@ -101,6 +101,25 @@ input[type="checkbox"]:disabled + label {
   }
   input[type="checkbox"]:not(:checked) + label:after,
   input[type="checkbox"]:checked + label:after {
-    top: 18px;
+    top: 16px;
+  }
+}
+
+@media (min-width: 1366px) {
+  input[type="checkbox"]:not(:checked) + label:before,
+  input[type="checkbox"]:checked + label:before {
+    margin-top: 13px;
+    width: 15px; height: 15px;
+    top: 0;
+  }
+  input[type="checkbox"]:not(:checked) + label,
+  input[type="checkbox"]:checked + label {
+    padding: 16px;
+  }
+  input[type="checkbox"]:not(:checked) + label:after,
+  input[type="checkbox"]:checked + label:after {
+    top: 16px;
+    left: 2px;
+    font-size: 18px;
   }
 }

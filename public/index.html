@@ -43,5 +43,28 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <script src="https://interactive-floorplan.dev.dbxd.com/floorplan_feature.js"></script>
+    <script type="text/javascript">
+      function floorplan_plugin(fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector) {
+        interactive_floorplan.init({
+          floorplan: fp_img,
+          pdf: pdf,
+          title: title,
+          features : {
+            zoom: {
+              enable: zoom,
+              info: zoom_info
+            }, 
+            pan_mousemove: {
+              enable: mouse,
+              info: mouse_info
+            },
+            pan_clickdrag: {
+              enable: click,
+              info: click_info
+            }
+          }  
+        }, document.querySelector(selector));
+      }
+    </script>
   </body>
 </html>

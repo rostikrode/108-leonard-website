@@ -189,7 +189,7 @@ export default class Filter extends Component {
               <img src={down_arrow_small} alt="downward arrow icon" />
             </button>
           
-            <button data-filter="monthlytaxes" className="filter-row list-cell hide-for-mobile flex" onClick={this.onFilterColumn}>
+            <button data-filter="monthlytaxes" className="filter-row list-cell hide-for-mobile flex margin-centering" onClick={this.onFilterColumn}>
               <span className="sans filter-label">est monthly r.e. <br/>taxes</span>
               <img src={down_arrow_small} alt="downward arrow icon" />
             </button>
