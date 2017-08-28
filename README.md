@@ -12,7 +12,7 @@
   * ~~fill with data~~
   * ~~sorting~~
   * ~~filtering~~
-  * floorplan plugin in floorplan overlay
+  * ~~floorplan plugin in floorplan overlay~~
   * selection and population of share form
     * in share email, send link with filtered list
   * test
