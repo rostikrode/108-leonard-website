@@ -5,7 +5,7 @@ import Header from './partials/Header';
 import '../styles/App.css';
 
 import Carousel from './pages/Carousel';
-import Availability from './pages/Availability';
+// import Availability from './pages/Availability';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
 import Press from './pages/Press';
@@ -21,6 +21,8 @@ import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
 import pressJSON from './data/press.json';
 import legalJSON from './data/legal.json';
+
+import AvailabilityComingSoon from './pages/AvailabilityComingSoon';
 
 const PAGES = [{
   'title': 'Building',
@@ -53,7 +55,8 @@ const PAGES = [{
       'Clocktower'
   ]}, {
     'title': 'Availability',
-    'component': Availability,
+    //'component': Availability,
+    'component': AvailabilityComingSoon,
     'slug': '/availability/',
     'data': availabilityJSON,
     'subnavs': []
