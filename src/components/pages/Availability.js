@@ -28,6 +28,8 @@ export default class Availability extends Component {
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href = window.location.href
     }
+
+    this.hideShowDownArrow();
   }
 
   naturalSorter(as, bs){
@@ -101,6 +103,19 @@ export default class Availability extends Component {
     this.setState({
       filterOverlay: open
     });
+
+    this.hideShowDownArrow();
+  }
+
+  hideShowDownArrow() {
+    // remove down arrow if no scrolling exists
+    setTimeout(() => {
+      if(this.listElementRef.scrollHeight > this.listElementRef.clientHeight) {
+        this.dwnArrow.classList.remove('hide');
+      } else {
+        this.dwnArrow.classList.add('hide');
+      }
+    }, 100);
   }
 
   onFilterItem(filter, checked) {
@@ -130,9 +145,9 @@ export default class Availability extends Component {
         </div>
         <div className="list-wrapper">
           <Filter onViewClick={this.onViewClick.bind(this)} filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
-          <List residences={this.state.residences} />
+          <List listElement={el=>this.listElementRef = el} residences={this.state.residences} />
         </div>
-        <img src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>
+        <img ref={el=>this.dwnArrow = el} src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>
       </div>
     );
   }
