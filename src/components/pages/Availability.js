@@ -16,14 +16,15 @@ export default class Availability extends Component {
       filterOverlay: false,
       filtersArray: [],
       activeResidence: '',
-      floorplanState: ''
+      floorplanState: '',
+      checkboxArray: [],
+      disabledShare: true
     }
     this.onFilterClick = this.onFilterClick.bind(this);
+    this.onShareClick = this.onShareClick.bind(this);
   }
   
   componentDidMount() {
-    console.log(this.state.residences);
-
     setTimeout(() => {
       window.scrollTo(0,0);
     }, 100);
@@ -212,6 +213,26 @@ export default class Availability extends Component {
       floorplanState: fstate
     });
   }
+  sendCheckboxes(checkArray) {
+    this.setState({
+      checkboxArray: checkArray
+    });
+    if(checkArray.length > 0) {
+      this.setState({
+        disabledShare: false
+      });
+    } else {
+      this.setState({
+        disabledShare: true
+      });
+    }
+  }
+  onShareClick() {
+    this.props.history.push({
+      pathname: '/share/',
+      state: {checkboxArray: this.state.checkboxArray}
+    });
+  }
 
   render() {
     return (
@@ -219,11 +240,11 @@ export default class Availability extends Component {
         <FloorplanOverlay fresidence={this.state.activeResidence} fstate={this.state.floorplanState} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
         <div className="filter-button-wrapper">
           <Button btnEl={el=>this.btnElement = el} name="Filter" onClick={this.onFilterClick} idClass="filter-button" />
-          <Button name="Share" disabled />
+          <Button name="Share" disabled={this.state.disabledShare} onClick={this.onShareClick} />
         </div>
         <div className="list-wrapper">
           <Filter onViewClick={this.onViewClick.bind(this)} filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
-          <List listElement={el=>this.listElementRef = el} residences={this.state.residences} onViewFloorplanClick={this.onViewFloorplanClick.bind(this)} />
+          <List listElement={el=>this.listElementRef = el} residences={this.state.residences} onViewFloorplanClick={this.onViewFloorplanClick.bind(this)} sendCheckboxes={this.sendCheckboxes.bind(this)} />
         </div>
         <img ref={el=>this.dwnArrow = el} src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>
       </div>

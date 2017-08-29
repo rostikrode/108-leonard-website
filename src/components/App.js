@@ -6,6 +6,7 @@ import '../styles/App.css';
 
 import Carousel from './pages/Carousel';
 import Availability from './pages/Availability';
+import AvailabilityShare from './pages/AvailabilityShare';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
 import Press from './pages/Press';
@@ -175,6 +176,7 @@ export default class App extends Component {
             {routeComponents}
 
             <Route exact path="/availability/:residence" render={(props) => ( <Availability {...props} {...availabilityJSON} /> )} />
+            <Route exact path="/share/" render={(props) => ( <AvailabilityShare {...props} /> )} />
             <Route exact path="/team/" render={(props) => ( <Team {...teamJSON} /> )} />
             <Route exact path="/press/" render={(props) => ( <Press {...pressJSON} /> )} />
             <Route exact path="/legal/" render={(props) => ( <Legal {...legalJSON} /> )} />

@@ -3,20 +3,22 @@ import Button from '../partials/Button';
 import Checkbox from '../partials/Checkbox';
 import '../../styles/ListItem.css';
 
+var checkArray = [];
 export default class ListItem extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: ''
-    };
-
     this.handleCheck = this.handleCheck.bind(this);
     this.sqmFormat = this.sqmFormat.bind(this);
     this.onViewFloorplanClick = this.onViewFloorplanClick.bind(this);
   }
 
   handleCheck(e) {
-    // console.log(e.target.value);
+    if(e.currentTarget.checked) {
+      checkArray.push(e.currentTarget.value) 
+    } else {
+      checkArray.pop(e.currentTarget.value) 
+    }
+    this.props.sendCheckboxes(checkArray);
   }
 
   delimitNumbers(str) {
@@ -37,7 +39,7 @@ export default class ListItem extends Component {
     return (
       <div className="list-row" id={this.props.index}>
         <div className="list-cell check-cell">
-          <Checkbox value={this.state.value} handleCheck={this.handleCheck} index={this.props.index} />
+          <Checkbox value={this.props.residence} handleCheck={this.handleCheck} index={this.props.index} />
           <h4 className="res serif-bold">{this.props.residence}</h4>
         </div>
         <div className="mobile-padding list-cell label-with-info">
