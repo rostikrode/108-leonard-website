@@ -162,7 +162,7 @@ export default class App extends Component {
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
-      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} onNextButton={this.onNextButton.bind(this)} navClicked={this.state.navClicked} navElement={this.state.navElRef} /> )} />)
+      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...props} {...page.data} onNextButton={this.onNextButton.bind(this)} navClicked={this.state.navClicked} navElement={this.state.navElRef} /> )} />)
     });
     
     return (
@@ -174,6 +174,7 @@ export default class App extends Component {
 
             {routeComponents}
 
+            <Route exact path="/availability/:residence" render={(props) => ( <Availability {...props} {...availabilityJSON} /> )} />
             <Route exact path="/team/" render={(props) => ( <Team {...teamJSON} /> )} />
             <Route exact path="/press/" render={(props) => ( <Press {...pressJSON} /> )} />
             <Route exact path="/legal/" render={(props) => ( <Legal {...legalJSON} /> )} />

@@ -33,6 +33,30 @@ export default class Availability extends Component {
     }
 
     this.hideShowDownArrow();
+
+    // dealing with child residence slugs
+    if(this.props.match.params.residence) {
+      this.showCertainResidences(this.props.match.params.residence);
+    }
+  }
+
+  showCertainResidences(residences) {
+    var resArray = residences.split('&');
+    var newFilteredArray = [];
+
+    var filterRes = (el) => {
+      if (el.residence === resArray[res]) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+    for(var res in resArray) {
+      newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
+    }
+    this.setState({
+      residences: newFilteredArray
+    });
   }
 
   naturalSorter(as, bs){
@@ -108,15 +132,22 @@ export default class Availability extends Component {
     });
 
     this.hideShowDownArrow();
+    // removing the children residences from the URL if they are there
+    // 3 is normal for /availability/, however /availability/13-A&14-A/ etc... has 4
+    if(window.location.pathname.split('/').length > 3) {
+      this.props.history.replace('/availability/'); 
+    }
   }
 
   hideShowDownArrow() {
     // remove down arrow if no scrolling exists
     setTimeout(() => {
-      if(this.listElementRef.scrollHeight > this.listElementRef.clientHeight) {
-        this.dwnArrow.classList.remove('hide');
-      } else {
-        this.dwnArrow.classList.add('hide');
+      if(this.listElementRef) {
+        if(this.listElementRef.scrollHeight > this.listElementRef.clientHeight) {
+          this.dwnArrow.classList.remove('hide');
+        } else {
+          this.dwnArrow.classList.add('hide');
+        }
       }
     }, 100);
   }

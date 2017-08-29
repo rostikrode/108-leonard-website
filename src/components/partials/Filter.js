@@ -39,69 +39,77 @@ export default class Filter extends Component {
   }
 
   onViewClick() {
-    var miniArray = [];
     var filter = this.props.filtersArray;
+    var tempArray = this.props.residences;
+    var newArray = [];
+    var beds = [];
+    var price = [];
 
-    var filterBeds = (el) =>  {
-      var quantityInt = parseInt(quantity, 10);
-
-      if (el.bedrooms === quantityInt) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-    var filterPrice = (el) => {
-      var splitQ = quantity.split('-');      
-      var rstart = parseInt(splitQ[0], 10) * 1000000;
-      var rend = splitQ.length > 1 ? parseInt(splitQ[1], 10) * 1000000: '';
-      
-      if (rend !== '') {
-        if ((el.price <= rend) && (el.price >= rstart)) {
-          return true;
-        } else {
-          return false;
-        }
-      } else {
-        if (el.price >= rstart) {
-          return true;  
-        } else {
-          return false;
-        }
-      }
-    }
-    
-    for(var f in filter) {
+    for(var f = 0; f < filter.length; f++) {
       var quantity = filter[f].split('_')[0];
       var type = filter[f].split('_')[1];
-      
       switch(type) {
-        case 'bed':
-          miniArray.push(this.props.residences.filter(filterBeds));
+        case 'bedrooms':
+          var quantityInt = parseInt(quantity, 10);
+          beds.push(quantityInt);
           break;
         case 'crowncollection':
-          miniArray.push(this.props.residences);
+          // no idea
           break;
         case 'price':
-          miniArray.push(this.props.residences.filter(filterPrice));
+          var splitQ = quantity.split('-');      
+          var rstart = parseInt(splitQ[0], 10) * 1000000;
+          var rend = splitQ.length > 1 ? parseInt(splitQ[1], 10) * 1000000: false;
+          price.push([rstart, rend]);
           break;
         default:
           console.log('ERROR - filter is not found');
-          miniArray.push(this.props.residences);
           break;
       }
     }
 
-    var newSort = [];
-    for(var m in miniArray) {
-      newSort = newSort.concat(miniArray[m]);
+    var filterBeds = (el) => {
+      return el.bedrooms === index;
+    }
+    var filterPriceBeds = (el) => {
+      var start = index[0];
+      var end = index[1];
+      if (end) {
+        return (el.price >= start) && (el.price <= end);
+      } else {
+        return el.price >= start;
+      }
+    }
+    /** selected only BEDS */
+    if ((beds.length > 0) && (price.length <= 0)) {
+      for(var bed in beds) {
+        var index = beds[bed];
+        newArray = newArray.concat(tempArray.filter(filterBeds));
+      }
+    } 
+    /** selected BEDS and PRICE */
+    if ((beds.length > 0) && (price.length > 0)) {
+      var bedArray = [];
+      var priceBedArray = [];
+      for(bed in beds) {
+        index = beds[bed];
+        bedArray = bedArray.concat(tempArray.filter(filterBeds));
+      }
+      for(var p in price) {
+        index = price[p];
+        priceBedArray = priceBedArray.concat(bedArray.filter(filterPriceBeds));
+      }
+      newArray = priceBedArray;
+    }
+    /** selected only PRICE */
+    if ((price.length > 0) && (beds.length <= 0)) {
+      for(var p2 in price) {
+        index = price[p2];
+        newArray = newArray.concat(tempArray.filter(filterPriceBeds));
+      }
     }
     
-    // checking for and removing duplicates from array
-    newSort = newSort.filter((el, position) => {
-      return newSort.indexOf(el) === position;
-    });
-
+    var newSort = newArray;
     if(newSort.length > 0) {
       this.props.sendResidences(newSort);
     } else {
@@ -117,19 +125,19 @@ export default class Filter extends Component {
           <div className="floating-filter-checkbox-wrapper">
             <div className="floating-filter-group">
               <div className="floating-filter-item">  
-                <Checkbox value="1_bed" handleCheck={this.handleCheck} index="filter-checkbox-0" />
+                <Checkbox value="1_bedrooms" handleCheck={this.handleCheck} index="filter-checkbox-0" />
                 <span className="serif">1 Bedroom</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="2_bed" handleCheck={this.handleCheck} index="filter-checkbox-1" />
+                <Checkbox value="2_bedrooms" handleCheck={this.handleCheck} index="filter-checkbox-1" />
                 <span className="serif">2 bedroom</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="3_bed" handleCheck={this.handleCheck} index="filter-checkbox-2" />
+                <Checkbox value="3_bedrooms" handleCheck={this.handleCheck} index="filter-checkbox-2" />
                 <span className="serif">3 bedroom</span>
               </div>
               <div className="floating-filter-item">
-                <Checkbox value="4_bed" handleCheck={this.handleCheck} index="filter-checkbox-3" />
+                <Checkbox value="4_bedrooms" handleCheck={this.handleCheck} index="filter-checkbox-3" />
                 <span className="serif">4 bedroom</span>
               </div>
               <div className="floating-filter-item">

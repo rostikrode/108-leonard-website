@@ -25,6 +25,19 @@ export default class Header extends Component {
     });
 
     window.addEventListener('scroll', this.sectionOnScroll);
+
+    setTimeout(() => {
+      // Dealing with Availability child pages
+      var currentPageArray = window.location.pathname.split('/');
+      for(var p in currentPageArray) {
+        var cPage = `/${currentPageArray[p]}/`;
+        for(var page in this.props.pages) {
+          if(this.props.pages[page].slug === cPage) {
+            this.nav.querySelector(`.nav-list .nav-anchor-wrapper .nav-anchor[href="${this.props.pages[page].slug}"]`).classList.add('active');
+          }
+        }
+      }
+    }, 100);
   }
   
   componentWillUnmount() {
