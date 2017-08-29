@@ -18,7 +18,8 @@
   * test
 * replace all document instances with ref
   * Carousel.js mostly done (2 more nav-subnav-items left)
-  * all other pages  
+  * all other pages
+* MOAR TESTING!!!
 * Full site styling
 * more info on and program cms popup
 * form
@@ -31,8 +32,6 @@
 
 ## notes
 
-* Floorplan - plugin as overlay
-* Availability - native scroll with bottom blue arrow (Grant want's scrolljack/fake inline scroll, Jason and me do not)
 * Contact form - all one form (not split up)
 * Animated intro incoming - leads to home page (building)
 
