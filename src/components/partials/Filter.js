@@ -110,6 +110,10 @@ export default class Filter extends Component {
     }
     
     var newSort = newArray;
+    /** NO DUPES!!! */
+    newSort = newSort.filter((el, position) => {
+      return newSort.indexOf(el) === position;
+    });
     if(newSort.length > 0) {
       this.props.sendResidences(newSort);
     } else {

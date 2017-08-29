@@ -6,11 +6,13 @@ import FloorplanOverlay from '../partials/FloorplanOverlay';
 import '../../styles/Availability.css';
 import down_arrow_large from '../../assets/down_arrow_large.svg';
 
+var tempRes = [];
+var fromChild = false;
 export default class Availability extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      residences: this.props.residences,
+      residences: tempRes > 0 ? tempRes : this.props.residences,
       filterOverlay: false,
       filtersArray: [],
       activeResidence: '',
@@ -20,6 +22,8 @@ export default class Availability extends Component {
   }
   
   componentDidMount() {
+    console.log(this.state.residences);
+
     setTimeout(() => {
       window.scrollTo(0,0);
     }, 100);
@@ -38,6 +42,16 @@ export default class Availability extends Component {
     if(this.props.match.params.residence) {
       this.showCertainResidences(this.props.match.params.residence);
     }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if(fromChild) {
+      tempRes = nextState.residences;
+    } else {
+      tempRes = [];
+    }
+    return true;
+
   }
 
   showCertainResidences(residences) {
@@ -135,7 +149,11 @@ export default class Availability extends Component {
     // removing the children residences from the URL if they are there
     // 3 is normal for /availability/, however /availability/13-A&14-A/ etc... has 4
     if(window.location.pathname.split('/').length > 3) {
-      this.props.history.replace('/availability/'); 
+      // this.props.history.push('/availability/'); 
+      window.history.pushState('', '', '/availability/');
+      fromChild = true;
+    } else {
+      fromChild = false;
     }
   }
 
