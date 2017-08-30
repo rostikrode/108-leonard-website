@@ -57,7 +57,7 @@ const PAGES = [{
   ]}, {
     'title': 'Availability',
     //'component': Availability,
-    'component': AvailabilityComingSoon,
+    'component': Availability,
     'slug': '/availability/',
     'data': availabilityJSON,
     'subnavs': []
