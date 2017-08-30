@@ -23,8 +23,6 @@ import teamJSON from './data/team.json';
 import pressJSON from './data/press.json';
 import legalJSON from './data/legal.json';
 
-import AvailabilityComingSoon from './pages/AvailabilityComingSoon';
-
 const PAGES = [{
   'title': 'Building',
   'component': Carousel,
