@@ -6,17 +6,22 @@ import FloorplanOverlay from '../partials/FloorplanOverlay';
 import '../../styles/Availability.css';
 import down_arrow_large from '../../assets/down_arrow_large.svg';
 
+var tempRes = [];
+var fromChild = false;
 export default class Availability extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      residences: this.props.residences,
+      residences: tempRes > 0 ? tempRes : this.props.residences,
       filterOverlay: false,
       filtersArray: [],
       activeResidence: '',
-      floorplanState: ''
+      floorplanState: '',
+      checkboxArray: [],
+      disabledShare: true
     }
     this.onFilterClick = this.onFilterClick.bind(this);
+    this.onShareClick = this.onShareClick.bind(this);
   }
   
   componentDidMount() {
@@ -33,6 +38,40 @@ export default class Availability extends Component {
     }
 
     this.hideShowDownArrow();
+
+    // dealing with child residence slugs
+    if(this.props.match.params.residence) {
+      this.showCertainResidences(this.props.match.params.residence);
+    }
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if(fromChild) {
+      tempRes = nextState.residences;
+    } else {
+      tempRes = [];
+    }
+    return true;
+
+  }
+
+  showCertainResidences(residences) {
+    var resArray = residences.split('&');
+    var newFilteredArray = [];
+
+    var filterRes = (el) => {
+      if (el.residence === resArray[res]) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+    for(var res in resArray) {
+      newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
+    }
+    this.setState({
+      residences: newFilteredArray
+    });
   }
 
   naturalSorter(as, bs){
@@ -108,15 +147,26 @@ export default class Availability extends Component {
     });
 
     this.hideShowDownArrow();
+    // removing the children residences from the URL if they are there
+    // 3 is normal for /availability/, however /availability/13-A&14-A/ etc... has 4
+    if(window.location.pathname.split('/').length > 3) {
+      // this.props.history.push('/availability/'); 
+      window.history.pushState('', '', '/availability/');
+      fromChild = true;
+    } else {
+      fromChild = false;
+    }
   }
 
   hideShowDownArrow() {
     // remove down arrow if no scrolling exists
     setTimeout(() => {
-      if(this.listElementRef.scrollHeight > this.listElementRef.clientHeight) {
-        this.dwnArrow.classList.remove('hide');
-      } else {
-        this.dwnArrow.classList.add('hide');
+      if(this.listElementRef) {
+        if(this.listElementRef.scrollHeight > this.listElementRef.clientHeight) {
+          this.dwnArrow.classList.remove('hide');
+        } else {
+          this.dwnArrow.classList.add('hide');
+        }
       }
     }, 100);
   }
@@ -163,6 +213,26 @@ export default class Availability extends Component {
       floorplanState: fstate
     });
   }
+  sendCheckboxes(checkArray) {
+    this.setState({
+      checkboxArray: checkArray
+    });
+    if(checkArray.length > 0) {
+      this.setState({
+        disabledShare: false
+      });
+    } else {
+      this.setState({
+        disabledShare: true
+      });
+    }
+  }
+  onShareClick() {
+    this.props.history.push({
+      pathname: '/share/',
+      state: {checkboxArray: this.state.checkboxArray}
+    });
+  }
 
   render() {
     return (
@@ -170,11 +240,11 @@ export default class Availability extends Component {
         <FloorplanOverlay fresidence={this.state.activeResidence} fstate={this.state.floorplanState} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
         <div className="filter-button-wrapper">
           <Button btnEl={el=>this.btnElement = el} name="Filter" onClick={this.onFilterClick} idClass="filter-button" />
-          <Button name="Share" disabled />
+          <Button name="Share" disabled={this.state.disabledShare} onClick={this.onShareClick} />
         </div>
         <div className="list-wrapper">
           <Filter onViewClick={this.onViewClick.bind(this)} filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
-          <List listElement={el=>this.listElementRef = el} residences={this.state.residences} onViewFloorplanClick={this.onViewFloorplanClick.bind(this)} />
+          <List listElement={el=>this.listElementRef = el} residences={this.state.residences} onViewFloorplanClick={this.onViewFloorplanClick.bind(this)} sendCheckboxes={this.sendCheckboxes.bind(this)} />
         </div>
         <img ref={el=>this.dwnArrow = el} src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>
       </div>

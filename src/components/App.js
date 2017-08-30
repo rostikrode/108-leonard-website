@@ -5,7 +5,8 @@ import Header from './partials/Header';
 import '../styles/App.css';
 
 import Carousel from './pages/Carousel';
-// import Availability from './pages/Availability';
+import Availability from './pages/Availability';
+import AvailabilityShare from './pages/AvailabilityShare';
 import Contact from './pages/Contact';
 import Team from './pages/Team';
 import Press from './pages/Press';
@@ -122,13 +123,20 @@ export default class App extends Component {
   getPage() {
     // get current page title
     var url = window.location.pathname;
-    PAGES.forEach((index, key) => {
-      if(url === index.slug) {
-        this.setState({
-          page: index.title
-        });
-      }
-    });
+    
+    if ((url.split('/')[1] === 'availability') || (url === '/availability/') || (url === '/share/')) {
+      this.setState({
+        page: 'Availability'
+      });
+    } else {
+      PAGES.forEach((index, key) => {
+        if(url === index.slug) {
+          this.setState({
+            page: index.title
+          });
+        }
+      });  
+    }
   }
   onForwardButtonEvent(e) {
     console.log('forward!');
@@ -165,7 +173,7 @@ export default class App extends Component {
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
-      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...page.data} onNextButton={this.onNextButton.bind(this)} navClicked={this.state.navClicked} navElement={this.state.navElRef} /> )} />)
+      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...props} {...page.data} onNextButton={this.onNextButton.bind(this)} navClicked={this.state.navClicked} navElement={this.state.navElRef} /> )} />)
     });
     
     return (
@@ -177,6 +185,8 @@ export default class App extends Component {
 
             {routeComponents}
 
+            <Route exact path="/availability/:residence" render={(props) => ( <Availability {...props} {...availabilityJSON} /> )} />
+            <Route exact path="/share/" render={(props) => ( <AvailabilityShare {...props} /> )} />
             <Route exact path="/team/" render={(props) => ( <Team {...teamJSON} /> )} />
             <Route exact path="/press/" render={(props) => ( <Press {...pressJSON} /> )} />
             <Route exact path="/legal/" render={(props) => ( <Legal {...legalJSON} /> )} />

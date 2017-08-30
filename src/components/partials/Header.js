@@ -15,16 +15,8 @@ export default class Header extends Component {
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
   }
   componentDidMount() {
-    var url = window.location.pathname;
-    this.props.pages.forEach((index, key) => {
-      if(url === index.slug) {
-        this.setState({
-          currPage: index.title
-        });
-      }
-    });
-
     window.addEventListener('scroll', this.sectionOnScroll);
+    this.onAvailabilityPage();
   }
   
   componentWillUnmount() {
@@ -32,6 +24,7 @@ export default class Header extends Component {
   }
 
   componentDidUpdate() {
+    this.onAvailabilityPage();
     // if new page, remove active classes from subnavs (counts for the next page button too)
     if(this.props.page !== currentPage) {
       var allsubnavs = this.nav.querySelectorAll('.nav-subnav-item');
@@ -40,6 +33,17 @@ export default class Header extends Component {
       }
     }
     currentPage = this.props.page;
+  }
+
+  onAvailabilityPage() {
+    var url = window.location.pathname;
+    setTimeout(() => {
+      if ((url.split('/')[1] === 'availability') || (url === '/availability/') || (url === '/share/')) {
+        this.nav.querySelector(`.nav-list .nav-anchor-wrapper .nav-anchor[href="/availability/"]`).classList.add('active');
+      } else {
+        this.nav.querySelector(`.nav-list .nav-anchor-wrapper .nav-anchor[href="/availability/"]`).classList.remove('active');
+      }
+    }, 100);
   }
 
   sectionOnScroll(e) {

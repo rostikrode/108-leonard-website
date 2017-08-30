@@ -270,6 +270,15 @@ body {
 	color: #000;
 	text-transform: uppercase;
 }
+.serif-bold-same-size {
+	font-weight: bold;
+}
+.heavy {
+	font-weight: 900;
+}
+.upper {
+	text-transform: uppercase;
+}
 .sans {
 	font-family: 'Calibre', sans;
 	font-weight: normal;
