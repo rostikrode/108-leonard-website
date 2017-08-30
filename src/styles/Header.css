@@ -24,8 +24,8 @@
 
 .mobile-header .navigation-titles .sub-title {
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -176,7 +176,8 @@
 }
 
 .app-logo {
-  height: 7em;
+  height: 8.5em;
+  width: auto;
   padding: 20px;
   padding-top: 0;
   position: relative;
@@ -227,6 +228,7 @@ nav {
 }
 
 .nav-subnav {
+  display: none;
   list-style: none;
   margin: 0; padding: 0;
 }
@@ -235,6 +237,11 @@ nav {
   height: 1.5em;
   opacity: 1;
   padding-top: 0.5em;
+}
+@media(min-width: 1024px) {
+  .nav-subnav {
+    display: block;
+  } 
 }
 @media(min-width: 1366px) {
   .nav-anchor.active + .nav-subnav  li:first-child {

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import Slider from 'react-slick';
-import Scroll from 'react-scroll';
 import Img from 'react-image';
 
 import 'slick-carousel/slick/slick.css';
@@ -11,9 +10,6 @@ import next_arrow from '../../assets/next_arrow.svg';
 import prev_arrow from '../../assets/prev_arrow.svg';
 
 var debounce = require('throttle-debounce/debounce');
-
-var Element = Scroll.Element;
-var scroll = Scroll.animateScroll;
 
 const Loader = () => {
   return (
@@ -194,14 +190,6 @@ export default class Carousel extends Component {
         var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
         if(this.slider !== null) 
           this.slider.slickGoTo(slideIndex);
-      } else {
-        /** mobile version that doesn't have a slider */
-        var section = parentSliderEl.querySelector(`.newsection[data-section="${index}"]`); 
-        if (section)
-          scroll.scrollTo(section.offsetTop + 40, {
-            duration: 1000,
-            smooth: true
-          });
       }
     };
   }
@@ -270,13 +258,13 @@ export default class Carousel extends Component {
               <div className="image-wrapper">
                 <img className="intro-image" src={this.props.introImage} alt={this.props.introImageCaption}/>
               </div>
-              <span className="caption serif-bold">{this.props.introImageCaption}</span>
+              <p className="caption serif-bold">{this.props.introImageCaption}</p>
             </div>
           </div>  
 
           {Object.entries(this.props.slides).map((slide, key) => {
             return (
-              <Element key={key + 1} data-section={slide[1].section} className="slick-section">
+              <div key={key + 1} data-section={slide[1].section} className="slick-section">
                 <div className="inner">
                   {slide[1].newsection ? 
                       <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
@@ -286,7 +274,7 @@ export default class Carousel extends Component {
                     
                   <p className="caption serif-bold" >{slide[1].caption}</p>
                 </div>
-              </Element>  
+              </div>  
             );
           })}
         </Slider>

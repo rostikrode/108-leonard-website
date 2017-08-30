@@ -88,7 +88,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: '',
+      page: 'Building',
       section: '',
       navClicked: false,
       navElRef: ''
@@ -137,7 +137,6 @@ export default class App extends Component {
     }
   }
   onForwardButtonEvent(e) {
-    console.log('forward!');
     this.getPage();
   }
   onBackButtonEvent(e) {
@@ -164,7 +163,17 @@ export default class App extends Component {
   onNavClick(clicked) {
     this.setState({
       navClicked: true
-    });
+    }, () => {
+      var url = window.location.pathname;
+      PAGES.forEach((index, key) => {
+        if(url === index.slug) {
+          this.setState({
+            page: index.title
+          });
+        }
+      });  
+      console.log('app.js', this.state.page, url)
+    });  
   }
   
 

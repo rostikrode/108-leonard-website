@@ -10,7 +10,8 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: ''
+      open: '',
+      home: 'Building'
     }
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
   }
@@ -81,8 +82,9 @@ export default class Header extends Component {
 
   onNavItemClick(e) {
     // send a click signal thru App, and to Carousel
-    var url = e.target.getAttribute('href');
+    var url = e.currentTarget.getAttribute('href');
     var currUrl = window.location.pathname;    
+    console.log(url, currUrl)
     if(url === currUrl) {
       this.props.onNavClick(true);
     }
@@ -144,11 +146,13 @@ export default class Header extends Component {
         <div className="mobile-header">
           <div className="navigation-titles">            
               <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>
-                <h3 ref={ (el) => this.subTitle = el} className="come-in sub-title sans-light-bold">{this.props.page} {this.props.section ? `| ${this.props.section}` : ''}</h3>
+                <h3 ref={ (el) => this.subTitle = el} className="come-in sub-title sans-light-bold">
+                  {this.props.page ? this.props.page : 'Building'} {this.props.section ? `| ${this.props.section}` : ''}
+                </h3>
           </div>
         </div>
         <div className={`app-header ${this.state.open}`}>
-          <img src={logo} className="app-logo" alt="logo" />
+          <NavLink onClick={(e)=>{this.onNavItemClick(e)}} data-type="" activeClassName="active" id="home-0" strict exact to="/" href="/"><img src={logo} className="app-logo" alt="logo" /></NavLink>
           <nav ref={(el) => this.nav = el}>
             <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
 
