@@ -120,13 +120,20 @@ export default class App extends Component {
   getPage() {
     // get current page title
     var url = window.location.pathname;
-    PAGES.forEach((index, key) => {
-      if(url === index.slug) {
-        this.setState({
-          page: index.title
-        });
-      }
-    });
+    
+    if ((url.split('/')[1] === 'availability') || (url === '/availability/') || (url === '/share/')) {
+      this.setState({
+        page: 'Availability'
+      });
+    } else {
+      PAGES.forEach((index, key) => {
+        if(url === index.slug) {
+          this.setState({
+            page: index.title
+          });
+        }
+      });  
+    }
   }
   onForwardButtonEvent(e) {
     console.log('forward!');

@@ -20,6 +20,7 @@ input[type="checkbox"]:not(:checked),
 input[type="checkbox"]:checked {
   position: absolute;
   left: -9999px;
+  display: none;
 }
 input[type="checkbox"]:not(:checked) + label,
 input[type="checkbox"]:checked + label {
