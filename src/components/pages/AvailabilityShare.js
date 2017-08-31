@@ -45,29 +45,31 @@ export default class AvailabilityShare extends Component {
       residenceurl: `${window.location.origin}/availability/${slug}`,
       residencephrase:  phrase
     }, () => {
-      console.log(this.state);
-        fetch('https://api.dbxd.com/sendmail.v1/send/', {
+      var data = '?';
+      data += `fromname=${encodeURIComponent(this.state.fromfirst)} ${encodeURIComponent(this.state.fromlast)}`;
+      data +=  `&fromemail=${encodeURIComponent(this.state.fromemail)}`;
+      data +=  `&toname=${encodeURIComponent(this.state.tofirst)} ${encodeURIComponent(this.state.tolast)}`;
+      data +=  `&toemail=${encodeURIComponent(this.state.toemail)}`;
+      data +=  `&subject=${encodeURIComponent(this.state.fromfirst)} ${encodeURIComponent(this.state.fromlast)} Has Shared 108 Leonard Residences With You`;
+      data +=  `&phrase=${encodeURIComponent(this.state.residencephrase)}`;
+      data +=  `&url=${encodeURIComponent(this.state.residenceurl)}`;
+      data +=  `&template=${encodeURIComponent('http://108leonard-full.dev.dbxd.com.s3-website-us-east-1.amazonaws.com/share-template.html')}`;
+
+      /** TODO: figure out why response is false */
+        fetch(`https://api.dbxd.com/sendmail.v1/send/${data}`, {
           method: 'post',
           headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            fromname: `${this.state.fromfirst} ${this.state.fromlast}`,
-            fromemail: this.state.fromemail,
-            toname: `${this.state.tofirst} ${this.state.tolast}`,
-            toemail: this.state.toemail,
-            subject: `${this.state.fromfirst} ${this.state.fromlast} Has Shared 108 Leonard Residences With You`,
-            phrase: this.state.residencephrase,
-            url: this.state.residenceurl,
-            template: 'http://108leonard-full.dev.dbxd.com.s3-website-us-east-1.amazonaws.com/share-template.html'
-          })
+            'Content-Type': 'application/x-www-form-urlencoded'
+          }
         })
         .then((response) => {
           console.log(response.status === 200 ? `posted ok ${response}` : 'error');
+          console.log(response);
+          /** TODO: replace form with a success message */
         })
         .catch((err) => {
           console.log('Request error ', err);
+          /** TODO: replace form with a error message */
         });
     });
   }
