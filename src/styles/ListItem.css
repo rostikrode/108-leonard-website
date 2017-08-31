@@ -115,12 +115,13 @@
   }
 
   .floorplan-button {
-    height: 22px;
-    padding: 10px 15px 16px 15px
+    height: 32px;
+    padding: 6px 10px;
+    padding-top: 13px;
   }
 }
 @media(min-width: 1920px) {
   .floorplan-button {
-    padding: 13px 18px 19px 18px;
+    /* padding: 13px 18px 19px 18px; */
   }
 }

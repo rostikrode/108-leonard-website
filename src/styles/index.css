@@ -336,7 +336,7 @@ body {
 .label, .filter-label {
   font-size: 12px;
   letter-spacing: 2px;
-  line-height: 12px;
+  line-height: 15px;
   text-transform: uppercase;
 }
 .info {

@@ -154,6 +154,7 @@
 @media (min-width: 1024px) {
   .app-header {
     width: 12em;
+    overflow: hidden;
   }
 }
 @media (min-width: 1366px) {
