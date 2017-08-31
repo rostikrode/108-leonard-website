@@ -14,9 +14,9 @@
   * ~~filtering~~
   * ~~floorplan plugin in floorplan overlay~~
   * ~selection and population of share form~
-    * style the email itself
-    * fade out form and clear it and fade in response on form send (like teaser)
-  * test
+    * ~~style the email itsel~~
+    * ~~fade out form and clear it and fade in response on form send (like teaser)~~
+  * ~~test~~
 * replace all document instances with ref
   * Carousel.js mostly done (2 more nav-subnav-items left)
   * all other pages
@@ -35,6 +35,12 @@
 
 * Contact form - all one form (not split up)
 * Animated intro incoming - leads to home page (building)
+
+## waiting on
+
+* email share form styling
+* final copy (everywhere, including the form submit messages)
+* final images
 
 
 Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web

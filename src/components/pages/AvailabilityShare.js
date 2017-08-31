@@ -155,23 +155,23 @@ export default class AvailabilityShare extends Component {
 
   render() {
     return (
-      <div className="share-page-wrapper">
+      <div className="form-page-wrapper">
       {this.state.checkboxArray ?  
         this.state.submitMessage ? 
           <VelocityComponent animation="fadeIn" display="flex" easing="ease-in" duration={400} runOnMount>
-            <div className="share-page-message">
-              <div className="share-chosen message">
+            <div className="form-page-message">
+              <div className="form-chosen message">
                 <div className="sans-light-bold">{this.state.submitMessage}</div>
               </div>
             </div>
           </VelocityComponent>
         : 
-          <div className="share-page">
-            <div className="share-chosen">
+          <div className="form-page">
+            <div className="form-chosen">
               <span className="serif upper">You have requested to share floorplans for residences,&nbsp;</span>
               {Object.entries(this.state.checkboxArray).map((res, key) => {
                 return (
-                  <span key={key} className="share-chosen-res serif upper serif-bold-same-size">
+                  <span key={key} className="form-chosen-res serif upper serif-bold-same-size">
                   &nbsp;{key === (this.state.checkboxArray.length - 1) ? (this.state.checkboxArray.length === 1 ? `${res[1]}` : `and ${res[1]}`) : `${res[1]},`}
                   </span>
                 );
@@ -194,21 +194,21 @@ export default class AvailabilityShare extends Component {
                   <input onChange={ (e) => this.setState({ tofirst: e.target.value })} name="tofirst" required className="black-ph half" type="text" placeholder="FIRST NAME*" tabIndex="0" />
                   <input onChange={ (e) => this.setState({ tolast: e.target.value })} name="tolast" required className="black-ph half" type="text" placeholder="LAST NAME*" tabIndex="0" />
                 </div>
-                <input onChange={ (e) => this.setState({ toemail: e.target.value })} name="toemail" required className="black-ph whole" type="email" placeholder="EMAIL NAME*" tabIndex="0" />
+                <input onChange={ (e) => this.setState({ toemail: e.target.value })} name="toemail" required className="black-ph whole" type="email" placeholder="EMAIL*" tabIndex="0" />
 
                 <label className="form-section serif upper heavy">From:</label>
                 <div className="half-wrapper">
                   <input onChange={ (e) => this.setState({ fromfirst: e.target.value })} name="fromfirst" required className="black-ph half" type="text" placeholder="FIRST NAME*" tabIndex="0" />
                   <input onChange={ (e) => this.setState({ fromlast: e.target.value })} name="fromlast" required className="black-ph half" type="text" placeholder="LAST NAME*" tabIndex="0" />
                 </div>
-                <input onChange={ (e) => this.setState({ fromemail: e.target.value })} name="fromemail" required className="black-ph whole" type="email" placeholder="EMAIL NAME*" tabIndex="0" />
+                <input onChange={ (e) => this.setState({ fromemail: e.target.value })} name="fromemail" required className="black-ph whole" type="email" placeholder="EMAIL*" tabIndex="0" />
                 <input type="submit" value="Submit" className="button sans-light-bold"/>
               </form>
             </div>
           </div>
       :
-        <div className="share-page">
-          <div className="share-chosen">
+        <div className="form-page">
+          <div className="form-chosen">
             <span className="serif upper">You have not selected any residences to share.</span>
           </div>
         </div>

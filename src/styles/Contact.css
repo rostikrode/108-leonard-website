@@ -1,4 +1,4 @@
-.share-page {
+.form-page {
   padding: 18px;
   display: flex;
   flex-flow: column nowrap;
@@ -6,11 +6,11 @@
   align-items: center;
   height: 100%;
 }
-.share-page-message {
+.form-page-message {
   height: calc(100vh - 137px);
 }
 
-.share-chosen {
+.form-chosen {
   max-width: 240px;
   margin: 0 auto;
   display: flex;
@@ -19,30 +19,30 @@
   align-items: center;
   padding-top: 30px;
 }
-.share-chosen.message {
+.form-chosen.message {
   max-width: 340px;
 }
 
-.share-chosen-res {
+.form-chosen-res {
   white-space: nowrap;
 }
 
 @media (min-width: 768px) {
-  .share-page {
+  .form-page {
     height: calc(100vh - 36px - 106px * 2);
   }
 }
 @media (min-width: 1024px) {
-  .share-page, .share-page-message {
+  .form-page, .form-page-message {
     padding: 32px;
     height: calc(100vh - 64px);
   }
 }
 @media (min-width: 1920px) {
-  .share-chosen {
+  .form-chosen {
     max-width: 375px;
   }
-  .share-chosen.message {
+  .form-chosen.message {
     max-width: 475px;
   }
 }
