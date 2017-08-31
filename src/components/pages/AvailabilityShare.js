@@ -132,12 +132,6 @@ export default class AvailabilityShare extends Component {
           .then((response) => {
             console.log(response.status === 200 ? `posted ok ${response}` : 'error');
             console.log(response);
-            
-            // cleaning form of values
-            var inputs = this.shareform.querySelectorAll('input:not([type="submit"])');
-            for (var i in inputs) {
-              inputs[i].value = '';
-            }
 
             if(response.status === 200) {
               this.setState({
