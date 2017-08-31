@@ -56,6 +56,10 @@ export default class Carousel extends Component {
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href = window.location.href
     }
+    var viewport = document.querySelector("meta[name=viewport]");
+    if(viewport) {
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
+    }
 
     /** dynamically setting the next arrow location based on the length of the dots */
     this.updateArrowPosition();

@@ -1,16 +1,19 @@
 .button {
+  appearance: none;
+  -webkit-appearance: none;
   background-color: #000;
   color: #FFF;
   box-shadow: none;
   border: none;
   border-radius: 0;
-  padding: 3px; padding-top: 5px;
+  padding: 3px; padding-top: 6px;
   min-height: 44px;
   min-width: 86px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .button:hover,
 .button:active {

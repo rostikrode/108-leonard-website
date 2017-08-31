@@ -36,6 +36,10 @@ export default class Availability extends Component {
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href = window.location.href
     }
+    var viewport = document.querySelector("meta[name=viewport]");
+    if(viewport) {
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
+    }
 
     this.hideShowDownArrow();
 

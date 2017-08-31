@@ -51,7 +51,7 @@ input[type="checkbox"]:not(:checked) + label:after,
 input[type="checkbox"]:checked + label:after {
   content: '\00d7';
   position: absolute;
-  top: 8px;
+  top: 6px;
   left: 2px;
   font-size: 34px;
   line-height: 0.8;

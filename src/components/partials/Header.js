@@ -84,7 +84,6 @@ export default class Header extends Component {
     // send a click signal thru App, and to Carousel
     var url = e.currentTarget.getAttribute('href');
     var currUrl = window.location.pathname;    
-    console.log(url, currUrl)
     if(url === currUrl) {
       this.props.onNavClick(true);
     }

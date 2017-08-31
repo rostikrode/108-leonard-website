@@ -11,6 +11,9 @@ export default class ListItem extends Component {
     this.sqmFormat = this.sqmFormat.bind(this);
     this.onViewFloorplanClick = this.onViewFloorplanClick.bind(this);
   }
+  componentDidMount() {
+    checkArray = [];
+  }
 
   handleCheck(e) {
     if(e.currentTarget.checked) {

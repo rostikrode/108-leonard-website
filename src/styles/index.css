@@ -344,6 +344,10 @@ body {
   font-size: 16px;
 }
 
+.response-message p {
+  font-size: 24px;
+}
+
 @media (min-width: 1024px) {
 	.res {
 		font-size: 16px;

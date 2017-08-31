@@ -7,6 +7,10 @@ export default class Contact extends Component {
     document.title = "Contact Page";
     document.getElementsByTagName('meta').description.content = "Contact page of the website.";
     document.querySelector("link[rel='canonical']").href = window.location.href;
+    var viewport = document.querySelector("meta[name=viewport]");
+    if(viewport) {
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
+    }
 
   }
 
