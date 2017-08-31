@@ -317,6 +317,7 @@ body {
 	text-transform: uppercase;
 	color: #000;
 	letter-spacing: 3px;
+	font-size: 11px;
 }
 .link:focus, 
 .link:hover,

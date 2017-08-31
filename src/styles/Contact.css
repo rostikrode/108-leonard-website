@@ -10,6 +10,13 @@
   height: calc(100vh - 137px);
 }
 
+.form-page .link {
+  padding: 20px 0 5px 0;
+}
+.form-page .link:last-child {
+  padding: 5px 0 0 0;
+}
+
 .form-chosen {
   max-width: 240px;
   margin: 0 auto;
@@ -52,11 +59,19 @@
   width: 100%;
 }
 
+.contact-form-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
 form, .error-wrapper {
-  max-width: 375px;
+  min-width: 100%;
+  max-width: 385px;
   margin: 0 auto;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -124,6 +139,28 @@ input[type="submit"] {
   display: inline-block;
 }
 
+.radio-fieldset {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  border-bottom: 1px solid #A1C6CF;
+  width: 100%;
+}
+.radio-field {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.radio-fieldset .radio-field:first-child {
+  padding-right: 18px;
+}
+.radio-field .checkbox {
+  padding: 0;
+}
+
 .black-ph::-webkit-input-placeholder {
   color: #000;
   opacity: 1;
@@ -160,4 +197,16 @@ input[type="submit"] {
   width: 100%;
   padding: 8px 0;
   font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  form, .error-wrapper {
+    min-width: 385px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-form-wrapper {
+    height: 100%;
+  }
 }
