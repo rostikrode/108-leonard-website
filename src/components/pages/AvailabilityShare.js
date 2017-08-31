@@ -42,7 +42,7 @@ export default class AvailabilityShare extends Component {
       }
     });
     this.setState({
-      residenceurl: `${window.location.origin}/availability/${slug}`,
+      residenceurl: `${window.location.origin}/availability/${slug}/`,
       residencephrase:  phrase
     }, () => {
       var data = '?';
@@ -55,7 +55,7 @@ export default class AvailabilityShare extends Component {
       data +=  `&url=${encodeURIComponent(this.state.residenceurl)}`;
       data +=  `&template=${encodeURIComponent('http://108leonard-full.dev.dbxd.com.s3-website-us-east-1.amazonaws.com/share-template.html')}`;
 
-      /** TODO: figure out why response is false */
+      /** TODO: fade out form and fade in responses */
         fetch(`https://api.dbxd.com/sendmail.v1/send/${data}`, {
           method: 'post',
           headers: {

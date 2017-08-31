@@ -13,8 +13,9 @@
   * ~~sorting~~
   * ~~filtering~~
   * ~~floorplan plugin in floorplan overlay~~
-  * selection and population of share form
-    * in share email, send link with filtered list
+  * ~selection and population of share form~
+    * style the email itself
+    * fade out form and clear it and fade in response on form send (like teaser)
   * test
 * replace all document instances with ref
   * Carousel.js mostly done (2 more nav-subnav-items left)
