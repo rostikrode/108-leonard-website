@@ -132,16 +132,16 @@ export default class AvailabilityShare extends Component {
           .then((response) => {
             console.log(response.status === 200 ? `posted ok ${response}` : 'error');
             console.log(response);
+            
+            // cleaning form of values
+            var inputs = this.shareform.querySelectorAll('input:not([type="submit"])');
+            for (var i in inputs) {
+              inputs[i].value = '';
+            }
 
             if(response.status === 200) {
               this.setState({
                 submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">Your email has been sent to {this.state.toemail}</p></div>
-              }, () => {
-                // cleaning form of values
-                var inputs = this.shareform.querySelectorAll('input:not([type="submit"])');
-                for (var i in inputs) {
-                  inputs[i].value = '';
-                }
               });
             } else {
               this.setState({
