@@ -14,9 +14,12 @@ export default class Contact extends Component {
     super(props);
     this.state = {
       error: '',
-      submitMessage: ''
+      submitMessage: '',
+      client_type: '',
+      hasbroker: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
   }
   componentDidMount() {
     /** meta data for page */
@@ -30,6 +33,19 @@ export default class Contact extends Component {
     var viewport = document.querySelector("meta[name=viewport]");
     if(viewport) {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=0');
+    }
+  }
+
+  handleCheck(e) {
+    console.log(e.currentTarget, e.currentTarget.value);
+    if(e.currentTarget.getAttribute('name') === 'client_type') {
+      this.setState({
+        client_type: e.currentTarget.value
+      });
+    } else if(e.currentTarget.getAttribute('name') === 'hasbroker') {
+      this.setState({
+        hasbroker: e.currentTarget.value
+      });
     }
   }
 
@@ -123,28 +139,54 @@ export default class Contact extends Component {
                 {/* radio select */}
                 <div className="radio-fieldset">
                   <span className="radio-field">
-                    <Checkbox radio={true} radio_id='client_type' value="29766" handleCheck={this.handleCheck} index="client-type-broker" />
+                    <Checkbox checked={this.state.client_type === '29766'} required="required" radio={true} radio_id='client_type' value="29766" handleCheck={this.handleCheck} index="client-type-broker" />
                     <span className="serif">BROKER</span>
                   </span>
                   <span className="radio-field">
-                    <Checkbox radio={true} radio_id='client_type' value="29767" handleCheck={this.handleCheck} index="client-type-purchaser" />
+                    <Checkbox checked={this.state.client_type === '29767'} rrequired="required" adio={true} radio_id='client_type' value="29767" handleCheck={this.handleCheck} index="client-type-purchaser" />
                     <span className="serif">PROSPECTIVE PURCHASER</span>
                   </span>
                 </div>
 
-
-                <input onChange={ (e) => this.setState({ client_type: e.target.value })} name="client_type" required className="black-ph whole" type="text" placeholder="BROKER PROSPECTIVE PURCHASER*" tabIndex="0" />
-
                 {/* on broker select - textfield with dropdown */}
-                <input onChange={ (e) => this.setState({ brokerage_firm: e.target.value })} name="brokerage_firm" className="black-ph whole" type="text" placeholder="BROKERAGE FIRM" tabIndex="0" />
+                <VelocityTransitionGroup className="input-wrapper" enter={{animation: "fadeIn", display: "block", duration: 400, easing: 'ease-in-out', delay: 405}} leave={{animation: "fadeOut", duration: 400, easing: 'ease-in-out'}}>
+                  {this.state.client_type === '29766' ? 
+                    <input onChange={ (e) => this.setState({ brokerage_firm: e.target.value })} name="brokerage_firm" className="black-ph whole" type="text" placeholder="BROKERAGE FIRM" tabIndex="0" />
+                    :
+                    undefined
+                  }
+                </VelocityTransitionGroup>
 
                 {/* on purchaer select  - radio */}
-                <input onChange={ (e) => this.setState({ represented: e.target.value })} name="represented" required className="black-ph whole" type="text" placeholder="REPRESENTED BY A BROKER?*" tabIndex="0" />
+                <VelocityTransitionGroup className="input-wrapper" enter={{animation: "fadeIn", display: "flex", duration: 400, easing: 'ease-in-out', delay: 405}} leave={{animation: "fadeOut", duration: 400, easing: 'ease-in-out'}}>
+                  {this.state.client_type === '29767' ?                
+                    <div className="radio-fieldset">
+                      <span className="input serif radio-label">REPRESENTED BY A BROKER?*</span>
+                      <span className="radio-field">
+                        <Checkbox checked={this.state.hasbroker === '1'} required="required" radio={true} radio_id='hasbroker' value="1" handleCheck={this.handleCheck} index="hasbroker-1" />
+                        <span className="input serif">YES</span>
+                      </span>
+                      <span className="radio-field">
+                        <Checkbox checked={this.state.hasbroker === '0'} required="required" radio={true} radio_id='hasbroker' value="0" handleCheck={this.handleCheck} index="hasbroker-0" />
+                        <span className="input serif">NO</span>
+                      </span>
+                    </div>
+                  :
+                    undefined
+                  }
+                </VelocityTransitionGroup>
 
                 {/* on represented select */}
-                <input onChange={ (e) => this.setState({ agent_name: e.target.value })} name="agent_name" required className="black-ph whole" type="text" placeholder="AGENT NAME*" tabIndex="0" />
-                {/* textfield with dropdown */}
-                <input onChange={ (e) => this.setState({ brokerage_firm: e.target.value })} name="brokerage_firm" required className="black-ph whole" type="text" placeholder="BROKERAGE FIRM*" tabIndex="0" />
+                <VelocityTransitionGroup className="input-wrapper" enter={{animation: "fadeIn", display: 'block', duration: 400, easing: 'ease-in-out'}} leave={{animation: "fadeOut", duration: 400, easing: 'ease-in-out'}}>
+                  {this.state.hasbroker === '1' && this.state.client_type === '29767' ?
+                    <div className="input-wrapper">
+                      <input onChange={ (e) => this.setState({ agent_name: e.target.value })} name="agent_name" required className="black-ph whole" type="text" placeholder="AGENT NAME*" tabIndex="0" />
+                      <input onChange={ (e) => this.setState({ brokerage_firm: e.target.value })} name="brokerage_firm" required className="black-ph whole" type="text" placeholder="BROKERAGE FIRM*" tabIndex="0" />
+                    </div>
+                  :
+                    undefined
+                  }
+                </VelocityTransitionGroup>
 
 
                 {/* dropdown */}  
