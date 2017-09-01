@@ -122,7 +122,6 @@ export default class AvailabilityShare extends Component {
           posturl = `https://api.dbxd.com/sendmail.v1/send/${data}`;
         }
 
-        /** TODO: fade out form and fade in responses */
           fetch(posturl, {
             method: 'post',
             headers: {

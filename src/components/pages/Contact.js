@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { VelocityComponent, VelocityTransitionGroup } from 'velocity-react';
-import Select from 'react-select';
+import Autocomplete from 'react-autocomplete';
 import Checkbox from '../partials/Checkbox';
-import 'react-select/dist/react-select.css';
+// import down_arrow from '../../assets/down_arrow_small.svg';
+import staticJSON from '../data/countrycodes.json';
 import '../../styles/Contact.css';
 
 const Error = (props) => {
@@ -19,11 +20,9 @@ export default class Contact extends Component {
       submitMessage: '',
       client_type: '',
       hasbroker: '',
-      options: [
-        {value: 'one', label: 'One-label'},
-        {value: 'two', label: 'Two-label'},
-        {value: 'three', label: 'Three-label'}
-      ]
+      countrycodelist: [],
+      countrycode: '',
+      countrycodevalue: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCheck = this.handleCheck.bind(this);
@@ -41,6 +40,51 @@ export default class Contact extends Component {
     if(viewport) {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=0');
     }
+
+    fetch('https://restcountries.eu/rest/v2/all', {
+      method: 'get',
+    })
+    .then(response => response.json())
+    .then(json => {
+      this.countryCodeCallback(json);
+    })
+    .catch((err) => {
+      console.log('External request error ', err);
+      this.countryCodeCallback(staticJSON);
+    });
+  }
+
+  countryCodeCallback(json) {
+    var codeList = [];
+    var index = 1;
+    json.forEach(function(country) {
+			country.callingCodes.forEach(function(code) {
+        if(country.name !== 'United States of America') {
+          var codeFormatted = code === '' ?  'n/a': '+'+code;
+          var countryFormatted = code === '' ?  country.name: '('+codeFormatted+') ' + country.name;
+          codeList.push({
+            'id': index,
+            'name': countryFormatted,
+            'abbr': codeFormatted
+          });
+          index++;
+        }
+      });
+		});  
+
+		codeList.push({
+      'id': 0,
+			'name': 'Other',
+			'abbr': 'n/a'
+    });
+    codeList.unshift({
+      'id': -1,
+			'name': '(+1) United States of America',
+			'abbr': '+1'
+    })
+    this.setState({
+      countrycodelist: this.state.countrycodelist.concat(codeList)
+    })
   }
 
   handleCheck(e) {
@@ -138,18 +182,34 @@ export default class Contact extends Component {
 
                 <div className="half-wrapper">
                   {/* textfield with dropdown */}
-                  {/*<input onChange={ (e) => this.setState({ countrycode: e.target.value })} name="countrycode" required className="black-ph half" type="text" placeholder="COUNTRY*" tabIndex="3" />*/}
-                  <Select
-                    value=""
-                    name="countrycode" 
-                    required
-                    className="black-ph half custom-select"
-                    placeholder="COUNTRY*"
-                    tabIndex="3"
-                    options={this.state.options}
-                    matchPos="start"
-                    matchProp="label"
-                    clearable={false}
+                  <Autocomplete
+                    ref={e => this.countrycode = e}
+                    value={this.state.countrycodevalue}
+                    className="half"
+                    wrapperStyle={{display: 'block', width: '50%'}}
+                    getItemValue={(item) => item.name}
+                    shouldItemRender={(item, value) => {
+                      return (
+                        item.name.toLowerCase().indexOf(value.toLowerCase()) !== -1 ||
+                        item.abbr.toLowerCase().indexOf(value.toLowerCase()) !== -1
+                      )
+                    }}
+                    items={this.state.countrycodelist}
+                    renderMenu={children => (
+                      <div className="menu">
+                        {children}
+                      </div>
+                    )}
+                    renderItem={(item, isHighlighted) =>
+                      <div className="menu-item" key={item.id} style={{ background: isHighlighted ? '#A1C6CF' : '#FFF' }}>{item.name}</div>
+                    }
+                    renderInput={(props) => {
+                      return <div className="select-wrapper"><input ref={e => this.countrycodeinput = e} className="black-ph" {...props} required placeholder="COUNTRY CODE*" tabIndex="3" /></div>
+                    }}
+                    onChange={(event, value) => this.setState({ countrycodevalue: value })}
+                    onSelect={(value, item) => {
+                      this.setState({ countrycodevalue: item.abbr, countrycode: item.abbr })
+                    }}
                   />
 
                   <input onChange={ (e) => this.setState({ phone: e.target.value })} name="phone" required className="black-ph half" type="tel" placeholder="PHONE NUMBER*" tabIndex="4" />
