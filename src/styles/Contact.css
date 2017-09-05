@@ -1,14 +1,6 @@
 *:focus {
   outline: none;
 }
-.break-md {
-  display: inline;
-}
-@media (min-width: 768px) {
-  .break-md {
-    display: block;
-  }
-}
 
 .form-page {
   padding: 18px;
