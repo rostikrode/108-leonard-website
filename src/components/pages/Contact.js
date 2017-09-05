@@ -338,13 +338,14 @@ export default class Contact extends Component {
         // broker form
 
         data += '&seckey=9f42aaeb9f';
+        data += '&debug=1';
         if (this.state.client_type === '29766') {
           data += `&firstname=${encodeURIComponent(this.state.first)}`;
           data += `&lastname=${encodeURIComponent(this.state.last)}`;
           data += `&email=${encodeURIComponent(this.state.email)}`;
           data += `&homephone=${encodeURIComponent(this.state.countrycode)}${encodeURIComponent(this.state.phonenumber)}`;
           data += `&realtor_phone=${encodeURIComponent(this.state.countrycode)}${encodeURIComponent(this.state.phonenumber)}`;
-          data += `&realtor_name=${encodeURIComponent(this.state.first)}${encodeURIComponent(this.state.last)}`;
+          data += `&realtor_name=${encodeURIComponent(this.state.first)} ${encodeURIComponent(this.state.last)}`;
           data += `&brokerage_company=${encodeURIComponent(this.state.brokerage_firm)}`;
           data += `&floorplan=${encodeURIComponent(this.state.residenceid)}`;
           data += `&hearfrom=${encodeURIComponent(this.state.hearfromid)}`;      
@@ -372,16 +373,8 @@ export default class Contact extends Component {
         // don't actually send email on localhost
         if (window.location.host.includes('localhost')) {
           posturl = '#';
-          data += '&debug=1';
         } else {
           posturl = `https://app.sequentsys.com/api_postform.php/${data}`;
-          
-          // if a dev URL, use debug mode
-          if (window.location.hostname.indexOf('.dev.dbxd') >= 0) {
-            data += '&debug=1';
-          } else {
-            data += '&debug=0';
-          }
         }
 
         fetch(posturl, {
