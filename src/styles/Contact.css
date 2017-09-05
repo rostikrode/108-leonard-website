@@ -1,6 +1,15 @@
 *:focus {
   outline: none;
 }
+.break-md {
+  display: inline;
+}
+@media (min-width: 768px) {
+  .break-md {
+    display: block;
+  }
+}
+
 .form-page {
   padding: 18px;
   display: flex;
@@ -130,7 +139,9 @@ input.half{
   width: 50%;
   margin: 0; padding: 0;
 }
-input.error-underline {
+input.error-underline,
+.select-field.error-underline,
+.radio-fieldset.error-underline {
   border-bottom: 2px solid #55809e;
 } 
 
@@ -264,6 +275,9 @@ input.select-field:active {
   letter-spacing: 2px;
   line-height: 12px;
   font-size: 11px;
+}
+.radio-field .serif {
+  margin-top: 2px;
 }
 
 /** input placeholder styles */
