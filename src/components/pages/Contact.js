@@ -339,7 +339,7 @@ export default class Contact extends Component {
 
         data += '&seckey=9f42aaeb9f';
         if (this.state.client_type === '29766') {
-          data += `firstname=${encodeURIComponent(this.state.first)}`;
+          data += `&firstname=${encodeURIComponent(this.state.first)}`;
           data += `&lastname=${encodeURIComponent(this.state.last)}`;
           data += `&email=${encodeURIComponent(this.state.email)}`;
           data += `&homephone=${encodeURIComponent(this.state.countrycode)}${encodeURIComponent(this.state.phonenumber)}`;
@@ -351,7 +351,7 @@ export default class Contact extends Component {
 
         // purchaser form
         } else {
-          data += `firstname=${encodeURIComponent(this.state.first)}`;
+          data += `&firstname=${encodeURIComponent(this.state.first)}`;
           data += `&lastname=${encodeURIComponent(this.state.last)}`;
           data += `&email=${encodeURIComponent(this.state.email)}`;
           data += `&homephone=${encodeURIComponent(this.state.countrycode)}${encodeURIComponent(this.state.phonenumber)}`;
