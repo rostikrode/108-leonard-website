@@ -422,7 +422,7 @@ export default class Contact extends Component {
           <div className="form-page">
             <div className="form-wrapper contact-form-wrapper">
               
-            <VelocityTransitionGroup enter={{animation: "slideDown", display: 'flex', duration: 400, easing: 'ease-in-out'}} leave={{animation: "slideUp", duration: 400, easing: 'ease-in-out'}}>
+            <VelocityTransitionGroup enter={{animation: "slideDown", display: 'flex', duration: 400, easing: 'ease-in-out'}} leave={{animation: "slideUp", duration: 400, easing: 'ease-in-out'}} className="velocity-error-wrapper">
                 {this.state.error.length > 0 || this.state.emailerror.length > 0 || this.state.phoneerror.length > 0 || this.state.checkerror.length > 0  ? 
                   <div className="error-wrapper">
                     {this.state.error      ? <Error error={this.state.error} />      : undefined}
