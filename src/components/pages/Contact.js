@@ -339,31 +339,32 @@ export default class Contact extends Component {
 
         data += '&seckey=9f42aaeb9f';
         data += '&debug=1';
+        data += `&client_type=${this.state.client_type}`;
         if (this.state.client_type === '29766') {
-          data += `&firstname=${encodeURIComponent(this.state.first)}`;
-          data += `&lastname=${encodeURIComponent(this.state.last)}`;
-          data += `&email=${encodeURIComponent(this.state.email)}`;
-          data += `&homephone=${encodeURIComponent(this.state.countrycode)}${encodeURIComponent(this.state.phonenumber)}`;
-          data += `&realtor_phone=${encodeURIComponent(this.state.countrycode)}${encodeURIComponent(this.state.phonenumber)}`;
-          data += `&realtor_name=${encodeURIComponent(this.state.first)} ${encodeURIComponent(this.state.last)}`;
-          data += `&brokerage_company=${encodeURIComponent(this.state.brokerage_firm)}`;
-          data += `&floorplan=${encodeURIComponent(this.state.residenceid)}`;
-          data += `&hearfrom=${encodeURIComponent(this.state.hearfromid)}`;      
+          data += `&firstname=${this.state.first}`;
+          data += `&lastname=${this.state.last}`;
+          data += `&email=${this.state.email}`;
+          data += `&homephone=${this.state.countrycode}${this.state.phonenumber}`;
+          data += `&realtor_phone=${this.state.countrycode}${this.state.phonenumber}`;
+          data += `&realtor_name=${this.state.first} ${this.state.last}`;
+          data += `&brokerage_company=${this.state.brokerage_firm}`;
+          data += `&floorplan=${this.state.residenceid}`;
+          data += `&hearfrom=${this.state.hearfromid}`;      
 
         // purchaser form
         } else {
-          data += `&firstname=${encodeURIComponent(this.state.first)}`;
-          data += `&lastname=${encodeURIComponent(this.state.last)}`;
-          data += `&email=${encodeURIComponent(this.state.email)}`;
-          data += `&homephone=${encodeURIComponent(this.state.countrycode)}${encodeURIComponent(this.state.phonenumber)}`;
-          data += `&floorplan=${encodeURIComponent(this.state.residenceid)}`;
-          data += `&hearfrom=${encodeURIComponent(this.state.hearfromid)}`;
+          data += `&firstname=${this.state.first}`;
+          data += `&lastname=${this.state.last}`;
+          data += `&email=${this.state.email}`;
+          data += `&homephone=${this.state.countrycode}${this.state.phonenumber}`;
+          data += `&floorplan=${this.state.residenceid}`;
+          data += `&hearfrom=${this.state.hearfromid}`;
 
           // with broker
           if (this.state.hasbroker === '1') {
             data += '&hasbroker=1';
-            data += `&brokerage_company=${encodeURIComponent(this.state.brokerage_firm)}`;
-            data += `&realtor_name=${encodeURIComponent(this.state.agent_name)}`;
+            data += `&brokerage_company=${this.state.brokerage_firm}`;
+            data += `&realtor_name=${this.state.agent_name}`;
           } else {
             data += '&hasbroker=0';
           }
