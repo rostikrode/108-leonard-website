@@ -339,6 +339,8 @@ export default class Contact extends Component {
 
         data += '&seckey=9f42aaeb9f';
         data += '&debug=1';
+        data += '&post_type=post';
+        data += '&returnURL='
         data += `&client_type=${this.state.client_type}`;
         if (this.state.client_type === '29766') {
           data += `&firstname=${this.state.first}`;
@@ -373,7 +375,7 @@ export default class Contact extends Component {
 
         // don't actually send email on localhost
         if (window.location.host.includes('localhost')) {
-          posturl = '#';
+          posturl = `https://app.sequentsys.com/api_postform.php/${data}`;
         } else {
           posturl = `https://app.sequentsys.com/api_postform.php/${data}`;
         }
@@ -397,6 +399,11 @@ export default class Contact extends Component {
               submitMessage: <div className="response-message"><p className="sans-light-bold">An error has occured.</p><p className="sans-light-bold">Please try again&nbsp;later.</p></div>
             });
           }
+
+          return response.text();
+        })
+        .then((text) => { 
+          console.log(`response from Sequent: ${text}`); 
         })
         .catch((err) => {
           console.log('Request error ', err);
