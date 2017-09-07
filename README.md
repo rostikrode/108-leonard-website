@@ -7,7 +7,6 @@
 ### general todo
 
 * press
-* legal
 * implement flow
 * replace all document instances with ref
   * Carousel.js mostly done (2 more nav-subnav-items left)
