@@ -6,7 +6,7 @@
 
 ## general todo (second)
 
-* Team page to be active in Nav
+* implement flow
 * replace all document instances with ref
   * Carousel.js mostly done (2 more nav-subnav-items left)
   * all other pages

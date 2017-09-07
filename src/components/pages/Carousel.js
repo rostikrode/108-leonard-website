@@ -97,11 +97,25 @@ export default class Carousel extends Component {
             let nextButton = parentSliderEl.childNodes[3];
   
             if (window.matchMedia("(min-width: 1366px)").matches) {
-              nextArrow.style.left = `calc(80px + ${length}px)`;
+              if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+                let prevArrow = sliderButtonPrevEl;
+                prevArrow.style.left = `calc(50% - (80px + ${length}px) + 12em)`;
+                nextArrow.style.left = `calc(50% + 80px + ${length}px - 12em)`;
+              } else {
+                nextArrow.style.left = `calc(80px + ${length}px)`;
+              }
+              
               if (nextButton !== undefined)
                 nextButton.style.left = `calc(80px + ${length}px)`;
             } else {
-              nextArrow.style.left = `calc(30px + ${length}px)`;
+              if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+                let prevArrow = sliderButtonPrevEl;
+                prevArrow.style.left = `calc(50% - (80px + ${length}px) + 12em)`;
+                nextArrow.style.left = `calc(50% + 70px + ${length}px - 12em)`;
+              } else {
+                nextArrow.style.left = `calc(30px + ${length}px)`;
+              }
+              
               if (nextButton !== undefined)
                 nextButton.style.left = `calc(30px + ${length}px)`;
             }
@@ -230,18 +244,29 @@ export default class Carousel extends Component {
           sliderButtonNextEl.classList.add('fade');
 
           /** show the next slideshow page button on last slide */
-          nextPageButton.classList.add('fadein');
+          if(nextPageButton)
+            nextPageButton.classList.add('fadein');
         } else if (slide === 0) {
           sliderButtonNextEl.classList.remove('fade');
           sliderButtonPrevEl.classList.add('fade');
 
           /** dont't show the next slideshow page button on last slide */
-          nextPageButton.classList.remove('fadein');
+          if(nextPageButton)
+            nextPageButton.classList.remove('fadein');
         } else {
           sliderButtonNextEl.classList.remove('fade');
           sliderButtonPrevEl.classList.remove('fade');
           /** don't show the next slideshow page button on last slide */
-          nextPageButton.classList.remove('fadein');
+          if(nextPageButton)
+            nextPageButton.classList.remove('fadein');
+
+          // if team carousel, the slide num and total slides is mismatched
+          if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+            if(slide === this.props.slides.length - 1) {
+              sliderButtonPrevEl.classList.remove('fade');
+              sliderButtonNextEl.classList.add('fade');
+            }
+          }
         }
         var section = parentSliderEl.querySelector('.slick-slide.slick-active').getAttribute('data-section');
         this.activateSubnav(section);

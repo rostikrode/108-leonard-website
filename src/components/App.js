@@ -8,7 +8,6 @@ import Carousel from './pages/Carousel';
 import Availability from './pages/Availability';
 import AvailabilityShare from './pages/AvailabilityShare';
 import Contact from './pages/Contact';
-import Team from './pages/Team';
 import Press from './pages/Press';
 import Legal from './pages/Legal';
 

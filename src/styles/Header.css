@@ -294,6 +294,9 @@ nav {
 .footer-pages a:hover {
   font-weight: 600;
 }
+.footer-pages .nav-anchor.active {
+  font-weight: 900;
+}
 @media (min-width: 480px) and (max-width: 768px) and (orientation: landscape) {
   .footer {
     padding-bottom: 20px;

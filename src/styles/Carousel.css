@@ -43,6 +43,12 @@
   height: 16px;
   background-color: #FFF;
 }
+
+.team-slider .slick-dots {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .slick-dots .slick-active button {
   background-color: #000;
   border-color: #000;
@@ -102,6 +108,12 @@
   padding: 0.45rem; padding-bottom: 0;
   padding-left: 1.3em;
 }
+
+.team-slider + .prev-arrow,
+.team-slider + .next-arrow {
+  transform: translateX(-50%);
+}
+
 .next-button {
   color: rgb(0,0,0);
   background-color: #FFF;
