@@ -4,28 +4,28 @@
 
 ## TODO:
 
-## general todo (second)
+### general todo
 
+* press
+* legal
 * implement flow
 * replace all document instances with ref
   * Carousel.js mostly done (2 more nav-subnav-items left)
   * all other pages
-* MOAR TESTING!!!
-* Full site styling
+* more tests for all other main pages
 * more info on and program cms popup
 
-## bonuses (third)
+### bonuses (third)
 
 * [bonus] 404 page to throw 404 error
 * [bonus] lazy load images as they appear on screen
 * [bonus] cross-fade mobile text-changing subheaders
 
-## notes
+### notes
 
-* Contact form - all one form (not split up)
 * Animated intro incoming - leads to home page (building)
 
-## waiting on
+### waiting on
 
 * email share form styling
 * final copy (everywhere, including the form submit messages)

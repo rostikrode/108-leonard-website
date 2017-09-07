@@ -298,29 +298,29 @@ export default class Carousel extends Component {
           : undefined}
           
           {!this.props.istext ? 
-            Object.entries(this.props.slides).map((slide, key) => {
+            this.props.slides.map((slide, key) => {
               return (
-                <div key={key + 1} data-section={slide[1].section} className="slick-section">
+                <div key={key + 1} data-section={slide.section} className="slick-section">
                   <div className="inner">
-                    {slide[1].newsection ? 
-                        <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
+                    {slide.newsection ? 
+                        <h3 data-section={slide.section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide.section}</h3>
                       : ''}
                       
-                      <Img src={slide[1].src} loader={<Loader />} alt={slide[1].caption} />
+                      <Img src={slide.src} loader={<Loader />} alt={slide.caption} />
                       
-                    <p className="caption serif-bold" >{slide[1].caption}</p>
+                    <p className="caption serif-bold" >{slide.caption}</p>
                   </div>
                 </div>  
               );
             })
           :
-            Object.entries(this.props.slides).map((slide, key) => {
+            this.props.slides.map((slide, key) => {
               return (
-                <div key={key + 1} data-section={slide[1].section} className="slick-section slick-intro-slide">
+                <div key={key + 1} data-section={slide.section} className="slick-section slick-intro-slide">
                   <div className="inner">
                     <div className="caption-wrapper">
-                      <h1 className="sans-bold upper">{slide[1].title}</h1>
-                      <p className="serif">{slide[1].para}</p>
+                      <h1 className="sans-bold upper">{slide.title}</h1>
+                      <p className="serif">{slide.para}</p>
                     </div>
                   </div>
                 </div>  

@@ -155,21 +155,21 @@ export default class Header extends Component {
           <nav ref={(el) => this.nav = el}>
             <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
 
-            {Object.entries(this.props.pages).map((p, key) => {
+            {this.props.pages.map((p, key) => {
                 return (
                   <li key={key} className="nav-anchor-wrapper">
-                    <NavLink data-type={p[1].subnavs.length > 0 ? "carousel" : "" } activeClassName="active" id={`nav-anchor-${key}`} className="nav-anchor sans" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to={p[1].slug}>{p[1].title}</NavLink>
+                    <NavLink data-type={p.subnavs.length > 0 ? "carousel" : "" } activeClassName="active" id={`nav-anchor-${key}`} className="nav-anchor sans" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to={p.slug}>{p.title}</NavLink>
                     
-                    {p[1].subnavs.length > 0 ?
+                    {p.subnavs.length > 0 ?
                       <ul className="nav-subnav">
-                        {Object.entries(p[1].subnavs).map((sub, k) => {
+                        {p.subnavs.map((sub, k) => {
                           return (
                             <li role="button" key={k} 
-                              data-id={sub[1]}
+                              data-id={sub}
                               className="nav-subnav-item sans-light"
                               style={{transitionDelay: 100*k+'ms'}}
                               onClick={(e)=>{this.onSubClick(e)}}>
-                              {sub[1]}
+                              {sub}
                             </li>  
                           );
                         })}

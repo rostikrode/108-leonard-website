@@ -168,10 +168,10 @@ export default class AvailabilityShare extends Component {
           <div className="form-page">
             <div className="form-chosen">
               <span className="serif upper">You have requested to share floorplans for residences,&nbsp;</span>
-              {Object.entries(this.state.checkboxArray).map((res, key) => {
+              {this.state.checkboxArray.map((res, key) => {
                 return (
                   <span key={key} className="form-chosen-res serif upper serif-bold-same-size">
-                  &nbsp;{key === (this.state.checkboxArray.length - 1) ? (this.state.checkboxArray.length === 1 ? `${res[1]}` : `and ${res[1]}`) : `${res[1]},`}
+                  &nbsp;{key === (this.state.checkboxArray.length - 1) ? (this.state.checkboxArray.length === 1 ? `${res}` : `and ${res}`) : `${res},`}
                   </span>
                 );
               })}
