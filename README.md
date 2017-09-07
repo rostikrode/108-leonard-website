@@ -6,24 +6,13 @@
 
 ## general todo (second)
 
-* Availability page
-  * ~~layout~~
-  * ~~IE - has a scroll thing bug~~
-  * ~~fill with data~~
-  * ~~sorting~~
-  * ~~filtering~~
-  * ~~floorplan plugin in floorplan overlay~~
-  * ~selection and population of share form~
-    * ~~style the email itsel~~
-    * ~~fade out form and clear it and fade in response on form send (like teaser)~~
-  * ~~test~~
+* Team page to be active in Nav
 * replace all document instances with ref
   * Carousel.js mostly done (2 more nav-subnav-items left)
   * all other pages
 * MOAR TESTING!!!
 * Full site styling
 * more info on and program cms popup
-* form
 
 ## bonuses (third)
 

@@ -54,7 +54,6 @@ const PAGES = [{
       'Clocktower'
   ]}, {
     'title': 'Availability',
-    //'component': Availability,
     'component': Availability,
     'slug': '/availability/',
     'data': availabilityJSON,
@@ -116,6 +115,19 @@ export default class App extends Component {
         navElRef: this.navElRef
       })
     }
+
+    this.setFooterPageTitle();
+  }
+
+  setFooterPageTitle() {
+    // getting footer page titles
+    var page = window.location.pathname.replace(new RegExp('/', 'g'), '');
+    page = page.charAt(0).toUpperCase() + page.slice(1);
+    if ((page === 'Team') || (page === 'Press') || (page === 'Legal')) {
+      this.setState({
+        page: page
+      });
+    }
   }
 
   getPage() {
@@ -138,9 +150,11 @@ export default class App extends Component {
   }
   onForwardButtonEvent(e) {
     this.getPage();
+    this.setFooterPageTitle();
   }
   onBackButtonEvent(e) {
     this.getPage();
+    this.setFooterPageTitle();
   }
 
   onNextButton(nextTitle) {
@@ -194,7 +208,7 @@ export default class App extends Component {
 
             <Route exact path="/availability/:residence" render={(props) => ( <Availability {...props} {...availabilityJSON} /> )} />
             <Route exact path="/share/" render={(props) => ( <AvailabilityShare {...props} /> )} />
-            <Route exact path="/team/" render={(props) => ( <Team {...teamJSON} /> )} />
+            <Route exact path="/team/" render={(props) =>  ( <Carousel {...teamJSON} /> )} />
             <Route exact path="/press/" render={(props) => ( <Press {...pressJSON} /> )} />
             <Route exact path="/legal/" render={(props) => ( <Legal {...legalJSON} /> )} />
             

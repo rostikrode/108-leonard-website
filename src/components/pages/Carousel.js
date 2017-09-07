@@ -98,10 +98,12 @@ export default class Carousel extends Component {
   
             if (window.matchMedia("(min-width: 1366px)").matches) {
               nextArrow.style.left = `calc(80px + ${length}px)`;
-              nextButton.style.left = `calc(80px + ${length}px)`;
+              if (nextButton !== undefined)
+                nextButton.style.left = `calc(80px + ${length}px)`;
             } else {
               nextArrow.style.left = `calc(30px + ${length}px)`;
-              nextButton.style.left = `calc(30px + ${length}px)`;
+              if (nextButton !== undefined)
+                nextButton.style.left = `calc(30px + ${length}px)`;
             }
           }
         }
@@ -138,8 +140,10 @@ export default class Carousel extends Component {
         this.activateSubnav(sTitle);
       }
     }
-    if (this.introSlide.getBoundingClientRect().bottom >= 102) {
-      this.activateSubnav('');
+    if (this.props.intro) {
+      if (this.introSlide.getBoundingClientRect().bottom >= 102) {
+        this.activateSubnav('');
+      }
     }
   }
 
@@ -253,34 +257,51 @@ export default class Carousel extends Component {
     return (
       <div ref={c => this.sliderParent = c } className="slider-parent" onWheel={this.debounceEventHandler(65, (e) => this.onMouseWheelScroll(e, this))}>
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
-          <div ref={c => this.introSlide = c } key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
-            <div className="inner">
-              <div className="caption-wrapper">
-                <h1 className="sans-bold">{this.props.intro.title}</h1>
-                <p className="serif">{this.props.intro.para}</p>
-              </div>
-              <div className="image-wrapper">
-                <img className="intro-image" src={this.props.introImage} alt={this.props.introImageCaption}/>
-              </div>
-              <p className="caption serif-bold">{this.props.introImageCaption}</p>
-            </div>
-          </div>  
-
-          {Object.entries(this.props.slides).map((slide, key) => {
-            return (
-              <div key={key + 1} data-section={slide[1].section} className="slick-section">
-                <div className="inner">
-                  {slide[1].newsection ? 
-                      <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
-                    : ''}
-                    
-                    <Img src={slide[1].src} loader={<Loader />} alt={slide[1].caption} />
-                    
-                  <p className="caption serif-bold" >{slide[1].caption}</p>
+          {this.props.intro ?
+            <div ref={c => this.introSlide = c } key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
+              <div className="inner">
+                <div className="caption-wrapper">
+                  <h1 className="sans-bold">{this.props.intro.title}</h1>
+                  <p className="serif">{this.props.intro.para}</p>
                 </div>
-              </div>  
-            );
-          })}
+                <div className="image-wrapper">
+                  <img className="intro-image" src={this.props.introImage} alt={this.props.introImageCaption}/>
+                </div>
+                <p className="caption serif-bold">{this.props.introImageCaption}</p>
+              </div>
+            </div>  
+          : undefined}
+          
+          {!this.props.istext ? 
+            Object.entries(this.props.slides).map((slide, key) => {
+              return (
+                <div key={key + 1} data-section={slide[1].section} className="slick-section">
+                  <div className="inner">
+                    {slide[1].newsection ? 
+                        <h3 data-section={slide[1].section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide[1].section}</h3>
+                      : ''}
+                      
+                      <Img src={slide[1].src} loader={<Loader />} alt={slide[1].caption} />
+                      
+                    <p className="caption serif-bold" >{slide[1].caption}</p>
+                  </div>
+                </div>  
+              );
+            })
+          :
+            Object.entries(this.props.slides).map((slide, key) => {
+              return (
+                <div key={key + 1} data-section={slide[1].section} className="slick-section slick-intro-slide">
+                  <div className="inner">
+                    <div className="caption-wrapper">
+                      <h1 className="sans-bold upper">{slide[1].title}</h1>
+                      <p className="serif">{slide[1].para}</p>
+                    </div>
+                  </div>
+                </div>  
+              );
+            })
+          }
         </Slider>
         <button ref={(el) => this.btnPrev = el } onClick={this.previous} className="custom-arrow prev-arrow fade">
           <img src={prev_arrow} alt="arrow to take you to previous slide"/>
@@ -289,7 +310,11 @@ export default class Carousel extends Component {
           <img src={next_arrow} alt="arrow to take you to next slide"/>
         </button>
         
-        <NextPage {...this.props} nextButton={this.onNextButton.bind(this)} />
+        {this.props.nextPageTitle ? 
+          <NextPage {...this.props} nextButton={this.onNextButton.bind(this)} />
+          :
+          undefined
+        }
       </div>
     );
   }
