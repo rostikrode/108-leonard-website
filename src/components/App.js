@@ -89,7 +89,10 @@ export default class App extends Component {
       page: 'Building',
       section: '',
       navClicked: false,
-      navElRef: ''
+      navElRef: '',
+      subnavs: [],
+      slider: null,
+      parentslider: null
     }
 
     this.getPage = this.getPage.bind(this);
@@ -98,7 +101,7 @@ export default class App extends Component {
   }
   componentDidUpate() {
     // remove any leftover active sub pages
-    let allsubs = document.getElementsByClassName('nav-subnav-item');
+    let allsubs = this.state.subnavs;
     for(let i = 0; i < allsubs.length; i++) {
       allsubs[i].classList.remove('active');
     }
@@ -173,6 +176,17 @@ export default class App extends Component {
       section: title
     });
   }
+  passAllSubnavs(subnavs) {
+    this.setState({
+      subnavs: subnavs
+    });
+  }
+  sendSlider(slider, parent) {
+    this.setState({
+      slider: slider,
+      parentslider: parent
+    });
+  }
   onNavClick(clicked) {
     this.setState({
       navClicked: true
@@ -193,12 +207,32 @@ export default class App extends Component {
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
-      return (<Route exact path={page.slug} key={key} render={(props) => ( <DynComp {...props} {...page.data} onNextButton={this.onNextButton.bind(this)} navClicked={this.state.navClicked} navElement={this.state.navElRef} /> )} />)
+      return (
+        <Route exact path={page.slug} key={key} render={(props) => ( 
+          <DynComp {...props} {...page.data} 
+            onNextButton={this.onNextButton.bind(this)} 
+            navClicked={this.state.navClicked} 
+            navElement={this.state.navElRef} 
+            subnavs={this.state.subnavs}
+            sendSlider={this.sendSlider.bind(this)}
+          />)} 
+        />)
     });
     
     return (
       <div className="App">
-        <Header pages={PAGES} page={this.state.page} newPage={this.newPage.bind(this)} section={this.state.section} newSection={this.newSection.bind(this)} slider={this.state.slider} onNavClick={this.onNavClick.bind(this)} navEl={el=>this.navElRef = el} />
+        <Header 
+          pages={PAGES} 
+          page={this.state.page} 
+          newPage={this.newPage.bind(this)} 
+          section={this.state.section} 
+          newSection={this.newSection.bind(this)} 
+          slider={this.state.slider} 
+          parentslider={this.state.parentslider}
+          onNavClick={this.onNavClick.bind(this)} 
+          navEl={el=>this.navElRef = el} 
+          passAllSubnavs={this.passAllSubnavs.bind(this)} 
+        />
         <main>  
           <Switch>
             <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`}/>} />
@@ -207,7 +241,7 @@ export default class App extends Component {
 
             <Route exact path="/availability/:residence" render={(props) => ( <Availability {...props} {...availabilityJSON} /> )} />
             <Route exact path="/share/" render={(props) => ( <AvailabilityShare {...props} /> )} />
-            <Route exact path="/team/" render={(props) =>  ( <Carousel {...teamJSON} /> )} />
+            <Route exact path="/team/" render={(props) =>  ( <Carousel {...teamJSON} sendSlider={this.sendSlider.bind(this)} subnavs={this.state.subnavs} /> )} />
             <Route exact path="/press/" render={(props) => ( <Press {...pressJSON} /> )} />
             <Route exact path="/legal/" render={(props) => ( <Legal {...legalJSON} /> )} />
             

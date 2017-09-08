@@ -17,7 +17,7 @@ export default class Filter extends Component {
     var thisArrow = e.currentTarget.children[1];
     var thisFilter = e.currentTarget.dataset.filter;
     // flip all previous arrows back down (only one arrow can be active at a time)
-    var rows = document.getElementsByClassName('filter-row');
+    var rows = this.filterlist.querySelectorAll('.filter-row');
     for(var i = 0; i < rows.length; i++) {
       if(rows[i].children && rows[i].children.length > 0) {
         var filter = rows[i].dataset.filter;
@@ -175,7 +175,7 @@ export default class Filter extends Component {
           <Button name="View" onClick={this.onViewClick} />
         </div>
         
-        <div className="header-filter list-row">
+        <div className="header-filter list-row" ref={e => this.filterlist = e}>
             <button data-filter="residence" className="filter-row list-cell" onClick={this.onFilterColumn}>
               <span className="sans filter-label">Residence</span>
               <img src={down_arrow_small} alt="downward arrow icon" />

@@ -29,6 +29,9 @@ export default class Header extends Component {
     // if new page, remove active classes from subnavs (counts for the next page button too)
     if(this.props.page !== currentPage) {
       var allsubnavs = this.nav.querySelectorAll('.nav-subnav-item');
+      
+      this.props.passAllSubnavs(allsubnavs);
+
       for(var i = 0; i < allsubnavs.length; i++) {
         allsubnavs[i].classList.remove('active');
       }
@@ -49,8 +52,8 @@ export default class Header extends Component {
 
   sectionOnScroll(e) {
     setTimeout(() => {
-      if(document.querySelector('.nav-subnav-item.active')) {
-        var current = document.querySelector('.nav-subnav-item.active').getAttribute('data-id');
+      if(this.nav.querySelector('.nav-subnav-item.active')) {
+        var current = this.nav.querySelector('.nav-subnav-item.active').getAttribute('data-id');
         /** on new subtitle... */
         if(current !== this.props.section) {
           this.props.newSection(current);
@@ -101,7 +104,7 @@ export default class Header extends Component {
     }
 
     // remove any leftover active sub pages
-    var allsubs = document.getElementsByClassName('nav-subnav-item');
+    var allsubs = this.nav.querySelectorAll('.nav-subnav-item');;
     for(var i = 0; i < allsubs.length; i++) {
       allsubs[i].classList.remove('active');
     }
@@ -110,8 +113,18 @@ export default class Header extends Component {
     this.scrollToTop(1000);
   }
   
-  onSubClick(e) {
-    let allsubs = document.getElementsByClassName('nav-subnav-item');
+  onSubClick(e) { 
+    // slider go to slide that corresponds to active subnav
+    var index = e.target.getAttribute('data-id');
+    var slide = this.props.parentslider.querySelector(`.slick-slide[data-section="${index}"]`);
+    if (slide) {
+      /** desktop version, that has a carousel */
+      var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
+      if(this.props.slider !== null) 
+        this.props.slider.slickGoTo(slideIndex);
+    }
+
+    let allsubs = this.nav.querySelectorAll('.nav-subnav-item');;
     for(let i = 0; i < allsubs.length; i++) {
       allsubs[i].classList.remove('active');
     }

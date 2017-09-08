@@ -8,9 +8,6 @@
 
 * press
 * implement flow
-* replace all document instances with ref
-  * Carousel.js mostly done (2 more nav-subnav-items left)
-  * all other pages
 * more tests for all other main pages
 * more info on and program cms popup
 
@@ -26,7 +23,7 @@
 
 ### waiting on
 
-* email share form styling
+* share email design
 * final copy (everywhere, including the form submit messages)
 * final images
 

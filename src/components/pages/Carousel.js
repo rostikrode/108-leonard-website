@@ -1,21 +1,19 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import Slider from 'react-slick';
-import Img from 'react-image';
+
+import IntroSlide from '../partials/IntroSlide.js';
+import ImageSlide from '../partials/ImageSlide.js';
+import TextSlide from '../partials/TextSlide.js';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../../styles/Carousel.css';
+
 import next_arrow from '../../assets/next_arrow.svg';
 import prev_arrow from '../../assets/prev_arrow.svg';
 
 var debounce = require('throttle-debounce/debounce');
-
-const Loader = () => {
-  return (
-    <div className="loading-wrapper"><i className="loading"></i></div>
-  );
-}
 
 const NextPage = (props) => {
   return (
@@ -34,7 +32,6 @@ export default class Carousel extends Component {
     this.next = this.next.bind(this)
     this.previous = this.previous.bind(this)
     this.activateSubnav = this.activateSubnav.bind(this)
-    this.onSubNavClick = this.onSubNavClick.bind(this)
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
   }
@@ -42,6 +39,8 @@ export default class Carousel extends Component {
     setTimeout(() => {
       window.scrollTo(0,0);
     }, 100);
+
+    this.props.sendSlider(this.slider, this.sliderParent);
 
     parentSliderEl = this.sliderParent;
     nextPageButton = parentSliderEl.childNodes[3];
@@ -63,8 +62,6 @@ export default class Carousel extends Component {
 
     /** dynamically setting the next arrow location based on the length of the dots */
     this.updateArrowPosition();
-      
-    this.onSubNavClick();
     window.addEventListener('scroll', this.onWindowScroll);
     window.addEventListener('orientationchange', this.onOrientationChange);
     window.addEventListener('resize', this.updateArrowPosition);
@@ -154,11 +151,6 @@ export default class Carousel extends Component {
         this.activateSubnav(sTitle);
       }
     }
-    if (this.props.intro) {
-      if (this.introSlide.getBoundingClientRect().bottom >= 102) {
-        this.activateSubnav('');
-      }
-    }
   }
 
   /** functionality to change slides on mousewheel  */
@@ -191,7 +183,7 @@ export default class Carousel extends Component {
 
   /** sub section in nav - make active when passing over section. */
   activateSubnav(section) { 
-    var subnavs = document.getElementsByClassName('nav-subnav-item');
+    var subnavs = this.props.subnavs;
     for(let i = 0; i < subnavs.length; i++) {
       var subnavId = subnavs[i].getAttribute('data-id'); 
       if(section === subnavId) {
@@ -199,28 +191,6 @@ export default class Carousel extends Component {
       } else {
         subnavs[i].classList.remove('active');
       }
-    }
-  }
-
-  /** function to stop linter from complaning about making functions in loops -.- */
-  subNavClickEvent(slide, slider) {
-    return(e) => {
-      var index = e.target.getAttribute('data-id');
-      var slide = parentSliderEl.querySelector(`.slick-slide[data-section="${index}"]`);
-      if (slide) {
-        /** desktop version, that has a carousel */
-        var slideIndex = parseInt(slide.getAttribute('data-index'), 10);
-        if(this.slider !== null) 
-          this.slider.slickGoTo(slideIndex);
-      }
-    };
-  }
-  /** forcing  goToSlide on nav click event from here */
-  onSubNavClick() {
-    var navs = document.getElementsByClassName('nav-subnav-item')
-    for(let i = 0; i < navs.length; i++) {
-      var slider = this.slider;
-      navs[i].addEventListener('click', this.subNavClickEvent(slider));
     }
   }
 
@@ -281,65 +251,43 @@ export default class Carousel extends Component {
 
     return (
       <div ref={c => this.sliderParent = c } className="slider-parent" onWheel={this.debounceEventHandler(65, (e) => this.onMouseWheelScroll(e, this))}>
+      
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
           {this.props.intro ?
-            <div ref={c => this.introSlide = c } key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
-              <div className="inner">
-                <div className="caption-wrapper">
-                  <h1 className="sans-bold">{this.props.intro.title}</h1>
-                  <p className="serif">{this.props.intro.para}</p>
-                </div>
-                <div className="image-wrapper">
-                  <img className="intro-image" src={this.props.introImage} alt={this.props.introImageCaption}/>
-                </div>
-                <p className="caption serif-bold">{this.props.introImageCaption}</p>
-              </div>
-            </div>  
+            <div key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
+              <IntroSlide {...this.props} activateSubnav={this.activateSubnav}/>
+            </div>
           : undefined}
           
           {!this.props.istext ? 
             this.props.slides.map((slide, key) => {
               return (
-                <div key={key + 1} data-section={slide.section} className="slick-section">
-                  <div className="inner">
-                    {slide.newsection ? 
-                        <h3 data-section={slide.section} className="newsection mobile-section sans-light-bold">{this.props.page} |  {slide.section}</h3>
-                      : ''}
-                      
-                      <Img src={slide.src} loader={<Loader />} alt={slide.caption} />
-                      
-                    <p className="caption serif-bold" >{slide.caption}</p>
-                  </div>
-                </div>  
+                <div key={key+1} data-section={slide.section} className="slick-section">
+                  <ImageSlide slide={slide} page={this.props.page}/>
+                </div>
               );
             })
           :
             this.props.slides.map((slide, key) => {
               return (
                 <div key={key + 1} data-section={slide.section} className="slick-section slick-intro-slide">
-                  <div className="inner">
-                    <div className="caption-wrapper">
-                      <h1 className="sans-bold upper">{slide.title}</h1>
-                      <p className="serif">{slide.para}</p>
-                    </div>
-                  </div>
+                  <TextSlide slide={slide}/>
                 </div>  
               );
             })
           }
         </Slider>
+
         <button ref={(el) => this.btnPrev = el } onClick={this.previous} className="custom-arrow prev-arrow fade">
-          <img src={prev_arrow} alt="arrow to take you to previous slide"/>
+          <img src={prev_arrow} alt="arrow to prev slide"/>
         </button>
         <button ref={(el) => this.btnNext = el } onClick={this.next} className="custom-arrow next-arrow">          
-          <img src={next_arrow} alt="arrow to take you to next slide"/>
+          <img src={next_arrow} alt="arrow to next slide"/>
         </button>
         
         {this.props.nextPageTitle ? 
           <NextPage {...this.props} nextButton={this.onNextButton.bind(this)} />
-          :
-          undefined
-        }
+        : undefined}
       </div>
     );
   }
