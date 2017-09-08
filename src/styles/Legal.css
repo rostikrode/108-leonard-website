@@ -57,7 +57,7 @@
   .content-wrapper {
     padding-top: 0;
     overflow-y: auto;
-    height: calc(100% - 110px);
+    height: calc(100% - 110px - 32px);
   } 
 }
 .content-wrapper .content {

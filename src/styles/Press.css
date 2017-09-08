@@ -1,0 +1,131 @@
+.press-wrapper {
+  padding: 18px;
+}
+
+.press-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .press-wrapper {
+    padding: 55px;
+  }
+  .press-list {
+    margin-top: 0;
+    height: calc(100vh - 110px - 32px);
+    overflow: auto;
+    margin-bottom: 32px;
+  } 
+}
+
+.press-item-wrapper {
+  margin: 0 auto;
+}
+.press-item-wrapper:last-child .press-item {
+  margin-bottom: 0;
+}
+
+.press-item {
+  margin-bottom: 50px;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+}
+.press-item:not(.not-active) {
+  cursor: pointer;
+}
+
+.press-item a {
+  color: #000;
+  text-decoration: none;
+}
+.press-item:not(.not-active):hover .publication {
+  color: #505050;
+}
+.press-item:not(.not-active):active .publication {
+  color: #000;
+}
+.press-item:not(.not-active):hover .title,
+.press-item:not(.not-active):hover .date {
+  font-weight: 600;
+}
+.press-item:not(.not-active):active .title,
+.press-item:not(.not-active):active .date {
+  font-weight: 900;
+  color: #000;
+}
+.publication.sans-light-bold {
+  font-size: 27px;
+  letter-spacing: 3px;
+  line-height: normal;
+  margin: 0;
+  margin-bottom: 8px;
+}
+.title.sans, .date.sans {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #505050;
+}
+.title.sans {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1024px) {
+  .press-item-wrapper {
+    width: 40vw;
+  }
+  .publication.sans-light-bold {
+    font-size: 2.3em;
+  }
+  .title.sans, .date.sans {
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+}
+
+.press-item.not-active {
+  padding-bottom: 55px;
+}
+
+.press-article {
+  padding: 18px; 
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: calc(100vh - 36px);
+}
+.subtitle, .summary {
+  margin: 0;
+  margin-bottom: 32px;
+}
+.url {
+  padding: 20px;
+  text-decoration: none;
+  color: #505050;
+}
+.url:hover {
+  opacity: 0.65;
+}
+.url:active {
+  opacity: 0.35;
+}
+
+.summary-wrapper {
+  margin-bottom: 55px;
+}
+@media (min-width: 1024px) {
+  .press-article {
+    padding: 32px; 
+    margin-top: 55px;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+  } 
+  .summary-wrapper {
+    width:  50vw;
+  }
+}

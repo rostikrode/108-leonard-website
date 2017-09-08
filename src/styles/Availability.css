@@ -1,5 +1,5 @@
 .arrow-down-scroll {
-  padding: 0.5em;
+  padding: 18px;
   display: none;
   position: absolute;
   bottom: 0;
@@ -10,6 +10,11 @@
 }
 .arrow-down-scroll.hide {
   opacity: 0;
+}
+@media (min-width: 1024px) {
+  .arrow-down-scroll {
+    padding: 32px;
+  }
 }
 
 .availability-page {
@@ -58,6 +63,7 @@
   }
   .list-wrapper {
     padding-top: 133px;
+    padding-bottom: 32px;
   }
 }
 

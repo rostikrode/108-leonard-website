@@ -18,6 +18,7 @@ export default class Header extends Component {
   componentDidMount() {
     window.addEventListener('scroll', this.sectionOnScroll);
     this.onAvailabilityPage();
+    this.onPressPage();
   }
   
   componentWillUnmount() {
@@ -26,6 +27,7 @@ export default class Header extends Component {
 
   componentDidUpdate() {
     this.onAvailabilityPage();
+    this.onPressPage();
     // if new page, remove active classes from subnavs (counts for the next page button too)
     if(this.props.page !== currentPage) {
       var allsubnavs = this.nav.querySelectorAll('.nav-subnav-item');
@@ -46,6 +48,16 @@ export default class Header extends Component {
         this.nav.querySelector(`.nav-list .nav-anchor-wrapper .nav-anchor[href="/availability/"]`).classList.add('active');
       } else {
         this.nav.querySelector(`.nav-list .nav-anchor-wrapper .nav-anchor[href="/availability/"]`).classList.remove('active');
+      }
+    }, 100);
+  }
+  onPressPage() {
+    var url = window.location.pathname;
+    setTimeout(() => {
+      if ((url.split('/')[1] === 'press')) {
+        this.footer.querySelector(`.nav-anchor[href="/press/"]`).classList.add('active');
+      } else {
+        this.footer.querySelector(`.nav-anchor[href="/press/"]`).classList.remove('active');
       }
     }, 100);
   }
@@ -193,7 +205,7 @@ export default class Header extends Component {
               })}
             </ul>
           </nav>
-          <div className="footer">
+          <div className="footer" ref={(el) => this.footer = el}>
               <div className="footer-pages">
                 <NavLink data-type="carousel" activeClassName="active" id="team-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to="/team/">Team</NavLink>
                 <NavLink data-type="" activeClassName="active" id="press-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to="/press/">Press</NavLink>

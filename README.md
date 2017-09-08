@@ -6,7 +6,6 @@
 
 ### general todo
 
-* press
 * implement flow
 * more tests for all other main pages
 * more info on and program cms popup

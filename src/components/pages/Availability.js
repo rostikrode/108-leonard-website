@@ -4,7 +4,7 @@ import List from '../partials/List';
 import Button from '../partials/Button';
 import FloorplanOverlay from '../partials/FloorplanOverlay';
 import '../../styles/Availability.css';
-import down_arrow_large from '../../assets/down_arrow_large.svg';
+import ScrollArrow from '../partials/ScrollArrow';
 
 var tempRes = [];
 var fromChild = false;
@@ -40,8 +40,6 @@ export default class Availability extends Component {
     if(viewport) {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
     }
-
-    this.hideShowDownArrow();
 
     // dealing with child residence slugs
     if(this.props.match.params.residence) {
@@ -150,7 +148,8 @@ export default class Availability extends Component {
       filterOverlay: open
     });
 
-    this.hideShowDownArrow();
+    this.scrollArrow.hideShowDownArrow();
+
     // removing the children residences from the URL if they are there
     // 3 is normal for /availability/, however /availability/13-A&14-A/ etc... has 4
     if(window.location.pathname.split('/').length > 3) {
@@ -160,19 +159,6 @@ export default class Availability extends Component {
     } else {
       fromChild = false;
     }
-  }
-
-  hideShowDownArrow() {
-    // remove down arrow if no scrolling exists
-    setTimeout(() => {
-      if(this.listElementRef) {
-        if(this.listElementRef.scrollHeight > this.listElementRef.clientHeight) {
-          this.dwnArrow.classList.remove('hide');
-        } else {
-          this.dwnArrow.classList.add('hide');
-        }
-      }
-    }, 100);
   }
 
   onFilterItem(filter, checked) {
@@ -250,7 +236,7 @@ export default class Availability extends Component {
           <Filter onViewClick={this.onViewClick.bind(this)} filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
           <List listElement={el=>this.listElementRef = el} residences={this.state.residences} onViewFloorplanClick={this.onViewFloorplanClick.bind(this)} sendCheckboxes={this.sendCheckboxes.bind(this)} />
         </div>
-        <img ref={el=>this.dwnArrow = el} src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>
+        <ScrollArrow ref={i => {this.scrollArrow = i;}} listElementRef={this.listElementRef} />
       </div>
     );
   }

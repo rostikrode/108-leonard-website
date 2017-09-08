@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MultilineText from '../partials/MultilineText';
-import down_arrow_large from '../../assets/down_arrow_large.svg';
+import ScrollArrow from '../partials/ScrollArrow';
 import '../../styles/Legal.css';
 
 export default class Legal extends Component {
@@ -21,22 +21,7 @@ export default class Legal extends Component {
     var viewport = document.querySelector("meta[name=viewport]");
     if(viewport) {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
-    }
-
-    this.hideShowDownArrow();
-  }
-
-  hideShowDownArrow() {
-    // remove down arrow if no scrolling exists
-    setTimeout(() => {
-      if(this.contentref) {
-        if(this.contentref.scrollHeight > this.contentref.clientHeight) {
-          this.dwnArrow.classList.remove('hide');
-        } else {
-          this.dwnArrow.classList.add('hide');
-        }
-      }
-    }, 100);
+    }  
   }
 
   onTabClick(e) {
@@ -53,6 +38,8 @@ export default class Legal extends Component {
 
     e.currentTarget.classList.toggle('active');
     this.contentref.querySelector(`.content[data-id="${e.currentTarget.dataset.id}"]`).classList.toggle('active');
+
+    this.scrollArrow.hideShowDownArrow();
   }
 
   render() {
@@ -75,7 +62,7 @@ export default class Legal extends Component {
             );
           })}
         </div>
-        <img ref={el=>this.dwnArrow = el} src={down_arrow_large} className="arrow-down-scroll" alt="downward arrow icon"/>
+        <ScrollArrow ref={i => {this.scrollArrow = i;}} listElementRef={this.contentref} />
       </div>
     );
   }
