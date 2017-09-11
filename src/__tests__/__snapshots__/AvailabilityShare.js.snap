@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="form-page-wrapper"
+>
+  <div
+    className="form-page"
+  >
+    <div
+      className="form-chosen"
+    >
+      <span
+        className="serif upper"
+      >
+        You have not selected any residences to share.
+      </span>
+    </div>
+  </div>
+</div>
+`;

@@ -38,9 +38,9 @@ export default class AvailabilityShare extends Component {
     if(viewport) {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=0');
     }
-
+    
     this.setState({
-      checkboxArray: this.props.location.state ? this.props.location.state.checkboxArray : false
+      checkboxArray: this.props.location && this.props.location.state ? this.props.location.state.checkboxArray : false
     });
   }
 

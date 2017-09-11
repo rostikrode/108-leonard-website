@@ -4,8 +4,8 @@ export default class PressArticle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      article: this.slugify(this.props.match.params.article),
-      publication: this.slugify(this.props.match.params.publication),
+      article: this.slugify(this.props.match ? this.props.match.params.article: ''),
+      publication: this.slugify(this.props.match ? this.props.match.params.publication: ''),
       entry: {},
       overflow: ''
     }

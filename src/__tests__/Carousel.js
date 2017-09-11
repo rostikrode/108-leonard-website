@@ -2,13 +2,14 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import App from '../components/App';
+import Carousel from '../components/pages/Carousel';
+import buildingJSON from '../components/data/building.json'
 import { MemoryRouter } from 'react-router-dom';
 
 
 it('renders without crashing', () => {
   const tree = mount(
-    <MemoryRouter><App  /></MemoryRouter>
+    <MemoryRouter><Carousel {...buildingJSON} sendSlider={() => {console.log('test output')}}  /></MemoryRouter>
   );
   expect(tree.html()).toMatchSnapshot()
 });

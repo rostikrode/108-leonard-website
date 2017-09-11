@@ -2,14 +2,14 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import App from '../components/App';
+import PressList from '../components/pages/PressList';
+import pressJSON from '../components/data/press.json';
 import { MemoryRouter } from 'react-router-dom';
 
 
 it('renders without crashing', () => {
   const tree = mount(
-    <MemoryRouter><App  /></MemoryRouter>
+    <MemoryRouter><PressList {...pressJSON} /></MemoryRouter>
   );
-  expect(tree.html()).toMatchSnapshot()
+  expect(tree.html()).toMatchSnapshot();
 });
-

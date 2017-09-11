@@ -89,7 +89,10 @@ export default class Carousel extends Component {
         if (parentSliderEl) {
           var dots = parentSliderEl.children[0].querySelector('.slick-dots');
           if (dots !== null) {
-            let length = dots.getBoundingClientRect().width;
+            var length = 0;
+            if (dots) {
+              length = dots.getBoundingClientRect().width;
+            }
             let nextArrow = sliderButtonNextEl;
             let nextButton = parentSliderEl.childNodes[3];
   
@@ -143,7 +146,10 @@ export default class Carousel extends Component {
     var sectionHeaders = parentSliderEl.querySelectorAll('.newsection'); 
     for(var i = 0; i < sectionHeaders.length; i++) {
       var s = sectionHeaders[i];
-      var sTop = s.getBoundingClientRect().top;
+      var sTop = 0;
+      if (s) {
+        sTop = s.getBoundingClientRect().top;
+      }
       
       /** going down */
       if(sTop <= 70) {

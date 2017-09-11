@@ -42,7 +42,7 @@ export default class Availability extends Component {
     }
 
     // dealing with child residence slugs
-    if(this.props.match.params.residence) {
+    if(this.props.match && this.props.match.params.residence) {
       this.showCertainResidences(this.props.match.params.residence);
     }
   }

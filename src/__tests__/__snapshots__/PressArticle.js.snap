@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="press-article"
+>
+  <div
+    className="press-item not-active"
+  >
+    <h2
+      className="publication sans-light-bold upper"
+    />
+    <h5
+      className="title sans"
+    />
+    <h5
+      className="date sans"
+    />
+  </div>
+  <div
+    className="summary-wrapper"
+  >
+    <h1
+      className="subtitle sans-bold"
+    />
+    <p
+      className="summary serif"
+    />
+    <a
+      className="url serif-bold upper"
+      href={undefined}
+      target="_blank"
+    >
+      DOWNLOAD FULL ARTICLE
+    </a>
+  </div>
+</div>
+`;

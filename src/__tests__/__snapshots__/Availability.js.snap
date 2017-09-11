@@ -1,0 +1,1852 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="availability-page"
+>
+  <div
+    className="floorplan-overlay hide"
+    onClick={[Function]}
+  >
+    <div
+      className="floorplan-content"
+    >
+      <button
+        className="close-btn"
+        onClick={[Function]}
+      >
+        <img
+          alt="close btn"
+          className="close-btn-img"
+          src="close.svg"
+        />
+      </button>
+      <div
+        className="floorplan-wrapper"
+      />
+    </div>
+  </div>
+  <div
+    className="filter-button-wrapper"
+  >
+    <button
+      className="button sans-light-bold   filter-button"
+      data-id={undefined}
+      onClick={[Function]}
+    >
+      <span>
+        Filter
+      </span>
+    </button>
+    <button
+      className="button sans-light-bold disabled  "
+      data-id={undefined}
+      onClick={[Function]}
+    >
+      <span>
+        Share
+      </span>
+    </button>
+  </div>
+  <div
+    className="list-wrapper"
+  >
+    <div
+      className="filter"
+    >
+      <div
+        className="floating-filter hide"
+      >
+        <div
+          className="floating-filter-checkbox-wrapper"
+        >
+          <div
+            className="floating-filter-group"
+          >
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-0"
+                  name="filter-checkbox-0"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="1_bedrooms"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-0"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                1 Bedroom
+              </span>
+            </div>
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-1"
+                  name="filter-checkbox-1"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="2_bedrooms"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-1"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                2 bedroom
+              </span>
+            </div>
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-2"
+                  name="filter-checkbox-2"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="3_bedrooms"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-2"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                3 bedroom
+              </span>
+            </div>
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-3"
+                  name="filter-checkbox-3"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="4_bedrooms"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-3"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                4 bedroom
+              </span>
+            </div>
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-4"
+                  name="filter-checkbox-4"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="0_crowncollection"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-4"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                crown collection
+              </span>
+            </div>
+          </div>
+          <div
+            className="floating-filter-group"
+          >
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-5"
+                  name="filter-checkbox-5"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="1-2_price"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-5"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                $1-2M
+              </span>
+            </div>
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-6"
+                  name="filter-checkbox-6"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="2-3_price"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-6"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                $2-3M
+              </span>
+            </div>
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-7"
+                  name="filter-checkbox-7"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="3-4_price"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-7"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                $3-4M
+              </span>
+            </div>
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-8"
+                  name="filter-checkbox-8"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="4-5_price"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-8"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                $4-5M
+              </span>
+            </div>
+            <div
+              className="floating-filter-item"
+            >
+              <div
+                className="checkbox"
+              >
+                <input
+                  checked={undefined}
+                  id="checkbox-filter-checkbox-9"
+                  name="filter-checkbox-9"
+                  onChange={[Function]}
+                  required={undefined}
+                  tabIndex={undefined}
+                  type="checkbox"
+                  value="5_price"
+                />
+                <label
+                  htmlFor="checkbox-filter-checkbox-9"
+                />
+              </div>
+              <span
+                className="serif"
+              >
+                $5M+
+              </span>
+            </div>
+          </div>
+        </div>
+        <button
+          className="button sans-light-bold   "
+          data-id={undefined}
+          onClick={[Function]}
+        >
+          <span>
+            View
+          </span>
+        </button>
+      </div>
+      <div
+        className="header-filter list-row"
+      >
+        <button
+          className="filter-row list-cell"
+          data-filter="residence"
+          onClick={[Function]}
+        >
+          <span
+            className="sans filter-label"
+          >
+            Residence
+          </span>
+          <img
+            alt="downward arrow icon"
+            src="down_arrow_small.svg"
+          />
+        </button>
+        <button
+          className="more-margin margin filter-row list-cell"
+          data-filter="bedrooms"
+          onClick={[Function]}
+        >
+          <span
+            className="sans filter-label"
+          >
+            Beds
+          </span>
+          <img
+            alt="downward arrow icon"
+            src="down_arrow_small.svg"
+          />
+        </button>
+        <button
+          className="margin filter-row list-cell"
+          data-filter="baths"
+          onClick={[Function]}
+        >
+          <span
+            className="sans filter-label"
+          >
+            Baths
+          </span>
+          <img
+            alt="downward arrow icon"
+            src="down_arrow_small.svg"
+          />
+        </button>
+        <button
+          className="more-margin margin filter-row list-cell"
+          data-filter="interior"
+          onClick={[Function]}
+        >
+          <span
+            className="sans filter-label"
+          >
+            Interior 
+            <br />
+            sq ft/m
+          </span>
+          <img
+            alt="downward arrow icon"
+            src="down_arrow_small.svg"
+          />
+        </button>
+        <button
+          className="margin filter-row list-cell"
+          data-filter="price"
+          onClick={[Function]}
+        >
+          <span
+            className="sans filter-label"
+          >
+            Price
+          </span>
+          <img
+            alt="downward arrow icon"
+            src="down_arrow_small.svg"
+          />
+        </button>
+        <button
+          className="margin filter-row list-cell hide-for-mobile flex"
+          data-filter="monthlycc"
+          onClick={[Function]}
+        >
+          <span
+            className="sans filter-label"
+          >
+            est monthly 
+            <br />
+            c.c.
+          </span>
+          <img
+            alt="downward arrow icon"
+            src="down_arrow_small.svg"
+          />
+        </button>
+        <button
+          className="filter-row list-cell hide-for-mobile flex margin-centering"
+          data-filter="monthlytaxes"
+          onClick={[Function]}
+        >
+          <span
+            className="sans filter-label"
+          >
+            est monthly r.e. 
+            <br />
+            taxes
+          </span>
+          <img
+            alt="downward arrow icon"
+            src="down_arrow_small.svg"
+          />
+        </button>
+        <div
+          className="filter-row list-cell floorplan-space-keeper"
+        />
+      </div>
+    </div>
+    <div
+      className="list"
+    >
+      <div
+        className="list-row"
+        id={0}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-0"
+              name={0}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="13-A"
+            />
+            <label
+              htmlFor="checkbox-0"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            13-A
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            3
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            3
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="13-A"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            1,422
+            /
+            132
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            1,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="13-A"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={1}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-1"
+              name={1}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="13-B"
+            />
+            <label
+              htmlFor="checkbox-1"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            13-B
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            2
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            1.5
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="13-B"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            3,000
+            /
+            278
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            5,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="13-B"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={2}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-2"
+              name={2}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="13-C"
+            />
+            <label
+              htmlFor="checkbox-2"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            13-C
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            2
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            2
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="13-C"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            1,005
+            /
+            93
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            150,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="13-C"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={3}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-3"
+              name={3}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="13-D"
+            />
+            <label
+              htmlFor="checkbox-3"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            13-D
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            4
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            5
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="13-D"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            10,000
+            /
+            929
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            14,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="13-D"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={4}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-4"
+              name={4}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="13-E"
+            />
+            <label
+              htmlFor="checkbox-4"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            13-E
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            1
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            2.5
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="13-E"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            5,000
+            /
+            464
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            2,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="13-E"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={5}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-5"
+              name={5}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="14-A"
+            />
+            <label
+              htmlFor="checkbox-5"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            14-A
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            3
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            3
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="14-A"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            1,000
+            /
+            92
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            1,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="14-A"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={6}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-6"
+              name={6}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="14-B"
+            />
+            <label
+              htmlFor="checkbox-6"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            14-B
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            2
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            1.5
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="14-B"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            3,000
+            /
+            278
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            5,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="14-B"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={7}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-7"
+              name={7}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="14-C"
+            />
+            <label
+              htmlFor="checkbox-7"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            14-C
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            2
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            2
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="14-C"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            1,005
+            /
+            93
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            150,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="14-C"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={8}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-8"
+              name={8}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="14-D"
+            />
+            <label
+              htmlFor="checkbox-8"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            14-D
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            4
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            5
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="14-D"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            10,000
+            /
+            929
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            14,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="14-D"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+      <div
+        className="list-row"
+        id={9}
+      >
+        <div
+          className="list-cell check-cell"
+        >
+          <div
+            className="checkbox"
+          >
+            <input
+              checked={undefined}
+              id="checkbox-9"
+              name={9}
+              onChange={[Function]}
+              required={undefined}
+              tabIndex={undefined}
+              type="checkbox"
+              value="14-E"
+            />
+            <label
+              htmlFor="checkbox-9"
+            />
+          </div>
+          <h4
+            className="res serif-bold"
+          >
+            14-E
+          </h4>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BEDROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            1
+          </p>
+        </div>
+        <div
+          className="mobile-padding list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            BATHROOMS
+          </p>
+          <p
+            className="info serif"
+          >
+            2.5
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button mobile"
+          data-id="14-E"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            INTERIOR SQ FT/M
+          </p>
+          <p
+            className="info serif"
+          >
+            5,000
+            /
+            464
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info"
+        >
+          <p
+            className="label sans"
+          >
+            PRICE
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            6,000,000
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY C.C.
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            100
+          </p>
+        </div>
+        <div
+          className="list-cell label-with-info hide-for-mobile"
+        >
+          <p
+            className="label sans"
+          >
+            EST MONTHLY R.E. TAXES
+          </p>
+          <p
+            className="info serif"
+          >
+            $
+            200
+          </p>
+        </div>
+        <button
+          className="button sans-light-bold  inverted list-cell floorplan-button desktop"
+          data-id="14-E"
+          onClick={[Function]}
+        >
+          <span>
+            View Floorplan
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <img
+    alt="downward arrow icon"
+    className="arrow-down-scroll"
+    src="down_arrow_large.svg"
+  />
+</div>
+`;

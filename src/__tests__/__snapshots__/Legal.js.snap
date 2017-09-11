@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="legal-wrapper"
+>
+  <div
+    className="tab-wrapper"
+  >
+    <button
+      className="tab sans active"
+      data-id="tab-0"
+      onClick={[Function]}
+    >
+      Privacy Policy
+    </button>
+    <button
+      className="tab sans"
+      data-id="tab-1"
+      onClick={[Function]}
+    >
+      Legal Disclaimer
+    </button>
+  </div>
+  <div
+    className="content-wrapper"
+  >
+    <div
+      className="content sans active"
+      data-id="tab-0"
+    >
+      <div>
+        <p>
+          PRIVACY POLICY Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget posuere lorem. Nunc vulputate turpis massa, id euismod neque sollicitudin id. Aliquam erat volutpat. Aliquam erat volutpat. Vivamus consectetur justo sed finibus feugiat. Suspendisse turpis nunc, lacinia vel rhoncus non, congue nec odio. Aliquam tortor ipsum, molestie quis magna ac, condimentum pulvinar risus.
+        </p>
+        <p>
+          Curabitur laoreet tincidunt orci. Sed ullamcorper enim metus, euismod porta eros aliquam vitae. Praesent dui tellus, venenatis quis accumsan et, volutpat non purus. Curabitur sit amet volutpat sapien, a pulvinar enim. Fusce maximus condimentum blandit. Etiam placerat felis eget dolor vestibulum, eu semper risus rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc id iaculis nulla. Nullam in quam vestibulum, ultricies quam non, scelerisque lectus. Integer ultricies risus vitae risus aliquam, eu iaculis lacus egestas.
+        </p>
+        <p>
+          Cras diam dui, congue vitae mi et, lacinia aliquet nisi. Aenean fringilla magna erat, eu blandit turpis aliquet ac. Nullam nec nisi feugiat, ornare ex eu, consequat nisl. Etiam lectus mi, tristique quis risus in, dignissim egestas erat. Aenean auctor bibendum mi id facilisis. Curabitur porttitor mollis pellentesque. Maecenas fermentum mauris et metus scelerisque, sit amet iaculis elit tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse a lectus felis.
+        </p>
+        <p>
+          Mauris sed imperdiet tortor. Nullam tincidunt eros sed ex efficitur feugiat. Fusce et lobortis enim, eu lobortis mi. Praesent nunc erat, congue eget lacus ut, ullamcorper feugiat tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a accumsan libero. Morbi consectetur efficitur aliquam. Integer euismod dolor a faucibus sagittis. Proin finibus turpis magna, nec egestas nunc vestibulum non.
+        </p>
+        <p>
+          or sit amet, consectetur adipiscing elit. Suspendisse eget posuere lorem. Nunc vulputate turpis massa, id euismod neque sollicitudin id. Aliquam erat volutpat. Aliquam erat volutpat. Vivamus consectetur justo sed finibus feugiat. Suspendisse turpis nunc, lacinia vel rhoncus non, congue nec odio. Aliquam tortor ipsum, molestie quis magna ac, condimentum pulvinar risus.
+        </p>
+      </div>
+    </div>
+    <div
+      className="content sans"
+      data-id="tab-1"
+    >
+      <div>
+        <p>
+          LEGAL DISCLAIMER Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget posuere lorem. Nunc vulputate turpis massa, id euismod neque sollicitudin id. Aliquam erat volutpat. Aliquam erat volutpat. Vivamus consectetur justo sed finibus feugiat. Suspendisse turpis nunc, lacinia vel rhoncus non, congue nec odio. Aliquam tortor ipsum, molestie quis magna ac, condimentum pulvinar risus.
+        </p>
+        <p>
+          Curabitur laoreet tincidunt orci. Sed ullamcorper enim metus, euismod porta eros aliquam vitae. Praesent dui tellus, venenatis quis accumsan et, volutpat non purus. Curabitur sit amet volutpat sapien, a pulvinar enim. Fusce maximus condimentum blandit. Etiam placerat felis eget dolor vestibulum, eu semper risus rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc id iaculis nulla. Nullam in quam vestibulum, ultricies quam non, scelerisque lectus. Integer ultricies risus vitae risus aliquam, eu iaculis lacus egestas.
+        </p>
+        <p>
+          Cras diam dui, congue vitae mi et, lacinia aliquet nisi. Aenean fringilla magna erat, eu blandit turpis aliquet ac. Nullam nec nisi feugiat, ornare ex eu, consequat nisl. Etiam lectus mi, tristique quis risus in, dignissim egestas erat. Aenean auctor bibendum mi id facilisis. Curabitur porttitor mollis pellentesque. Maecenas fermentum mauris et metus scelerisque, sit amet iaculis elit tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse a lectus felis.
+        </p>
+        <p>
+          Mauris sed imperdiet tortor. Nullam tincidunt eros sed ex efficitur feugiat. Fusce et lobortis enim, eu lobortis mi. Praesent nunc erat, congue eget lacus ut, ullamcorper feugiat tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a accumsan libero. Morbi consectetur efficitur aliquam. Integer euismod dolor a faucibus sagittis. Proin finibus turpis magna, nec egestas nunc vestibulum non.
+        </p>
+        <p>
+          or sit amet, consectetur adipiscing elit. Suspendisse eget posuere lorem. Nunc vulputate turpis massa, id euismod neque sollicitudin id. Aliquam erat volutpat. Aliquam erat volutpat. Vivamus consectetur justo sed finibus feugiat. Suspendisse turpis nunc, lacinia vel rhoncus non, congue nec odio. Aliquam tortor ipsum, molestie quis magna ac, condimentum pulvinar risus.
+        </p>
+      </div>
+    </div>
+  </div>
+  <img
+    alt="downward arrow icon"
+    className="arrow-down-scroll"
+    src="down_arrow_large.svg"
+  />
+</div>
+`;

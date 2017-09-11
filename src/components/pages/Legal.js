@@ -54,7 +54,6 @@ export default class Legal extends Component {
         </div>
         <div ref={e => {this.contentref = e}} className="content-wrapper">
           {this.props.body.map((content, key) => {
-            console.log(key)
             return (
               <div key={key} className={key === 0 ? 'content sans active' : 'content sans'} data-id={`tab-${key}`}>
                 <MultilineText text={content.content}/>
