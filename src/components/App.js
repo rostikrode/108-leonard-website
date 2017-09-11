@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+// @flow
+import * as React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
@@ -22,6 +23,16 @@ import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
 import pressJSON from './data/press.json';
 import legalJSON from './data/legal.json';
+
+type Props = {/**/}
+type State = {
+  page: string,
+  section: string,
+  navClicked: boolean,
+  subnavs:  Array<HTMLAnchorElement>,
+  slider: ?HTMLDivElement,
+  parentslider: ?HTMLDivElement
+}
 
 const PAGES = [{
   'title': 'Building',
@@ -83,9 +94,15 @@ const PAGES = [{
     'subnavs': []
   }];
 
-export default class App extends Component {
-  constructor(props) {
+export default class App extends React.Component<Props, State> {
+  getPage: Function;
+  onForwardButtonEvent: Function;
+  onBackButtonEvent: Function;
+
+  
+  constructor(props: Object) {
     super(props);
+
     this.state = {
       page: 'Building',
       section: '',
@@ -103,6 +120,7 @@ export default class App extends Component {
   componentDidUpate() {
     // remove any leftover active sub pages
     let allsubs = this.state.subnavs;
+    console.log(allsubs);
     for(let i = 0; i < allsubs.length; i++) {
       allsubs[i].classList.remove('active');
     }
@@ -112,12 +130,6 @@ export default class App extends Component {
     window.onpushstate = this.onForwardButtonEvent;
 
     this.getPage();
-
-    if(this.navElRef) {
-      this.setState({
-        navElRef: this.navElRef
-      })
-    }
 
     this.setFooterPageTitle();
   }
@@ -157,44 +169,44 @@ export default class App extends Component {
       }
     }
   }
-  onForwardButtonEvent(e) {
+  onForwardButtonEvent(e: Event) {
     this.getPage();
     this.setFooterPageTitle();
   }
-  onBackButtonEvent(e) {
+  onBackButtonEvent(e: Event) {
     this.getPage();
     this.setFooterPageTitle();
   }
 
-  onNextButton(nextTitle) {
+  onNextButton(nextTitle: string) {
     this.setState({
       page: nextTitle,
       section: ''
     });
   }
-  newPage(title) {
+  newPage(title: string) {
     this.setState({
       page: title,
       section: ''
     });
   }
-  newSection(title) {
+  newSection(title: string) {
     this.setState({
       section: title
     });
   }
-  passAllSubnavs(subnavs) {
+  passAllSubnavs(subnavs: Array<HTMLAnchorElement>) {
     this.setState({
       subnavs: subnavs
     });
   }
-  sendSlider(slider, parent) {
+  sendSlider(slider: ?HTMLDivElement, parent: ?HTMLDivElement) {
     this.setState({
       slider: slider,
       parentslider: parent
     });
   }
-  onNavClick(clicked) {
+  onNavClick(clicked: boolean) {
     this.setState({
       navClicked: true
     }, () => {
@@ -219,7 +231,6 @@ export default class App extends Component {
           <DynComp {...props} {...page.data} 
             onNextButton={this.onNextButton.bind(this)} 
             navClicked={this.state.navClicked} 
-            navElement={this.state.navElRef} 
             subnavs={this.state.subnavs}
             sendSlider={this.sendSlider.bind(this)}
           />)} 
@@ -237,7 +248,6 @@ export default class App extends Component {
           slider={this.state.slider} 
           parentslider={this.state.parentslider}
           onNavClick={this.onNavClick.bind(this)} 
-          navEl={el=>this.navElRef = el} 
           passAllSubnavs={this.passAllSubnavs.bind(this)} 
         />
         <main>  

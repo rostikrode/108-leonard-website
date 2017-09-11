@@ -1,7 +1,6 @@
 import React from 'react';
 
 const MultilineText = (props) => {
-  console.log(props.text);
   return (
     <div>
         {props.text.split('\\n').map((i, key) => {

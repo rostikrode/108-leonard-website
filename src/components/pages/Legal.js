@@ -25,8 +25,6 @@ export default class Legal extends Component {
   }
 
   onTabClick(e) {
-    console.log(e.currentTarget.dataset.id)
-
     var tabs = this.tabref.querySelectorAll('.tab');
     for (var t = 0; t < tabs.length; t++) {
       tabs[t].classList.remove('active');
