@@ -117,7 +117,7 @@
   .floorplan-button {
     height: 32px;
     padding: 6px 10px;
-    padding-top: 13px;
+    padding-top: 9px;
   }
 }
 @media(min-width: 1920px) {

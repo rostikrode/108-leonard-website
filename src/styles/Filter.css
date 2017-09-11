@@ -1,5 +1,6 @@
 .filter {
   position: relative;
+  z-index: 900;
 }
 
 .margin {
@@ -17,7 +18,6 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  z-index: 900;
 }
 .floating-filter.show {
   transform: translateY(0);
