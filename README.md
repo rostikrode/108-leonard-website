@@ -4,10 +4,13 @@
 
 ## TODO:
 
+* Avail Mobile - add floorplan popups below each res row
+* Availability - no floorplan popups, make them accordion style beneath each residence row
+* Availability will be based heavily on Edition Residences design
+
 ### general todo
 
-* implement flow - tests say proptypes are depreciated?
-* ~~more tests for all other main pages~~
+* implement flow
 * more info on and program cms popup
 
 ### bonuses (third)
@@ -22,6 +25,8 @@
 
 ### waiting on
 
+* Availability floorplan accordion redesign
+* Availability residece row text re-layout - also based on Edition mobile layout
 * share email design
 * final copy (everywhere, including the form submit messages and legal)
 * final images

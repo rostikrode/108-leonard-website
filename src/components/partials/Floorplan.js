@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../styles/FloorplanOverlay.css';
+import '../../styles/Floorplan.css';
 import close from '../../assets/close.svg';
 
 
-const FloorplanOverlay = (props) => {
+const Floorplan = (props) => {
   return (
     <div className={props.fstate ? 'floorplan-overlay show' : 'floorplan-overlay hide'} onClick={(e) => {
       if(e.target.classList.contains('floorplan-overlay')) {
@@ -19,4 +19,4 @@ const FloorplanOverlay = (props) => {
   );
 }
 
-export default FloorplanOverlay;
+export default Floorplan;

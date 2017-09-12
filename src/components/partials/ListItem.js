@@ -45,30 +45,33 @@ export default class ListItem extends Component {
           <Checkbox value={this.props.residence} handleCheck={this.handleCheck} index={this.props.index} />
           <h4 className="res serif-bold">{this.props.residence}</h4>
         </div>
-        <div className="mobile-padding list-cell label-with-info">
-          <p className="label sans">BEDROOMS</p>
-          <p className="info serif">{this.props.bedrooms}</p>
+        <div className="list-cell-group">
+          <div className="mobile-padding list-cell label-with-info">
+            <p className="label sans">BEDROOMS</p>
+            <p className="info serif">{this.props.bedrooms}</p>
+          </div>
+          <div className="mobile-padding list-cell label-with-info">
+            <p className="label sans">BATHROOMS</p>
+            <p className="info serif">{this.props.baths}</p>
+          </div>
         </div>
-        <div className="mobile-padding list-cell label-with-info">
-          <p className="label sans">BATHROOMS</p>
-          <p className="info serif">{this.props.baths}</p>
-        </div>
-        <Button idClass="list-cell floorplan-button mobile" inverted dataId={this.props.residence} name="View Floorplan" onClick={this.onViewFloorplanClick} />
-        <div className="list-cell label-with-info">
-          <p className="label sans">INTERIOR SQ FT/M</p>
-          <p className="info serif">{this.delimitNumbers(this.props.interior)}/{this.sqmFormat(this.props.interior)}</p>
-        </div>
-        <div className="list-cell label-with-info">
-          <p className="label sans">PRICE</p>
-          <p className="info serif">${this.delimitNumbers(this.props.price)}</p>
-        </div>
-        <div className="list-cell label-with-info hide-for-mobile">
-          <p className="label sans">EST MONTHLY C.C.</p>
-          <p className="info serif">${this.delimitNumbers(this.props.monthlycc)}</p>
-        </div>
-        <div className="list-cell label-with-info hide-for-mobile">
-          <p className="label sans">EST MONTHLY R.E. TAXES</p>
-          <p className="info serif">${this.delimitNumbers(this.props.monthlytaxes)}</p>
+        <div className="list-cell-group">
+          <div className="list-cell label-with-info">
+            <p className="label sans">INTERIOR SQ FT/M</p>
+            <p className="info serif">{this.delimitNumbers(this.props.interior)}/{this.sqmFormat(this.props.interior)}</p>
+          </div>
+          <div className="list-cell label-with-info">
+            <p className="label sans">PRICE</p>
+            <p className="info serif">${this.delimitNumbers(this.props.price)}</p>
+          </div>
+          <div className="list-cell label-with-info hide-for-mobile">
+            <p className="label sans">EST MONTHLY C.C.</p>
+            <p className="info serif">${this.delimitNumbers(this.props.monthlycc)}</p>
+          </div>
+          <div className="list-cell label-with-info hide-for-mobile">
+            <p className="label sans">EST MONTHLY R.E. TAXES</p>
+            <p className="info serif">${this.delimitNumbers(this.props.monthlytaxes)}</p>
+          </div>
         </div>
         <Button idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" dataId={this.props.residence} onClick={this.onViewFloorplanClick} />
       </div>

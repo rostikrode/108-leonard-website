@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Filter from '../partials/Filter';
 import List from '../partials/List';
 import Button from '../partials/Button';
-import FloorplanOverlay from '../partials/FloorplanOverlay';
+import Floorplan from '../partials/Floorplan';
 import '../../styles/Availability.css';
 import ScrollArrow from '../partials/ScrollArrow';
 
@@ -187,7 +187,7 @@ export default class Availability extends Component {
 
     var fp_img = 'https://via.placeholder.com/2048x1401/FFFFFF/A1C6CF/?text=PH+' + fresidence
     , pdf = 'https://via.placeholder.com/2048x1401/FFFFFF/A1C6CF/?text=PH+' + fresidence + '+PDF'
-    , title = 'Residence ' + fresidence
+    , title = ''
     , zoom = true
     , zoom_info = 'Click floorplan (or use your fingers) to zoom in and out.'
     , mouse = false
@@ -227,7 +227,7 @@ export default class Availability extends Component {
   render() {
     return (
       <div className="availability-page">
-        <FloorplanOverlay fresidence={this.state.activeResidence} fstate={this.state.floorplanState} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
+        <Floorplan fresidence={this.state.activeResidence} fstate={this.state.floorplanState} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
         <div className="filter-button-wrapper">
           <Button btnEl={el=>this.btnElement = el} name="Filter" onClick={this.onFilterClick} idClass="filter-button" />
           <Button name="Share" disabled={this.state.disabledShare} onClick={this.onShareClick} />

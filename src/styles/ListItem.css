@@ -14,17 +14,18 @@
   padding: 30px 0;
   border-bottom: 1px solid #A1C6CF;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   height: 300px;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .list-cell.check-cell {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 35px;
   height: 44px;
+  width: 100%;
 }
 .list-cell {
   display: flex;
@@ -48,11 +49,6 @@
 
 .floorplan-button.desktop {
   display: none;
-}
-.floorplan-button.mobile {
-  display: flex;
-  margin-bottom: 35px;
-  max-width: 200px;
 }
 .mobile-padding {
   padding-left: 44px;
@@ -90,8 +86,9 @@
     min-width: 80px;
   }
 
-  .list-cell.list-cell.check-cell {
+  .list-cell.check-cell {
     margin-bottom: 0;
+    width: auto;
   }
   .info {
     margin: 0;
@@ -99,9 +96,6 @@
   
   .floorplan-button.desktop {
     display: flex;
-  }
-  .floorplan-button.mobile {
-    display: none;
   }
 }
 
@@ -118,10 +112,5 @@
     height: 32px;
     padding: 6px 10px;
     padding-top: 9px;
-  }
-}
-@media(min-width: 1920px) {
-  .floorplan-button {
-    /* padding: 13px 18px 19px 18px; */
   }
 }
