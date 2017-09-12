@@ -262,6 +262,9 @@
     padding: 32px;
     padding-top: 52px;
   }
+  .slick-slide .inner {
+    height: calc(100vh - 64px - 32px - 64px);
+  }
   .slick-slide .inner .caption {
     right: 2.5em; 
     bottom: 0;
@@ -273,6 +276,9 @@
   .slick-intro-slide .inner {
     padding: 32px;
     padding-top: 32px;
+  }
+  .slick-slide .inner {
+    height: calc(100vh - 64px - 32px);
   }
   .slick-slide .inner .caption {
     margin-right: 45px;
@@ -357,13 +363,15 @@
     margin: 39px 0;
     margin-top: 0;
 }
-/* .slick-intro-slide .inner {
-  padding: 18px; 
-  padding-top: 0;
-  padding-bottom: 32px;
-} */
+
 .slick-intro-slide .inner img {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .team-slider .slick-intro-slide .caption-wrapper {
+    width: 80%;
+  }
 }
 @media (min-width: 1024px) {
   .slick-intro-slide .caption {

@@ -56,13 +56,13 @@
     left: 0;
   }
   .filter-button-wrapper button {
-    margin-top: 93px;
+    margin-top: 55px;
   }
   .filter-button-wrapper button:first-child {
     margin-left: 32px;
   }
   .list-wrapper {
-    padding-top: 133px;
+    padding-top: 53px;
     padding-bottom: 32px;
   }
 }

@@ -57,6 +57,7 @@
 @media (min-width: 1024px) {
   .ham-nav-button {
     left: 12px;
+    position: absolute;
   }
 }
 

@@ -119,6 +119,11 @@
   padding: 18px;
 }
 
+@media (min-width: 768px) {
+  .floorplan-overlay .floorplan-content {
+    height: calc(100vh - 100px - 36px - 75px);
+  }
+}
 @media (min-width: 1024px) {
   .floorplan-overlay {
     position: absolute;
@@ -126,12 +131,12 @@
   }
   .floorplan-overlay .floorplan-content {
     position: absolute;
-    top: calc(32px + 133px);
+    top: calc(32px + 23px);
     left: 32px;
     background-color: #fff;
     border: 1px solid #C9C9C9;
     width: calc(100% - 64px);
-    height: calc(100vh - 133px - 64px);
+    height: calc(100vh - 83px - 64px);
   }
   .floorplan-wrapper .dbxd-floorplan-layout .dbxd-optional-title {
     margin-top: 32px;

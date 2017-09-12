@@ -340,6 +340,9 @@ body {
   line-height: 15px;
   text-transform: uppercase;
 }
+.filter-label {
+	padding-right: 0.5em;
+}
 .info {
   letter-spacing: 1px;
   font-size: 16px;
