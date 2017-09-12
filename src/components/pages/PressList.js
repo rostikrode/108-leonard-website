@@ -4,6 +4,12 @@ import ScrollArrow from '../partials/ScrollArrow';
 import '../../styles/Press.css';
 
 export default class Press extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      overflowClass: ''
+    }
+  }
   componentDidMount() {
     /** meta data for page */
     document.title = this.props.metaTitle;
@@ -17,27 +23,24 @@ export default class Press extends Component {
     if(viewport) {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
     }
-
-    this.hideShowDownArrow();
   }
 
-  hideShowDownArrow() {
-    // remove down arrow if no scrolling exists
-    setTimeout(() => {
-      if(this.listElementRef) {
-        if(this.listElementRef.scrollHeight > this.listElementRef.clientHeight) {
-          this.dwnArrow.classList.remove('hide');
-        } else {
-          this.dwnArrow.classList.add('hide');
-        }
-      }
-    }, 100);
+  isOverflowing(overflowing) {
+    if(overflowing) {
+      this.setState({
+        overflowClass: 'overflowing'
+      });
+    } else {
+      this.setState({
+        overflowClass: ''
+      });
+    }
   }
 
   render() {
     return (
-      <div className="press-wrapper">
-        <ul className="press-list" ref={e => {this.presslist = e;}}>
+      <div className={`press-wrapper ${this.state.overflowClass}`}>
+        <ul className={`press-list ${this.state.overflowClass}`} ref={e => {this.presslist = e;}}>
           {this.props.articles.map((art, key) => {
             return (
               <li className="press-item-wrapper" key={key}>
@@ -46,7 +49,7 @@ export default class Press extends Component {
             );
           })}        
         </ul>
-        <ScrollArrow listElementRef={this.presslist} />
+        <ScrollArrow listElementRef={this.presslist} isOverflowing={this.isOverflowing.bind(this)} />
       </div>
     );
   }

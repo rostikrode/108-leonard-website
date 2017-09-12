@@ -6,7 +6,7 @@
 
 ### general todo
 
-* implement flow
+* implement flow - tests say proptypes are depreciated?
 * ~~more tests for all other main pages~~
 * more info on and program cms popup
 
@@ -23,7 +23,7 @@
 ### waiting on
 
 * share email design
-* final copy (everywhere, including the form submit messages)
+* final copy (everywhere, including the form submit messages and legal)
 * final images
 
 

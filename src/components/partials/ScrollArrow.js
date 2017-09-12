@@ -12,8 +12,14 @@ export default class ScrollArrow extends Component {
       if(this.props.listElementRef) {
         if(this.props.listElementRef.scrollHeight > this.props.listElementRef.clientHeight) {
           this.dwnArrow.classList.remove('hide');
+          if(this.props.isOverflowing !== undefined) {
+            this.props.isOverflowing(true);
+          }
         } else {
           this.dwnArrow.classList.add('hide');
+          if(this.props.isOverflowing !== undefined) {
+            this.props.isOverflowing(false);
+          }
         }
       }
     }, 100);

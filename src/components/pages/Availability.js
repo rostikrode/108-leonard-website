@@ -236,7 +236,7 @@ export default class Availability extends Component {
           <Filter onViewClick={this.onViewClick.bind(this)} filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
           <List listElement={el=>this.listElementRef = el} residences={this.state.residences} onViewFloorplanClick={this.onViewFloorplanClick.bind(this)} sendCheckboxes={this.sendCheckboxes.bind(this)} />
         </div>
-        <ScrollArrow ref={i => {this.scrollArrow = i;}} listElementRef={this.listElementRef} />
+        <ScrollArrow ref={i => {this.scrollArrow = i;}} listElementRef={this.listElementRef}  />
       </div>
     );
   }

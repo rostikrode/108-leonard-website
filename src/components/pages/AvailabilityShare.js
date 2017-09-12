@@ -50,7 +50,7 @@ export default class AvailabilityShare extends Component {
     // var emailValid = true;
     var inputs = [this.state.tofirst, this.state.tolast, this.state.toemail, this.state.fromfirst, this.state.fromlast, this.state.fromemail];
     for (var i in inputs) {
-      if ((inputs[i] === '') || (inputs[i].match(/^\s$/))) {
+      if ((inputs[i] === '') || (inputs[i].match(/^\s$/)) || (inputs[i] === ' ')) {
         empty = true;
         errorStr = '* fields are required';
       }
