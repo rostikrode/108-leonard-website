@@ -4,7 +4,8 @@
 
 ## TODO:
 
-* Avail Mobile - add floorplan popups below each res row
+* Avail Mobile - add floorplan popups below each res row - look @ tablet portrait too
+  * for desktop spacing take Edition's CSS (it's pretty perf~)
 * Availability - no floorplan popups, make them accordion style beneath each residence row
 * Availability will be based heavily on Edition Residences design
 
