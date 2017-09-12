@@ -19,6 +19,7 @@
   "devDependencies": {
     "enzyme": "^2.9.1",
     "google-libphonenumber": "^3.0.0",
+    "prop-types": "^15.5.10",
     "react-autocomplete": "^1.7.1",
     "react-image": "^1.0.1",
     "react-router-dom": "^4.2.0",

@@ -1,5 +1,5 @@
 // @flow
-import * as React from 'react';
+import React, {Component} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
@@ -94,7 +94,7 @@ const PAGES = [{
     'subnavs': []
   }];
 
-export default class App extends React.Component<Props, State> {
+export default class App extends Component<Props, State> {
   getPage: Function;
   onForwardButtonEvent: Function;
   onBackButtonEvent: Function;
