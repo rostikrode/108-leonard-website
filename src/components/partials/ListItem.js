@@ -36,7 +36,7 @@ export default class ListItem extends Component {
       , click = true
       , click_info = 'When zoomed in, click and drag mouse to pan the floorplan.'
       , selector = '.floorplan-overlay .floorplan-content .floorplan-wrapper';
-      window.floorplan_plugin(fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector);
+      // window.floorplan_plugin(fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector);
   }
 
   handleCheck(e) {

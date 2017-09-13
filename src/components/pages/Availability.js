@@ -184,18 +184,18 @@ export default class Availability extends Component {
       floorplanState: fstate
     });
 
-    var fp_img = 'https://via.placeholder.com/2048x1401/FFFFFF/A1C6CF/?text=PH+' + fresidence
-    , pdf = 'https://via.placeholder.com/2048x1401/FFFFFF/A1C6CF/?text=PH+' + fresidence + '+PDF'
-    , title = ''
-    , zoom = true
-    , zoom_info = 'Click floorplan (or use your fingers) to zoom in and out.'
-    , mouse = false
-    , mouse_info = ''
-    , click = true
-    , click_info = 'When zoomed in, click and drag mouse to pan the floorplan.'
-    , selector = '.floorplan-wrapper';
-    // (fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector)
-    window.floorplan_plugin(fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector);
+    // var fp_img = 'https://via.placeholder.com/2048x1401/FFFFFF/A1C6CF/?text=PH+' + fresidence
+    // , pdf = 'https://via.placeholder.com/2048x1401/FFFFFF/A1C6CF/?text=PH+' + fresidence + '+PDF'
+    // , title = ''
+    // , zoom = true
+    // , zoom_info = 'Click floorplan (or use your fingers) to zoom in and out.'
+    // , mouse = false
+    // , mouse_info = ''
+    // , click = true
+    // , click_info = 'When zoomed in, click and drag mouse to pan the floorplan.'
+    // , selector = '.floorplan-wrapper';
+    // // (fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector)
+    // window.floorplan_plugin(fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector);
   }
   onCloseBtnClick(fstate) {
     this.setState({
