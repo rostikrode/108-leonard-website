@@ -103,6 +103,7 @@
   .list-cell.check-cell {
     margin-bottom: 0;
     width: auto;
+    padding-bottom: 0;
   }
   .info {
     margin: 0;
