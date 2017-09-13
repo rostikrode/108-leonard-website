@@ -85,6 +85,9 @@
     align-items: center;
     height: auto;
   }
+  .list-row:first-child .list-row-wrapper {
+    border-top: 0;
+  }
   .list-cell-group {
     display: flex;
     flex-flow: row nowrap;

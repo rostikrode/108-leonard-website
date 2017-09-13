@@ -1,172 +1,383 @@
-
-.floorplan-overlay {
-  position: relative;
+.floorplan-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
   width: 100%;
-  height: 100%;
-  background-color: transparent;
-  z-index: 905;
+  height: auto;
+}
+.floorplan-overlay {
   padding-top: 3px; padding-bottom: 30px;
 }
-.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: transform 0ms linear, opacity 300ms ease-in 100ms;
-}
-.hide {
-  opacity: 0;
-  transform: translateY(-1000%);
-  transition: opacity 300ms ease-out, transform 0ms 301ms;
+.floorplan-overlay .floorplan-content {
+  height: auto;
 }
 
 .close-btn {
   display: none;
 }
 
-.floorplan-overlay .floorplan-content {
-  position: relative;
-  background-color: #fff;
-  border: 1px solid #C9C9C9;
-  width: 100%;
-  height: auto;
+@media (min-width: 1024px) {
+  .floorplan-wrapper {
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+  }
 }
-.floorplan-overlay .floorplan-content .floorplan-wrapper {
-  padding: 0;
-  width: 100%; height: 100%;
-  display: block;
-  position: relative;
+
+
+/* ~~~ Floorplan Plugin Styles ~~~ */
+@media print {
+  .dbxd-floorplan-layout {
+    display: none !important;  /* hide whole page */
+  }
+  .dbxd-no-print {
+    display: block !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
-.floorplan-wrapper .dbxd-floorplan-layout .dbxd-floorplan-wrapper {
-  border: none;
-}
-.floorplan-wrapper .dbxd-floorplan-layout .dbxd-floorplan-wrapper img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  width: 100%;
-  margin: 0 auto;
-}
-.floorplan-wrapper .dbxd-tutorial-wrapper {
-  background: rgba(255,255,255,.9);
-  border: none;
-}
-.floorplan-wrapper .dbxd-tutorial-wrapper .dbxd-close {
-  background-image: url("data:image/svg+xml,%3Csvg viewPort='0 0 21 21' version='1.1' width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E %3Cline x1='1' y1='20' x2='20' y2='1' stroke='%23A1C6CF' stroke-width='2'/%3E %3Cline x1='1' y1='1' x2='20' y2='20' stroke='%23A1C6CF' stroke-width='2'/%3E %3C/svg%3E");
-}
-.floorplan-wrapper .dbxd-tutorial-wrapper .dbxd-tutorial-list  {
-  color: #A1C6CF;
-  font-family: 'Calibre', sans;
-	font-weight: 600;	
-	font-size: 17px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.floorplan-wrapper .dbxd-download, 
-.floorplan-wrapper .dbxd-expand, 
-.floorplan-wrapper .dbxd-minimize, 
-.floorplan-wrapper .dbxd-print,
-.floorplan-wrapper .dbxd-instructions-icon {
-  width: 15px; height: 15px;
-}
-.floorplan-wrapper .dbxd-expand {
+
+.dbxd-no-print {
   display: none;
 }
 
-
-.floorplan-wrapper .dbxd-floorplan-layout .dbxd-optional-title {
-  margin-top: 18px;
-  font-family: 'Caecilia LT Std', serif;
-	font-weight: normal;
-	letter-spacing: 1px;
-	line-height: 20px;
-	font-size: 12px;
-  color: #000;
-  text-transform: uppercase;
-}
-.floorplan-wrapper .dbxd-floorplan-layout .dbxd-copyright {
-  margin-bottom: 3px;
-}
-.floorplan-wrapper .dbxd-floorplan-layout .dbxd-copyright a {
-  font-family: 'Calibre', sans;
-	font-weight: normal;
-	font-size: 12px;
-	text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #000;
-}
-.floorplan-wrapper .dbxd-floorplan-layout .dbxd-copyright a:visited,
-.floorplan-wrapper .dbxd-floorplan-layout .dbxd-copyright a:hover,
-.floorplan-wrapper .dbxd-floorplan-layout .dbxd-copyright a:active {
-  color: #000;
-}
-
-.floorplan-overlay .floorplan-content .close-btn {
+.dbxd-optional-title {
+  background-color: transparent;
+  z-index: 900;
   position: absolute;
-  right: 0;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: larger;
+  font-weight: bold;
+}
+
+/* Toggle Sections */
+.dbxd-floorplan-layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.dbxd-floorplan-layout-expand {
+  position: fixed;
+  top: 50%;
+  right: 32px;
+  transform: translateY(-50%);
+  z-index: 9001;
+  background-color: #fff;
+  flex-flow: row nowrap;
+  
+  height: calc(100vh - 64px);
+}
+@media (min-width: 1024px) {
+  .dbxd-floorplan-layout {
+    flex-flow: row nowrap;
+  }
+  .dbxd-floorplan-layout-expand {
+    width: calc(100% - 64px);
+  }
+}
+@media (min-width: 1366px) {
+  .dbxd-floorplan-layout-expand {
+    width: calc(100% - 14rem - 96px);
+  }
+}
+
+.dbxd-radio-wrapper input:radio {
+  visibility: hidden;
+  margin-right: 2em;
+}
+.dbxd-radio-menu {
+  width: auto;
+  position: absolute;
+  margin: 0.5em 1em;
+  top: 0; left: 0 ;
+  background-color: #fff;
+}
+.dbxd-radio-wrapper {
+  width: auto;
+  margin: 0.5em 1em;
+  background-color: #fff;
+  position: relative;
+}
+
+.dbxd-radio-wrapper label {
+  cursor: pointer;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  border-radius: 21px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background: #eee;
+  border: 1px solid #000;
+}
+.dbxd-radio-info {
+  font-size: 120%;
+  vertical-align: sub;
+  margin-left: 1em;
+}
+
+.dbxd-floorplan-wrapper {
+  border: 1px solid #000;
+  width: 100%;
+  height: 100%;
+}
+
+.dbxd-radio-label:after {
+  opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 6px;
+	left: 5px;
+	border: 3px solid #000;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+
+.dbxd-radio-label:hover::after {
+	opacity: 0.1;
+}
+
+.dbxd-radio-wrapper input[type=radio]:checked + .dbxd-radio-label:after {
+	opacity: 1;
+}
+
+.dbxd-floorplan-wrapper {
+  height: 100%; width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.dbxd-floorplan {
+  width:100%; height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: contain; 
+  background-position: center center;
+}
+
+.dbxd-floorplan.furn {
+  display: block;
+}
+
+.dbxd-floorplan.no-furn {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .dbxd-floorplan {
+    cursor: -webkit-zoom-in;
+    cursor: -moz-zoom-in;
+    cursor: zoom-in;
+  }
+  .dbxd-floorplan.dbxd-zoom {
+    cursor: -webkit-zoom-out;
+    cursor: -moz-zoom-out;
+    cursor: zoom-out;
+  }
+}
+
+.dbxd-tutorial-wrapper {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .dbxd-tutorial-wrapper {
+    display: flex;
+  }
+}
+
+.dbxd-tutorial-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 75%;
+  background: hsla(0,0%,100%,.9);
+  border: 1px solid #a1c6cf;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dbxd-tutorial-wrapper.show {
+  z-index: 900;
+  opacity: 1;
+  transition: z-index 0ms linear, opacity 300ms ease-in 100ms;
+}
+.dbxd-tutorial-wrapper.hide {
+  z-index: -100;
+  opacity: 0;
+  transition: opacity 300ms ease-out, z-index 0ms linear 301ms;
+}
+
+.dbxd-tutorial-wrapper .dbxd-close {
+  cursor: pointer;
+  position: absolute;
+  top: 1em; right: 1em;
+  background-color: transparent;
+  padding: 0;
+  margin: 0.5em;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
   box-shadow: none;
   border: none;
-  border-radius: 0;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  z-index: 805;
 }
-.floorplan-overlay .floorplan-content .close-btn:hover,
-.floorplan-overlay .floorplan-content .close-btn:active {
-  cursor: pointer;
-} 
-.close-btn .close-btn-img {
-  width: 15px;
-  height: 15px;
+.dbxd-tutorial-wrapper .dbxd-close:focus,
+.dbxd-tutorial-wrapper .dbxd-close:active {
+  outline: 0;
+}
+
+.dbxd-tutorial-wrapper .dbxd-tutorial-list {
+  color: #fff;
+  font-size: 150%;
+  line-height: normal;
+  text-align: center;
   padding: 18px;
 }
 
-@media (min-width: 768px) {
-  .floorplan-overlay .floorplan-content {
-    height: calc(100vh - 100px - 36px - 75px);
+.dbxd-tutorial-wrapper .dbxd-tutorial-list .dbxd-feat {
+  margin: 2em 0;
+  color: #a1c6cf;
+  font-family: Calibre,sans;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dbxd-copyright {
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  right: 1em;
+  font-size: 12px;
+}
+.dbxd-copyright a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+.dbxd-instructions-icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: none;
+  padding: 0;
+  margin: 0.5em;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.dbxd-icon-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media(min-width: 1024px) {
+  .dbxd-instructions-icon {
+    display: block;
   }
+  .dbxd-icon-wrapper {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.dbxd-print, .dbxd-download, .dbxd-expand, .dbxd-minimize {
+  padding: 0;
+  margin: 0.5em;
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.dbxd-expand {
+  display: none;
+}
+.dbxd-expand img {
+  display: none;
+}
+.dbxd-expand .current {
+  display: block;
 }
 @media (min-width: 1024px) {
-  .floorplan-overlay {
-    display: none;
-  }
-  .floorplan-overlay .floorplan-content {
-    position: absolute;
-    top: calc(32px + 23px);
-    left: 32px;
-    background-color: #fff;
-    border: 1px solid #C9C9C9;
-    width: calc(100% - 64px);
-    height: calc(100vh - 83px - 64px);
-  }
-  .floorplan-wrapper .dbxd-floorplan-layout .dbxd-optional-title {
-    margin-top: 32px;
-  }
-
-  .close-btn .close-btn-img {
-    padding: 32px;
-  }
-
-}
-@media (min-width: 1366px) {
-  .floorplan-overlay .floorplan-content {
-    position: absolute;
-    top: 32px;
-    left: 32px;
-    background-color: #fff;
-    border: 1px solid #C9C9C9;
-    width: calc(100% - 64px);
-    height: calc(100vh - 64px);
-  }
-  .floorplan-wrapper .dbxd-expand {
+  .dbxd-expand {
     display: block;
   }
 }
 
-@media (min-width: 1920px) {
-  .floorplan-wrapper .dbxd-floorplan-layout .dbxd-optional-title {
-    letter-spacing: 1px;
-    line-height: 22px;
-    font-size: 15px;
+.dbxd-print:hover, .dbxd-download:hover, .dbxd-expand:hover, .dbxd-minimize:hover, .dbxd-instructions-icon:hover {
+  opacity: 0.65;
+  cursor: pointer;
+}
+a:active, a:focus,
+button:active, button:focus {
+  outline: 0;
+}
+
+.dbxd-pdf-title {
+  display: none;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+}
+@media (min-width: 1024px) {
+  .dbxd-pdf-title {
+    display: block;
+    width: 100%;
   }
 }
