@@ -372,6 +372,7 @@ body {
 	}
 	.floorplan-button span {
 		font-size: 12px;
+		white-space: nowrap;
 	}
 }
 @media (min-width: 1920px) {

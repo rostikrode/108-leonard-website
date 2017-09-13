@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Filter from '../partials/Filter';
 import List from '../partials/List';
 import Button from '../partials/Button';
-import Floorplan from '../partials/Floorplan';
 import '../../styles/Availability.css';
 import ScrollArrow from '../partials/ScrollArrow';
 
@@ -227,7 +226,6 @@ export default class Availability extends Component {
   render() {
     return (
       <div className="availability-page">
-        <Floorplan fresidence={this.state.activeResidence} fstate={this.state.floorplanState} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
         <div className="filter-button-wrapper">
           <Button btnEl={el=>this.btnElement = el} name="Filter" onClick={this.onFilterClick} idClass="filter-button" />
           <Button name="Share" disabled={this.state.disabledShare} onClick={this.onShareClick} />

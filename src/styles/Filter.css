@@ -89,15 +89,16 @@
   }
   .header-filter,
   .header-filter.list-row {
+    padding: 30px 0;
     display: flex;
     border-bottom: 1px solid #A1C6CF; 
   } 
   .filter-row.list-item {
     border: none;
   }
-  .floorplan-space-keeper {
+  .floorplan-space-keeper.list-cell {
     margin: 0;
-    width: 130px;
+    width: 14rem;
     height: 44px;
   }
 }
@@ -109,10 +110,16 @@
   .more-margin {
     margin-left: 50px;
   }
-
+  .header-filter,
+  .header-filter.list-row {
+    padding: 0;
+  } 
   .floating-filter {
     position: absolute;
     left: 0; top: 0;
+  }
+  .floorplan-space-keeper.list-cell {
+    width: 10rem;
   }
 }
 
@@ -126,5 +133,13 @@
   .margin-centering {
     margin-left: -40px;
     margin-right: 40px;
+  }
+  .floorplan-space-keeper.list-cell {
+    width: 25rem;
+  }
+}
+@media (min-width: 2048px) {
+  .floorplan-space-keeper.list-cell {
+    width: 26rem;
   }
 }
