@@ -32,13 +32,17 @@ class Floorplan extends Component {
 
   componentDidMount() {
     if (!cookie.cookies.readCookie('instructionsShown')) {
-      this.tutorial.classList.remove('hide')
-      this.tutorial.classList.add('show');
+      if(this.tutorial) {
+        this.tutorial.classList.remove('hide')
+        this.tutorial.classList.add('show');
+      }
       cookie.cookies.eraseCookie('instructionsShown');
       cookie.cookies.createCookie('instructionsShown', true, 7);
     } else {
-      this.tutorial.classList.remove('show')
-      this.tutorial.classList.add('hide');
+      if (this.tutorial) {
+        this.tutorial.classList.remove('show');
+        this.tutorial.classList.add('hide');
+      }
     }
   }
 

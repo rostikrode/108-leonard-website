@@ -604,7 +604,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-13-A"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -767,7 +903,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-13-B"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -930,7 +1202,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-13-C"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1093,7 +1501,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-13-D"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1256,7 +1800,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-13-E"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1419,7 +2099,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-14-A"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1582,7 +2398,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-14-B"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1745,7 +2697,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-14-C"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1908,7 +2996,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-14-D"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -2071,7 +3295,143 @@ exports[`renders without crashing 1`] = `
             </button>
             <div
               className="floorplan-wrapper"
-            />
+              id="residence-14-E"
+            >
+              <p
+                className="dbxd-no-print"
+              >
+                Printing these floorplans is not allowed.
+              </p>
+              <div
+                className="dbxd-floorplan-layout"
+              >
+                <div
+                  className="dbxd-floorplan-wrapper"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                  <div
+                    className="dbxd-tutorial-wrapper hide"
+                  >
+                    <div
+                      className="dbxd-tutorial-list"
+                    >
+                      <button
+                        className="dbxd-close"
+                        onClick={[Function]}
+                        title="close info window button"
+                      >
+                        <div
+                          className="loading-wrapper"
+                        >
+                          <i
+                            className="loading"
+                          />
+                        </div>
+                      </button>
+                      <div
+                        className="sans dbxd-feat zoom"
+                      >
+                        Click floorplan to zoom in and out.
+                      </div>
+                      <div
+                        className="sans dbxd-feat pan_clickdrag"
+                      >
+                        While zoomed in, click and drag mouse to pan the floorplan.
+                        <br />
+                        <br />
+                        <br />
+                        On mobile and tablet devices, pinch your screen to zoom in.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="dbxd-instructions-icon"
+                  onClick={[Function]}
+                  title="Show Intructions"
+                >
+                  <div
+                    className="loading-wrapper"
+                  >
+                    <i
+                      className="loading"
+                    />
+                  </div>
+                </button>
+                <div
+                  className="dbxd-icon-wrapper"
+                >
+                  <a
+                    className="dbxd-print"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Print floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <a
+                    className="dbxd-download"
+                    href="/placeholder.pdf"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    title="Download floorplan"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </a>
+                  <button
+                    className="dbxd-expand"
+                    onClick={[Function]}
+                    title="Expand window"
+                  >
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                    <div
+                      className="loading-wrapper"
+                    >
+                      <i
+                        className="loading"
+                      />
+                    </div>
+                  </button>
+                </div>
+                <p
+                  className="dbxd-copyright"
+                >
+                  <a
+                    className="sans-medium"
+                    href="//www.dbxd.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    © DBXD
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
