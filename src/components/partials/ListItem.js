@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {VelocityComponent} from 'velocity-react';
 import Button from '../partials/Button';
 import Checkbox from '../partials/Checkbox';
 import Floorplan from '../partials/Floorplan';
@@ -10,7 +11,8 @@ export default class ListItem extends Component {
     super(props);
 
     this.state = {
-      floorplanState: true
+      floorplanState: true,
+      clickedFloorplan: false
     };
 
     this.handleCheck = this.handleCheck.bind(this);
@@ -20,6 +22,12 @@ export default class ListItem extends Component {
   }
   componentDidMount() {
     checkArray = [];
+
+    if(window.matchMedia('(max-width: 1023px)').matches) {
+      this.setState({
+        clickedFloorplan: true
+      });
+    }
   }
 
   handleCheck(e) {
@@ -42,10 +50,23 @@ export default class ListItem extends Component {
   }
 
   onViewFloorplanClick(e) {
-    this.setState({
-      floorplanState: true
-    });
+    if (this.state.clickedFloorplan && window.matchMedia('(min-width: 1024px').matches) {
+      this.setState({
+        floorplanState: true,
+        clickedFloorplan: false
+      });
+      e.currentTarget.classList.remove('active');
+    } else {
+      this.setState({
+        floorplanState: true,
+        clickedFloorplan: true
+      });
+      e.currentTarget.classList.add('active');
+    }
     this.props.onViewFloorplanClick(e.currentTarget.dataset.id, true);
+
+    
+    
   }
 
   onCloseBtnClick() {
@@ -92,7 +113,12 @@ export default class ListItem extends Component {
           </div>
           <Button idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" dataId={this.props.residence} onClick={this.onViewFloorplanClick} />
         </div>
-        <Floorplan fresidence={this.props.residence} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
+        <VelocityComponent ref={e => {this.floorplanwrapper = e}} 
+          duration={500} 
+          easing={this.state.clickedFloorplan ? 'ease-out': 'ease-in'}
+          animation={this.state.clickedFloorplan ? 'slideDown': 'slideUp'}>
+          <Floorplan fresidence={this.props.residence} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
+        </VelocityComponent>
       </div>
     );
   }

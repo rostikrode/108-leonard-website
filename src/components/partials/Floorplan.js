@@ -163,7 +163,7 @@ class Floorplan extends Component {
                 <div className="dbxd-floorplan-wrapper">  
                   <Draggable disabled={!this.state.zoomed} onDrag={this.handleDrag}>
                     <span ref={e => this.span = e}>
-                      <VelocityComponent className="test" ref={e => {this.floorplanimage = e}}
+                      <VelocityComponent ref={e => {this.floorplanimage = e}}
                         duration={300}
                         easing="ease-in-out"
                         {...zoomAnimation}>
