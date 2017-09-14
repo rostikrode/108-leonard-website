@@ -27,6 +27,10 @@ export default class ListItem extends Component {
       this.setState({
         clickedFloorplan: true
       });
+    } else {
+      this.setState({
+        clickedFloorplan: false
+      });
     }
   }
 
@@ -50,23 +54,22 @@ export default class ListItem extends Component {
   }
 
   onViewFloorplanClick(e) {
-    if (this.state.clickedFloorplan && window.matchMedia('(min-width: 1024px').matches) {
-      this.setState({
-        floorplanState: true,
-        clickedFloorplan: false
-      });
-      e.currentTarget.classList.remove('active');
-    } else {
-      this.setState({
-        floorplanState: true,
-        clickedFloorplan: true
-      });
-      e.currentTarget.classList.add('active');
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      if (this.state.clickedFloorplan) {
+        this.setState({
+          floorplanState: true,
+          clickedFloorplan: false
+        });
+        e.currentTarget.classList.remove('active');
+      } else {
+        this.setState({
+          floorplanState: true,
+          clickedFloorplan: true
+        });
+        e.currentTarget.classList.add('active');
+      }
+      this.props.onViewFloorplanClick(e.currentTarget.dataset.id, true);
     }
-    this.props.onViewFloorplanClick(e.currentTarget.dataset.id, true);
-
-    
-    
   }
 
   onCloseBtnClick() {

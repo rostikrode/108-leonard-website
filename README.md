@@ -4,6 +4,8 @@
 
 ## TODO:
 
+* test floorplan exand with iPad
+
 ### general todo
 
 * implement flow

@@ -134,7 +134,6 @@
 }
 
 .dbxd-floorplan-wrapper {
-  border: 1px solid #D9D9D9;
   width: 100%;
   height: auto;
 }
@@ -196,6 +195,7 @@
 @media (min-width: 1024px) {
   .dbxd-floorplan-wrapper {
     height: 100%;
+    border: 1px solid #D9D9D9;
   }
 }
 @media (min-width: 1366px) {
@@ -231,11 +231,6 @@
 .dbxd-tutorial-wrapper {
   display: none;
 }
-@media (min-width: 1024px) {
-  .dbxd-tutorial-wrapper {
-    display: flex;
-  }
-}
 
 .dbxd-tutorial-wrapper {
   position: absolute;
@@ -246,18 +241,21 @@
   height: 75%;
   background: hsla(0,0%,100%,.9);
   border: 1px solid #a1c6cf;
-  display: block;
 }
-
-.dbxd-tutorial-wrapper.show {
-  z-index: 900;
-  opacity: 1;
-  transition: z-index 0ms linear, opacity 300ms ease-in 100ms;
-}
-.dbxd-tutorial-wrapper.hide {
-  z-index: -100;
-  opacity: 0;
-  transition: opacity 300ms ease-out, z-index 0ms linear 301ms;
+@media (min-width: 1024px) {
+  .dbxd-tutorial-wrapper {
+    display: flex;
+  }
+  .dbxd-tutorial-wrapper.show {
+    z-index: 900;
+    opacity: 1;
+    transition: z-index 0ms linear, opacity 300ms ease-in 100ms;
+  }
+  .dbxd-tutorial-wrapper.hide {
+    z-index: -100;
+    opacity: 0;
+    transition: opacity 300ms ease-out, z-index 0ms linear 301ms;
+  }
 }
 
 .dbxd-tutorial-wrapper .dbxd-close {
