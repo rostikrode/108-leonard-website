@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Img from 'react-image';
 import {VelocityComponent} from 'velocity-react';
+import Draggable from 'react-draggable';
 import cookie from './cookies.js';
 
 import '../../styles/Floorplan.css';
@@ -25,13 +26,19 @@ class Floorplan extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      zoomed: false
+      zoomed: false,
+      dragdisabled: true,
+      flag: 0,
+      x: 0,
+      y: 0
     }
 
     this.onCloseInfo = this.onCloseInfo.bind(this);
     this.onOpenInfo = this.onOpenInfo.bind(this);
     this.onExpand = this.onExpand.bind(this);
     this.onZoomFloorplan = this.onZoomFloorplan.bind(this);
+    this.handleDrag = this.handleDrag.bind(this);
+    this.onMouseDown = this.onMouseDown.bind(this);
   }
 
   componentDidMount() {
@@ -51,8 +58,6 @@ class Floorplan extends Component {
   }
 
   onCloseInfo(e) {
-    console.log(e.currentTarget);
-
     if (this.tutorial.classList.contains('show')) {
       this.tutorial.classList.remove('show')
       this.tutorial.classList.add('hide');
@@ -70,7 +75,6 @@ class Floorplan extends Component {
 
   onExpand(e) {
     this.layout.classList.toggle('dbxd-floorplan-layout-expand');
-    
     if (e.currentTarget.querySelector('.expand').classList.contains('current')) {
       e.currentTarget.querySelector('.expand').classList.remove('current');
       e.currentTarget.querySelector('.minimize').classList.add('current');
@@ -80,71 +84,103 @@ class Floorplan extends Component {
     }
   }
 
+  onMouseDown() {
+    this.setState({
+      flag: 0
+    })
+  }
   onZoomFloorplan(e) {
+    e.persist();
     var mouseX = e.clientX;
     var mouseY = e.clientY;
     var distX = mouseX - (e.currentTarget.getBoundingClientRect().left+(e.currentTarget.getBoundingClientRect().width/2));
     var distY = mouseY - (e.currentTarget.getBoundingClientRect().top+(e.currentTarget.getBoundingClientRect().height/2));
-
-    if (window.matchMedia('(min-width: 1024px)').matches) {
-      if(!this.state.zoomed) {
-        // then zoom in...
-        zoomAnimation = {
-          animation: {
-            scale: 2.5,
-            top: -distY+'px',
-            left: -distX+'px'
+    var $this = e.currentTarget;
+    
+    if (window.matchMedia('(min-width: 1366px)').matches) {
+      // only active zoom if desktop and if not currently dragging
+      if(this.state.flag === 0) {
+        $this.classList.toggle('dbxd-zoom');
+        if(!this.state.zoomed) {
+          // then zoom in...
+          zoomAnimation = {
+            animation: {
+              scale: 2.5,
+              top: -distY+'px',
+              left: -distX+'px'
+            }
           }
-        }
-        this.floorplanimage.runAnimation(zoomAnimation);
-        this.setState({
-          zoomed: true
-        });
-      } else {
-        // zoom out
-        zoomAnimation = {
-          animation: {
-            scale: 1,
-            top: 0,
-            left: 0
+          this.floorplanimage.runAnimation(zoomAnimation);
+          this.setState({
+            zoomed: true,
+            x: e.clientX,
+            y: e.clientY
+          }, () => {
+            this.setState({
+              dragdisabled: false
+            });
+          });
+        } else {
+          // zoom out
+          zoomAnimation = {
+            animation: {
+              scale: 1,
+              top: 0,
+              left: 0
+            }
           }
+          this.span.style.transform = 'translate(0, 0)'; 
+          this.floorplanimage.runAnimation(zoomAnimation);
+          this.setState({
+            zoomed: false
+          });
         }
-        this.floorplanimage.runAnimation(zoomAnimation);
-        this.setState({
-          zoomed: false
-        });
       }
     }
   }
 
+  // check if currently dragging floorplan so as to not accidentally zoom out mid-drag
+  handleDrag() {
+    this.setState({
+      flag: 1
+    });
+  }
 
   render() {
     return (
       <div className={this.props.fstate ? 'floorplan-overlay show' : 'floorplan-overlay hide'} onClick={(e) => {
+        
         if(e.target.classList.contains('floorplan-overlay')) {
           this.props.onCloseBtnClick(false)
         }}}>
+
         <div className="floorplan-content" ref={(e) => this.el = e}>
           <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close} alt="close btn" className="close-btn-img" /></button>
+
           <div className="floorplan-wrapper" id={`residence-${this.props.fresidence}`}>
               <p className="dbxd-no-print">Printing these floorplans is not allowed.</p>
               <div className="dbxd-floorplan-layout" ref={e => {this.layout = e}}>
                 <div className="dbxd-floorplan-wrapper">  
-                  <VelocityComponent className="test" ref={e => {this.floorplanimage = e}}
-                  duration={300}
-                  easing="ease-in-out"
-                  {...zoomAnimation}>
-                    <Img src={floorplan_placeholder} className="dbxd-floorplan ui-draggable ui-draggable-handle ui-draggable-disabled" loader={<Loader />} alt={this.props.fresidence} onClick={this.onZoomFloorplan}  />
-                  </VelocityComponent>
-                  <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>
-                    <div className="dbxd-tutorial-list">
-                      <button title="close info window button" className="dbxd-close" onClick={this.onCloseInfo}>
-                        <Img src={close_blue} loader={<Loader />} alt="close floorplan" />
-                      </button>
-                      <div className="sans dbxd-feat zoom">Click floorplan to zoom in and out.</div>
-                      <div className="sans dbxd-feat pan_clickdrag">While zoomed in, click and drag mouse to pan the floorplan.<br/><br/><br/>On mobile and tablet devices, pinch your screen to zoom in.</div>
+                  <Draggable disabled={!this.state.zoomed} onDrag={this.handleDrag}>
+                    <span ref={e => this.span = e}>
+                      <VelocityComponent className="test" ref={e => {this.floorplanimage = e}}
+                        duration={300}
+                        easing="ease-in-out"
+                        {...zoomAnimation}>
+                          <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(${floorplan_placeholder})` }} />
+                        </VelocityComponent>
+                        <Img src={floorplan_placeholder} className="dbxd-floorplan mobile-fp" alt={this.props.fresidence} loader={<Loader />} />
+                      </span>
+                    </Draggable>
+                    <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>
+                      <div className="dbxd-tutorial-list">
+                        <button title="close info window button" className="dbxd-close" onClick={this.onCloseInfo}>
+                          <Img src={close_blue} loader={<Loader />} alt="close floorplan" />
+                        </button>
+                        <div className="sans dbxd-feat zoom">Click floorplan to zoom in and out.</div>
+                        <div className="sans dbxd-feat pan_clickdrag">While zoomed in, click and drag mouse to pan the floorplan.<br/><br/><br/>On mobile and tablet devices, pinch your screen to zoom in.</div>
+                      </div>
                     </div>
-                  </div>
                   </div>
                 <button title="Show Intructions" className="dbxd-instructions-icon" onClick={this.onOpenInfo}>
                   <Img id="info" src={question} loader={<Loader />} alt="info about floorplan plugin button" />
