@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Img from 'react-image';
+import {VelocityComponent} from 'velocity-react';
 import cookie from './cookies.js';
 
 import '../../styles/Floorplan.css';
@@ -13,7 +14,7 @@ import minimize from '../../assets/floorplan/minimize.svg';
 import print from '../../assets/floorplan/print.svg';
 import question from '../../assets/floorplan/question.svg';
 
-
+var zoomAnimation = {};
 const Loader = () => {
   return (
     <div className="loading-wrapper"><i className="loading"></i></div>
@@ -23,6 +24,9 @@ const Loader = () => {
 class Floorplan extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      zoomed: false
+    }
 
     this.onCloseInfo = this.onCloseInfo.bind(this);
     this.onOpenInfo = this.onOpenInfo.bind(this);
@@ -82,11 +86,35 @@ class Floorplan extends Component {
     var distX = mouseX - (e.currentTarget.getBoundingClientRect().left+(e.currentTarget.getBoundingClientRect().width/2));
     var distY = mouseY - (e.currentTarget.getBoundingClientRect().top+(e.currentTarget.getBoundingClientRect().height/2));
 
-    console.log(mouseX, mouseY, distX, distY);
-
-    /**
-     * TODO: the rest of the zoom function implemented in ReactJS - use Velocity?
-     */
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+      if(!this.state.zoomed) {
+        // then zoom in...
+        zoomAnimation = {
+          animation: {
+            scale: 2.5,
+            top: -distY+'px',
+            left: -distX+'px'
+          }
+        }
+        this.floorplanimage.runAnimation(zoomAnimation);
+        this.setState({
+          zoomed: true
+        });
+      } else {
+        // zoom out
+        zoomAnimation = {
+          animation: {
+            scale: 1,
+            top: 0,
+            left: 0
+          }
+        }
+        this.floorplanimage.runAnimation(zoomAnimation);
+        this.setState({
+          zoomed: false
+        });
+      }
+    }
   }
 
 
@@ -102,7 +130,12 @@ class Floorplan extends Component {
               <p className="dbxd-no-print">Printing these floorplans is not allowed.</p>
               <div className="dbxd-floorplan-layout" ref={e => {this.layout = e}}>
                 <div className="dbxd-floorplan-wrapper">  
-                  <Img src={floorplan_placeholder} className="dbxd-floorplan ui-draggable ui-draggable-handle ui-draggable-disabled" loader={<Loader />} alt={this.props.fresidence} onClick={this.onZoomFloorplan}  />
+                  <VelocityComponent className="test" ref={e => {this.floorplanimage = e}}
+                  duration={300}
+                  easing="ease-in-out"
+                  {...zoomAnimation}>
+                    <Img src={floorplan_placeholder} className="dbxd-floorplan ui-draggable ui-draggable-handle ui-draggable-disabled" loader={<Loader />} alt={this.props.fresidence} onClick={this.onZoomFloorplan}  />
+                  </VelocityComponent>
                   <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>
                     <div className="dbxd-tutorial-list">
                       <button title="close info window button" className="dbxd-close" onClick={this.onCloseInfo}>
@@ -112,7 +145,7 @@ class Floorplan extends Component {
                       <div className="sans dbxd-feat pan_clickdrag">While zoomed in, click and drag mouse to pan the floorplan.<br/><br/><br/>On mobile and tablet devices, pinch your screen to zoom in.</div>
                     </div>
                   </div>
-                </div>
+                  </div>
                 <button title="Show Intructions" className="dbxd-instructions-icon" onClick={this.onOpenInfo}>
                   <Img id="info" src={question} loader={<Loader />} alt="info about floorplan plugin button" />
                 </button>
