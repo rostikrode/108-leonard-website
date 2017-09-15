@@ -6,10 +6,11 @@
 
 * test floorplan exand with iPad
 * use Lambda@Edge for page redirect to index.html and for error
+  * ex: https://read.acloud.guru/supercharging-a-static-site-with-lambda-edge-da5a1314238b
 
 ### general todo
 
-* implement flow
+* ~~implement flow~~
 * more info on and program cms popup
 
 ### bonuses (third)
