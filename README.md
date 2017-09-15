@@ -5,6 +5,7 @@
 ## TODO:
 
 * test floorplan exand with iPad
+* use Lambda@Edge for page redirect to index.html and for error
 
 ### general todo
 
