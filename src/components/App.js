@@ -1,4 +1,3 @@
-// @flow
 import React, {Component} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import NotFound from './pages/NotFound';
@@ -23,16 +22,6 @@ import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
 import pressJSON from './data/press.json';
 import legalJSON from './data/legal.json';
-
-type Props = {/**/}
-type State = {
-  page: string,
-  section: string,
-  navClicked: boolean,
-  subnavs:  Array<HTMLAnchorElement>,
-  slider: ?HTMLDivElement,
-  parentslider: ?HTMLDivElement
-}
 
 const PAGES = [{
   'title': 'Building',
@@ -94,11 +83,7 @@ const PAGES = [{
     'subnavs': []
   }];
 
-export default class App extends Component<Props, State> {
-  getPage: Function;
-  onForwardButtonEvent: Function;
-  onBackButtonEvent: Function;
-
+export default class App extends Component {
   
   constructor(props: Object) {
     super(props);
@@ -169,38 +154,38 @@ export default class App extends Component<Props, State> {
       }
     }
   }
-  onForwardButtonEvent(e: Event) {
+  onForwardButtonEvent(e) {
     this.getPage();
     this.setFooterPageTitle();
   }
-  onBackButtonEvent(e: Event) {
+  onBackButtonEvent(e) {
     this.getPage();
     this.setFooterPageTitle();
   }
 
-  onNextButton(nextTitle: string) {
+  onNextButton(nextTitle) {
     this.setState({
       page: nextTitle,
       section: ''
     });
   }
-  newPage(title: string) {
+  newPage(title) {
     this.setState({
       page: title,
       section: ''
     });
   }
-  newSection(title: string) {
+  newSection(title) {
     this.setState({
       section: title
     });
   }
-  passAllSubnavs(subnavs: Array<HTMLAnchorElement>) {
+  passAllSubnavs(subnavs) {
     this.setState({
       subnavs: subnavs
     });
   }
-  sendSlider(slider: ?HTMLDivElement, parent: ?HTMLDivElement) {
+  sendSlider(slider, parent) {
     this.setState({
       slider: slider,
       parentslider: parent
