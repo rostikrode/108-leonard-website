@@ -95,7 +95,7 @@ export default class Carousel extends Component {
             }
             let nextArrow = sliderButtonNextEl;
             let nextButton = parentSliderEl.childNodes[3];
-  
+
             if (window.matchMedia("(min-width: 1366px)").matches) {
               if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
                 let prevArrow = sliderButtonPrevEl;
@@ -261,7 +261,7 @@ export default class Carousel extends Component {
         <Slider ref={c => this.slider = c } {...this.props.settings} {...moreSettings}>
           {this.props.intro ?
             <div key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
-              <IntroSlide {...this.props} activateSubnav={this.activateSubnav}/>
+              <IntroSlide {...this.props} activateSubnav={this.activateSubnav} />
             </div>
           : undefined}
           
