@@ -26,7 +26,7 @@ export default class IntroSlide extends Component {
         var captionWrapper = introslide.querySelector('.inner .caption-wrapper');
         var imageWidth = introslide.querySelector('.inner .image-wrapper img').getBoundingClientRect().width / 2;
         captionWrapper.style.width = `calc(${imageWidth}px - 32px - 32px)`;
-      }, 400);
+      }, 250);
     }
   }
 
