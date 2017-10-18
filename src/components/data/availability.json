@@ -9,6 +9,7 @@
         "baths": 3,
         "price": 1000000,
         "interior": 1422,
+        "exterior": 10000,
         "monthlycc": 100,
         "monthlytaxes": 200
     },{
@@ -17,6 +18,7 @@
         "baths": 1.5,
         "price": 5000000,
         "interior": 3000,
+        "exterior": 10001,
         "monthlycc": 100,
         "monthlytaxes": 200
     },{
@@ -25,6 +27,7 @@
         "baths": 2,
         "price": 150000000,
         "interior": 1005,
+        "exterior": 10002,
         "monthlycc": 100,
         "monthlytaxes": 200
     },{
@@ -33,6 +36,7 @@
         "baths": 5,
         "price": 14000000,
         "interior": 10000,
+        "exterior": 10003,
         "monthlycc": 100,
         "monthlytaxes": 200
     },{
@@ -41,6 +45,7 @@
         "baths": 2.5,
         "price": 2000000,
         "interior": 5000,
+        "exterior": 10004,
         "monthlycc": 100,
         "monthlytaxes": 200
     }, {
@@ -49,6 +54,7 @@
         "baths": 3,
         "price": 1000000,
         "interior": 1000,
+        "exterior": 10005,
         "monthlycc": 100,
         "monthlytaxes": 200
     },{
@@ -57,6 +63,7 @@
         "baths": 1.5,
         "price": 5000000,
         "interior": 3000,
+        "exterior": 10006,
         "monthlycc": 100,
         "monthlytaxes": 200
     },{
@@ -65,6 +72,7 @@
         "baths": 2,
         "price": 150000000,
         "interior": 1005,
+        "exterior": 10007,
         "monthlycc": 100,
         "monthlytaxes": 200
     },{
@@ -73,6 +81,7 @@
         "baths": 5,
         "price": 14000000,
         "interior": 10000,
+        "exterior": 10008,
         "monthlycc": 100,
         "monthlytaxes": 200
     },{
@@ -81,6 +90,7 @@
         "baths": 2.5,
         "price": 6000000,
         "interior": 5000,
+        "exterior": 10009,
         "monthlycc": 100,
         "monthlytaxes": 200
     }]

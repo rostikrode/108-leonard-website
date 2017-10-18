@@ -153,10 +153,8 @@ class Floorplan extends Component {
         if(e.target.classList.contains('floorplan-overlay')) {
           this.props.onCloseBtnClick(false)
         }}}>
-
+        <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close} alt="close btn" className="close-btn-img" /></button>
         <div className="floorplan-content" ref={(e) => this.el = e}>
-          <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close} alt="close btn" className="close-btn-img" /></button>
-
           <div className="floorplan-wrapper" id={`residence-${this.props.fresidence}`}>
               <p className="dbxd-no-print">Printing these floorplans is not allowed.</p>
               <div className="dbxd-floorplan-layout" ref={e => {this.layout = e}}>

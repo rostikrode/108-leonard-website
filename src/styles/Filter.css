@@ -98,7 +98,7 @@
   }
   .floorplan-space-keeper.list-cell {
     margin: 0;
-    width: 14rem;
+    width: 10rem;
     height: 44px;
   }
 }
@@ -119,7 +119,7 @@
     left: 0; top: 0;
   }
   .floorplan-space-keeper.list-cell {
-    width: 10rem;
+    width: 15%;
   }
 }
 
@@ -135,11 +135,11 @@
     margin-right: 40px;
   }
   .floorplan-space-keeper.list-cell {
-    width: 25rem;
+    width: 10%;
   }
 }
-@media (min-width: 2048px) {
+/* @media (min-width: 2048px) {
   .floorplan-space-keeper.list-cell {
     width: 26rem;
   }
-}
+} */

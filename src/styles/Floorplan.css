@@ -5,14 +5,36 @@
   height: auto;
 }
 .floorplan-overlay {
-  padding-top: 18px; padding-bottom: 60px;
+  padding: 60px 18px;
+  position: relative;
+  background-color: #FFF;
+  z-index: 999;
+  border-top: 1px solid #A1C6CF;
+}
+.close-btn {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .close-btn {
+    display: block;
+  }
+  .floorplan-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-top: none;
+    width: calc(100% - 18px - 18px);
+    height: calc(100% - 18px - 18px);
+  }
+}
+@media (min-width: 1366px) {
+  .floorplan-overlay {
+    left: calc(225px + 18px + 18px);
+    width: calc(100% - 225px - (18px *4));
+  }
 }
 .floorplan-overlay .floorplan-content {
   height: auto;
-}
-
-.close-btn {
-  display: none;
 }
 
 @media (min-width: 1024px) {

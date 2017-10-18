@@ -326,7 +326,7 @@ body {
 }
 
 .floorplan-button span {
-  font-size: 14px;
+  font-size: 1vw;
 }
 .res {
   letter-spacing: 1px;
@@ -341,6 +341,7 @@ body {
   text-transform: uppercase;
 }
 .filter-label {
+	margin-left: 26px;
 	padding-right: 0.5em;
 }
 .info {
@@ -371,7 +372,7 @@ body {
 		font-size: 14px;
 	}
 	.floorplan-button span {
-		font-size: 12px;
+		font-size: 0.65vw;
 		white-space: nowrap;
 	}
 }
@@ -385,7 +386,7 @@ body {
 		font-size: 24px;
 	}
 	.floorplan-button span {
-		font-size: 14px;
+		font-size: 0.8vw;
 	}
 	.sans-medium, 
 	.sans-light,

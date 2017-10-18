@@ -180,35 +180,35 @@ export default class Filter extends Component {
               <span className="sans filter-label">Residence</span>
               <img src={down_arrow_small} alt="downward arrow icon" />
             </button>
-            <div className="list-cell-group">
-              <button data-filter="bedrooms" className="filter-row list-cell" onClick={this.onFilterColumn}>
-                <span className="sans filter-label">Beds</span>
-                <img src={down_arrow_small} alt="downward arrow icon" />
-              </button>
-              <button data-filter="baths" className="filter-row list-cell" onClick={this.onFilterColumn}>
-                <span className="sans filter-label">Baths</span>
-                <img src={down_arrow_small} alt="downward arrow icon" />
-              </button>
-            </div>
-            <div className="list-cell-group">
-              <button data-filter="interior" className="filter-row list-cell" onClick={this.onFilterColumn}>
-                <span className="sans filter-label">Interior <br/>sq ft/m</span>
-                <img src={down_arrow_small} alt="downward arrow icon" />
-              </button>
-              <button data-filter="price" className="filter-row list-cell" onClick={this.onFilterColumn}>
-                <span className="sans filter-label">Price</span>
-                <img src={down_arrow_small} alt="downward arrow icon" />
-              </button>
-              <button data-filter="monthlycc" className="filter-row list-cell hide-for-mobile flex" onClick={this.onFilterColumn}>
-                <span className="sans filter-label">est monthly <br/>c.c.</span>
-                <img src={down_arrow_small} alt="downward arrow icon" />
-              </button>
-            
-              <button data-filter="monthlytaxes" className="filter-row list-cell hide-for-mobile flex" onClick={this.onFilterColumn}>
-                <span className="sans filter-label">est monthly r.e. taxes</span>
-                <img src={down_arrow_small} alt="downward arrow icon" />
-              </button>
-            </div>
+            <button data-filter="bedrooms" className="filter-row list-cell" onClick={this.onFilterColumn}>
+              <span className="sans filter-label">Beds</span>
+              <img src={down_arrow_small} alt="downward arrow icon" />
+            </button>
+            <button data-filter="baths" className="filter-row list-cell" onClick={this.onFilterColumn}>
+              <span className="sans filter-label">Baths</span>
+              <img src={down_arrow_small} alt="downward arrow icon" />
+            </button>
+            <button data-filter="interior" className="filter-row list-cell" onClick={this.onFilterColumn}>
+              <span className="sans filter-label">Interior <br/>sq ft/m</span>
+              <img src={down_arrow_small} alt="downward arrow icon" />
+            </button>
+            <button data-filter="exterior" className="filter-row list-cell" onClick={this.onFilterColumn}>
+              <span className="sans filter-label">Exterior <br/>sq ft/m</span>
+              <img src={down_arrow_small} alt="downward arrow icon" />
+            </button>
+            <button data-filter="price" className="filter-row list-cell" onClick={this.onFilterColumn}>
+              <span className="sans filter-label">Price</span>
+              <img src={down_arrow_small} alt="downward arrow icon" />
+            </button>
+            <button data-filter="monthlycc" className="filter-row list-cell hide-for-mobile flex" onClick={this.onFilterColumn}>
+              <span className="sans filter-label">est monthly <br/>c.c.</span>
+              <img src={down_arrow_small} alt="downward arrow icon" />
+            </button>
+          
+            <button data-filter="monthlytaxes" className="filter-row list-cell hide-for-mobile flex" onClick={this.onFilterColumn}>
+              <span className="sans filter-label">est monthly r.e. taxes</span>
+              <img src={down_arrow_small} alt="downward arrow icon" />
+            </button>
             <div className="filter-row list-cell floorplan-space-keeper"></div>
         </div>
       </div>

@@ -16,10 +16,10 @@
   border-bottom: 1px solid #A1C6CF;
   margin-bottom: -1px;
   display: flex;
-  flex-flow: row wrap;
-  height: auto;
+  flex-flow: column wrap;
+  height: 17rem;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .list-cell.check-cell {
   display: flex;
@@ -27,8 +27,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 44px;
-  width: 100%;
-  padding-bottom: 30px;
+  width: auto;
+  padding-bottom: 15px;
 }
 .list-cell {
   display: flex;
@@ -64,7 +64,11 @@
 .mobile-padding {
   padding-left: 44px;
 }
-
+@media (max-width: 374px) {
+  .mobile-padding {
+    padding-left: 25px;
+  }
+}
 @media (min-width: 1024px) {
   .mobile-padding {
     padding-left: 0;
@@ -100,17 +104,16 @@
     align-items: center;
   }
 
-  .list-cell {
+  .list-cell, .list-cell.check-cell {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 10rem;
+    width: 15%;
   }
 
   .list-cell.check-cell {
     margin-bottom: 0;
-    width: auto;
     padding-bottom: 0;
   }
   .info {
@@ -131,9 +134,9 @@
     display: block;
   }
 
-  .list-cell {
+  /* .list-cell {
     width: 8rem;
-  }
+  } */
 
   .floorplan-button {
     width: 9rem;
@@ -144,12 +147,13 @@
 }
 
 @media (min-width: 1920px) {
-  .list-cell {
-    width: 13rem;
+  .list-cell, .list-cell.check-cell {
+    /* width: 13rem; */
+    width: 11%;
   }
 }
-@media (min-width: 2048px) {
+/* @media (min-width: 2048px) {
   .list-cell {
     width: 14rem;
   }
-}
+} */

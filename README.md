@@ -25,8 +25,6 @@
 
 ### waiting on
 
-* Availability floorplan accordion redesign
-* Availability residece row text re-layout - also based on Edition mobile layout
 * share email design
 * final copy (everywhere, including the form submit messages and legal)
 * final images
