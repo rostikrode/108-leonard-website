@@ -11,7 +11,8 @@
         "interior": 1422,
         "exterior": 10000,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     },{
         "residence": "13-B",
         "bedrooms": 2,
@@ -20,7 +21,8 @@
         "interior": 3000,
         "exterior": 10001,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     },{
         "residence": "13-C",
         "bedrooms": 2,
@@ -29,7 +31,8 @@
         "interior": 1005,
         "exterior": 10002,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     },{
         "residence": "13-D",
         "bedrooms": 4,
@@ -38,7 +41,8 @@
         "interior": 10000,
         "exterior": 10003,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     },{
         "residence": "13-E",
         "bedrooms": 1,
@@ -47,7 +51,8 @@
         "interior": 5000,
         "exterior": 10004,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     }, {
         "residence": "14-A",
         "bedrooms": 3,
@@ -56,7 +61,8 @@
         "interior": 1000,
         "exterior": 10005,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     },{
         "residence": "14-B",
         "bedrooms": 2,
@@ -65,7 +71,8 @@
         "interior": 3000,
         "exterior": 10006,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     },{
         "residence": "14-C",
         "bedrooms": 2,
@@ -74,7 +81,8 @@
         "interior": 1005,
         "exterior": 10007,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     },{
         "residence": "14-D",
         "bedrooms": 4,
@@ -83,7 +91,8 @@
         "interior": 10000,
         "exterior": 10008,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     },{
         "residence": "14-E",
         "bedrooms": 1,
@@ -92,6 +101,7 @@
         "interior": 5000,
         "exterior": 10009,
         "monthlycc": 100,
-        "monthlytaxes": 200
+        "monthlytaxes": 200,
+        "exposure": "West & North"
     }]
 }

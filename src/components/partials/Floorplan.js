@@ -2,23 +2,21 @@ import React, {Component} from 'react';
 import Img from 'react-image';
 import {VelocityComponent} from 'velocity-react';
 import Draggable from 'react-draggable';
+import Button from '../partials/Button';
 import cookie from './cookies.js';
 
 import '../../styles/Floorplan.css';
 
-import close from '../../assets/close.svg';
 import close_blue from '../../assets/close_blue.svg';
 import floorplan_placeholder from '../../assets/floorplan/floorplan_placeholder.svg';
-import download from '../../assets/floorplan/download.svg';
-import expand from '../../assets/floorplan/expand.svg';
-import minimize from '../../assets/floorplan/minimize.svg';
-import print from '../../assets/floorplan/print.svg';
 import question from '../../assets/floorplan/question.svg';
 
 var zoomAnimation = {};
 const Loader = () => {
   return (
-    <div className="loading-wrapper"><i className="loading"></i></div>
+    <div className="loading-wrapper">
+      <i className="loading" />
+    </div>
   );
 }
 
@@ -153,9 +151,24 @@ class Floorplan extends Component {
         if(e.target.classList.contains('floorplan-overlay')) {
           this.props.onCloseBtnClick(false)
         }}}>
-        <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close} alt="close btn" className="close-btn-img" /></button>
+        <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_blue} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
+        <Button idClass="download-btn desktop" inverted name="DOWNLOAD" href="/placeholder.pdf"/>
+
         <div className="floorplan-content" ref={(e) => this.el = e}>
-          <div className="floorplan-wrapper" id={`residence-${this.props.fresidence}`}>
+          <div className="floorplan-sidebar">
+            <div className="floorplan-info">
+              <div className="floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
+              <div className="floorplan-bedrooms serif">{this.props.bedrooms === 1 ? `${this.props.bedrooms} BEDROOM` : `${this.props.bedrooms} BEDROOMS`}</div>
+              <div className="floorplan-bathrooms serif">{this.props.bedrooms === 1 ? `${this.props.baths} BATHROOM` : `${this.props.baths}  BATHROOMS`}</div>
+              <div className="floorplan-interior serif">{this.props.intft} SQ FT | {this.props.intsqm} SQ M</div>
+              <div className="floorplan-exposure serif">{this.props.exposure} <br/> EXPOSURES</div>
+            </div>
+            <div className="floorplan-keys">
+              <img src="http://via.placeholder.com/193x424/A1C6CF/FFFFFF/?text=PH+KEYS" alt={`Floor Layout for Residence ${this.props.residence}`} />   
+            </div>
+          </div>
+
+          <div className="floorplan-wrapper" id={`residence-${this.props.residence}`}>
               <p className="dbxd-no-print">Printing these floorplans is not allowed.</p>
               <div className="dbxd-floorplan-layout" ref={e => {this.layout = e}}>
                 <div className="dbxd-floorplan-wrapper">  
@@ -167,7 +180,7 @@ class Floorplan extends Component {
                         {...zoomAnimation}>
                           <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(${floorplan_placeholder})` }} />
                         </VelocityComponent>
-                        <Img src={floorplan_placeholder} className="dbxd-floorplan mobile-fp" alt={this.props.fresidence} loader={<Loader />} />
+                        <Img src={floorplan_placeholder} className="dbxd-floorplan mobile-fp" alt={this.props.residence} loader={<Loader />} />
                       </span>
                     </Draggable>
                     <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>
@@ -183,18 +196,6 @@ class Floorplan extends Component {
                 <button title="Show Intructions" className="dbxd-instructions-icon" onClick={this.onOpenInfo}>
                   <Img id="info" src={question} loader={<Loader />} alt="info about floorplan plugin button" />
                 </button>
-                <div className="dbxd-icon-wrapper">
-                  <a title="Print floorplan" target="_blank" rel="noopener noreferrer" className="dbxd-print" href="/placeholder.pdf">
-                    <Img src={print} loader={<Loader />} alt="print floorplan" />
-                  </a>
-                  <a title="Download floorplan" target="_blank" rel="noopener noreferrer" className="dbxd-download" href="/placeholder.pdf">
-                    <Img src={download} loader={<Loader />} alt="download floorplan" />
-                  </a>
-                  <button title="Expand window" className="dbxd-expand" onClick={this.onExpand}>
-                    <Img className="current expand" src={expand} loader={<Loader />} alt="expand floorplan" />
-                    <Img className="minimize" src={minimize} loader={<Loader />} alt="minimize floorplan" />
-                  </button>
-                </div>
                 <p className="dbxd-copyright">
                   <a href="//www.dbxd.com" target="_blank" rel="noopener noreferrer" className="sans-medium">© DBXD</a>
                 </p>

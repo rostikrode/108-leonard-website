@@ -235,6 +235,8 @@ export default class Availability extends Component {
           <List listElement={el=>this.listElementRef = el} residences={this.state.residences} onViewFloorplanClick={this.onViewFloorplanClick.bind(this)} sendCheckboxes={this.sendCheckboxes.bind(this)} />
         </div>
         <ScrollArrow ref={i => {this.scrollArrow = i;}} listElementRef={this.listElementRef}  />
+
+        {/* TOOD: try to move floorplan to here */}
       </div>
     );
   }

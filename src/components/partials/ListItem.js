@@ -121,7 +121,7 @@ export default class ListItem extends Component {
           duration={500} 
           easing={this.state.clickedFloorplan ? 'ease-out': 'ease-in'}
           animation={this.state.clickedFloorplan ? 'fadeIn': 'fadeOut'}>
-          <Floorplan fresidence={this.props.residence} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
+          <Floorplan {...this.props} intft={this.delimitNumbers(this.props.interior)} intsqm={this.sqmFormat(this.props.interior)} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
         </VelocityComponent>
       </div>
     );
