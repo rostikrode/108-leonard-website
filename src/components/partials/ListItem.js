@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import {VelocityComponent} from 'velocity-react';
 import Button from '../partials/Button';
 import Checkbox from '../partials/Checkbox';
-import Floorplan from '../partials/Floorplan';
 import '../../styles/ListItem.css';
 
 var checkArray = [];
@@ -23,15 +21,15 @@ export default class ListItem extends Component {
   componentDidMount() {
     checkArray = [];
 
-    if(window.matchMedia('(max-width: 1023px)').matches) {
-      this.setState({
-        clickedFloorplan: true
-      });
-    } else {
+    // if(window.matchMedia('(max-width: 1023px)').matches) {
+    //   this.setState({
+    //     clickedFloorplan: true
+    //   });
+    // } else {
       this.setState({
         clickedFloorplan: false
       });
-    }
+    // }
   }
 
   handleCheck(e) {
@@ -54,22 +52,20 @@ export default class ListItem extends Component {
   }
 
   onViewFloorplanClick(e) {
-    if (window.matchMedia('(min-width: 1024px)').matches) {
-      if (this.state.clickedFloorplan) {
+    // if (window.matchMedia('(min-width: 1024px)').matches) {
         this.setState({
           floorplanState: true,
           clickedFloorplan: false
         });
         // e.currentTarget.classList.remove('active');
-      } else {
-        this.setState({
-          floorplanState: true,
-          clickedFloorplan: true
-        });
-        // e.currentTarget.classList.add('active');
-      }
+      // } else {
+      //   this.setState({
+      //     floorplanState: true,
+      //     clickedFloorplan: true
+      //   });
+      //   // e.currentTarget.classList.add('active');
+      // }
       this.props.onViewFloorplanClick(e.currentTarget.dataset.id, true);
-    }
   }
 
   onCloseBtnClick() {
@@ -117,12 +113,6 @@ export default class ListItem extends Component {
           </div>
           <Button idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" dataId={this.props.residence} onClick={this.onViewFloorplanClick} />
         </div>
-        <VelocityComponent ref={e => {this.floorplanwrapper = e}} 
-          duration={500} 
-          easing={this.state.clickedFloorplan ? 'ease-out': 'ease-in'}
-          animation={this.state.clickedFloorplan ? 'fadeIn': 'fadeOut'}>
-          <Floorplan {...this.props} intft={this.delimitNumbers(this.props.interior)} intsqm={this.sqmFormat(this.props.interior)} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
-        </VelocityComponent>
       </div>
     );
   }

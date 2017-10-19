@@ -328,6 +328,12 @@ body {
 .floorplan-button span {
   font-size: 1vw;
 }
+@media(max-width: 1023px) {
+  .floorplan-button span {
+    font-size: 16px;
+  }
+}
+
 .res {
   letter-spacing: 1px;
   line-height: 44px;

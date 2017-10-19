@@ -20,6 +20,7 @@
   height: 17rem;
   justify-content: space-between;
   align-items: flex-start;
+  position: relative;
 }
 .list-cell.check-cell {
   display: flex;
@@ -54,9 +55,17 @@
   margin-bottom: 35px;
 }
 
-.floorplan-button.desktop {
-  display: none;
+@media(max-width: 1023px) {
+  .floorplan-button.desktop {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    width: 80%;
+  }
 }
+
 .floorplan-button.active {
   background-color: #A1C6CF;
 }
@@ -93,6 +102,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
+    position: relative;
   }
   .list-row:first-child .list-row-wrapper {
     border-top: 0;

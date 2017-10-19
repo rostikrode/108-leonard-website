@@ -4,6 +4,8 @@ import List from '../partials/List';
 import Button from '../partials/Button';
 import '../../styles/Availability.css';
 import ScrollArrow from '../partials/ScrollArrow';
+import Floorplan from '../partials/Floorplan';
+import {VelocityComponent} from 'velocity-react';
 
 var tempRes = [];
 var fromChild = false;
@@ -17,7 +19,8 @@ export default class Availability extends Component {
       activeResidence: '',
       floorplanState: '',
       checkboxArray: [],
-      disabledShare: true
+      disabledShare: true,
+      floorplanResidenceArray: []
     }
     this.onFilterClick = this.onFilterClick.bind(this);
     this.onShareClick = this.onShareClick.bind(this);
@@ -179,23 +182,19 @@ export default class Availability extends Component {
   }
 
   onViewFloorplanClick(fresidence, fstate) {
+    console.log(fresidence, fstate);
     this.setState({
       activeResidence: fresidence,
       floorplanState: fstate
     });
 
-    // var fp_img = 'https://via.placeholder.com/2048x1401/FFFFFF/A1C6CF/?text=PH+' + fresidence
-    // , pdf = 'https://via.placeholder.com/2048x1401/FFFFFF/A1C6CF/?text=PH+' + fresidence + '+PDF'
-    // , title = ''
-    // , zoom = true
-    // , zoom_info = 'Click floorplan (or use your fingers) to zoom in and out.'
-    // , mouse = false
-    // , mouse_info = ''
-    // , click = true
-    // , click_info = 'When zoomed in, click and drag mouse to pan the floorplan.'
-    // , selector = '.floorplan-wrapper';
-    // // (fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector)
-    // window.floorplan_plugin(fp_img, pdf, title, zoom, zoom_info, mouse, mouse_info, click, click_info, selector);
+    for(var r = 0; r < this.props.residences.length; r++) {
+      if (this.props.residences[r].residence === fresidence) {
+        this.setState({
+          floorplanResidenceArray: this.props.residences[r]
+        });
+      }
+    }
   }
   onCloseBtnClick(fstate) {
     this.setState({
@@ -223,6 +222,16 @@ export default class Availability extends Component {
     });
   }
 
+  delimitNumbers(str) {
+    return (str + "").replace(/\b(\d+)((\.\d+)*)\b/g, function(a, b, c) {
+      return (b.charAt(0) > 0 && !(c || ".").lastIndexOf(".") ? b.replace(/(\d)(?=(\d{3})+$)/g, "$1,") : b) + c;
+    });
+  }
+
+  sqmFormat(num) {
+    return (this.delimitNumbers(parseInt(num * 0.09290304, 10)));
+  }
+
   render() {
     return (
       <div className="availability-page">
@@ -237,6 +246,12 @@ export default class Availability extends Component {
         <ScrollArrow ref={i => {this.scrollArrow = i;}} listElementRef={this.listElementRef}  />
 
         {/* TOOD: try to move floorplan to here */}
+        <VelocityComponent ref={e => {this.floorplanwrapper = e}} 
+          duration={500} 
+          easing={this.state.floorplanState ? 'ease-out': 'ease-in'}
+          animation={this.state.floorplanState ? 'fadeIn': 'fadeOut'}>
+          <Floorplan {...this.state.floorplanResidenceArray} intft={this.delimitNumbers(this.state.floorplanResidenceArray.interior)} intsqm={this.sqmFormat(this.state.floorplanResidenceArray.interior)} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
+      </VelocityComponent>
       </div>
     );
   }

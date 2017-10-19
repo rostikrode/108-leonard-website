@@ -95,7 +95,7 @@ class Floorplan extends Component {
     var distY = mouseY - (e.currentTarget.getBoundingClientRect().top+(e.currentTarget.getBoundingClientRect().height/2));
     var $this = e.currentTarget;
     
-    if (window.matchMedia('(min-width: 1366px)').matches) {
+    // if (window.matchMedia('(min-width: 1366px)').matches) {
       // only active zoom if desktop and if not currently dragging
       if(this.state.flag === 0) {
         $this.classList.toggle('dbxd-zoom');
@@ -134,7 +134,7 @@ class Floorplan extends Component {
           });
         }
       }
-    }
+    // }
   }
 
   // check if currently dragging floorplan so as to not accidentally zoom out mid-drag
@@ -159,7 +159,7 @@ class Floorplan extends Component {
             <div className="floorplan-info">
               <div className="floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
               <div className="floorplan-bedrooms serif">{this.props.bedrooms === 1 ? `${this.props.bedrooms} BEDROOM` : `${this.props.bedrooms} BEDROOMS`}</div>
-              <div className="floorplan-bathrooms serif">{this.props.bedrooms === 1 ? `${this.props.baths} BATHROOM` : `${this.props.baths}  BATHROOMS`}</div>
+              <div className="floorplan-bathrooms serif">{this.props.baths === 1 ? `${this.props.baths} BATHROOM` : `${this.props.baths}  BATHROOMS`}</div>
               <div className="floorplan-interior serif">{this.props.intft} SQ FT | {this.props.intsqm} SQ M</div>
               <div className="floorplan-exposure serif">{this.props.exposure} <br/> EXPOSURES</div>
             </div>
