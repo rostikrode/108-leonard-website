@@ -392,7 +392,7 @@ export default class Contact extends Component {
 
           if(response.status === 200) {
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">A representative from our sales team will contact you&nbsp;shortly.</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">A representative will contact you&nbsp;shortly.</p></div>
             });
           } else {
             this.setState({
