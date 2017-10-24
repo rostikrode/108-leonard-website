@@ -4,104 +4,103 @@
     "metaDescription": "Availability page of website",
     "residences": [
     {
-        "residence": "13-A",
-        "bedrooms": 3,
-        "baths": 3,
-        "price": 1000000,
-        "interior": 1422,
-        "exterior": 10000,
-        "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
-    },{
-        "residence": "13-B",
+        "residence": "A",
         "bedrooms": 2,
-        "baths": 1.5,
-        "price": 5000000,
-        "interior": 3000,
-        "exterior": 10001,
-        "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
-    },{
-        "residence": "13-C",
-        "bedrooms": 2,
-        "baths": 2,
-        "price": 150000000,
-        "interior": 1005,
-        "exterior": 10002,
-        "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
-    },{
-        "residence": "13-D",
-        "bedrooms": 4,
-        "baths": 5,
-        "price": 14000000,
-        "interior": 10000,
-        "exterior": 10003,
-        "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
-    },{
-        "residence": "13-E",
-        "bedrooms": 1,
         "baths": 2.5,
-        "price": 2000000,
-        "interior": 5000,
-        "exterior": 10004,
+        "price": 1000000,
+        "interior": 1783,
+        "exterior": 1000,
         "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
+        "monthlytaxes": 100,
+        "exposure": "West & North",
+        "floors": "4-12"
+    },{
+        "residence": "B",
+        "bedrooms": 2,
+        "baths": 2.5,
+        "price": 1000000,
+        "interior": 1443,
+        "exterior": 1000,
+        "monthlycc": 100,
+        "monthlytaxes": 100,
+        "exposure": "North",
+        "floors": "7-12"
+    },{
+        "residence": "C",
+        "bedrooms": 3,
+        "baths": 3.5,
+        "price": 1000000,
+        "interior": 1922,
+        "exterior": 1000,
+        "monthlycc": 100,
+        "monthlytaxes": 100,
+        "exposure": "South & North",
+        "floors": "7-12"
+    },{
+        "residence": "E",
+        "bedrooms": 2,
+        "baths": 2.5,
+        "price": 1000000,
+        "interior": 1306,
+        "exterior": 1000,
+        "monthlycc": 100,
+        "monthlytaxes": 100,
+        "exposure": "South & North",
+        "floors": "4-12"
+    },{
+        "residence": "F",
+        "bedrooms": 2,
+        "baths": 2.5,
+        "price": 1000000,
+        "interior": 1536,
+        "exterior": 1000,
+        "monthlycc": 100,
+        "monthlytaxes": 100,
+        "exposure": "North",
+        "floors": "3-12"
     }, {
-        "residence": "14-A",
+        "residence": "G",
         "bedrooms": 3,
-        "baths": 3,
+        "baths": 3.5,
         "price": 1000000,
-        "interior": 1000,
-        "exterior": 10005,
+        "interior": 2015,
+        "exterior": 1000,
         "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
+        "monthlytaxes": 100,
+        "exposure": "North",
+        "floors": "7-12"
     },{
-        "residence": "14-B",
+        "residence": "H",
         "bedrooms": 2,
-        "baths": 1.5,
-        "price": 5000000,
-        "interior": 3000,
-        "exterior": 10006,
-        "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
-    },{
-        "residence": "14-C",
-        "bedrooms": 2,
-        "baths": 2,
-        "price": 150000000,
-        "interior": 1005,
-        "exterior": 10007,
-        "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
-    },{
-        "residence": "14-D",
-        "bedrooms": 4,
-        "baths": 5,
-        "price": 14000000,
-        "interior": 10000,
-        "exterior": 10008,
-        "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
-    },{
-        "residence": "14-E",
-        "bedrooms": 1,
         "baths": 2.5,
-        "price": 6000000,
-        "interior": 5000,
-        "exterior": 10009,
+        "price": 1000000,
+        "interior": 1584,
+        "exterior": 1000,
         "monthlycc": 100,
-        "monthlytaxes": 200,
-        "exposure": "West & North"
+        "monthlytaxes": 100,
+        "exposure": "North",
+        "floors": "7-12"
+    },{
+        "residence": "L",
+        "bedrooms": 2,
+        "baths": 2.5,
+        "price": 1000000,
+        "interior": 1472,
+        "exterior": 1000,
+        "monthlycc": 100,
+        "monthlytaxes": 100,
+        "exposure": "South",
+        "floors": "7-12"
+    },{
+        "residence": "M",
+        "bedrooms": 2,
+        "baths": 2.5,
+        "price": 1000000,
+        "interior": 1809,
+        "exterior": 1000,
+        "monthlycc": 100,
+        "monthlytaxes": 100,
+        "exposure": "South & North",
+        "floors": "5-12"
     }]
 }

@@ -19,6 +19,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .floating-filter.show {
   transform: translateY(0);
   opacity: 1;
@@ -52,6 +53,16 @@
   white-space: nowrap;
 }
 
+@media (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {
+  .floating-filter {
+    position: fixed;
+    top: 92px;
+    padding: 5px;
+  }
+  .floating-filter-checkbox-wrapper {
+    padding: 0;
+  }
+}
 
 .header-filter,
 .header-filter.list-row {

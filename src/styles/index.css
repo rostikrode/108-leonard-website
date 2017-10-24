@@ -330,7 +330,7 @@ body {
 }
 @media(max-width: 1023px) {
   .floorplan-button span {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -390,9 +390,6 @@ body {
 	}
 	.res,.info {
 		font-size: 24px;
-	}
-	.floorplan-button span {
-		font-size: 0.8vw;
 	}
 	.sans-medium, 
 	.sans-light,

@@ -2,13 +2,11 @@ import React, {Component} from 'react';
 import Img from 'react-image';
 import {VelocityComponent} from 'velocity-react';
 import Draggable from 'react-draggable';
-import Button from '../partials/Button';
 import cookie from './cookies.js';
 
 import '../../styles/Floorplan.css';
 
 import close_blue from '../../assets/close_blue.svg';
-import floorplan_placeholder from '../../assets/floorplan/floorplan_placeholder.svg';
 import question from '../../assets/floorplan/question.svg';
 
 var zoomAnimation = {};
@@ -152,7 +150,7 @@ class Floorplan extends Component {
           this.props.onCloseBtnClick(false)
         }}}>
         <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_blue} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
-        <Button idClass="download-btn desktop" inverted name="DOWNLOAD" href="/placeholder.pdf"/>
+        <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.residence}.pdf`}>DOWNLOAD</a>
 
         <div className="floorplan-content" ref={(e) => this.el = e}>
           <div className="floorplan-sidebar">
@@ -164,7 +162,7 @@ class Floorplan extends Component {
               <div className="floorplan-exposure serif">{this.props.exposure} <br/> EXPOSURES</div>
             </div>
             <div className="floorplan-keys">
-              <img src="http://via.placeholder.com/193x424/A1C6CF/FFFFFF/?text=PH+KEYS" alt={`Floor Layout for Residence ${this.props.residence}`} />   
+              <img src={`/images/5_availability/keys/residence_${this.props.residence}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
             </div>
           </div>
 
@@ -178,9 +176,9 @@ class Floorplan extends Component {
                         duration={300}
                         easing="ease-in-out"
                         {...zoomAnimation}>
-                          <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(${floorplan_placeholder})` }} />
+                          <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(/images/5_availability/floorplans/residence_${this.props.residence}.svg)` }} />
                         </VelocityComponent>
-                        <Img src={floorplan_placeholder} className="dbxd-floorplan mobile-fp" alt={this.props.residence} loader={<Loader />} />
+                        <Img src={`/images/5_availability/floorplans/residence_${this.props.residence}.svg`} className="dbxd-floorplan mobile-fp" alt={this.props.residence} loader={<Loader />} />
                       </span>
                     </Draggable>
                     <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>
