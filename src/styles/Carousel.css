@@ -383,7 +383,7 @@
     top: 52px;
     left: 50%;
     /* transform: translateX(calc(-50% - 32px); */
-    width: calc(50% - 64px);
+    width: 45%;
     height: calc(100vh - 64px - 32px - 64px - 64px);
     z-index: 900;
     background-color: rgba(255, 255, 255, 0.42);
@@ -401,7 +401,6 @@
     position: absolute;
     top: 32px;
     left: 50%;
-    width: calc(50% - 64px);
     height: calc(100vh - 64px - 32px - 64px);
     z-index: 900;
     background-color: rgba(255, 255, 255, 0.42);
@@ -437,7 +436,6 @@
     flex-flow: row nowrap;
   }
   .slick-intro-slide .caption-wrapper {
-    width: calc(50% - 32px);
     padding: 32px;
   }
   .slick-intro-slide .caption-wrapper h1 {

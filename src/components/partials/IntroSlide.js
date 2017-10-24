@@ -7,9 +7,17 @@ export default class IntroSlide extends Component {
     introslide = this.introSlide;
     activatesubnav = this.props.activateSubnav;
 
-    this.resizeCaption();
+    window.onload = () => {
+      this.resizeCaption();
+    };
+
     window.addEventListener('resize', this.resizeCaption);
   }
+
+  componentWillUpdate() {
+    this.resizeCaption();
+  }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.onWindowScroll);
     window.removeEventListener('resize', this.resizeCaption);
@@ -21,13 +29,31 @@ export default class IntroSlide extends Component {
     }
   }
   resizeCaption() {
-    if (window.matchMedia("(min-width: 1024px)").matches) {
-      setTimeout(() => {
-        var captionWrapper = introslide.querySelector('.inner .caption-wrapper');
-        var imageWidth = introslide.querySelector('.inner .image-wrapper img').getBoundingClientRect().width / 2;
-        captionWrapper.style.width = `calc(${imageWidth}px - 32px - 32px)`;
-      }, 250);
-    }
+    setTimeout(() => {
+      var captionWrapper = introslide.querySelector('.inner .caption-wrapper');
+      var imageWidth = introslide.querySelector('.inner .image-wrapper img').getBoundingClientRect().width/2;
+      var trueImageWidth = imageWidth - 64;
+      var trueWindowWidth;
+
+      if (window.matchMedia("(min-width: 1024px)").matches) {
+        trueWindowWidth = window.innerWidth/2;
+
+        if (trueImageWidth > trueWindowWidth) {
+          captionWrapper.style.width = `${trueWindowWidth}px`;
+        } else {
+          captionWrapper.style.width = `${trueImageWidth}px`;
+        }
+      } 
+      if (window.matchMedia("(min-width: 1366px)").matches) {
+        trueWindowWidth = window.innerWidth/2 - 200;
+
+        if (trueImageWidth > trueWindowWidth) {
+          captionWrapper.style.width = `${trueWindowWidth}px`;
+        } else {
+          captionWrapper.style.width = `${trueImageWidth}px`;
+        }
+      }
+    }, 10);
   }
 
   render() {
