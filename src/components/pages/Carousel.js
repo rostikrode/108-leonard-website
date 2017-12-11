@@ -96,7 +96,28 @@ export default class Carousel extends Component {
             let nextArrow = sliderButtonNextEl;
             let nextButton = parentSliderEl.childNodes[3];
 
-            if (window.matchMedia("(min-width: 1366px)").matches) {
+            if (window.matchMedia("(min-width: 2560px)").matches) {
+              if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+                nextArrow.style.left = `calc(134px + 70px + ${length}px)`;
+              }
+              if (nextButton !== undefined)
+                nextButton.style.left = `calc(134px + 70px + ${length}px)`;
+
+            } else if (window.matchMedia("(min-width: 1920px)").matches) {
+              if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+                nextArrow.style.left = `calc(134px + ${length}px)`;
+              }
+              if (nextButton !== undefined)
+                nextButton.style.left = `calc(134px + ${length}px)`;
+
+            } else if (window.matchMedia("(min-width: 1440px)").matches) {
+              if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+                nextArrow.style.left = `calc(80px - 30px + ${length}px)`;
+              }
+              if (nextButton !== undefined)
+                nextButton.style.left = `calc(80px - 30px + ${length}px)`;
+
+            } else if (window.matchMedia("(min-width: 1366px)").matches) {
               if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
                 let prevArrow = sliderButtonPrevEl;
                 prevArrow.style.left = `calc(50% - (80px + ${length}px) + 12em)`;
@@ -107,6 +128,13 @@ export default class Carousel extends Component {
               
               if (nextButton !== undefined)
                 nextButton.style.left = `calc(80px + ${length}px)`;
+            } else if (window.matchMedia("(min-width: 1024px)").matches) {
+              if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+                nextArrow.style.left = `calc(80px + 50px + ${length}px)`;
+              }
+              
+              if (nextButton !== undefined)
+                nextButton.style.left = `calc(80px + 50px + ${length}px)`;
             } else {
               if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
                 let prevArrow = sliderButtonPrevEl;
