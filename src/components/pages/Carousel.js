@@ -110,12 +110,19 @@ export default class Carousel extends Component {
               if (nextButton !== undefined)
                 nextButton.style.left = `calc(134px + ${length}px)`;
 
-            } else if (window.matchMedia("(min-width: 1440px)").matches) {
+            } else if (window.matchMedia("(min-width: 1440px) and (min-height: 900px)").matches) {
               if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
                 nextArrow.style.left = `calc(80px - 30px + ${length}px)`;
               }
               if (nextButton !== undefined)
                 nextButton.style.left = `calc(80px - 30px + ${length}px)`;
+
+            } else if (window.matchMedia("(min-width: 1440px)").matches) {
+              if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+                nextArrow.style.left = `calc(80px + 20px + ${length}px)`;
+              }
+              if (nextButton !== undefined)
+                nextButton.style.left = `calc(80px + 20px + ${length}px)`;
 
             } else if (window.matchMedia("(min-width: 1366px)").matches) {
               if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {

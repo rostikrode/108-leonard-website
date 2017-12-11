@@ -310,6 +310,28 @@
   }
   .slick-slide .inner .caption {
     margin-right: 32px;
+    right: 2%;
+  }
+  .prev-arrow {
+    left: 5%;
+  }
+  .slick-dots {
+    left: 7%;
+  }
+}
+
+@media (min-width: 1440px) and (min-height: 900px) {
+  .slick-section .inner,
+  .slick-slide .inner,
+  .slick-intro-slide .inner {
+    padding: 32px;
+    padding-top: 32px;
+  }
+  .slick-slide .inner {
+    height: calc(100vh - 64px - 32px);
+  }
+  .slick-slide .inner .caption {
+    margin-right: 32px;
     right: 0;
   }
   .prev-arrow {
