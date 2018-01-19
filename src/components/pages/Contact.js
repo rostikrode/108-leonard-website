@@ -334,57 +334,65 @@ export default class Contact extends Component {
     e.preventDefault();
       this.doValidation(e);
       if (_valid) {
-        var data = '?', posturl = '';
+        var data = {};
         // broker form
 
-        data += '&seckey=9f42aaeb9f';
-        data += '&debug=1';
-        data += '&post_type=post';
-        data += '&returnURL='
-        data += `&client_type=${this.state.client_type}`;
+        data['post_type'] = 'post';
+        data['client_type'] = this.state.client_type;
         if (this.state.client_type === '29766') {
-          data += `&firstname=${this.state.first}`;
-          data += `&lastname=${this.state.last}`;
-          data += `&email=${this.state.email}`;
-          data += `&homephone=${this.state.countrycode}${this.state.phonenumber}`;
-          data += `&realtor_phone=${this.state.countrycode}${this.state.phonenumber}`;
-          data += `&realtor_name=${this.state.first} ${this.state.last}`;
-          data += `&brokerage_company=${this.state.brokerage_firm}`;
-          data += `&floorplan=${this.state.residenceid}`;
-          data += `&hearfrom=${this.state.hearfromid}`;      
+          data['firstname'] = this.state.first;
+          data['lastname'] = this.state.last;
+          data['email'] = this.state.email;
+          data['homephone'] = `${this.state.countrycode} ${this.state.phonenumber}`;
+          data['realtor_phone'] = `${this.state.countrycode} ${this.state.phonenumber}`;
+          data['realtor_name'] = `${this.state.first} ${this.state.last}`;
+          data['brokerage_company'] = this.state.brokerage_firm;
+          data['floorplan'] = this.state.residenceid;
+          data['hearfrom'] = this.state.hearfromid;      
 
         // purchaser form
         } else {
-          data += `&firstname=${this.state.first}`;
-          data += `&lastname=${this.state.last}`;
-          data += `&email=${this.state.email}`;
-          data += `&homephone=${this.state.countrycode}${this.state.phonenumber}`;
-          data += `&floorplan=${this.state.residenceid}`;
-          data += `&hearfrom=${this.state.hearfromid}`;
+          data['firstname'] = this.state.first;
+          data['lastname'] = this.state.last;
+          data['email'] = this.state.email;
+          data['homephone'] = `${this.state.countrycode} ${this.state.phonenumber}`;
+          data['floorplan'] = this.state.residenceid;
+          data['hearfrom'] = this.state.hearfromid;
 
           // with broker
           if (this.state.hasbroker === '1') {
-            data += '&hasbroker=1';
-            data += `&brokerage_company=${this.state.brokerage_firm}`;
-            data += `&realtor_name=${this.state.agent_name}`;
+            data['hasbroker'] = 1;
+            data['brokerage_company'] = this.state.brokerage_firm;
+            data['realtor_name'] = this.state.agent_name;
           } else {
-            data += '&hasbroker=0';
+            data['hasbroker'] = 0;
           }
         }
-      
+        
+        var debug;
+				if ((window.location.hostname.indexOf('localhost') > -1) || (window.location.hostname.indexOf('dev.dbxd.com') > -1)) {
+					debug = 1;
+				} else {
+					debug = 0;
+				}
+				data['debug'] = debug;
+				var formData = {
+					projectname: '108leonard',
+					data: data
+        };
+        
+        if ((window.location.hostname.indexOf('localhost') > -1) || (window.location.hostname.indexOf('dev.dbxd.com') > -1)) {
+					console.log(formData);
+				}
 
-        // don't actually send email on localhost
-        if (window.location.host.includes('localhost')) {
-          posturl = `https://app.sequentsys.com/api_postform.php/${data}`;
-        } else {
-          posturl = `https://app.sequentsys.com/api_postform.php/${data}`;
-        }
-
-        fetch(posturl, {
-          method: 'post',
+        // Fix this so that it posts the data - use GET for now...
+        fetch('https://form.api.dbxd.com/submit-sequent-form', {
+          method: 'POST',
           headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: {params: JSON.stringify(formData)}
         })
         .then((response) => {
           console.log(response.status === 200 ? `posted ok ${response}` : 'error');
@@ -393,6 +401,9 @@ export default class Contact extends Component {
           if(response.status === 200) {
             this.setState({
               submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">A representative will contact you&nbsp;shortly.</p></div>
+
+              // to CampaignManager here, also send email
+
             });
           } else {
             this.setState({
