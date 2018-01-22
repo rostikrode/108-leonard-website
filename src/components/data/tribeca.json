@@ -1,22 +1,72 @@
 {
   "page": "Tribeca",
-  "metaTitle": "Tribeca Page",
-  "metaDescription": "Tribeca page of website",
+  "metaTitle": "Tribeca | At the Intersection of Everything | 108 Leonard",
+  "metaDescription": "Tribeca is the most coveted place to live in New York City. Its architecture has come to define Downtown, with lofty buildings that reflect its heritage.",
   "intro": {
-    "title": "TRIBECA VOLORRUM",
-    "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+    "title": "At the Intersection of Everything",
+    "para": "Tribeca is the most coveted place to live in New York City. Its architecture has come to define Downtown, with lofty buildings that reflect its heritage. Tribeca's waterfront and parks are ubiquitous, and the most enviable, world-class schools are zoned for this tony neighborhood. And of course, the city’s top restaurants, hotspots, hotels, shops, spas, social clubs all maintain addresses here. Simultaneously, 108 Leonard is perfectly situated in the middle of Downtown between the Hudson and East Rivers, and a quick walk to four parks. Getting to Soho’s boutique shopping or the exciting nightlife of the Lower East Side is a quick walk. The Bowery, West Village, premium downtown shopping at Brookfield Place or gallery hopping in West Chelsea are minutes away by taxi. The best of New York City is in reach at 108 Leonard."
   },
   "introImage": "http://via.placeholder.com/2048x1408x1356/A1C6CF/FFFFFF/?text=PH",
-  "introImageCaption": "Tribeca Intro",
+  "introImageCaption": "",
   "section": "Intro",
   "slides": [
     {
-      "src": "/images/7_tribeca/ph.png",
+      "src": "/images/7_tribeca/7.2.1_AIRE_ANCIENT_BATHS.jpg",
       "section": "Neighborhood",
       "newsection": true,
-      "caption": "Neighborhood - Caption 1"
-    }, {
-      "src": "/images/7_tribeca/7.3_108_map_horiz.jpg",
+      "caption": "Aire Ancient Baths"
+    },{
+      "src": "/images/7_tribeca/7.2.2_AMERICAN_CUT_STEAKHOUSE.jpg",
+      "section": "Neighborhood",
+      "newsection": false,
+      "caption": "American Cut Steakhouse"
+    },{
+      "src": "/images/7_tribeca/7.2.3_LE_COUCOU.jpg",
+      "section": "Neighborhood",
+      "newsection": true,
+      "caption": "Le Coucou"
+    },{
+      "src": "/images/7_tribeca/7.2.4_TODD_MERRILL.jpg",
+      "section": "Neighborhood",
+      "newsection": false,
+      "caption": "Todd Merrill"
+    },{
+      "src": "/images/7_tribeca/7.2.5_NOBU.jpg",
+      "section": "Neighborhood",
+      "newsection": true,
+      "caption": "NOBU"
+    },{
+      "src": "/images/7_tribeca/7.2.6_HUDSON_RIVER_PARK.jpg",
+      "section": "Neighborhood",
+      "newsection": false,
+      "caption": "Hudson River Park"
+    },{
+      "src": "/images/7_tribeca/7.2.7_CITY_HALL_PARK_FOUNTAIN.jpg",
+      "section": "Neighborhood",
+      "newsection": true,
+      "caption": "City Hall Park Fountain"
+    },{
+      "src": "/images/7_tribeca/7.2.8_GRAND_BANKS.jpg",
+      "section": "Neighborhood",
+      "newsection": false,
+      "caption": "Grant Banks"
+    },{
+      "src": "/images/7_tribeca/7.2.9_DE_VERA.jpg",
+      "section": "Neighborhood",
+      "newsection": false,
+      "caption": "De Vera"
+    },{
+      "src": "/images/7_tribeca/7.2.10_THE_CLASS_BY_TARYN_TOOMEY.jpg",
+      "section": "Neighborhood",
+      "newsection": true,
+      "caption": "The Class by Taryn Toomey"
+    },{
+      "src": "/images/7_tribeca/7.2.11_LET_THERE_BE_NEON_NYC.jpg",
+      "section": "Neighborhood",
+      "newsection": false,
+      "caption": "Let there be neon NYC"
+    },{
+      "src": "/images/7_tribeca/7.3_MAP.jpg",
       "section": "Map",
       "newsection": true,
       "caption": "108 Leonard Neighborhood Map"

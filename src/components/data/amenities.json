@@ -1,13 +1,13 @@
 {
   "page": "Amenities",
-  "metaTitle": "Amenities Page",
-  "metaDescription": "Amenities page of website",
+  "metaTitle": "Amenities | A Life Well Lived | 108 Leonard",
+  "metaDescription": "A bevy of hidden retreats spanning over 20,000 square feet, 108 Leonard's amenities are a private escape in Tribeca.",
   "intro": {
-    "title": "AMENITIES VOLORRUM",
-    "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+    "title": "A Life Well Lived",
+    "para": "A bevy of hidden retreats spanning over 20,000 square feet, 108 Leonard's amenities are a private escape in Tribeca. It starts with the arrival via a private heated indoor motor reception. Within, find an entertaining suite replete with private dining, wine cellar and a sumptuous lounge flanked by clubby nooks for intimate conversation. Wellness features include a stunning 75 foot lap pool, thermal bath, steam shower, sauna and rain shower. Luxuriant rooftop gardens are designed for dining, lounging and contemplative reflection. "
   },
   "introImage": "/images/6_amenities/AmenitiesDetail_GeometryTest1.jpg",
-  "introImageCaption": "Amenities Intro",
+  "introImageCaption": "",
   "section": "Intro",
   "slides": [
     {

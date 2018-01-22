@@ -1,45 +1,30 @@
 {
   "page": "Building",
-  "metaTitle": "Building Page",
-  "metaDescription": "Building page of website",
+  "metaTitle": "Building | A Modern Renaissance | 108 Leonard",
+  "metaDescription": "108 Leonard pays homage to the most coveted elements of an architectural masterpiece, including dramatic details of scale, proportion, and volume.",
   "intro": {
-    "title": "BUILDING VOLORRUM",
-    "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+    "title": "A Modern Renaissance",
+    "para": "108 Leonard pays homage to the most coveted elements of an architectural masterpiece, including dramatic details of scale, proportion, and volume. Here, ornamental majesty and historic provenance are paired anew with fresh, modern forms and contemporary design priorities. Award-winning hospitality design firm Jeffrey Beers International has meticulously restored renowned architect McKim Mead & White's Italian Renaissance Revival landmark. Beers has masterfully imbued a distinctly contemporary yet timeless point of view within Tribeca's most iconic century-old building."
   },
-  "introImage": "http://via.placeholder.com/2048x1408x1356/A1C6CF/FFFFFF/?text=PH",
-  "introImageCaption": "Building Intro",
+  "introImage": "/images/2_building/Interior_Day2.jpg",
+  "introImageCaption": "",
   "section": "Intro",
   "slides": [
     {
-      "src": "/images/2_building/ph.png",
-      "section": "Property",
-      "newsection": true,
-      "caption": "Property - Caption 1"
-    }, {
-      "src": "/images/2_building/ph.png",
-      "section": "Property",
-      "newsection": false,
-      "caption": "Property - Caption 2"
-    }, {
-      "src": "/images/2_building/ph.png",
-      "section": "Property",
-      "newsection": false,
-      "caption": "Property - Caption 3"
-    }, {
       "src": "/images/2_building/2.3.1_Leonard_Entrance.jpg",
-      "section": "Entrance",
+      "section": "Property",
       "newsection": true,
       "caption": "Leonard Entrance"
     }, {
-      "src": "/images/2_building/2.3.2_Leonard_Lobby.jpg",
+      "src": "/images/2_building/2.3.2_Leonard_Entrance.jpg",
+      "section": "Property",
+      "newsection": false,
+      "caption": "Leonard Entrance"
+    }, {
+      "src": "/images/2_building/2.3.3_Leonard_Lobby.jpg",
       "section": "Entrance",
       "newsection": false,
       "caption": "Leonard Lobby"
-    }, {
-      "src": "/images/2_building/2.3.3_Leonard_Entrance.jpg",
-      "section": "Entrance",
-      "newsection": false,
-      "caption": "Leonard Entrance"
     }, {
       "src": "/images/2_building/2.3.4_Motor_Reception.jpg",
       "section": "Entrance",
