@@ -533,6 +533,9 @@
   }
 }
 @media (min-width: 1920px) {
+  .slick-intro-slide .caption-wrapper {
+    width: 45%;
+  }
   .slick-intro-slide .caption-wrapper h1 {
     font-size: 1.5rem;
   }
