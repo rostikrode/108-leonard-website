@@ -344,6 +344,7 @@ export default class Contact extends Component {
           data['lastname'] = this.state.last;
           data['email'] = this.state.email;
           data['homephone'] = `${this.state.countrycode} ${this.state.phonenumber}`;
+          data['hasbroker'] = 0;
           data['realtor_phone'] = `${this.state.countrycode} ${this.state.phonenumber}`;
           data['realtor_name'] = `${this.state.first} ${this.state.last}`;
           data['brokerage_company'] = this.state.brokerage_firm;
@@ -385,14 +386,14 @@ export default class Contact extends Component {
 					console.log(formData);
 				}
 
-        // Fix this so that it posts the data - use GET for now...
-        fetch('https://form.api.dbxd.com/submit-sequent-form', {
+        fetch('https://form.api.dbxd.com/post-sequent-form', {
           method: 'POST',
+          mode: 'cors',
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
           },
-          body: {params: JSON.stringify(formData)}
+          body: JSON.stringify({params: formData})
         })
         .then((response) => {
           console.log(response.status === 200 ? `posted ok ${response}` : 'error');
