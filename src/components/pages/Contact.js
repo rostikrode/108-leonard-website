@@ -404,71 +404,75 @@ export default class Contact extends Component {
               submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">A representative will contact you&nbsp;shortly.</p></div>
             });
 
-            // // to CampaignManager here, also send email
-            // Object.prototype.getKey = function(value) {
-            //   var object = this;
-            //   return Object.keys(object).find(key => object[key] === value);
-            // };
-            // /** Send form to Campaign Monitor as well */
-            // let formData = {
-            //   projectname: "108leonard",
-            //   name: $('input[name="firstname"]').val()+" "+$('input[name="lastname"]').val(),
-            //   EmailAddress: $('input[name="email"]').val(),
-            //   CustomFields: [
-            //     {
-            //       Key: 'Phone',
-            //       Value: `${this.state.countrycode} ${this.state.phonenumber}`
-            //     },
-            //     {
-            //       Key: 'Country',
-            //       Value: this.state.countrycode
-            //     },
-            //     {
-            //       Key: 'DesiredResidence',
-            //       Value:  this.state.residencelist.getKey(this.state.residenceid) 
-            //     }, 
-            //     {
-            //       Key: 'Howdidyouhearaboutus',
-            //       Value:  this.state.hearfromlist.getKey(this.state.hearfromid) 
-            //     }, 
-            //     {
-            //       Key: 'ContactType',
-            //       Value: this.state.client_type === '29766' ? 'Broker' : 'Buyer'
-            //     },
-            //     {
-            //       Key: 'BrokerageFirm',
-            //       Value: this.state.brokerage_firm
-            //     },
-            //     {
-            //       Key: 'Representedbyabroker',
-            //       Value: this.state.hasbroker === 1 ? 'Yes' : 'No'
-            //     }, 
-            //     {
-            //       Key: 'AgentName',
-            //       Value: this.state.client_type === '29766' ? `${this.state.first} ${this.state.last}` : this.state.agent_name
-            //     }
-            //   ]
-            // };
-            // $.ajax({
-            //   url: "https://form.api.dbxd.com/submit-form",
-            //   dataType: 'json',
-            //   data: formData,
-            //   crossDomain: true,
-            //   success: function(data, textStatus, jqXHR) {
-            //     var response = jqXHR.responseJSON;
-            //     console.log(response);
-                
-            //     if(response.success) {   
-            //       console.log("campaign manager send inquiry: success - no error");
-            //     } else {
-            //       console.log("campaign manager send inquiry: success - INTERNAL ERROR");
-            //     }
-            //   },
-            //   error: function(xhr, status) {
-            //     console.warn("send campaign manager send inquiry confirmation error", xhr, status);
+            // to CampaignManager here, also send email
+            Object.prototype.getKey = function(value) {
+              var object = this;
+              return Object.keys(object).find(key => object[key] === value);
+            };
+            /** Send form to Campaign Monitor as well */
+            let formData = {
+              projectname: "108leonard",
+              name: `${this.state.first} ${this.state.last}`,
+              EmailAddress: this.state.email,
+              CustomFields: [
+                {
+                  Key: 'Phone',
+                  Value: `${this.state.countrycode} ${this.state.phonenumber}`
+                },
+                {
+                  Key: 'Country',
+                  Value: this.state.countrycode
+                },
+                {
+                  Key: 'DesiredResidence',
+                  Value:  this.state.residencelist.getKey(this.state.residenceid) 
+                }, 
+                {
+                  Key: 'Howdidyouhearaboutus',
+                  Value:  this.state.hearfromlist.getKey(this.state.hearfromid) 
+                }, 
+                {
+                  Key: 'ContactType',
+                  Value: this.state.client_type === '29766' ? 'Broker' : 'Buyer'
+                },
+                {
+                  Key: 'BrokerageFirm',
+                  Value: this.state.brokerage_firm
+                },
+                {
+                  Key: 'Representedbyabroker',
+                  Value: this.state.hasbroker === 1 ? 'Yes' : 'No'
+                }, 
+                {
+                  Key: 'AgentName',
+                  Value: this.state.client_type === '29766' ? `${this.state.first} ${this.state.last}` : this.state.agent_name
+                }
+              ]
+            };
+
+            // Figure out how to successfully send this or just put some POST paths into forms.api:
+
+            // fetch('https://form.api.dbxd.com/submit-form?'+encodeURIComponent(JSON.stringify(formData)), {
+            //   method: 'GET',
+            //   mode: 'cors',
+            //   headers: {
+            //     'Content-Type': 'application/json'
             //   }
+            // })
+            // .then((response) => {
+            //   console.log(response.status === 200 ? `posted ok ${response}` : 'error');
+            //   console.log(response);
+
+            //   if(response.success) {   
+            //     console.log("campaign manager send inquiry: success - no error");
+            //   } else {
+            //     console.log("campaign manager send inquiry: success - INTERNAL ERROR");
+            //   }
+
+            // })
+            // .catch((err) => {
+            //   console.warn("send campaign manager send inquiry confirmation error", err);
             // });
-            // /** END send form to campaign monitor */
 
           } else {
             this.setState({
