@@ -1,5 +1,6 @@
 import 'babel-polyfill';
 import React from 'react';
+import fetch from 'isomorphic-fetch';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
 import Contact from '../components/pages/Contact';

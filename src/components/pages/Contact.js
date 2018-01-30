@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import fetch from 'isomorphic-fetch';
 import { VelocityComponent, VelocityTransitionGroup } from 'velocity-react';
 import Autocomplete from 'react-autocomplete';
 import Checkbox from '../partials/Checkbox';
