@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import fetch from 'isomorphic-fetch';
 import Filter from '../partials/Filter';
 import List from '../partials/List';
 import Button from '../partials/Button';
@@ -53,7 +54,7 @@ export default class Availability extends Component {
   }
 
   loadResidences() {
-    fetch('https://residences.api.dbxd.com/getunits/?projectname=108leonard')
+    fetch('https://residences.api.dbxd.com/getunits/available?projectname=108leonard')
     .then(response => response.json())
     .then(json => {
       var parsed = [];
