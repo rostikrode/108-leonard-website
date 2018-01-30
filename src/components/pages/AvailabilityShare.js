@@ -104,51 +104,55 @@ export default class AvailabilityShare extends Component {
     }, () => {
       var valid = this.validateForm();
       if(valid) {
+        // Send the smart email via Email Marketing Manager/Campaign Monitor
+        var emaildata = {
+          projectname: '108leonard',
+          smartEmailID: '6ee5e920-e0bf-4384-8bdc-f0e774335ae3',
+          Data: {
+            fromname: `${this.state.fromfirst} ${this.state.fromlast}`,
+            fromemail: this.state.fromemail,
+            toname: `${this.state.tofirst} ${this.state.tolast}`,
+            toemail: this.state.toemail,
+            residences: this.state.residencephrase,
+            url: this.state.residenceurl
+          },
+          To: this.state.toemail,
+          From: '108 Leonard <info@108leonard.com>',
+          ReplyTo: this.state.fromemail
+        };
+        fetch('https://form.api.dbxd.com/post-smart-email', {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(emaildata)
+        }).then((response) => {
+          console.log(response.status === 200 ? `posted ok ${response.status}` : 'error');
+          return response.text();
+        }).then((data) => {
+          var jsonData = JSON.parse(data);
 
-        var data = '?', posturl = '';
-        data += `fromname=${encodeURIComponent(this.state.fromfirst)} ${encodeURIComponent(this.state.fromlast)}`;
-        data +=  `&fromemail=${encodeURIComponent(this.state.fromemail)}`;
-        data +=  `&toname=${encodeURIComponent(this.state.tofirst)} ${encodeURIComponent(this.state.tolast)}`;
-        data +=  `&toemail=${encodeURIComponent(this.state.toemail)}`;
-        data +=  `&subject=${encodeURIComponent(this.state.fromfirst)} ${encodeURIComponent(this.state.fromlast)} Has Shared 108 Leonard Residences With You`;
-        data +=  `&phrase=${encodeURIComponent(this.state.residencephrase)}`;
-        data +=  `&url=${encodeURIComponent(this.state.residenceurl)}`;
-        data +=  `&template=${encodeURIComponent('http://108leonard-full.dev.dbxd.com.s3-website-us-east-1.amazonaws.com/share-template.html')}`;
-
-        // don't actually send email on localhost
-        if (window.location.host.includes('localhost')) {
-          posturl = '#';
-        } else {
-          posturl = `https://api.dbxd.com/sendmail.v1/send/${data}`;
-        }
-
-          fetch(posturl, {
-            method: 'post',
-            headers: {
-              'Content-Type': 'application/x-www-form-urlencoded'
-            }
-          })
-          .then((response) => {
-            console.log(response.status === 200 ? `posted ok ${response}` : 'error');
-            console.log(response);
-
-            if(response.status === 200) {
-              this.setState({
-                submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">Your email has been sent to {this.state.toemail}</p></div>
-              });
-            } else {
-              this.setState({
-                submitMessage: <div className="response-message"><p className="sans-light-bold">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
-              });
-            }
-          })
-          .catch((err) => {
-            console.log('Request error ', err);
+          if(jsonData.success) {
+            console.log("send smart email: success - no error");
+            this.setState({
+              submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">Your email has been sent to {this.state.toemail}</p></div>
+            });
+          } else {
+            console.log('send smart email: success - INTERNAL ERROR', jsonData);
             this.setState({
               submitMessage: <div className="response-message"><p className="sans-light-bold">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
             });
-          });
-        }
+          }
+        })
+        .catch((err) => {
+          console.log('send smart email error ', err);
+            this.setState({
+              submitMessage: <div className="response-message"><p className="sans-light-bold">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
+            });
+        });
+      }
     });
   }
 

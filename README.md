@@ -25,7 +25,6 @@
 
 ### waiting on
 
-* share email design
 * final copy (everywhere, including the form submit messages and legal)
 * final images
 

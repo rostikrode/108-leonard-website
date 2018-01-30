@@ -13,7 +13,8 @@ export default class Availability extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      residences: tempRes > 0 ? tempRes : this.props.residences,
+      residences: tempRes > 0 ? tempRes : [],
+      allResidences: [],
       filterOverlay: false,
       filtersArray: [],
       activeResidence: '',
@@ -27,6 +28,8 @@ export default class Availability extends Component {
   }
   
   componentDidMount() {
+    this.loadResidences();
+    
     setTimeout(() => {
       window.scrollTo(0,0);
     }, 100);
@@ -49,6 +52,34 @@ export default class Availability extends Component {
     }
   }
 
+  loadResidences() {
+    fetch('https://residences.api.dbxd.com/getunits/?projectname=108leonard')
+    .then(response => response.json())
+    .then(json => {
+      var parsed = [];
+      for (var i in json) {
+        if (json[i]) {
+          parsed[i] = {
+            'id': json[i]['idx'],
+            'residence': json[i]['unit_num'].indexOf('(') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'],
+            'letter': json[i]['unit_num'].indexOf('PH') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[1],
+            'bedrooms': parseInt(json[i]['unit_type'].split('/')[0].split('BR')[0], 10),
+            'baths': parseFloat(json[i]['unit_type'].split('/')[1].split('BA')[0]),
+            'price': Math.round(json[i]['price']),
+            'interior': json[i]['sqft'],
+            'exterior': json[i]['outdoor_sqft'],
+            "monthlycc": json[i]['common_charges'],
+            'monthlytaxes': json[i]['taxes']
+          };
+        }
+      }
+      this.setState({
+        residences: tempRes > 0 ? tempRes : parsed,
+        allResidences: parsed
+      });
+    });
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     if(fromChild) {
       tempRes = nextState.residences;
@@ -60,22 +91,26 @@ export default class Availability extends Component {
   }
 
   showCertainResidences(residences) {
-    var resArray = residences.split('&');
-    var newFilteredArray = [];
+    setTimeout(() => {
+      var resArray = residences.split('&');
+      var newFilteredArray = [];
 
-    var filterRes = (el) => {
-      if (el.residence === resArray[res]) {
-        return true;
-      } else {
-        return false;
+      var filterRes = (el) => {
+        if (el['residence'] === resArray[res]) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+      for(var res in resArray) {
+        if (resArray[res]) {
+          newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
+        }
       }
-    };
-    for(var res in resArray) {
-      newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
-    }
-    this.setState({
-      residences: newFilteredArray
-    });
+      this.setState({
+        residences: newFilteredArray
+      });
+    }, 1000);
   }
 
   naturalSorter(as, bs){
@@ -188,10 +223,10 @@ export default class Availability extends Component {
       floorplanState: fstate
     });
 
-    for(var r = 0; r < this.props.residences.length; r++) {
-      if (this.props.residences[r].residence === fresidence) {
+    for(var r = 0; r < this.state.residences.length; r++) {
+      if (this.state.residences[r].residence === fresidence) {
         this.setState({
-          floorplanResidenceArray: this.props.residences[r]
+          floorplanResidenceArray: this.state.residences[r]
         });
       }
     }
@@ -240,7 +275,7 @@ export default class Availability extends Component {
           <Button name="Share" disabled={this.state.disabledShare} onClick={this.onShareClick} />
         </div>
         <div className="list-wrapper">
-          <Filter onViewClick={this.onViewClick.bind(this)} filterOverlay={this.state.filterOverlay} residences={this.props.residences} sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
+          <Filter onViewClick={this.onViewClick.bind(this)} filterOverlay={this.state.filterOverlay} residences={this.state.residences} allResidences={this.state.allResidences}  sendResidences={this.sendResidences.bind(this)} filtersArray={this.state.filtersArray} onFilterItem={this.onFilterItem.bind(this)} onFilterColumn={this.onFilterColumn.bind(this)} />
           <List listElement={el=>this.listElementRef = el} residences={this.state.residences} onViewFloorplanClick={this.onViewFloorplanClick.bind(this)} sendCheckboxes={this.sendCheckboxes.bind(this)} />
         </div>
         <ScrollArrow ref={i => {this.scrollArrow = i;}} listElementRef={this.listElementRef}  />

@@ -85,7 +85,7 @@ const PAGES = [{
 
 export default class App extends Component {
   
-  constructor(props: Object) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -115,7 +115,6 @@ export default class App extends Component {
     window.onpushstate = this.onForwardButtonEvent;
 
     this.getPage();
-
     this.setFooterPageTitle();
   }
 
@@ -191,7 +190,7 @@ export default class App extends Component {
       parentslider: parent
     });
   }
-  onNavClick(clicked: boolean) {
+  onNavClick(clicked) {
     this.setState({
       navClicked: true
     }, () => {
@@ -221,7 +220,6 @@ export default class App extends Component {
           />)} 
         />)
     });
-    
     return (
       <div className="App">
         <Header 

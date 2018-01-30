@@ -396,7 +396,7 @@ export default class Contact extends Component {
           body: JSON.stringify({params: formData})
         })
         .then((response) => {
-          console.log(response.status === 200 ? `posted ok ${response}` : 'error');
+          console.log(response.status === 200 ? `posted ok ${response.status}` : 'error');
           console.log(response);
 
           if(response.status === 200) {
@@ -404,11 +404,6 @@ export default class Contact extends Component {
               submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">A representative will contact you&nbsp;shortly.</p></div>
             });
 
-            // to CampaignManager here, also send email
-            Object.prototype.getKey = function(value) {
-              var object = this;
-              return Object.keys(object).find(key => object[key] === value);
-            };
             /** Send form to Campaign Monitor as well */
             let formData = {
               projectname: "108leonard",
@@ -425,11 +420,11 @@ export default class Contact extends Component {
                 },
                 {
                   Key: 'DesiredResidence',
-                  Value:  this.state.residencelist.getKey(this.state.residenceid) 
+                  Value:  Object.keys(this.state.residencelist).find(key => this.state.residencelist[key] === this.state.residenceid)  
                 }, 
                 {
                   Key: 'Howdidyouhearaboutus',
-                  Value:  this.state.hearfromlist.getKey(this.state.hearfromid) 
+                  Value: Object.keys(this.state.hearfromlist).find(key => this.state.hearfromlist[key] === this.state.hearfromid)
                 }, 
                 {
                   Key: 'ContactType',
@@ -450,29 +445,64 @@ export default class Contact extends Component {
               ]
             };
 
-            // Figure out how to successfully send this or just put some POST paths into forms.api:
+            // POST info to Campaign Monitor/Email Marketing Manager
+            fetch('https://form.api.dbxd.com/post-form', {
+              method: 'POST',
+              mode: 'cors',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            }).then((response) => {
+              console.log(response.status === 200 ? `posted ok ${response.status}` : 'error');
+              return response.text();
+            }).then((data) => {
+              var jsonData = JSON.parse(data);
 
-            // fetch('https://form.api.dbxd.com/submit-form?'+encodeURIComponent(JSON.stringify(formData)), {
-            //   method: 'GET',
-            //   mode: 'cors',
-            //   headers: {
-            //     'Content-Type': 'application/json'
-            //   }
-            // })
-            // .then((response) => {
-            //   console.log(response.status === 200 ? `posted ok ${response}` : 'error');
-            //   console.log(response);
+              if(jsonData.success) {   
+                console.log("campaign manager inquiry: success - no error");
+              } else {
+                console.log('campaign manager inquiry: success - INTERNAL ERROR ', jsonData);
+              }
 
-            //   if(response.success) {   
-            //     console.log("campaign manager send inquiry: success - no error");
-            //   } else {
-            //     console.log("campaign manager send inquiry: success - INTERNAL ERROR");
-            //   }
+              // Send the smart email via Email Marketing Manager/Campaign Monitor
+              var emaildata = {
+                projectname: '108leonard',
+                smartEmailID: '8a7f95f7-e51d-467a-bf4a-df9c1ab80dae',
+                Data: {
+                  name: `${this.state.first} ${this.state.last}`
+                },
+                To: this.state.email,
+                From: '108 Leonard <info@108leonard.com>'
+              };
+              fetch('https://form.api.dbxd.com/post-smart-email', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(emaildata)
+              }).then((response) => {
+                console.log(response.status === 200 ? `posted ok ${response.status}` : 'error');
+                return response.text();
+              }).then((data) => {
+                var jsonData = JSON.parse(data);
 
-            // })
-            // .catch((err) => {
-            //   console.warn("send campaign manager send inquiry confirmation error", err);
-            // });
+                if(jsonData.success) {   
+                  console.log("send smart email: success - no error");
+                } else {
+                  console.log('send smart email: success - INTERNAL ERROR', jsonData);
+                }
+              })
+              .catch((err) => {
+                console.warn("send smart email error", err);
+              });
+            })
+            .catch((err) => {
+              console.warn("send campaign manager inquiry error", err);
+            });
 
           } else {
             this.setState({

@@ -40,7 +40,7 @@ export default class Filter extends Component {
 
   onViewClick() {
     var filter = this.props.filtersArray;
-    var tempArray = this.props.residences;
+    var tempArray = this.props.allResidences;
     var newArray = [];
     var beds = [];
     var price = [];
@@ -114,10 +114,11 @@ export default class Filter extends Component {
     newSort = newSort.filter((el, position) => {
       return newSort.indexOf(el) === position;
     });
+    
     if(newSort.length > 0) {
       this.props.sendResidences(newSort);
     } else {
-      this.props.sendResidences(this.props.residences);
+      this.props.sendResidences(this.props.allResidences);
     }
     this.props.onViewClick(false);
   }

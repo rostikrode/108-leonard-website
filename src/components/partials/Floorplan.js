@@ -159,10 +159,9 @@ class Floorplan extends Component {
               <div className="floorplan-bedrooms serif">{this.props.bedrooms === 1 ? `${this.props.bedrooms} BEDROOM` : `${this.props.bedrooms} BEDROOMS`}</div>
               <div className="floorplan-bathrooms serif">{this.props.baths === 1 ? `${this.props.baths} BATHROOM` : `${this.props.baths}  BATHROOMS`}</div>
               <div className="floorplan-interior serif">{this.props.intft} SQ FT | {this.props.intsqm} SQ M</div>
-              <div className="floorplan-exposure serif">{this.props.exposure} <br/> EXPOSURES</div>
             </div>
             <div className="floorplan-keys">
-              <img src={`/images/5_availability/keys/residence_${this.props.residence}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
+              <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
             </div>
           </div>
 
@@ -176,9 +175,9 @@ class Floorplan extends Component {
                         duration={300}
                         easing="ease-in-out"
                         {...zoomAnimation}>
-                          <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(/images/5_availability/floorplans/residence_${this.props.residence}.svg)` }} />
+                          <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(/images/5_availability/floorplans/residence_${this.props.letter}.svg)` }} />
                         </VelocityComponent>
-                        <Img src={`/images/5_availability/floorplans/residence_${this.props.residence}.svg`} className="dbxd-floorplan mobile-fp" alt={this.props.residence} loader={<Loader />} />
+                        <Img src={`/images/5_availability/floorplans/residence_${this.props.letter}.svg`} className="dbxd-floorplan mobile-fp" alt={this.props.residence} loader={<Loader />} />
                       </span>
                     </Draggable>
                     <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>
