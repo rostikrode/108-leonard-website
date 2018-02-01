@@ -8,23 +8,25 @@
 * use Lambda@Edge for page redirect to index.html and for error
   * ex: https://read.acloud.guru/supercharging-a-static-site-with-lambda-edge-da5a1314238b
 
-### general todo
 
-* ~~implement flow~~
-* more info on and program cms popup
+# TODO
 
-### bonuses (third)
+* Animated intro incoming - leads to new home page
 
-* [bonus] 404 page to throw 404 error
-* [bonus] lazy load images as they appear on screen
-* [bonus] cross-fade mobile text-changing subheaders
+* Meta description too short
+  * The meta description is too short. The description is: "108 Leonard", and it consists of only 11 characters. You should use at least 50 characters to increase the chances that search engines will display it on the search result page.
+  * To do  Write a more descriptive meta description text for this page.
 
-### notes
+* Missing H1 tag
 
-* Animated intro incoming - leads to home page (building)
+* The page does not use the H1 headline tag. The H1 headline tag is an excellent opportunity to describe the content of the page. Include one or two keywords in that description.
+  * To do  Use a descriptive H1 headline tag on this page.
 
-### waiting on
+* Facebook Open Graph URL is not canonical URL
+  * The page contains an Open Graph URL (which is used for sharing on social networks) and a canonical URL (which is used to show search engines the favorite version of the page).
 
+* Facebook Open Graph URL and the canonical URL do not match. Normally, they should be the same.
+  * To do  Choose one URl for both the Facebook Open Graph URL and the canonical tag.
 * final copy (everywhere, including the form submit messages and legal)
 * final images
 

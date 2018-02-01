@@ -6,6 +6,9 @@ import Carousel from '../components/pages/Carousel';
 import buildingJSON from '../components/data/building.json'
 import { MemoryRouter } from 'react-router-dom';
 
+window.gtag = window.gtag || function() {
+  return true;
+};
 
 it('renders without crashing', () => {
   const tree = mount(

@@ -7,6 +7,9 @@ import Availability from '../components/pages/Availability';
 import availJSON from '../components/data/availability.json'
 import { MemoryRouter } from 'react-router-dom';
 
+window.gtag = window.gtag || function() {
+  return true;
+};
 
 it('renders without crashing', () => {
   const tree = mount(
