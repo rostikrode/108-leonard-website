@@ -15,9 +15,10 @@ const ImageSlide = (props) => {
           <h3 data-section={props.slide.section} className="newsection mobile-section sans-light-bold">{props.page} |  {props.slide.section}</h3>
         : ''}
         
-        <Img src={props.slide.src} loader={<Loader />} alt={props.slide.caption} />
-        
-      <p className="caption serif-bold" >{props.slide.caption}</p>
+        <div className="image-wrapper">
+          <Img src={props.slide.src} loader={<Loader />} alt={props.slide.caption} />
+        </div>
+        <p className="caption serif-bold" >{props.slide.caption}</p>
     </div>
   );
 }

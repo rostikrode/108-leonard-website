@@ -150,7 +150,7 @@ class Floorplan extends Component {
           this.props.onCloseBtnClick(false)
         }}}>
         <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_blue} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
-        <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.residence}.pdf`}>DOWNLOAD</a>
+        <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.letter}.pdf`}>DOWNLOAD</a>
 
         <div className="floorplan-content" ref={(e) => this.el = e}>
           <div className="floorplan-sidebar">
