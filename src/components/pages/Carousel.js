@@ -155,6 +155,11 @@ export default class Carousel extends Component {
                 nextArrow.style.left = `calc(32px + 35px + ${length}px)`;
                 nextButton.style.left = `calc(32px + 35px + 35px + ${length}px)`;
               }
+              if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+                let prevArrow = sliderButtonPrevEl;
+                prevArrow.style.left = `calc(50% - ${(length/2)}px - 20px)`;
+                nextArrow.style.left = `calc(50% + ${(length/2)}px)`;
+              }
             // }
           }
         }
@@ -242,9 +247,15 @@ export default class Carousel extends Component {
   }
 
   render() {
+    let variableWidth = true;
+    if (this.props.page === 'Team') {
+      variableWidth = false;
+    } else {
+      variableWidth = true;
+    }
     const moreSettings = {
       arrows: false,
-      variableWidth: true,
+      variableWidth: variableWidth,
       // slidesToShow: 1,
       beforeChange: (currentSlide, nextSlide) => {
         /** to fade out captions */

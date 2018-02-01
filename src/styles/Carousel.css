@@ -225,6 +225,10 @@
 .slick-slide.slick-active.slick-section {
   opacity: 1;
 }
+.team-slider .slick-slide {
+  opacity: 1;
+}
+
 
 .lazy-image {
   opacity: 1;
@@ -623,8 +627,19 @@
   .slick-intro-slide .caption-wrapper p {
     max-width: 380px;
   }
-  .slick-intro-slide .inner img {
-    /* width: auto; */
+  .team-slider .slick-slide .inner,
+  .team-slider .slick-intro-slide .inner {
+    transform: translate(0,0);
+    top: unset;
+    left: unset;
+    width: 100%;
+  }
+  .team-slider .slick-slide .inner .caption-wrapper,
+  .team-slider .slick-intro-slide .inner .caption-wrapper {
+    width: 100%;
+    top: unset;
+    position: relative;
+    transform: translate(0,0);
   }
 }
 @media (min-width: 1366px) {
