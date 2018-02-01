@@ -52,20 +52,15 @@ export default class ListItem extends Component {
   }
 
   onViewFloorplanClick(e) {
-    // if (window.matchMedia('(min-width: 1024px)').matches) {
-        this.setState({
-          floorplanState: true,
-          clickedFloorplan: false
-        });
-        // e.currentTarget.classList.remove('active');
-      // } else {
-      //   this.setState({
-      //     floorplanState: true,
-      //     clickedFloorplan: true
-      //   });
-      //   // e.currentTarget.classList.add('active');
-      // }
-      this.props.onViewFloorplanClick(e.currentTarget.dataset.id, true);
+    // window.gtag('event', 'View Floorplan', {
+    //   'event_category': 'Availability',
+    //   'event_label': `Residence ${this.props.residence}`
+    // });
+    this.setState({
+      floorplanState: true,
+      clickedFloorplan: false
+    });
+    this.props.onViewFloorplanClick(e.currentTarget.dataset.id, true);
   }
 
   onCloseBtnClick() {
