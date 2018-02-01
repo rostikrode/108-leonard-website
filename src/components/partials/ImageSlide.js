@@ -1,12 +1,6 @@
 import React from 'react';
 import Img from 'react-image';
-
-
-const Loader = () => {
-  return (
-    <div className="loading-wrapper"><i className="loading"></i></div>
-  );
-}
+import Loader from './Loader';
 
 const ImageSlide = (props) => {
   return (

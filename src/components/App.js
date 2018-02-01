@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import PressList from './pages/PressList';
 import PressArticle from './pages/PressArticle';
 import Legal from './pages/Legal';
+import Home from './pages/Home';
 
 import buildingJSON from './data/building.json';
 import amenitiesJSON from './data/amenities.json';
@@ -22,11 +23,12 @@ import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
 import pressJSON from './data/press.json';
 import legalJSON from './data/legal.json';
+import homeJSON from './data/home.json';
 
 const PAGES = [{
   'title': 'Building',
   'component': Carousel,
-  'slug': '/',
+  'slug': '/building/',
   'data': buildingJSON,
   'subnavs': [
     'Property',
@@ -239,6 +241,7 @@ export default class App extends Component {
 
             {routeComponents}
 
+            <Route exact path="/" render={(props) => ( <Home {...homeJSON} /> )} />  
             <Route exact path="/availability/:residence" render={(props) => ( <Availability {...props} {...availabilityJSON} /> )} />
             <Route exact path="/share/" render={(props) => ( <AvailabilityShare {...props} /> )} />
             <Route exact path="/team/" render={(props) =>  ( <Carousel {...teamJSON} sendSlider={this.sendSlider.bind(this)} subnavs={this.state.subnavs} /> )} />
