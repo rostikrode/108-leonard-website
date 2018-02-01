@@ -3,13 +3,13 @@ import Img from 'react-image';
 import Loader from './../partials/Loader';
 import '../../styles/Home.css';
 
+
 const Home = (props) => {
   window.gtag('config', 'UA-113369414-1', {
     'page_title': props.metaTitle,
     'page_location': window.location.href,
     'page_path': window.location.pathname
   });
-  
 
   /** meta data for page */
   document.title = props.metaTitle;
@@ -25,9 +25,7 @@ const Home = (props) => {
   }
 
   return (
-    <div className="home-wrapper">
-      <Img src={props.image} loader={<Loader />} alt={props.caption} />
-    </div>
+    <div className="home-wrapper"></div>
   );
 }
 

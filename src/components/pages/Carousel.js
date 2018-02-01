@@ -103,72 +103,16 @@ export default class Carousel extends Component {
             }
             let nextArrow = sliderButtonNextEl;
             let nextButton = parentSliderEl.childNodes[3];
-
-            // if (window.matchMedia("(min-width: 2560px)").matches) {
-            //   if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            //     nextArrow.style.left = `${length}px`;
-            //   }
-            //   if (nextButton !== undefined)
-            //     nextButton.style.left = `${length}px`;
-
-            // } else if (window.matchMedia("(min-width: 1920px)").matches) {
-            //   if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            //     nextArrow.style.left = `${length}px`;
-            //   }
-            //   if (nextButton !== undefined)
-            //     nextButton.style.left = `${length}px`;
-
-            // } else if (window.matchMedia("(min-width: 1440px) and (min-height: 900px)").matches) {
-            //   if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            //     nextArrow.style.left = `${length}px`;
-            //   }
-            //   if (nextButton !== undefined)
-            //     nextButton.style.left = `${length}px`;
-
-            // } else if (window.matchMedia("(min-width: 1440px)").matches) {
-            //   if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            //     nextArrow.style.left = `${length}px`;
-            //   }
-            //   if (nextButton !== undefined)
-            //     nextButton.style.left = `${length}px`;
-
-            // } else if (window.matchMedia("(min-width: 1366px)").matches) {
-            //   if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            //     let prevArrow = sliderButtonPrevEl;
-            //     // prevArrow.style.left = `calc(50% - (80px + ${length}px) + 12em)`;
-            //     // nextArrow.style.left = `${length}px- 12em)`;
-            //   } else {
-            //     nextArrow.style.left = `${length}px`;
-            //   }
               
-            //   if (nextButton !== undefined)
-            //     nextButton.style.left = `${length}px`;
-            // } else if (window.matchMedia("(min-width: 1024px)").matches) {
-            //   if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            //     // nextArrow.style.left = `calc(80px + 50px + ${length}px)`;
-            //   }
-              
-            //   if (nextButton !== undefined)
-            //     nextButton.style.left = `calc(80px + 50px + ${length}px)`;
-            // } else {
-            //   if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            //     let prevArrow = sliderButtonPrevEl;
-            //     // prevArrow.style.left = `calc(50% - (80px + ${length}px) + 12em)`;
-            //     // nextArrow.style.left = `calc(50% + 70px + ${length}px - 12em)`;
-            //   } else {
-            //     nextArrow.style.left = `calc(32px + 15px + ${length}px)`;
-            //   }
-              
-              if (nextButton !== undefined && nextArrow !== undefined) {
-                nextArrow.style.left = `calc(32px + 35px + ${length}px)`;
-                nextButton.style.left = `calc(32px + 35px + 35px + ${length}px)`;
-              }
-              if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-                let prevArrow = sliderButtonPrevEl;
-                prevArrow.style.left = `calc(50% - ${(length/2)}px - 20px)`;
-                nextArrow.style.left = `calc(50% + ${(length/2)}px)`;
-              }
-            // }
+            if (nextButton !== undefined && nextArrow !== undefined) {
+              nextArrow.style.left = `calc(32px + 35px + ${length}px)`;
+              nextButton.style.left = `calc(32px + 35px + 35px + ${length}px)`;
+            }
+            if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+              let prevArrow = sliderButtonPrevEl;
+              prevArrow.style.left = `calc(50% - ${(length/2)}px - 20px)`;
+              nextArrow.style.left = `calc(50% + ${(length/2)}px)`;
+            }
           }
         }
       }, 100);
@@ -255,16 +199,8 @@ export default class Carousel extends Component {
   }
 
   render() {
-    let variableWidth = true;
-    if (this.props.page === 'Team') {
-      variableWidth = false;
-    } else {
-      variableWidth = true;
-    }
     const moreSettings = {
       arrows: false,
-      variableWidth: variableWidth,
-      // slidesToShow: 1,
       beforeChange: (currentSlide, nextSlide) => {
         /** to fade out captions */
         var allCaps = parentSliderEl.querySelectorAll(`.slick-slide .inner .caption`);

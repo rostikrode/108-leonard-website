@@ -1,3 +1,19 @@
+@keyframes showHeader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.header {
+  position: relative;
+  z-index: 900;
+  opacity: 0;
+  animation: showHeader 0.6s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+
 .mobile-header {
   position: fixed;
   display: flex;
@@ -122,8 +138,6 @@
   }
 }
 /** animating hamburger nav for mobile */
-
-
 .app-header {
   border-right: none;
   background-color: rgba(255, 255, 255, 0.99);
@@ -159,6 +173,18 @@
   }
 }
 @media (min-width: 1366px) {
+  @keyframes slideHeader {
+    0% {
+      padding: 0;
+      margin: 0;
+      width: 0;
+    }
+    100% {
+      padding-right: 32px;
+      margin: 32px 0 32px 32px;
+      width: 12em;
+    }
+  }
   .app-header {
     height: calc(100vh - 64px);
     transform: translateX(0);
@@ -166,10 +192,15 @@
     top: unset;
     left: unset;
     padding: 0;
-    margin: 32px; 
+    /* margin: 32px;  */
     margin-right: 0;
-    padding-right: 32px;
+    /* padding-right: 32px; */
     border-right: 1px solid #A1C6CF;
+    animation: slideHeader 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
+    animation-delay: 1s;
+    padding: 0;
+    margin: 0;
+    width: 0;
   }
 }
 

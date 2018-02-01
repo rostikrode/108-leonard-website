@@ -4,10 +4,8 @@
 
 ## TODO:
 
-* test floorplan exand with iPad
 * use Lambda@Edge for page redirect to index.html and for error
   * ex: https://read.acloud.guru/supercharging-a-static-site-with-lambda-edge-da5a1314238b
-
 
 # TODO
 
@@ -16,11 +14,6 @@
 * Meta description too short
   * The meta description is too short. The description is: "108 Leonard", and it consists of only 11 characters. You should use at least 50 characters to increase the chances that search engines will display it on the search result page.
   * To do  Write a more descriptive meta description text for this page.
-
-* Missing H1 tag
-
-* The page does not use the H1 headline tag. The H1 headline tag is an excellent opportunity to describe the content of the page. Include one or two keywords in that description.
-  * To do  Use a descriptive H1 headline tag on this page.
 
 * Facebook Open Graph URL is not canonical URL
   * The page contains an Open Graph URL (which is used for sharing on social networks) and a canonical URL (which is used to show search engines the favorite version of the page).
