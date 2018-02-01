@@ -1,6 +1,4 @@
 import React from 'react';
-import Img from 'react-image';
-import Loader from './../partials/Loader';
 import '../../styles/Home.css';
 
 
