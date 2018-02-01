@@ -28,6 +28,14 @@ export default class Availability extends Component {
     this.onShareClick = this.onShareClick.bind(this);
   }
   
+  componentWillMount() {
+    window.gtag('config', 'UA-113369414-1', {
+      'page_title': this.props.metaTitle,
+      'page_location': window.location.href,
+      'page_path': window.location.pathname
+    });
+  }
+
   componentDidMount() {
     this.loadResidences();
     

@@ -10,6 +10,14 @@ export default class Press extends Component {
       overflowClass: ''
     }
   }
+  componentWillMount() {
+    window.gtag('config', 'UA-113369414-1', {
+      'page_title': this.props.metaTitle,
+      'page_location': window.location.href,
+      'page_path': window.location.pathname
+    });
+  }
+
   componentDidMount() {
     /** meta data for page */
     document.title = this.props.metaTitle;

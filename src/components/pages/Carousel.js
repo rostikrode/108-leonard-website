@@ -35,6 +35,14 @@ export default class Carousel extends Component {
     this.onWindowScroll = this.onWindowScroll.bind(this)
     this.onOrientationChange = this.onOrientationChange.bind(this)
   }
+  componentWillMount() {
+    window.gtag('config', 'UA-113369414-1', {
+      'page_title': this.props.metaTitle,
+      'page_location': window.location.href,
+      'page_path': window.location.pathname
+    });
+  }
+  
   componentDidMount() { 
     setTimeout(() => {
       window.scrollTo(0,0);

@@ -11,7 +11,7 @@ export default class Header extends Component {
     super(props);
     this.state = {
       open: '',
-      home: 'Building'
+      home: ''
     }
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
   }
@@ -171,7 +171,7 @@ export default class Header extends Component {
           <div className="navigation-titles">            
               <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>
                 <h3 ref={ (el) => this.subTitle = el} className="come-in sub-title sans-light-bold">
-                  {this.props.page ? this.props.page : 'Building'} {this.props.section ? `| ${this.props.section}` : ''}
+                  {this.props.page ? this.props.page : ''} {this.props.section ? `| ${this.props.section}` : ''}
                 </h3>
           </div>
         </div>

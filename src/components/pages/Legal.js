@@ -9,6 +9,15 @@ export default class Legal extends Component {
     
     this.onTabClick = this.onTabClick.bind(this);
   }
+  
+  componentWillMount() {
+    window.gtag('config', 'UA-113369414-1', {
+      'page_title': this.props.metaTitle,
+      'page_location': window.location.href,
+      'page_path': window.location.pathname
+    });
+  }
+
   componentDidMount() {
     /** meta data for page */
     document.title = this.props.metaTitle;
