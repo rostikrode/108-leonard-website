@@ -3,5 +3,14 @@
   "metaTitle": "A Modern Renaissance | 108 Leonard",
   "metaDescription": "108 Leonard pays homage to the most coveted elements of an architectural masterpiece, including dramatic details of scale, proportion, and volume.",
   "image": "/images/1_landing/DBOX_108LEONARD_Ad_Facade_HOMEPAGE.jpg",
-  "caption": "Welcome to 108 Leonard."
+  "caption": "Welcome to 108 Leonard.",
+  "animation": {
+    "text1": "/images/1_landing/intro-copy-fullv2.svg",
+    "text2": "/images/1_landing/intro-copy-logov2.svg",
+    "linework1": "/images/1_landing/animation/linework-1.jpg",
+    "linework2": "/images/1_landing/animation/linework-2.jpg",
+    "linework3": "/images/1_landing/animation/linework-3.jpg",
+    "image1": "/images/1_landing/animation/image-1.jpg",
+    "image2": "/images/1_landing/animation/image-2.jpg"
+  }
 }

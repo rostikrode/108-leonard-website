@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import {VelocityComponent} from 'velocity-react';
 import logo from '../../assets/logo.svg';
 import brochure from '../../assets/brochure.svg';
 import logoText from '../../assets/108_leonard_text.svg';
@@ -157,24 +158,34 @@ export default class Header extends Component {
     }
   }
   render() {
+    var fadeInHeader = {
+      runOnMount: true,
+      animation: 'fadeIn',
+      duration: 1000,
+      delay: 2000+1000+1000+1000+2500
+    }
     return (
       <header className="header">
-        <button className="ham-nav-button" onClick={()=>{this.openMobileMenu()}}>
-          <div className={`ham-nav ${this.state.open}`}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+        <VelocityComponent {...fadeInHeader}>
+          <button className={`ham-nav-button ${this.props.page ? '' : 'off'}`} onClick={()=>{this.openMobileMenu()}}>
+            <div className={`ham-nav ${this.state.open}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+        </VelocityComponent>
+        <VelocityComponent {...fadeInHeader}>
+          <div className={`mobile-header ${this.props.page ? '' : 'off'}`}>
+            <div className="navigation-titles">            
+                <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>
+                  <h3 ref={ (el) => this.subTitle = el} className="come-in sub-title sans-light-bold">
+                    {this.props.page ? this.props.page : ''} {this.props.section ? `| ${this.props.section}` : ''}
+                  </h3>
+            </div>
           </div>
-        </button>
-        <div className="mobile-header">
-          <div className="navigation-titles">            
-              <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>
-                <h3 ref={ (el) => this.subTitle = el} className="come-in sub-title sans-light-bold">
-                  {this.props.page ? this.props.page : ''} {this.props.section ? `| ${this.props.section}` : ''}
-                </h3>
-          </div>
-        </div>
+        </VelocityComponent>
         <div className={`app-header ${this.state.open}`}>
           <NavLink onClick={(e)=>{this.onNavItemClick(e)}} data-type="" activeClassName="active" id="home-0" strict exact to="/" href="/"><img src={logo} className="app-logo" alt="logo" /></NavLink>
           <nav ref={(el) => this.nav = el}>

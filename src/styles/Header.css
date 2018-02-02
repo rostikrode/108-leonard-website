@@ -2,7 +2,6 @@
   position: relative;
   z-index: 900;
 }
-
 .mobile-header {
   position: fixed;
   display: flex;
@@ -14,6 +13,9 @@
   height: auto;
   background-color: transparent;
   z-index: 901;
+}
+.mobile-header.off {
+  display: none;
 }
 .mobile-header .navigation-titles {
   width: 100%;
@@ -58,6 +60,9 @@
   z-index: 910;
   padding: 0;
   margin: 0;
+}
+.ham-nav-button.off {
+  display: none;
 }
 @media (min-width: 1024px) {
   .ham-nav-button {
