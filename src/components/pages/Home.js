@@ -1,4 +1,6 @@
 import React from 'react';
+import Img from 'react-image';
+import Loader from '../partials/Loader';
 import '../../styles/Home.css';
 
 
@@ -23,7 +25,9 @@ const Home = (props) => {
   }
 
   return (
-    <div className="home-wrapper"></div>
+    <div className="home-wrapper">
+      <Img src={props.image} loader={<Loader />} alt={props.caption} />
+    </div>
   );
 }
 
