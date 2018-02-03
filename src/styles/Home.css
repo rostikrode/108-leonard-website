@@ -68,9 +68,9 @@
   position: absolute;
   top: 0; left: 0;
 }
-.animation-wrapper .slide:not(.slide.text-slide) {
+/* .animation-wrapper .slide:not(.slide.text-slide) {
   display: none;
-}
+} */
 
 .animation-wrapper .slide.text-slide {
   display: flex;
@@ -83,9 +83,10 @@
 }
 .animation-wrapper .slide.text-slide img {
   width: 100%;
-  height: auto;
-  position: relative;
-  z-index: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) 
 }
 
 @media (min-width: 1024px) {

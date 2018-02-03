@@ -150,35 +150,31 @@ const IntroAnimation = (props) => {
   return (
     <VelocityComponent {...fadeOutOverlay}>
       <div className="animation-wrapper">
-        <div className="slide text-slide">
+        <div className="slide text-slide" style={{zIndex: 900}}>
           <VelocityComponent {...fadeOutFullText}>
-            <img src={props.text1} alt="108 Leonard full text" />
+            <img src={props.text1} alt="108 Leonard full text" style={{zIndex: 11}} />
+          </VelocityComponent>
+          <VelocityComponent {...fadeOutLogoText}>
+            <img src={props.text2} alt="108 Leonard text logo" style={{zIndex: 12}} />
           </VelocityComponent>
           <VelocityComponent {...fadeOutFullText}>
-            <div className="bg"/>
+            <div className="bg" style={{zIndex: 10}}/>
           </VelocityComponent>
         </div>
-        <VelocityComponent>
-          <div className="slide text-slide">
-            <VelocityComponent {...fadeOutLogoText}>
-              <img src={props.text2} alt="108 Leonard text logo" />
-            </VelocityComponent>
-          </div>
-        </VelocityComponent>
         <VelocityComponent {...fadeOutLine1}>
-          <div className="slide" style={{backgroundImage: `url(${props.linework1}`, zIndex: 1}} />
+          <div className="slide" style={{backgroundImage: `url(${props.linework1}`, zIndex: 800}} />
         </VelocityComponent>
           <VelocityComponent {...fadeOutLine2}>
-          <div className="slide" style={{backgroundImage: `url(${props.linework2}`, zIndex: 10}} />
+          <div className="slide" style={{backgroundImage: `url(${props.linework2}`, zIndex: 700}} />
         </VelocityComponent>
         <VelocityComponent {...fadeOutLine3}>
-          <div className="slide" style={{backgroundImage: `url(${props.linework3}`, zIndex: 100}} />
+          <div className="slide" style={{backgroundImage: `url(${props.linework3}`, zIndex: 600}} />
         </VelocityComponent>
         <VelocityComponent  {...fadeOutImage1}>
-          <div className="slide" style={{backgroundImage: `url(${props.image1}`, zIndex: 1000}} />
+          <div className="slide" style={{backgroundImage: `url(${props.image1}`, zIndex: 500}} />
         </VelocityComponent>
         <VelocityComponent>
-          <div className="slide" style={{backgroundImage: `url(${props.image2}`, zIndex: 10000}} />
+          <div className="slide" style={{backgroundImage: `url(${props.image2}`, zIndex: 400}} />
         </VelocityComponent>
       </div>
     </VelocityComponent>
