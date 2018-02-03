@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import {VelocityComponent} from 'velocity-react';
+import {VelocityComponent, velocityHelpers} from 'velocity-react';
+import Cookies from 'js-cookie';
 import logo from '../../assets/logo.svg';
 import brochure from '../../assets/brochure.svg';
 import logoText from '../../assets/108_leonard_text.svg';
 import '../../styles/Header.css';
 
 var currentPage = '';
+var fadeInHeader, sequence, fadeInHeaderMain;
 export default class Header extends Component {
   constructor(props) {
     super(props);
@@ -15,11 +17,27 @@ export default class Header extends Component {
       home: ''
     }
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
+    this.handleLoad = this.handleLoad.bind(this);
   }
   componentDidMount() {
     window.addEventListener('scroll', this.sectionOnScroll);
+    window.addEventListener('load', this.handleLoad);
     this.onAvailabilityPage();
     this.onPressPage();
+
+    if (!Cookies.get('alreadyPlayed')) {
+      this.header.classList.add('off');
+      this.mobileHeader.classList.add('off');
+      this.hamNavButton.classList.add('off');
+    } else {
+      this.header.classList.remove('off');
+      this.mobileHeader.classList.remove('off');
+      this.hamNavButton.classList.remove('off');
+    }
+  }
+
+  handleLoad() {
+
   }
   
   componentWillUnmount() {
@@ -158,16 +176,39 @@ export default class Header extends Component {
     }
   }
   render() {
-    var fadeInHeader = {
-      runOnMount: true,
-      animation: 'fadeIn',
-      duration: 1000,
-      delay: 2000+1000+1000+1000+2500
+    if (window.matchMedia("(min-width: 1366px)").matches) {
+      sequence = velocityHelpers.registerEffect({
+        defaultDuration: 1000,
+        calls: [
+          ['fadeIn'],
+        ]
+      });
+      fadeInHeader = {
+        runOnMount: true,
+        animation: sequence,
+        duration: 1000,
+        delay: 2000+1000+1000+1000+2500
+      };
+      fadeInHeaderMain = {
+        runOnMount: true,
+        animation: sequence,
+        duration: 1000,
+        delay: 2000+1000+1000+1000+2500
+      };
+    } else {
+      fadeInHeader = {
+        runOnMount: true,
+        animation: 'fadeIn',
+        duration: 1000,
+        delay: 2000+1000+1000+1000+2500
+      };
     }
+    
     return (
-      <header className="header">
-        <VelocityComponent {...fadeInHeader}>
-          <button className={`ham-nav-button ${this.props.page ? '' : 'off'}`} onClick={()=>{this.openMobileMenu()}}>
+      <VelocityComponent {...fadeInHeaderMain} ref={(velocity)=> this.headerV = velocity}>
+      <header className={`header ${this.props.page ? '' : 'off'}`} ref={c => this.header = c }>
+        <VelocityComponent {...fadeInHeader} ref={(velocity)=> this.hamV = velocity}>
+          <button className={`ham-nav-button ${this.props.page ? '' : 'off'}`} onClick={()=>{this.openMobileMenu()}} ref={c => this.hamNavButton = c }>
             <div className={`ham-nav ${this.state.open}`}>
               <span></span>
               <span></span>
@@ -176,8 +217,8 @@ export default class Header extends Component {
             </div>
           </button>
         </VelocityComponent>
-        <VelocityComponent {...fadeInHeader}>
-          <div className={`mobile-header ${this.props.page ? '' : 'off'}`}>
+        <VelocityComponent {...fadeInHeader} ref={(velocity)=> this.mobileV = velocity}>
+          <div className={`mobile-header ${this.props.page ? '' : 'off'}`} ref={c => this.mobileHeader = c }>
             <div className="navigation-titles">            
                 <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>
                   <h3 ref={ (el) => this.subTitle = el} className="come-in sub-title sans-light-bold">
@@ -186,49 +227,52 @@ export default class Header extends Component {
             </div>
           </div>
         </VelocityComponent>
-        <div className={`app-header ${this.state.open}`}>
-          <NavLink onClick={(e)=>{this.onNavItemClick(e)}} data-type="" activeClassName="active" id="home-0" strict exact to="/" href="/"><img src={logo} className="app-logo" alt="logo" /></NavLink>
-          <nav ref={(el) => this.nav = el}>
-            <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
+        
+          <div className={`app-header ${this.state.open}`}>
+            <NavLink onClick={(e)=>{this.onNavItemClick(e)}} data-type="" activeClassName="active" id="home-0" strict exact to="/" href="/"><img src={logo} className="app-logo" alt="logo" /></NavLink>
+            <nav ref={(el) => this.nav = el}>
+              <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
 
-            {this.props.pages.map((p, key) => {
-                return (
-                  <li key={key} className="nav-anchor-wrapper">
-                    <NavLink data-type={p.subnavs.length > 0 ? "carousel" : "" } activeClassName="active" id={`nav-anchor-${key}`} className="nav-anchor sans" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to={p.slug}>{p.title}</NavLink>
-                    
-                    {p.subnavs.length > 0 ?
-                      <ul className="nav-subnav">
-                        {p.subnavs.map((sub, k) => {
-                          return (
-                            <li role="button" key={k} 
-                              data-id={sub}
-                              className="nav-subnav-item sans-light"
-                              style={{transitionDelay: 100*k+'ms'}}
-                              onClick={(e)=>{this.onSubClick(e)}}>
-                              {sub}
-                            </li>  
-                          );
-                        })}
-                      </ul>
-                    :''}
-                  </li>  
-                );
-              })}
-            </ul>
-          </nav>
-          <div className="footer" ref={(el) => this.footer = el}>
-              <div className="footer-pages">
-                <NavLink data-type="carousel" activeClassName="active" id="team-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to="/team/">Team</NavLink>
-                <NavLink data-type="" activeClassName="active" id="press-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to="/press/">Press</NavLink>
-                <NavLink data-type="" activeClassName="active" id="legal-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to="/legal/">Legal</NavLink>
-              </div>           
-              <a className="link sans-medium brochure" href="/placeholder.pdf" target="_blank">
-                <img src={brochure} alt="brochure icon" />
-                <span>VIEW BROCHURE</span>
-              </a>   
+              {this.props.pages.map((p, key) => {
+                  return (
+                    <li key={key} className="nav-anchor-wrapper">
+                      <NavLink data-type={p.subnavs.length > 0 ? "carousel" : "" } activeClassName="active" id={`nav-anchor-${key}`} className="nav-anchor sans" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to={p.slug}>{p.title}</NavLink>
+                      
+                      {p.subnavs.length > 0 ?
+                        <ul className="nav-subnav">
+                          {p.subnavs.map((sub, k) => {
+                            return (
+                              <li role="button" key={k} 
+                                data-id={sub}
+                                className="nav-subnav-item sans-light"
+                                style={{transitionDelay: 100*k+'ms'}}
+                                onClick={(e)=>{this.onSubClick(e)}}>
+                                {sub}
+                              </li>  
+                            );
+                          })}
+                        </ul>
+                      :''}
+                    </li>  
+                  );
+                })}
+              </ul>
+            </nav>
+            <div className="footer" ref={(el) => this.footer = el}>
+                <div className="footer-pages">
+                  <NavLink data-type="carousel" activeClassName="active" id="team-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to="/team/">Team</NavLink>
+                  <NavLink data-type="" activeClassName="active" id="press-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to="/press/">Press</NavLink>
+                  <NavLink data-type="" activeClassName="active" id="legal-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e)}} strict exact to="/legal/">Legal</NavLink>
+                </div>           
+                <a className="link sans-medium brochure" href="/placeholder.pdf" target="_blank">
+                  <img src={brochure} alt="brochure icon" />
+                  <span>VIEW BROCHURE</span>
+                </a>   
+            </div>
           </div>
-        </div>
+        
       </header>
+    </VelocityComponent>
     );
   };
 }
