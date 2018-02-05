@@ -45,7 +45,7 @@ export default class Header extends Component {
           this.setState({
             alreadyPlayed: true
           });
-          Cookies.set('alreadyPlayed', true);
+          Cookies.set('alreadyPlayed', true, {expires: 30});
         }, 7500);
       });
     

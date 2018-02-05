@@ -22,7 +22,7 @@ export default class Animation extends Component {
       this.setState({
         alreadyPlayed: false
       }, () => {
-        Cookies.set('alreadyPlayed', true);
+        Cookies.set('alreadyPlayed', true, {expires: 30});
       });
     }
   }
