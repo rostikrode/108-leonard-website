@@ -29,7 +29,7 @@ export default class Animation extends Component {
 
   render() {
     return (
-      <div className="home">
+      <div className="home animation">
         {this.state.alreadyPlayed ?
           ''
         : 
@@ -95,18 +95,20 @@ if (window.matchMedia("(min-width: 1366px)").matches) {
     duration: 2500,
     delay: 2000+1000+1000+1000+2500+300
   }
-} else if (window.matchMedia("(min-width: 1024px)").matches) {
-  sequence = velocityHelpers.registerEffect({
-    defaultDuration: 3000,
-    calls: [
-      ['fadeOut'],
-    ]
-  });
 } else {
+  let downPx = '0'; 
+  let delay = 0;
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    downPx = '0';
+    delay = 0;
+  } else {
+    downPx = '66px';
+    delay = 300;
+  }
   sequence = velocityHelpers.registerEffect({
     defaultDuration: 1000,
     calls: [
-      [{translateY: '7%'}],
+      [{translateY: downPx}],
       ['fadeOut']
     ]
   });
@@ -114,7 +116,7 @@ if (window.matchMedia("(min-width: 1366px)").matches) {
     runOnMount: true,
     animation: sequence,
     duration: 2500,
-    delay: 2000+1000+1000+1000+2500+300
+    delay: 2000+1000+1000+1000+2500+delay
   }
 }
 
@@ -135,23 +137,23 @@ const IntroAnimation = (props) => {
               </VelocityComponent>
             </div>
           <VelocityComponent {...fadeOutFullText}>
-            <div className="bg" style={{zIndex: 10}}/>
+            <div className="bg" style={{backgroundColor: '#FFFFFF', zIndex: 10}}/>
           </VelocityComponent>
         </div>
         <VelocityComponent {...fadeOutLine1}>
-          <div className="slide" style={{backgroundImage: `url(${props.linework1}`, zIndex: 800}} />
+          <div className="slide" style={{backgroundImage: 'url('+props.linework1+')', zIndex: 800}} />
         </VelocityComponent>
           <VelocityComponent {...fadeOutLine2}>
-          <div className="slide" style={{backgroundImage: `url(${props.linework2}`, zIndex: 700}} />
+          <div className="slide" style={{backgroundImage: 'url('+props.linework2+')', zIndex: 700}} />
         </VelocityComponent>
         <VelocityComponent {...fadeOutLine3}>
-          <div className="slide" style={{backgroundImage: `url(${props.linework3}`, zIndex: 600}} />
+          <div className="slide" style={{backgroundImage: 'url('+props.linework3+')', zIndex: 600}} />
         </VelocityComponent>
         <VelocityComponent  {...fadeOutImage1}>
-          <div className="slide" style={{backgroundImage: `url(${props.image1}`, zIndex: 500}} />
+          <div className="slide" style={{backgroundImage: 'url('+props.image1+')', zIndex: 500}} />
         </VelocityComponent>
         <VelocityComponent>
-          <div className="slide" style={{backgroundImage: `url(${props.image2}`, zIndex: 400}} />
+          <div className="slide" style={{backgroundImage: 'url('+props.image2+')', zIndex: 400}} />
         </VelocityComponent>
       </div>
     </VelocityComponent>
