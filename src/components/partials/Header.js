@@ -15,7 +15,7 @@ export default class Header extends Component {
     this.state = {
       open: '',
       home: '',
-      alreadyPlayed: false
+      alreadyPlayed: true
     };
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
   }
@@ -25,30 +25,30 @@ export default class Header extends Component {
     this.onAvailabilityPage();
     this.onPressPage();
 
-    if (Cookies.get('alreadyPlayed')) {
-    
-      this.setState({
-        alreadyPlayed: true
-      });
-      // this.header.classList.remove('slide-down');
-      // this.appHeader.classList.remove('slide-over');
-    
-    } else {
-    
-      this.setState({
-        alreadyPlayed: false
-      }, () => {
-        this.header.style.transition = 'transform 1s ease-in-out, opacity 1s ease-in-out';
-        setTimeout(() => {
-          this.header.classList.add('slide-down');
-          this.appHeader.classList.add('slide-over');
-          this.setState({
-            alreadyPlayed: true
-          });
-          Cookies.set('alreadyPlayed', true, {expires: 7});
-        }, 7500);
-      });
-    
+    if (window.location.pathname === '/') {
+      // if (Cookies.get('alreadyPlayed')) {
+      
+      //   this.setState({
+      //     alreadyPlayed: true
+      //   });
+      
+      // } else {
+      
+        this.setState({
+          alreadyPlayed: false
+        }, () => {
+          this.header.style.transition = 'transform 1s ease-in-out, opacity 1s ease-in-out';
+          setTimeout(() => {
+            this.header.classList.add('slide-down');
+            this.appHeader.classList.add('slide-over');
+            this.setState({
+              alreadyPlayed: true
+            });
+            Cookies.set('alreadyPlayed', true, {expires: 14});
+          }, 7500);
+        });
+      
+      //}
     }
   }
   

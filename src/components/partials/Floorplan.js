@@ -193,9 +193,6 @@ class Floorplan extends Component {
                 <button title="Show Intructions" className="dbxd-instructions-icon" onClick={this.onOpenInfo}>
                   <Img id="info" src={question} loader={<Loader />} alt="info about floorplan plugin button" />
                 </button>
-                <p className="dbxd-copyright">
-                  <a href="//www.dbxd.com" target="_blank" rel="noopener noreferrer" className="sans-medium">© DBXD</a>
-                </p>
               </div>
           </div>
         </div>

@@ -9,21 +9,23 @@ export default class Animation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      alreadyPlayed: false
+      alreadyPlayed: true
     }
   }
 
   componentWillMount() {
-    if (Cookies.get('alreadyPlayed')) {
-      this.setState({
-        alreadyPlayed: true
-      });
-    } else {
-      this.setState({
-        alreadyPlayed: false
-      }, () => {
-        Cookies.set('alreadyPlayed', true, {expires: 7});
-      });
+    if (window.location.pathname === '/') {
+      // if (Cookies.get('alreadyPlayed')) {
+      //   this.setState({
+      //     alreadyPlayed: true
+      //   });
+      //} else {
+        this.setState({
+          alreadyPlayed: false
+        }, () => {
+          Cookies.set('alreadyPlayed', true, {expires: 14});
+        });
+      //}
     }
   }
 
