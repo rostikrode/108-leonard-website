@@ -145,10 +145,10 @@ export default class Filter extends Component {
                 <Checkbox value="4_bedrooms" handleCheck={this.handleCheck} index="filter-checkbox-3" />
                 <span className="serif">4 bedroom</span>
               </div>
-              <div className="floating-filter-item">
+              {/*<div className="floating-filter-item">
                 <Checkbox value="0_crowncollection" handleCheck={this.handleCheck} index="filter-checkbox-4" />
                 <span className="serif">crown collection</span>
-              </div>
+              </div>*/}
             </div>
             <div className="floating-filter-group">
               <div className="floating-filter-item">

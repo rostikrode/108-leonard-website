@@ -16,35 +16,10 @@
       "newsection": true,
       "caption": "Private Dining Room"
     }, {
-      "src": "/images/6_amenities/6.2.2_Demonstration_Kitchen.jpg",
-      "section": "Entertaining",
-      "newsection": false,
-      "caption": "Demonstration Kitchen"
-    }, {
-      "src": "/images/6_amenities/6.2.3_Entertainment_Lounge.jpg",
-      "section": "Entertaining",
-      "newsection": false,
-      "caption": "Entertainment Lounge"
-    },{
-      "src": "/images/6_amenities/6.2.4_Media_Room.jpg",
-      "section": "Entertaining",
-      "newsection": false,
-      "caption": "Media Room"
-    }, {
-      "src": "/images/6_amenities/6.2.5_Childrens_Playroom.jpg",
-      "section": "Entertaining",
-      "newsection": false,
-      "caption": "Children's Playroom"
-    }, {
       "src": "/images/6_amenities/6.3.1_Pool.jpg",
       "section": "Wellness",
       "newsection": true,
       "caption": "Pool"
-    }, {
-      "src": "/images/6_amenities/ph.png",
-      "section": "Wellness",
-      "newsection": false,
-      "caption": "Wellness - Caption 2"
     }, {
       "src": "/images/6_amenities/6.4.1_Rooftop_View_1.jpg",
       "section": "Outdoor",

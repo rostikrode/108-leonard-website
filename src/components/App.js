@@ -18,7 +18,7 @@ import buildingJSON from './data/building.json';
 import amenitiesJSON from './data/amenities.json';
 import availabilityJSON from './data/availability.json';
 import contactJSON from './data/contact.json';
-import crowncollectionJSON from './data/crowncollection.json';
+// import crowncollectionJSON from './data/crowncollection.json';
 import residencesJSON from './data/residences.json';
 import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
@@ -43,8 +43,8 @@ const PAGES = [{
       'Interiors',
       'Kitchens',
       'Bathrooms',
-      'Landmarked Residences'
-  ]}, {
+      // 'Landmarked Residences'
+  ]}, /*{
     'title': 'Crown Collection',
     'component': Carousel,
     'slug': '/crown-collection/',
@@ -55,7 +55,7 @@ const PAGES = [{
       'Crown House',
       'Cupola',
       'Clocktower'
-  ]}, {
+  ]},*/ {
     'title': 'Availability',
     'component': Availability,
     'slug': '/availability/',

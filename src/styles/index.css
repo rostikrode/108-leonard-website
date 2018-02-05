@@ -378,8 +378,13 @@ body {
 		font-size: 14px;
 	}
 	.floorplan-button span {
-		font-size: 0.65vw;
+		font-size: 0.55vw;
 		white-space: nowrap;
+	}
+}
+@media (min-width: 1440px) {
+	.floorplan-button span {
+		font-size: 0.45vw;
 	}
 }
 @media (min-width: 1920px) {
@@ -404,5 +409,14 @@ body {
 	}
 	.serif-bold {
 		font-size: 12px;
+	}
+}
+
+.white-text {
+	color: #000;
+}
+@media (min-width: 1024px) {
+	.white-text {
+		color: #FFF;
 	}
 }
