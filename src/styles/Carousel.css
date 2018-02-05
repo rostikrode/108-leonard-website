@@ -514,3 +514,7 @@
     font-size: 1.5rem;
   }
 }
+
+.team-slider .slick-slide .inner .caption-wrapper {
+  background-color: #FFF;
+}

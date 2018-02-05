@@ -104,43 +104,45 @@ export default class Carousel extends Component {
     if (window.matchMedia("(min-width: 1024px)").matches) {      
       setTimeout(() => {
         if (parentSliderEl) {
-          let prevArrow = sliderButtonPrevEl;
-          let captions = parentSliderEl.querySelectorAll('.slick-slide .inner .caption');
           let dots = parentSliderEl.children[0].querySelector('.slick-dots');
-          let activeSlide = parentSliderEl.querySelector('.slick-active .inner .image-wrapper');
-          let imageOffset = Math.round(activeSlide.getBoundingClientRect().left + headerOffset);
-          let imageRightOffset = Math.round(window.innerWidth - activeSlide.getBoundingClientRect().right - 4);
-
-
-          // left arrow to be under the dynamically sized image
-          prevArrow.style.left = imageOffset+'px';     
           
-          //caption to be right aligned to dynamic image
-          for(let i in captions) {
-            let cap = captions[i];
-            
-            if (typeof cap === 'object') {
-              cap.style.right = imageRightOffset+'px';
-            }
-          }
-          // caption.style.right = imageRightOffset+'px';
+          let prevArrow = sliderButtonPrevEl;
+          let nextArrow = sliderButtonNextEl;
+          let nextButton = parentSliderEl.childNodes[3];
+          let length = 0;
           
-          if (dots !== null) {
-            let length = 0;
+          if (dots !== null && dots) {
             if (dots) {
               length = dots.getBoundingClientRect().width;
-              dots.style.left = `calc(${imageOffset}px + 35px)`;
             }
-            let nextArrow = sliderButtonNextEl;
-            let nextButton = parentSliderEl.childNodes[3];
+          }
+          if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+            prevArrow.style.left = `calc(50% - ${(length/2)}px - 20px)`;
+            nextArrow.style.left = `calc(50% + ${(length/2)}px)`;
+          } else {
+            let captions = parentSliderEl.querySelectorAll('.slick-slide .inner .caption');
+            let activeSlide = parentSliderEl.querySelector('.slick-active .inner .image-wrapper');
+            let imageOffset = Math.round(activeSlide.getBoundingClientRect().left + headerOffset);
+            let imageRightOffset = Math.round(window.innerWidth - activeSlide.getBoundingClientRect().right - 4);
+  
+  
+            // left arrow to be under the dynamically sized image
+            prevArrow.style.left = imageOffset+'px';     
+            
+            //caption to be right aligned to dynamic image
+            for(let i in captions) {
+              let cap = captions[i];
+              
+              if (typeof cap === 'object') {
+                cap.style.right = imageRightOffset+'px';
+              }
+            }
+            
+            dots.style.left = `calc(${imageOffset}px + 35px)`;
               
             if (nextButton !== undefined && nextArrow !== undefined) {
               nextArrow.style.left = `calc(${imageOffset}px + 35px + ${length}px)`;
               nextButton.style.left = `calc(${imageOffset}px + 35px + 35px + ${length}px)`;
-            }
-            if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-              prevArrow.style.left = `calc(50% - ${(length/2)}px - 20px)`;
-              nextArrow.style.left = `calc(50% + ${(length/2)}px)`;
             }
           }
         }
@@ -149,17 +151,23 @@ export default class Carousel extends Component {
   }
 
   updateArrowPosition () {
-    setTimeout(() => {
-      this.doPlacement();
-      
-      // then modify once image is loaded
-      let image = new Image();
-      image.onload = () => {
-        console.log('image loaded');
-        this.doPlacement();
-      }
-      image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
-    }, 100);
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      setTimeout(() => {
+        if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+          this.doPlacement();
+        } else {
+          this.doPlacement();
+
+          // then modify once image is loaded
+          let image = new Image();
+          image.onload = () => {
+            console.log('image loaded');
+            this.doPlacement();
+          }
+          image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
+        }
+      }, 100);
+    }
   }
   /** custom button events needed for custom buttons */
   next() {
