@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
+import Animation from './partials/Animation';
 import '../styles/App.css';
 
 import Carousel from './pages/Carousel';
@@ -235,6 +236,9 @@ export default class App extends Component {
           onNavClick={this.onNavClick.bind(this)} 
           passAllSubnavs={this.passAllSubnavs.bind(this)} 
         />
+
+        <Animation {...homeJSON} />
+
         <main>  
           <Switch>
             <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`}/>} />

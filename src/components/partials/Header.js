@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import {VelocityComponent, velocityHelpers} from 'velocity-react';
+// import {VelocityComponent, velocityHelpers} from 'velocity-react';
 import Cookies from 'js-cookie';
 import logo from '../../assets/logo.svg';
 import brochure from '../../assets/brochure.svg';
@@ -8,16 +8,16 @@ import logoText from '../../assets/108_leonard_text.svg';
 import '../../styles/Header.css';
 
 var currentPage = '';
-var fadeInHeader, sequence, fadeInHeaderMain;
+// var fadeInHeader, sequence, fadeInHeaderMain;
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
       open: '',
-      home: ''
-    }
+      home: '',
+      alreadyPlayed: false
+    };
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
-    this.handleLoad = this.handleLoad.bind(this);
   }
   componentDidMount() {
     window.addEventListener('scroll', this.sectionOnScroll);
@@ -25,19 +25,31 @@ export default class Header extends Component {
     this.onAvailabilityPage();
     this.onPressPage();
 
-    if (!Cookies.get('alreadyPlayed')) {
-      this.header.classList.add('off');
-      this.mobileHeader.classList.add('off');
-      this.hamNavButton.classList.add('off');
+    if (Cookies.get('alreadyPlayed')) {
+    
+      this.setState({
+        alreadyPlayed: true
+      });
+      // this.header.classList.remove('slide-down');
+      // this.appHeader.classList.remove('slide-over');
+    
     } else {
-      this.header.classList.remove('off');
-      this.mobileHeader.classList.remove('off');
-      this.hamNavButton.classList.remove('off');
+    
+      this.setState({
+        alreadyPlayed: false
+      }, () => {
+        this.header.style.transition = 'transform 1s ease-in-out, opacity 1s ease-in-out';
+        setTimeout(() => {
+          this.header.classList.add('slide-down');
+          this.appHeader.classList.add('slide-over');
+          this.setState({
+            alreadyPlayed: true
+          });
+          Cookies.set('alreadyPlayed', true);
+        }, 7500);
+      });
+    
     }
-  }
-
-  handleLoad() {
-
   }
   
   componentWillUnmount() {
@@ -58,6 +70,11 @@ export default class Header extends Component {
       }
     }
     currentPage = this.props.page;
+
+    if (this.state.alreadyPlayed) {
+      this.header.classList.remove('slide-down');
+      this.appHeader.classList.remove('slide-over');
+    }
   }
 
   onAvailabilityPage() {
@@ -176,39 +193,11 @@ export default class Header extends Component {
     }
   }
   render() {
-    if (window.matchMedia("(min-width: 1366px)").matches) {
-      sequence = velocityHelpers.registerEffect({
-        defaultDuration: 1000,
-        calls: [
-          ['fadeIn'],
-        ]
-      });
-      fadeInHeader = {
-        runOnMount: true,
-        animation: sequence,
-        duration: 1000,
-        delay: 2000+1000+1000+1000+2500
-      };
-      fadeInHeaderMain = {
-        runOnMount: true,
-        animation: sequence,
-        duration: 1000,
-        delay: 2000+1000+1000+1000+2500
-      };
-    } else {
-      fadeInHeader = {
-        runOnMount: true,
-        animation: 'fadeIn',
-        duration: 1000,
-        delay: 2000+1000+1000+1000+2500
-      };
-    }
-    
     return (
-      <VelocityComponent {...fadeInHeaderMain} ref={(velocity)=> this.headerV = velocity}>
-      <header className={`header ${this.props.page ? '' : 'off'}`} ref={c => this.header = c }>
-        <VelocityComponent {...fadeInHeader} ref={(velocity)=> this.hamV = velocity}>
-          <button className={`ham-nav-button ${this.props.page ? '' : 'off'}`} onClick={()=>{this.openMobileMenu()}} ref={c => this.hamNavButton = c }>
+      
+      <header className={`header ${this.state.alreadyPlayed ? 'normal' : ''}`} ref={c => this.header = c }>
+        
+          <button className={`ham-nav-button ${this.props.page ? '' : ''}`} onClick={()=>{this.openMobileMenu()}} ref={c => this.hamNavButton = c }>
             <div className={`ham-nav ${this.state.open}`}>
               <span></span>
               <span></span>
@@ -216,9 +205,9 @@ export default class Header extends Component {
               <span></span>
             </div>
           </button>
-        </VelocityComponent>
-        <VelocityComponent {...fadeInHeader} ref={(velocity)=> this.mobileV = velocity}>
-          <div className={`mobile-header ${this.props.page ? '' : 'off'}`} ref={c => this.mobileHeader = c }>
+        
+        
+          <div className='mobile-header' ref={c => this.mobileHeader = c }>
             <div className="navigation-titles">            
                 <h4 className="title"><img src={logoText} alt="108 Leonard text logo"  /></h4>
                   <h3 ref={ (el) => this.subTitle = el} className="come-in sub-title sans-light-bold">
@@ -226,9 +215,9 @@ export default class Header extends Component {
                   </h3>
             </div>
           </div>
-        </VelocityComponent>
         
-          <div className={`app-header ${this.state.open}`}>
+        
+          <div className={`app-header ${this.state.open}  ${this.state.alreadyPlayed ? 'normal' : ''}`} ref={c => this.appHeader = c }>
             <NavLink onClick={(e)=>{this.onNavItemClick(e)}} data-type="" activeClassName="active" id="home-0" strict exact to="/" href="/"><img src={logo} className="app-logo" alt="logo" /></NavLink>
             <nav ref={(el) => this.nav = el}>
               <ul className="nav-list" ref={ (listElement) => this.listElement = listElement}>
@@ -272,7 +261,7 @@ export default class Header extends Component {
           </div>
         
       </header>
-    </VelocityComponent>
+    
     );
   };
 }
