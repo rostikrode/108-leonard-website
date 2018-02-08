@@ -2,28 +2,88 @@
   "page": "Team",
   "metaTitle": "Team Page",
   "metaDescription": "Team page of website",
-  "istext": true,
+  "isteam": true,
   "slides": [
     {
       "title": "Elad Group",
+      "subtitle": "Lorem ipsum dolor sit amet",
       "section": "Elad Group",
       "newsection": false,
-      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
+      "images": [
+        {
+          "url":"/images/9_team/elad_group/ELAD_CPS_076.jpg",
+          "caption":"Caption 1"
+        }, {
+          "url":"/images/9_team/elad_group/ELAD_Sunset.jpg",
+          "half": true,
+          "caption":"Caption 2"
+        }, {
+          "url":"/images/9_team/elad_group/ELAD_west_PH.jpg",
+          "half": true,
+          "caption":"Caption 3"
+        }
+      ]
     }, {
-      "title": "Jeffrey Beers International",
+      "title": "DESIGN",
+      "subtitle": "Interiors designed by Jeffrey Beers International",
       "section": "Jeffrey Beers International",
       "newsection": false,
-      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
+      "images": [
+        {
+          "url":"/images/9_team/jeffrey_beers/JBI_Ascent_Lounge_Steven_Menendez.jpg",
+          "caption":"Caption 1"
+        }, {
+          "url":"/images/9_team/jeffrey_beers/JBI_One&Only_Palmilla_SEARED_Restaurant_Jean-Georges_Vongerichten.jpg",
+          "half": true,
+          "caption":"Caption 2"
+        }, {
+          "url":"/images/9_team/jeffrey_beers/JBI_The_Cove_GrandLobby-Horizontal_1296.jpg",
+          "half": true,
+          "caption":"Caption 3"
+        }
+      ]
     }, {
       "title": "Douglas Elliman",
+      "subtitle": "Lorem ipsum dolor sit amet",
       "section": "Douglas Elliman",
       "newsection": false,
-      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
+      "images": [
+        {
+          "url":"https://picsum.photos/650/440/",
+          "caption":"Caption 1"
+        }, {
+          "url":"https://picsum.photos/544/364/",
+          "half": true,
+          "caption":"Caption 2"
+        }, {
+          "url":"https://picsum.photos/544/364/",
+          "half": true,
+          "caption":"Caption 3"
+        }
+      ]
     }, {
       "title": "DBOX",
+      "subtitle": "Lorem ipsum dolor sit amet",
       "section": "Entrance",
       "newsection": false,
-      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
+      "images": [
+        {
+          "url":"https://picsum.photos/650/440/",
+          "caption":"Caption 1"
+        }, {
+          "url":"https://picsum.photos/544/364/",
+          "half": true,
+          "caption":"Caption 2"
+        }, {
+          "url":"https://picsum.photos/544/364/",
+          "half": true,
+          "caption":"Caption 3"
+        }
+      ]
     }
   ],
   "settings":{

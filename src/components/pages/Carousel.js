@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 import IntroSlide from '../partials/IntroSlide.js';
 import ImageSlide from '../partials/ImageSlide.js';
-import TextSlide from '../partials/TextSlide.js';
+import TeamSlide from '../partials/TeamSlide.js';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -120,8 +120,7 @@ export default class Carousel extends Component {
             }
           }
           if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            prevArrow.style.left = `calc(50% - ${(length/2)}px - 20px)`;
-            nextArrow.style.left = `calc(50% + ${(length/2)}px)`;
+            nextArrow.style.left = `calc(80px + ${(length)}px + 45px)`;
           } else {
             let captions = parentSliderEl.querySelectorAll('.slick-slide .inner .caption');
             let activeSlide = parentSliderEl.querySelector('.slick-active .inner .image-wrapper');
@@ -156,8 +155,10 @@ export default class Carousel extends Component {
   updateArrowPosition() {
     if (window.matchMedia('(min-width: 1024px)').matches) {
       setTimeout(() => {
-        if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-          this.doPlacement();
+        if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+          if (this.props) {
+            this.doPlacement();
+          }
         } else {
           this.doPlacement();
 
@@ -255,10 +256,12 @@ export default class Carousel extends Component {
     const moreSettings = {
       arrows: false,
       beforeChange: () => {
-        /** to fade out captions */
-        var allCaps = parentSliderEl.querySelectorAll(`.slick-slide .inner .caption`);
-        for (let i = 0; i < allCaps.length; i++) {
-          allCaps[i].classList.add('fade-out');
+        if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+          /** to fade out captions NOT on team tho */
+          var allCaps = parentSliderEl.querySelectorAll(`.slick-slide .inner .caption`);
+          for (let i = 0; i < allCaps.length; i++) {
+            allCaps[i].classList.add('fade-out');
+          }
         }
       },
       afterChange: (slide) => {
@@ -296,10 +299,12 @@ export default class Carousel extends Component {
         var section = parentSliderEl.querySelector('.slick-slide.slick-active').getAttribute('data-section');
         this.activateSubnav(section);
 
-        /** to fade in captions */
-        var currentCap = parentSliderEl.querySelector(`.slick-slide.slick-active .inner .caption`);
-        if (currentCap) {
-          currentCap.classList.remove('fade-out');
+        if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+          /** to fade in captions NOT on team tho */
+          var currentCap = parentSliderEl.querySelector(`.slick-slide.slick-active .inner .caption`);
+          if (currentCap) {
+            currentCap.classList.remove('fade-out');
+          }
         }
       },
     };
@@ -314,7 +319,7 @@ export default class Carousel extends Component {
             </div>
           : undefined}
 
-          {!this.props.istext ?
+          {!this.props.isteam ?
             this.props.slides.map((slide, key) => {
               return (
                 <div key={key+1} data-section={slide.section} className="slick-section">
@@ -326,7 +331,7 @@ export default class Carousel extends Component {
             this.props.slides.map((slide, key) => {
               return (
                 <div key={key + 1} data-section={slide.section} className="slick-section slick-intro-slide">
-                  <TextSlide slide={slide}/>
+                  <TeamSlide slide={slide}/>
                 </div>
               );
             })
