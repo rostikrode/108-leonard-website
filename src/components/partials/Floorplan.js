@@ -158,10 +158,13 @@ class Floorplan extends Component {
               <div className="floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
               <div className="floorplan-bedrooms serif">{this.props.bedrooms === 1 ? `${this.props.bedrooms} BEDROOM` : `${this.props.bedrooms} BEDROOMS`}</div>
               <div className="floorplan-bathrooms serif">{this.props.baths === 1 ? `${this.props.baths} BATHROOM` : `${this.props.baths}  BATHROOMS`}</div>
-              <div className="floorplan-interior serif">{this.props.intft} SQ FT | {this.props.intsqm} SQ M</div>
+              <div className="floorplan-interior serif">{this.props.intft} SQ FT | {this.props.intsqm} SQ M *</div>
             </div>
             <div className="floorplan-keys">
               <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
+            </div>
+            <div className="floorplan-info floorplan-footer">
+              <p className="serif">* Square footage is approximate</p>
             </div>
           </div>
 

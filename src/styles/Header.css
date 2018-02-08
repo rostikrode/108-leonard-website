@@ -253,10 +253,10 @@ nav {
 
 @media (min-width: 1024px) {
   .nav-anchor {
-    color: rgba(0,0,0, 0.25);
+    color: rgba(0,0,0, 0.5);
   } 
   .nav-anchor:hover {
-    color: rgba(0,0,0, 0.55);
+    color: rgba(0,0,0, 0.7);
   } 
   .nav-anchor:active,
   .nav-anchor.active {
@@ -323,9 +323,12 @@ nav {
 .footer-pages {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
+}
+.footer-pages .nav-anchor {
+  padding: 0 10px;
 }
 .footer-pages a:hover {
   font-weight: 600;
