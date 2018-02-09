@@ -25,6 +25,7 @@ export default class Header extends Component {
     this.onPressPage();
 
     if (window.location.pathname === '/') {
+      if (!Cookies.get('alreadyPlayed')) {
         this.setState({
           alreadyPlayed: false,
         }, () => {
@@ -38,8 +39,7 @@ export default class Header extends Component {
             Cookies.set('alreadyPlayed', true, {expires: 14});
           }, 7500);
         });
-
-      // }
+      }
     }
   }
 
@@ -152,25 +152,26 @@ export default class Header extends Component {
   }
 
   onSubClick(e) {
-    // slider go to slide that corresponds to active subnav
-    let index = e.target.getAttribute('data-id');
-    let slide = this.props.parentslider.querySelector(`.slick-slide[data-section="${index}"]`);
-    if (slide) {
-      /** desktop version, that has a carousel */
-      let slideIndex = parseInt(slide.getAttribute('data-index'), 10);
-      if (this.props.slider !== null)
-        {
-this.props.slider.slickGoTo(slideIndex);
-}
-    }
+    if(this.props.parentslider) {
+      // slider go to slide that corresponds to active subnav
+      let index = e.target.getAttribute('data-id');
+      let slide = this.props.parentslider.querySelector(`.slick-slide[data-section="${index}"]`);
+      if (slide) {
+        /** desktop version, that has a carousel */
+        let slideIndex = parseInt(slide.getAttribute('data-index'), 10);
+        if (this.props.slider !== null) {
+          this.props.slider.slickGoTo(slideIndex);
+        }
+      }
 
-    let allsubs = this.nav.querySelectorAll('.nav-subnav-item');
-    for (let i = 0; i < allsubs.length; i++) {
-      allsubs[i].classList.remove('active');
-    }
-    e.target.classList.add('active');
+      let allsubs = this.nav.querySelectorAll('.nav-subnav-item');
+      for (let i = 0; i < allsubs.length; i++) {
+        allsubs[i].classList.remove('active');
+      }
+      e.target.classList.add('active');
 
-    this.openMobileMenu();
+      this.openMobileMenu();
+    }
   }
 
   openMobileMenu() {

@@ -15,17 +15,17 @@ export default class Animation extends Component {
 
   componentWillMount() {
     if (window.location.pathname === '/') {
-      // if (Cookies.get('alreadyPlayed')) {
-      //   this.setState({
-      //     alreadyPlayed: true
-      //   });
-      //} else {
+      if (Cookies.get('alreadyPlayed')) {
+        this.setState({
+          alreadyPlayed: true
+        });
+      } else {
         this.setState({
           alreadyPlayed: false
         }, () => {
           Cookies.set('alreadyPlayed', true, {expires: 14});
         });
-      //}
+      }
     }
   }
 
@@ -87,7 +87,6 @@ if (window.matchMedia("(min-width: 1366px)").matches) {
   sequence = velocityHelpers.registerEffect({
     defaultDuration: 2000,
     calls: [
-      [{translateX: '16em'}],
       ['fadeOut'],
     ]
   });

@@ -161,11 +161,15 @@ export default class Carousel extends Component {
           }
         } else {
           if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('slick-slider')) {
-            this.doPlacement();
+            if (this.props) {
+              this.doPlacement();
+            }
             // then modify once image is loaded
             let image = new Image();
             image.onload = () => {
-              this.doPlacement();
+              if (this.props) {
+                this.doPlacement();
+              }
             };
             image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
           }
