@@ -625,6 +625,13 @@
   line-height: normal;
   padding: 1px;
   font-weight: 100;
+  transition: opacity 100ms ease-in-out;
+}
+.detail-info-button.serif.fadein{
+  opacity: 1;
+}
+.detail-info-button.serif.fadeout{
+  opacity: 0;
 }
 .detail-info-wrapper {
   position: absolute;
@@ -686,6 +693,7 @@
   }
   .detail-info-wrapper {
     width: calc(100% - 60px);
+    height: 4em;
     padding: 30px;
   }
   .detail-info-wrapper .close-detail-info-button {
