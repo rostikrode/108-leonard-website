@@ -9,21 +9,6 @@
 
 # TODO
 
-* Animated intro incoming - leads to new home page
-
-* Meta description too short
-  * The meta description is too short. The description is: "108 Leonard", and it consists of only 11 characters. You should use at least 50 characters to increase the chances that search engines will display it on the search result page.
-  * To do  Write a more descriptive meta description text for this page.
-
-* Facebook Open Graph URL is not canonical URL
-  * The page contains an Open Graph URL (which is used for sharing on social networks) and a canonical URL (which is used to show search engines the favorite version of the page).
-
-* Facebook Open Graph URL and the canonical URL do not match. Normally, they should be the same.
-  * To do  Choose one URl for both the Facebook Open Graph URL and the canonical tag.
-* final copy (everywhere, including the form submit messages and legal)
-* final images
-
-
 Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web
 Question Document: https://docs.google.com/document/d/1-Y4RTlJCLQ15iYe9DEKmx2u_GWFvjnBUZUbL5rss00w/edit?ts=5982baa3
 Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design
