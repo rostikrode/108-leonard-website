@@ -443,7 +443,7 @@
     width: 45%;
     min-width: 300px;
     z-index: 900;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
   }
 }
 @media (min-width: 1366px) {
@@ -451,7 +451,7 @@
     width: calc(100% - 64px);
   }
   .slick-intro-slide .caption-wrapper {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
   }
 }
 
@@ -633,7 +633,7 @@
   width: calc(100% - 30px);
   height: auto;
   padding: 15px;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,0.7);
   text-align: left;
   display: flex;
   flex-flow: row nowrap;

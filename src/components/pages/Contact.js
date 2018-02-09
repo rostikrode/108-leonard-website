@@ -99,7 +99,7 @@ export default class Contact extends Component {
           id: 29783
         },
         {
-          name: 'NY TIMES.COM',
+          name: 'NYTIMES.COM',
           id: 29784
         },
         {
@@ -107,7 +107,7 @@ export default class Contact extends Component {
           id: 29785
         },
         {
-          name: 'REAL DEAL',
+          name: 'THE REAL DEAL',
           id: 29787
         },
         {
