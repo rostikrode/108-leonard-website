@@ -331,7 +331,7 @@ export default class Carousel extends Component {
             this.props.slides.map((slide, key) => {
               return (
                 <div key={key + 1} data-section={slide.section} className="slick-section slick-intro-slide">
-                  <TeamSlide slide={slide}/>
+                  <TeamSlide slide={slide} />
                 </div>
               );
             })

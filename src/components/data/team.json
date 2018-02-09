@@ -5,10 +5,10 @@
   "isteam": true,
   "slides": [
     {
-      "title": "Elad Group",
-      "subtitle": "Lorem ipsum dolor sit amet",
-      "section": "Elad Group",
-      "newsection": false,
+      "title": "Development",
+      "subtitle": "Elad Group",
+      "section": "Development",
+      "newsection": true,
       "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
       "images": [
         {
@@ -27,8 +27,8 @@
     }, {
       "title": "DESIGN",
       "subtitle": "Interiors designed by Jeffrey Beers International",
-      "section": "Jeffrey Beers International",
-      "newsection": false,
+      "section": "Design",
+      "newsection": true,
       "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
       "images": [
         {
@@ -45,10 +45,10 @@
         }
       ]
     }, {
-      "title": "Douglas Elliman",
-      "subtitle": "Lorem ipsum dolor sit amet",
-      "section": "Douglas Elliman",
-      "newsection": false,
+      "title": "Marketing and Sales",
+      "subtitle": "Douglas Elliman Development Marketing",
+      "section": "Marketing and Sales",
+      "newsection": true,
       "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
       "images": [
         {
@@ -65,10 +65,10 @@
         }
       ]
     }, {
-      "title": "DBOX",
-      "subtitle": "Lorem ipsum dolor sit amet",
-      "section": "Entrance",
-      "newsection": false,
+      "title": "Branding and Creative",
+      "subtitle": "DBOX",
+      "section": "Branding and Creative",
+      "newsection": true,
       "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
       "images": [
         {

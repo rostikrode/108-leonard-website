@@ -5,7 +5,6 @@ import Loader from './Loader';
 const TextSlide = (props) => {
   return (
     <div className="inner">
-
       <div className="image-group">
         {props.slide.images.map((image, key) => {
           return (
@@ -14,7 +13,7 @@ const TextSlide = (props) => {
                 className="image"
                 title={image.caption}
                 style={{
-                  backgroundImage: `url(${image.url}`
+                  backgroundImage: `url(${image.url})`
                 }} 
               />
               <Img className="image-tag" src={image.url} loader={<Loader />} alt={image.caption} />
@@ -30,7 +29,6 @@ const TextSlide = (props) => {
         <h6 className="subtitle serif">{props.slide.subtitle}</h6>
         <p className="serif">{props.slide.para}</p>
       </div>
-
     </div>
   );
 }

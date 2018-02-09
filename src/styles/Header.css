@@ -315,7 +315,7 @@ nav {
 .footer {
   display: block;
   padding: 20px;
-  padding-bottom: 0;
+  padding-bottom: 45px;
   width: 100%;
   position: relative;
   z-index: 100;
@@ -348,6 +348,9 @@ nav {
   }
 }
 @media (min-width: 1024px) {
+  .footer {
+    padding-bottom: 0;
+  }
   .footer-pages {
     width: 100%;
   }
