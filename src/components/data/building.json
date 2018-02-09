@@ -4,7 +4,7 @@
   "metaDescription": "108 Leonard pays homage to the most coveted elements of an architectural masterpiece, including dramatic details of scale, proportion, and volume.",
   "intro": {
     "title": "A Modern Renaissance",
-    "para": "108 Leonard pays homage to the most coveted elements of an architectural masterpiece, including dramatic details of scale, proportion, and volume. Here, ornamental majesty and historic provenance are paired anew with fresh, modern forms and contemporary design priorities. Award-winning hospitality design firm Jeffrey Beers International has meticulously restored renowned architect McKim Mead & White's Italian Renaissance Revival landmark. Beers has masterfully imbued a distinctly contemporary yet timeless point of view within Tribeca's most iconic century-old building."
+    "para": "108 Leonard pays homage to the most coveted elements of an architectural masterpiece, including dramatic details of scale, proportion, and volume. Ornamental majesty and historic provenance are paired anew with fresh, modern forms and contemporary design priorities."
   },
   "introImage": "/images/2_building/Interior_Day2.jpg",
   "introImageCaption": "",
@@ -14,22 +14,24 @@
       "src": "/images/2_building/2.3.1_Leonard_Entrance.jpg",
       "section": "Property",
       "newsection": true,
-      "caption": "Leonard Entrance"
+      "caption": "Grand entrance on Leonard Street",
+      "detail": "Residents can choose from distinct entrances on Leonard Street, Broadway and Lafayette Street."
     }, {
       "src": "/images/2_building/2.3.2_Leonard_Entrance.jpg",
       "section": "Property",
       "newsection": false,
-      "caption": "Leonard Entrance"
+      "caption": "A meticulously restored McKim Mead & White landmark"
     }, {
       "src": "/images/2_building/2.3.3_Leonard_Lobby.jpg",
       "section": "Entrance",
       "newsection": false,
-      "caption": "Leonard Lobby"
+      "caption": "Double-height lobby on Leonard Street",
+      "detail": "Award-winning hospitality design firm Jeffrey Beers International has masterfully imbued a distinctly contemporary yet timeless point of view within Tribeca's most iconic century-old building."
     }, {
       "src": "/images/2_building/2.3.4_Motor_Reception.jpg",
       "section": "Entrance",
       "newsection": false,
-      "caption": "Motor Reception"
+      "caption": "Private heated indoor motor reception and private parking"
     }
   ],
   "settings":{

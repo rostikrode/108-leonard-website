@@ -1,10 +1,10 @@
 {
   "page": "Amenities",
   "metaTitle": "Amenities | A Life Well Lived | 108 Leonard",
-  "metaDescription": "A bevy of hidden retreats spanning over 20,000 square feet, 108 Leonard's amenities are a private escape in Tribeca.",
+  "metaDescription": "Countless hidden retreats make 108 Leonard more island than urban, an owner's private escape in Tribeca.",
   "intro": {
     "title": "A Life Well Lived",
-    "para": "A bevy of hidden retreats spanning over 20,000 square feet, 108 Leonard's amenities are a private escape in Tribeca. It starts with the arrival via a private heated indoor motor reception. Within, find an entertaining suite replete with private dining, wine cellar and a sumptuous lounge flanked by clubby nooks for intimate conversation. Wellness features include a stunning 75 foot lap pool, thermal bath, steam shower, sauna and rain shower. Luxuriant rooftop gardens are designed for dining, lounging and contemplative reflection. "
+    "para": "Countless hidden retreats make 108 Leonard more island than urban, an owner's private escape in Tribeca.  Enjoy over 20.000 square feet of amenities including a 2,200 square foot fitness center."
   },
   "introImage": "/images/6_amenities/AmenitiesDetail_GeometryTest1.jpg",
   "introImageCaption": "",
@@ -14,22 +14,26 @@
       "src": "/images/6_amenities/6.2.1_Private_Dining_Room.jpg",
       "section": "Entertaining",
       "newsection": true,
-      "caption": "Private Dining Room"
+      "caption": "Wine cellar with private dining room",
+      "detail": "Discover an entertaining suite replete with private dining, wine cellar and a sumptuous lounge flanked with clubby nooks for intimate conversation."
     }, {
       "src": "/images/6_amenities/6.3.1_Pool.jpg",
       "section": "Wellness",
       "newsection": true,
-      "caption": "Pool"
+      "caption": "75 foot lap pool",
+      "detail": "Wellness features include a stunning 75 foot lap pool, thermal bath, steam shower, sauna and rain shower."
     }, {
       "src": "/images/6_amenities/6.4.1_Rooftop_View_1.jpg",
       "section": "Outdoor",
       "newsection": true,
-      "caption": "Rooftop View 1"
+      "caption": "Rooftop gardens featuring cabana lounges",
+      "detail": "Luxuriant rooftop gardens are designed for dining, lounging and contemplative reflection."
     }, {
       "src": "/images/6_amenities/6.4.2_Rooftop_View_2.jpg",
       "section": "Outdoor",
       "newsection": false,
-      "caption": "Rooftop View 2"
+      "caption": "Rooftop outdoor dining",
+      "detail": "The entertaining cabana offers a fireplace and summer kitchen for nights with friends and family."
     }
   ],
   "settings":{

@@ -1,40 +1,44 @@
 {
   "page": "Residences",
-  "metaTitle": "Residences | Romancing Downtown | 108 Leonard",
+  "metaTitle": "Residences | Romancing Tribeca | 108 Leonard",
   "metaDescription": "In a nod to this distinguished Italian Renaissance building and its Parisian counterparts, Jeffrey Beers juxtaposes classic details-oversized moldings, chevron-patterned oak floors-with contemporary touches for these 169 highly-appointed residences.",
   "intro": {
-    "title": "Romancing Downtown",
-    "para": "In a nod to this distinguished Italian Renaissance building and its Parisian counterparts, Jeffrey Beers juxtaposes classic details—oversized moldings, chevron-patterned oak floors—with contemporary touches for these 169 highly-appointed residences. Particularly high ceilings ranging from 12 to more than 15 feet, original restored windows and five inch wide oak floors bring authentic European glamour to organically flowing layouts. Gallery walls are awash in lighting tucked behind recessed coves, offering illuminated spaces for burgeoning art collectors. Open-plan kitchens have been thoughtfully conceived in two palettes, Ash or Sand, sheathed in marble backsplashes and anchored by stunning marble waterfall islands and top-of-the-line appliances. Each residence has been optimized for space and warmth. From the outside, 108 Leonard is historic landmark that pays homage to a gilded bygone era; on the inside, it is a bright canvas of modern restraint, ready to adapt to one’s individual lifestyle."
+    "title": "Romancing Tribeca",
+    "para": "In a nod to this distinguished Italian Renaissance building and its Parisian counterparts, Jeffrey Beers International juxtaposes classic details-oversized moldings, chevron-patterned oak floors-with contemporary touches for these 152 highly-appointed residences. From the outside, 108 Leonard is historic landmark that pays homage to a gilded bygone era; on the inside, it is a bright canvas of modern restraint, ready to adapt to one's individual lifestyle."
   },
   "introImage": "/images/3_residences/3.1_DBOX_108LEONARD_EntryDoor2.jpg",
   "introImageCaption": "",
   "section": "Intro",
   "slides": [
     {
-      "src": "/images/3_residences/3.2.1_Greatroom_11N.jpg",
-      "section": "Interiors",
-      "newsection": true,
-      "caption": "Greatroom 11N"
-    }, {
       "src": "/images/3_residences/3.2.2_Greatroom_6P.jpg",
       "section": "Interiors",
-      "newsection": false,
-      "caption": "Greatroom 6P"
-    }, {
-      "src": "/images/3_residences/3.3.1_Plinth_Kitchen.jpg",
-      "section": "Kitchens",
       "newsection": true,
-      "caption": "Plinth Kitchen"
+      "caption": "Typical ceiling heights range from 10 to over 14 feet",
+      "detail": "Original restored windows and five inch wide oak floors bring authentic European glamour to organically flowing layouts. Typical ceiling heights range from 10 to over 14 feet, with premium residence ceiling heights soaring to more than 16 feet."
+    }, {
+      "src": "/images/3_residences/3.2.1_Greatroom_11N.jpg",
+      "section": "Interiors",
+      "newsection": false,
+      "caption": "Each residence has been optimized for space and warmth",
+      "detail": "Gallery walls are awash in lighting tucked behind recessed coves, offering illuminated spaces for burgeoning art collectors."
     }, {
       "src": "/images/3_residences/3.3.2_Waterfall_Kitchen.jpg",
       "section": "Kitchens",
+      "newsection": true,
+      "caption": "Kitchen in Sand Palette",
+      "detail": "Open-plan kitchens have been thoughtfully conceived in two palettes, sheathed in marble backsplashes and anchored by stunning marble waterfall islands. Sand palette shown here."
+    }, {
+      "src": "/images/3_residences/3.3.1_Plinth_Kitchen.jpg",
+      "section": "Kitchens",
       "newsection": false,
-      "caption": "Waterfall Kitchen"
+      "caption": "Kitchen in Ash Palette",
+      "detail": "Open-plan kitchens have been thoughtfully conceived in two palettes, featuring top-of-the-line Miele appliances. Ash palette shown here."
     }, {
       "src": "/images/3_residences/3.4.1_Master_Bath.jpg",
       "section": "Bathrooms",
       "newsection": true,
-      "caption": "Master Bath"
+      "caption": "Master bath with Calacatta Black feature wall"
     }
   ],
   "settings":{

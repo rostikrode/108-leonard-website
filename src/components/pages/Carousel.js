@@ -160,14 +160,15 @@ export default class Carousel extends Component {
             this.doPlacement();
           }
         } else {
-          this.doPlacement();
-
-          // then modify once image is loaded
-          let image = new Image();
-          image.onload = () => {
+          if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('slick-slider')) {
             this.doPlacement();
-          };
-          image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
+            // then modify once image is loaded
+            let image = new Image();
+            image.onload = () => {
+              this.doPlacement();
+            };
+            image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
+          }
         }
       }, 100);
     }
