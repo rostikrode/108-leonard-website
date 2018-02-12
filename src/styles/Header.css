@@ -4,17 +4,6 @@
   top: 0; left: 0;
   background-color: #FFF;
   z-index: 900;
-  opacity: 0;
-  transform: translate3d(0, -100%, 0);
-}
-.header.normal {
-  opacity: 1; 
-  transform: translate3d(0, 0, 0); 
-}
-
-.header.slide-down {
-  opacity: 1; 
-  transform: translate3d(0, 0, 0); 
 }
 @media (min-width: 1366px) {
   .header {
@@ -194,17 +183,7 @@
     margin-right: 0;
     padding-right: 32px;
     border-right: 1px solid #A1C6CF;
-    transform: translateX(-101%);
-  }
-
-  .app-header.normal {
-    opacity: 1; 
-    transform: translateX(0); 
-  }
-
-  .app-header.slide-over {
-    opacity: 1; 
-    transform: translateX(0); 
+    transform: translateX(0);
   }
 }
 

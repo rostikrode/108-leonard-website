@@ -97,19 +97,15 @@ if (window.matchMedia("(min-width: 1366px)").matches) {
     delay: 2000+1000+1000+1000+2500+300
   }
 } else {
-  let downPx = '0'; 
   let delay = 0;
   if (window.matchMedia("(min-width: 1024px)").matches) {
-    downPx = '0';
     delay = 0;
   } else {
-    downPx = '66px';
     delay = 300;
   }
   sequence = velocityHelpers.registerEffect({
     defaultDuration: 1000,
     calls: [
-      [{translateY: downPx}],
       ['fadeOut']
     ]
   });

@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
 import Img from 'react-image';
 import Cookies from 'js-cookie';
 import 'velocity-animate/velocity.ui';
 import Loader from '../partials/Loader';
 import '../../styles/Home.css';
+import next_arrow from '../../assets/next_arrow.svg';
 
 
 export default class Home extends Component {
@@ -13,6 +15,8 @@ export default class Home extends Component {
       'page_location': window.location.href,
       'page_path': window.location.pathname
     });
+
+    this.onGoTo = this.onGoTo.bind(this);
   }
   
   componentDidMount() {
@@ -42,20 +46,35 @@ export default class Home extends Component {
     }
   }
 
+  onGoTo() {
+    this.props.onNextButton('Building');
+  }
+
   render() {
     return (
       <div className="home">
         <div className="home-wrapper">
           <div className="image-wrapper" style={{backgroundImage: 'url('+this.props.image+')'}} >
             <Img src={this.props.image} loader={<Loader />} alt={this.props.caption} />
-            <div className="caption-wrapper" ref={el => {this.caption = el}}>
+            <div className="desktop-caption-wrapper caption-wrapper" ref={el => {this.caption = el}}>
               <div className="sans-bold h1">{this.props.title}</div>
               <div className="p">
-                <h1 className="serif">{this.props.header1}</h1>
-                <h2 className="serif">{this.props.header2}</h2>
+                <h1 className="serif" dangerouslySetInnerHTML={{__html: this.props.header1}}></h1>
+                <h2 className="serif" dangerouslySetInnerHTML={{__html: this.props.header2}}></h2>
               </div>
             </div>
           </div>
+          <div className="mobile-caption-wrapper caption-wrapper">
+            <div className="sans-bold h1">{this.props.title}</div>
+            <div className="p">
+              <h1 className="serif" dangerouslySetInnerHTML={{__html: this.props.header1}}></h1>
+              <h2 className="serif" dangerouslySetInnerHTML={{__html: this.props.header2}}></h2>
+            </div>
+          </div>
+          <NavLink className="mobile-goto nav-anchor next-button" strict exact to='/building' onClick={this.onGoTo}>
+            <span className="upper serif">Discover the building</span>
+            <img src={next_arrow} alt="arrow to take you to the Building page"/>
+          </NavLink>
         </div>
       </div>
     );

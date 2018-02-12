@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 // import {VelocityComponent, velocityHelpers} from 'velocity-react';
-import Cookies from 'js-cookie';
 import logo from '../../assets/logo.svg';
 // import brochure from '../../assets/brochure.svg';
 import logoText from '../../assets/108_leonard_text.svg';
@@ -13,8 +12,7 @@ export default class Header extends Component {
     super(props);
     this.state = {
       open: '',
-      home: '',
-      alreadyPlayed: true,
+      home: ''
     };
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
   }
@@ -24,23 +22,23 @@ export default class Header extends Component {
     this.onAvailabilityPage();
     this.onPressPage();
 
-    if (window.location.pathname === '/') {
-      if (!Cookies.get('alreadyPlayed')) {
-        this.setState({
-          alreadyPlayed: false,
-        }, () => {
-          this.header.style.transition = 'transform 1s ease-in-out, opacity 1s ease-in-out';
-          setTimeout(() => {
-            this.header.classList.add('slide-down');
-            this.appHeader.classList.add('slide-over');
-            this.setState({
-              alreadyPlayed: true,
-            });
-            Cookies.set('alreadyPlayed', true, {expires: 14});
-          }, 7500);
-        });
-      }
-    }
+    // if (window.location.pathname === '/') {
+    //   if (!Cookies.get('alreadyPlayed')) {
+    //     this.setState({
+    //       alreadyPlayed: false,
+    //     }, () => {
+    //       this.header.style.transition = 'transform 1s ease-in-out, opacity 1s ease-in-out';
+    //       setTimeout(() => {
+    //         this.header.classList.add('slide-down');
+    //         this.appHeader.classList.add('slide-over');
+    //         this.setState({
+    //           alreadyPlayed: true,
+    //         });
+    //         Cookies.set('alreadyPlayed', true, {expires: 14});
+    //       }, 7500);
+    //     });
+    //   }
+    // }
   }
 
   componentWillUnmount() {
@@ -188,7 +186,7 @@ export default class Header extends Component {
   render() {
     return (
 
-      <header className={`header ${this.state.alreadyPlayed ? 'normal' : ''}`} ref={(c) => this.header = c }>
+      <header className='header' ref={(c) => this.header = c }>
 
           <button className={`ham-nav-button ${this.props.page ? '' : ''}`} onClick={()=>{
 this.openMobileMenu();
@@ -212,7 +210,7 @@ this.openMobileMenu();
           </div>
 
 
-          <div className={`app-header ${this.state.open}  ${this.state.alreadyPlayed ? 'normal' : ''}`} ref={(c) => this.appHeader = c }>
+          <div className={`app-header ${this.state.open}`} ref={(c) => this.appHeader = c }>
             <NavLink onClick={(e)=>{
 this.onNavItemClick(e)
 ;

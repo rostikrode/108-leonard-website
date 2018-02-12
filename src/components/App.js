@@ -148,13 +148,19 @@ export default class App extends Component {
           page: 'Press'
         });
       } else {
-        PAGES.forEach((index) => {
-          if(url === index.slug) {
-            this.setState({
-              page: index.title
-            });
-          }
-        });  
+        if (url === '/') {
+          this.setState({
+            page: ''
+          });
+        } else {
+          PAGES.forEach((index) => {
+            if(url === index.slug) {
+              this.setState({
+                page: index.title
+              });
+            }
+          });  
+        }
       }
     }
   }
@@ -244,11 +250,11 @@ export default class App extends Component {
 
         <main>  
           <Switch>
-            <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`}/>} />
+            <Route exact strict path="/:url*" render={props => <Redirect to={`${props.location.pathname}/`} newPage={this.newPage.bind(this)} />} />
 
             {routeComponents}
 
-            <Route exact path="/" render={(props) => ( <Home {...homeJSON} /> )} />  
+            <Route exact path="/" render={(props) => ( <Home {...homeJSON} onNextButton={this.onNextButton.bind(this)}  /> )} />  
             <Route exact path="/availability/:residence" render={(props) => ( <Availability {...props} {...availabilityJSON} /> )} />
             <Route exact path="/share/" render={(props) => ( <AvailabilityShare {...props} /> )} />
             <Route exact path="/team/" render={(props) =>  ( <Carousel {...teamJSON} sendSlider={this.sendSlider.bind(this)} subnavs={this.state.subnavs} /> )} />
