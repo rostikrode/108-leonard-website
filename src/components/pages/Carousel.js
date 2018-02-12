@@ -140,32 +140,11 @@ export default class Carousel extends Component {
             }
 
             // caption to be right aligned to dynamic image
-            var bottom = captions[0].style.bottom;
             for (let i in captions) {
               let cap = captions[i];
 
               if (typeof cap === 'object') {
                 cap.style.right = imageRightOffset+'px';
-
-                /** moving captions over if they touch arrow */
-                let captionOffset = captions[i].getBoundingClientRect().left;
-                let nextArrowOffset = nextArrow.getBoundingClientRect().right;
-                let nextButtonOffset = nextButton.getBoundingClientRect().right;
-
-                if ((captionOffset > 0) && (captionOffset <= nextArrowOffset)) {
-                  cap.style.bottom = '15px';
-                } else {
-                  if (parseInt(i, 10) === (captions.length - 1)) {
-                    if ((captionOffset > 0) && (captionOffset <= nextButtonOffset)) {
-                      cap.style.bottom = '15px';
-                    } else {
-                      cap.style.bottom = bottom;
-                    }
-                  } else {
-                    cap.style.bottom = bottom;
-                  }
-                  
-                }
               }
             }
           }

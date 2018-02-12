@@ -5,43 +5,43 @@
   "isteam": true,
   "slides": [
     {
-      "title": "Development",
-      "subtitle": "Elad Group",
-      "section": "Development",
-      "newsection": true,
-      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
-      "images": [
-        {
-          "url":"/images/9_team/elad_group/ELAD_CPS_076.jpg",
-          "caption":"Caption 1"
-        }, {
-          "url":"/images/9_team/elad_group/ELAD_Sunset.jpg",
-          "half": true,
-          "caption":"Caption 2"
-        }, {
-          "url":"/images/9_team/elad_group/ELAD_west_PH.jpg",
-          "half": true,
-          "caption":"Caption 3"
-        }
-      ]
-    }, {
       "title": "DESIGN",
       "subtitle": "Interiors designed by Jeffrey Beers International",
       "section": "Design",
       "newsection": true,
-      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
+      "para": "Jeffery Beers International (JBI) brings experience, vision, and architectural precision to the creation of vibrant social spaces. Internationally recognized as a leader in architecture and design, JBI is a full service studio founded by Jeffrey Beers in 1986. JBI's team of talented and highly trained designers have collaborated with exceptional clients to push the boundaries of design, advancing the hospitality industry through a portfolio of award-winning projects, including the Cove at the Atlantis Resort in Paradise Island, the Bahamas, The 40/40 Club, The Plaza Food Hall in New York City and the Fontainebleau Resort in Miami.",
       "images": [
         {
           "url":"/images/9_team/jeffrey_beers/JBI_Ascent_Lounge_Steven_Menendez.jpg",
-          "caption":"Caption 1"
+          "caption":"Ascent Lounge"
         }, {
           "url":"/images/9_team/jeffrey_beers/JBI_One&Only_Palmilla_SEARED_Restaurant_Jean-Georges_Vongerichten.jpg",
           "half": true,
-          "caption":"Caption 2"
+          "caption":"Seared Restaurant"
         }, {
           "url":"/images/9_team/jeffrey_beers/JBI_The_Cove_GrandLobby-Horizontal_1296.jpg",
           "half": true,
-          "caption":"Caption 3"
+          "caption":"The Cove Atlantis"
+        }
+      ]
+    }, {
+      "title": "Development",
+      "subtitle": "Sponsored by C3GBLLC<br/>Managed by Elad Group",
+      "section": "Development",
+      "newsection": true,
+      "para": "With several billion dollars in assets, Elad Group is one of the nation's leading real estate companies, known and recognized worldwide for the history-making, restoration and conversion of the famed Plaza Hotel. Elad's New York portfolio of iconic buildings includes 22 Central Park South, an exquisite collection of luxury residences overlooking Central Park, and 250 West Street, a 1906 warehouse turned luxury condominium in TriBeCa. On the West Coast, Elad also developed The Carlyle Residences along L.A.'s coveted Wilshire Corridor.",
+      "images": [
+        {
+          "url":"/images/9_team/elad_group/ELAD_Sunset.jpg",
+          "caption":"One West End"
+        }, {
+          "url":"/images/9_team/elad_group/ELAD_CPS_076.jpg",
+          "half": true,
+          "caption":"22 Central Park South"
+        }, {
+          "url":"/images/9_team/elad_group/ELAD_west_PH.jpg",
+          "half": true,
+          "caption":"250 West Street"
         }
       ]
     }, {
@@ -49,11 +49,9 @@
       "subtitle": "Douglas Elliman Development Marketing",
       "section": "Marketing and Sales",
       "newsection": true,
-      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
       "title2": "Branding and Creative",
       "subtitle2": "DBOX",
-      "section2": "Branding and Creative",
-      "para2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+      "section2": "Branding and Creative"
     }
   ],
   "settings":{
