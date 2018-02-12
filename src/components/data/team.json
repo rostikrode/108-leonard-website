@@ -50,40 +50,10 @@
       "section": "Marketing and Sales",
       "newsection": true,
       "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
-      "images": [
-        {
-          "url":"https://picsum.photos/650/440/",
-          "caption":"Caption 1"
-        }, {
-          "url":"https://picsum.photos/544/364/",
-          "half": true,
-          "caption":"Caption 2"
-        }, {
-          "url":"https://picsum.photos/544/364/",
-          "half": true,
-          "caption":"Caption 3"
-        }
-      ]
-    }, {
-      "title": "Branding and Creative",
-      "subtitle": "DBOX",
-      "section": "Branding and Creative",
-      "newsection": true,
-      "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut.",
-      "images": [
-        {
-          "url":"https://picsum.photos/650/440/",
-          "caption":"Caption 1"
-        }, {
-          "url":"https://picsum.photos/544/364/",
-          "half": true,
-          "caption":"Caption 2"
-        }, {
-          "url":"https://picsum.photos/544/364/",
-          "half": true,
-          "caption":"Caption 3"
-        }
-      ]
+      "title2": "Branding and Creative",
+      "subtitle2": "DBOX",
+      "section2": "Branding and Creative",
+      "para2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
     }
   ],
   "settings":{

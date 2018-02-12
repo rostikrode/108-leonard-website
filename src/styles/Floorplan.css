@@ -389,7 +389,6 @@
   display: block;
 }
 .dbxd-floorplan-wrapper {
-  height: calc(100% - 2rem);
   width: calc(100% - 2rem);
   padding: 1rem;
   border: 1px solid #D9D9D9;
@@ -422,21 +421,32 @@
     cursor: -moz-zoom-out;
     cursor: zoom-out;
   }
+  .dbxd-floorplan-wrapper {
+    height: calc(100% - 2rem);
+  }
 }
 
-.dbxd-tutorial-wrapper {
+/* .dbxd-tutorial-wrapper {
   display: none;
-}
+} */
 
 .dbxd-tutorial-wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 75%;
-  height: 75%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
   background: hsla(0,0%,100%,.9);
-  border: 1px solid #a1c6cf;
+}
+.dbxd-tutorial-wrapper.show {
+  z-index: 900;
+  opacity: 1;
+  transition: z-index 0ms linear, opacity 300ms ease-in 100ms;
+}
+.dbxd-tutorial-wrapper.hide {
+  z-index: -100;
+  opacity: 0;
+  transition: opacity 300ms ease-out, z-index 0ms linear 301ms;
 }
 @media (min-width: 1024px) {
   .dbxd-tutorial-wrapper {
@@ -445,27 +455,16 @@
     justify-content: center;
     align-items:  center;
   }
-  .dbxd-tutorial-wrapper.show {
-    z-index: 900;
-    opacity: 1;
-    transition: z-index 0ms linear, opacity 300ms ease-in 100ms;
-  }
-  .dbxd-tutorial-wrapper.hide {
-    z-index: -100;
-    opacity: 0;
-    transition: opacity 300ms ease-out, z-index 0ms linear 301ms;
-  }
 }
 
 .dbxd-tutorial-wrapper .dbxd-close {
   cursor: pointer;
-  position: absolute;
-  top: 1em; right: 1em;
+  position: relative;
   background-color: transparent;
   padding: 0;
-  margin: 0.5em;
-  width: 20px;
-  height: 20px;
+  margin: 0.5em; margin-left: 2em;
+  width: 40px;
+  height: auto;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -483,23 +482,24 @@
   font-size: 150%;
   line-height: normal;
   text-align: center;
-  padding: 18px;
+  padding: 18px; padding-right: 0;
   height: 100%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row-reverse nowrap;
   justify-content: center;
   align-items: center;
 }
 
 .dbxd-tutorial-wrapper .dbxd-tutorial-list .dbxd-feat {
-  margin: 1em 0;
-  color: #a1c6cf;
+  margin: 0;
+  color: #000000;
   font-family: Calibre,sans;
   font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 1px;
+  font-size: 12px;
+  letter-spacing: normal;
   text-transform: uppercase;
   max-width: 100%;
+  text-align: center;
 }
 
 .dbxd-copyright {
@@ -519,9 +519,8 @@
 
 .dbxd-instructions-icon {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
-  display: none;
   padding: 0;
   margin: 0.5em;
   width: 20px;
@@ -548,6 +547,29 @@
   align-items: center;
 }
 
+@media (min-width: 480px) {
+  .dbxd-tutorial-wrapper .dbxd-close {
+    width: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .dbxd-instructions-icon {
+    right: 0.5em;
+    bottom: 0.5em;
+  }
+  .dbxd-tutorial-wrapper .dbxd-close {
+    margin: 1em;
+    margin-left: auto;
+    z-index: 100;
+  }
+  .dbxd-tutorial-wrapper .dbxd-tutorial-list .dbxd-feat {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 100%;
+  }
+}
+
 @media(min-width: 1024px) {
   .dbxd-copyright {
     bottom: 0;
@@ -559,6 +581,10 @@
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+  }
+
+  .dbxd-tutorial-wrapper .dbxd-tutorial-list {
+    width: 100%;
   }
 }
 

@@ -778,7 +778,7 @@ export default class Contact extends Component {
             </div>
                 
             <a className="serif-bold link" href="mailto:info@108leonard.com" >info@108leonard.com</a>
-            <a className="serif-bold link" href="tel:2125551212" >212&#8226;555&#8226;1212</a>
+            <a className="serif-bold link" href="tel:2127751080" >212&#8226;775&#8226;1080</a>
           </div>
         }
       </div>

@@ -7,6 +7,7 @@ import '../styles/App.css';
 
 import Carousel from './pages/Carousel';
 import Availability from './pages/Availability';
+import ComingSoon from './partials/ComingSoon';
 import AvailabilityShare from './pages/AvailabilityShare';
 import Contact from './pages/Contact';
 // import PressList from './pages/PressList';
@@ -57,7 +58,7 @@ const PAGES = [{
       'Clocktower'
   ]},*/ {
     'title': 'Availability',
-    'component': Availability,
+    'component': ComingSoon,
     'slug': '/availability/',
     'data': availabilityJSON,
     'subnavs': []
@@ -220,6 +221,7 @@ export default class App extends Component {
             navClicked={this.state.navClicked} 
             subnavs={this.state.subnavs}
             sendSlider={this.sendSlider.bind(this)}
+            availMessage='Please contact the sales gallery for current availability.'
           />)} 
         />)
     });

@@ -13,7 +13,8 @@ export default class ImageSlide extends Component {
     this.onCloseButtonClick = this.onCloseButtonClick.bind(this);
   }
 
-  onInfoButtonClick() {
+  onInfoButtonClick(e) {
+    e.currentTarget.blur();
     this.setState({
       slidUp: true
     });
@@ -36,7 +37,7 @@ export default class ImageSlide extends Component {
             <Img src={this.props.slide.src} loader={<Loader />} alt={this.props.slide.caption} />
 
             {this.props.slide.detail ? 
-              <button className={`serif detail-info-button ${this.state.slidUp ? 'fadeout' : 'fadein'}`} onClick={this.onInfoButtonClick}>i</button>
+              <button className={`serif detail-info-button ${this.state.slidUp ? 'fadeout' : 'fadein'}`} onClick={this.onInfoButtonClick} ref={e => {this.infobutton = e}}>i</button>
               :''
             }
             {this.props.slide.detail ? 

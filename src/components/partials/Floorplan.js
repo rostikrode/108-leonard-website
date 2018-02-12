@@ -6,7 +6,7 @@ import cookie from './cookies.js';
 
 import '../../styles/Floorplan.css';
 
-import close_blue from '../../assets/close_blue.svg';
+import close_thin from '../../assets/close_thin.svg';
 import question from '../../assets/floorplan/question.svg';
 
 var zoomAnimation = {};
@@ -149,7 +149,7 @@ class Floorplan extends Component {
         if(e.target.classList.contains('floorplan-overlay')) {
           this.props.onCloseBtnClick(false)
         }}}>
-        <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_blue} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
+        <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_thin} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
         <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.letter}.pdf`}>DOWNLOAD</a>
 
         <div className="floorplan-content" ref={(e) => this.el = e}>
@@ -186,10 +186,9 @@ class Floorplan extends Component {
                     <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>
                       <div className="dbxd-tutorial-list">
                         <button title="close info window button" className="dbxd-close" onClick={this.onCloseInfo}>
-                          <Img src={close_blue} loader={<Loader />} alt="close floorplan" />
+                          <Img src={close_thin} loader={<Loader />} alt="close floorplan" />
                         </button>
-                        <div className="sans dbxd-feat zoom">Click floorplan to zoom in and out.</div>
-                        <div className="sans dbxd-feat pan_clickdrag">While zoomed in, click and drag mouse to pan the floorplan.<br/><br/><br/>On mobile and tablet devices, pinch your screen to zoom in.</div>
+                        <div className="sans dbxd-feat pan_clickdrag">Click floorplan to zoom in and out. While zoomed in, click and drag mouse to pan the&nbsp;floorplan.<br/>On mobile and tablet devices, pinch your screen to zoom&nbsp;in.</div>
                       </div>
                     </div>
                   </div>

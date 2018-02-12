@@ -4,7 +4,7 @@
   "metaDescription": "Tribeca is the most coveted place to live in New York City. Its architecture has come to define Downtown, with lofty buildings that reflect its heritage.",
   "intro": {
     "title": "At the Intersection of Everything",
-    "para": "Tribeca's waterfront and parks are ubiquitous, and the most enviable, world-class schools are zoned for this tony neighborhood. And of course, the city's top restaurants, hotspots, hotels, shops, spas, social clubs all maintain addresses here. Simultaneously, 108 Leonard is perfectly situated in the middle of Downtown, and is a short walk to four parks, Soho's boutique shopping or the exciting nightlife of the Lower East Side. The Bowery, West Village, premium downtown shopping at Brookfield Place or gallery hopping in West Chelsea are minutes away by taxi. The best of New York City is in reach at 108 Leonard."
+    "para": "Tribeca's waterfront and parks are ubiquitous, and the most enviable, world-class schools are zoned for this tony neighborhood. And of course, the city's top restaurants, hotspots, hotels, shops, spas, social clubs all maintain addresses here. <br/><br/>Simultaneously, 108 Leonard is perfectly situated in the middle of Downtown, and is a short walk to four parks, Soho's boutique shopping or the exciting nightlife of the Lower East Side. The Bowery, West Village, premium downtown shopping at Brookfield Place or gallery hopping in West Chelsea are minutes away by taxi. The best of New York City is in reach at 108 Leonard."
   },
   "introImage": "/images/7_tribeca/TRIBECA-landing.jpg",
   "introImageCaption": "",
@@ -23,7 +23,7 @@
     },{
       "src": "/images/7_tribeca/7.2.3_LE_COUCOU.jpg",
       "section": "Neighborhood",
-      "newsection": true,
+      "newsection": false,
       "caption": "Le Coucou"
     },{
       "src": "/images/7_tribeca/7.2.4_TODD_MERRILL.jpg",
@@ -33,7 +33,7 @@
     },{
       "src": "/images/7_tribeca/7.2.5_NOBU.jpg",
       "section": "Neighborhood",
-      "newsection": true,
+      "newsection": false,
       "caption": "NOBU"
     },{
       "src": "/images/7_tribeca/7.2.6_HUDSON_RIVER_PARK.jpg",
@@ -43,7 +43,7 @@
     },{
       "src": "/images/7_tribeca/7.2.7_CITY_HALL_PARK_FOUNTAIN.jpg",
       "section": "Neighborhood",
-      "newsection": true,
+      "newsection": false,
       "caption": "City Hall Park Fountain"
     },{
       "src": "/images/7_tribeca/7.2.8_GRAND_BANKS.jpg",
@@ -58,7 +58,7 @@
     },{
       "src": "/images/7_tribeca/7.2.10_THE_CLASS_BY_TARYN_TOOMEY.jpg",
       "section": "Neighborhood",
-      "newsection": true,
+      "newsection": false,
       "caption": "The Class by Taryn Toomey"
     },{
       "src": "/images/7_tribeca/7.2.11_LET_THERE_BE_NEON_NYC.jpg",
