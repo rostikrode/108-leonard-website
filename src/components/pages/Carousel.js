@@ -200,14 +200,30 @@ export default class Carousel extends Component {
     for (var i = 0; i < sectionHeaders.length; i++) {
       var s = sectionHeaders[i];
       var sTop = 0;
+      var sBottom = 0;
       if (s) {
         sTop = s.getBoundingClientRect().top;
+        sBottom = s.getBoundingClientRect().bottom;
       }
 
       /** going down */
       if (sTop <= 70) {
-        var sTitle = s.getAttribute('data-section');
+        let sTitle = s.getAttribute('data-section');
         this.activateSubnav(sTitle);
+      }  
+
+      /** if at bottom of page and there's still a new section there */
+      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight)  {
+        if (sBottom > -1) {
+          // make in page title disappear
+          s.style.opacity = '0';
+
+          // appear title in header instead
+          let sTitle = s.getAttribute('data-section');
+          this.activateSubnav(sTitle);
+        }
+      } else {
+        s.style.opacity = '1';
       }
     }
   }
