@@ -7,7 +7,7 @@ import '../styles/App.css';
 
 import Carousel from './pages/Carousel';
 import Availability from './pages/Availability';
-// import ComingSoon from './partials/ComingSoon';
+import ComingSoon from './partials/ComingSoon';
 import AvailabilityShare from './pages/AvailabilityShare';
 import Contact from './pages/Contact';
 // import PressList from './pages/PressList';
@@ -58,8 +58,8 @@ const PAGES = [{
       'Clocktower'
   ]},*/ {
     'title': 'Availability',
-    // 'component': ComingSoon,
-    'component': Availability,
+    'component': ComingSoon,
+    // 'component': Availability,
     'slug': '/availability/',
     'data': availabilityJSON,
     'subnavs': []
