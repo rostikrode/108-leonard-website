@@ -52,10 +52,10 @@ export default class ListItem extends Component {
   }
 
   onViewFloorplanClick(e) {
-    // window.gtag('event', 'View Floorplan', {
-    //   'event_category': 'Availability',
-    //   'event_label': `Residence ${this.props.residence}`
-    // });
+    window.gtag('event', 'view_floorplan', {
+      'event_category': 'Availability',
+      'event_label': `Residence ${this.props.residence}`
+    });
     this.setState({
       floorplanState: true,
       clickedFloorplan: false
@@ -106,7 +106,7 @@ export default class ListItem extends Component {
             <p className="label sans">EST MONTHLY R.E. TAXES</p>
             <p className="info serif">${this.delimitNumbers(this.props.monthlytaxes)}</p>
           </div>
-          <Button idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" dataId={this.props.residence} onClick={this.onViewFloorplanClick} />
+          <Button id={this.props.residence} idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" dataId={this.props.residence} onClick={this.onViewFloorplanClick} />
         </div>
       </div>
     );

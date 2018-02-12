@@ -35,6 +35,7 @@ class Floorplan extends Component {
     this.onZoomFloorplan = this.onZoomFloorplan.bind(this);
     this.handleDrag = this.handleDrag.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
+    this.onDownloadClick = this.onDownloadClick.bind(this);
   }
 
   componentDidMount() {
@@ -51,6 +52,19 @@ class Floorplan extends Component {
         this.tutorial.classList.add('hide');
       }
     }
+  }
+
+  onDownloadClick(e) {
+    e.preventDefault();
+
+    console.log(e.currentTarget.href);
+
+    window.gtag('event', 'download_floorplan', {
+      'event_category': 'Availability',
+      'event_label': e.currentTarget.href
+    });
+
+    window.open(e.currentTarget.href, '_blank');
   }
 
   onCloseInfo(e) {
@@ -150,7 +164,7 @@ class Floorplan extends Component {
           this.props.onCloseBtnClick(false)
         }}}>
         <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_thin} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
-        <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.letter}.pdf`}>DOWNLOAD</a>
+        <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.letter}.pdf`} onClick={this.onDownloadClick}>DOWNLOAD</a>
 
         <div className="floorplan-content" ref={(e) => this.el = e}>
           <div className="floorplan-sidebar">

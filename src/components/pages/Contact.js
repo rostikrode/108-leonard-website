@@ -343,6 +343,13 @@ export default class Contact extends Component {
     e.preventDefault();
       this.doValidation(e);
       if (_valid) {
+        // form submit to Google Analytics too
+        window.gtag('event', 'contact_form_submit', {
+          'event_category': 'forms',
+          'event_label': window.location.href
+        });
+
+
         var data = {};
         // broker form
 
