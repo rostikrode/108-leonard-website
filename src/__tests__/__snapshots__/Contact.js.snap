@@ -233,9 +233,9 @@ exports[`renders without crashing 1`] = `
     </a>
     <a
       className="serif-bold link"
-      href="tel:2125551212"
+      href="tel:2127751080"
     >
-      212•555•1212
+      212•775•1080
     </a>
   </div>
 </div>
