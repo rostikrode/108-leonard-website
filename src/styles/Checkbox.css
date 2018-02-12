@@ -43,7 +43,7 @@ input[type="radio"]:checked + label:before {
   left:0; top: 2px;
   width: 20px; height: 20px;
   margin-right: 20px;
-  margin-top: 6px;
+  margin-top: -3px;
   border: 1px solid #A1C6CF;
   background: lighten(#C9C7C4, 5%);
   border-radius: 0;

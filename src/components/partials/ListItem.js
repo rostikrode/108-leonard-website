@@ -76,7 +76,7 @@ export default class ListItem extends Component {
         <div className="list-row-wrapper">
           <div className="list-cell check-cell">
             <Checkbox value={this.props.residence} handleCheck={this.handleCheck} index={this.props.index} />
-            <h4 className="res serif-bold">{this.props.residence}</h4>
+            <h4 className="res sans"><span className="desktop-hidden">RESIDENCE</span> {this.props.residence}</h4>
           </div>
           <div className="mobile-padding list-cell label-with-info">
             <p className="label sans">BEDROOMS</p>

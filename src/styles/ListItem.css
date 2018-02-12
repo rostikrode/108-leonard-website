@@ -23,7 +23,7 @@
   margin-bottom: -1px;
   display: flex;
   flex-flow: column wrap;
-  height: 17rem;
+  height: 14rem;
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
@@ -58,20 +58,39 @@
 
 .info {
   margin-top: 14px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
-@media(max-width: 1023px) {
+@media(max-width: 767px) {
   .floorplan-button.desktop {
     display: flex;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 15px;
-    width: 50%;
+    width: 85%;
   }
   .list-cell.check-cell .res {
     padding-left: 5px
+  }
+  .info {
+    transform: translateY(-90%);
+  }
+}
+@media(min-width: 768px) and (max-width: 1023px) {
+  .floorplan-button.desktop {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-60%);
+    bottom: 15px;
+    width: 70%;
+  }
+  .list-cell.check-cell .res {
+    padding-left: 5px
+  }
+  .info {
+    transform: translateY(-90%);
   }
 }
 

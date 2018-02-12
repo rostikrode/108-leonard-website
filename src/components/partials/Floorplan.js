@@ -6,7 +6,7 @@ import cookie from './cookies.js';
 
 import '../../styles/Floorplan.css';
 
-import close_thin from '../../assets/close_thin.svg';
+import close_thin from '../../assets/close_thin_blue.svg';
 import question from '../../assets/floorplan/question.svg';
 
 var zoomAnimation = {};
@@ -165,16 +165,18 @@ class Floorplan extends Component {
         }}}>
         <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_thin} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
         <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.letter}.pdf`} onClick={this.onDownloadClick}>DOWNLOAD</a>
+        <div className="mobile-title floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
+
 
         <div className="floorplan-content" ref={(e) => this.el = e}>
           <div className="floorplan-sidebar">
             <div className="floorplan-info">
-              <div className="floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
+              <div className="desktop-title floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
               <div className="floorplan-bedrooms serif">{this.props.bedrooms === 1 ? `${this.props.bedrooms} BEDROOM` : `${this.props.bedrooms} BEDROOMS`}</div>
               <div className="floorplan-bathrooms serif">{this.props.baths === 1 ? `${this.props.baths} BATHROOM` : `${this.props.baths}  BATHROOMS`}</div>
               <div className="floorplan-interior serif">{this.props.intft} SQ FT | {this.props.intsqm} SQ M *</div>
             </div>
-            <div className="floorplan-keys">
+            <div className="desktop-keys floorplan-keys">
               <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
             </div>
             <div className="floorplan-info floorplan-footer">
@@ -210,6 +212,9 @@ class Floorplan extends Component {
                   <Img id="info" src={question} loader={<Loader />} alt="info about floorplan plugin button" />
                 </button>
               </div>
+          </div>
+          <div className="mobile-keys floorplan-keys">
+            <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
           </div>
         </div>
       </div>

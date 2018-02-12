@@ -336,8 +336,9 @@ body {
 
 .res {
   letter-spacing: 1px;
-  line-height: 44px;
-  font-size: 34px;
+  line-height: 1em;
+	font-size: 1.1em;
+	font-weight: 600;
   margin: 0;
 }
 .label, .filter-label {
@@ -448,4 +449,13 @@ body {
 	.coming-soon {
 		font-size: 17px;
 	}
+}
+
+.desktop-hidden {
+	display: inline;
+}
+@media (min-width: 1024px) {
+	.desktop-hidden {
+		display: none;
+	}	
 }
