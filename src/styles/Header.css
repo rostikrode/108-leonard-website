@@ -321,21 +321,32 @@ nav {
   }
 }
 @media (min-width: 480px) {
+  .footer {
+    padding-bottom: 20px;
+  }
   .footer-pages {
     width: 70%;
     margin: 0 auto; 
   }
 }
 @media (min-width: 1024px) {
-  .footer {
-    padding-bottom: 0;
-  }
   .footer-pages {
     width: 100%;
   }
   .footer-pages .sans-medium {
     font-weight: 300;
     color: rgba(0,0,0, 0.75);
+  }
+}
+@media (min-width: 1366px) {
+  .footer {
+    padding-bottom: 0;
+  }
+}
+/* iPad pro */
+@media (min-width: 1366px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .footer {
+    padding-bottom: 20px;
   }
 }
 .brochure {

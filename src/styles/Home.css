@@ -133,11 +133,13 @@
 @media (min-width: 1024px) {
   .home-wrapper {
     margin-top: 0;
-    padding: 52px 32px 32px 32px;
+    padding: 32px;
     width: calc(100% - 32px - 32px);
     height: calc(100vh - 52px - 32px);
   }
-
+  .home-wrapper .image-wrapper {
+    height: calc(100% - 64px);
+  }
   .home-wrapper .image-wrapper img {
     width: auto;
     height: auto;
@@ -151,8 +153,17 @@
     padding: 32px;
     height: calc(100vh - 32px - 32px);
   }
+  .home-wrapper .image-wrapper {
+    height: auto;
+  }
   .home-wrapper .image-wrapper img {
     max-height: calc(100vh - 64px - 48px);
+  }
+}
+
+@media (min-width: 1366px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .home-wrapper .image-wrapper {
+    height: calc(100% - 64px);
   }
 }
 

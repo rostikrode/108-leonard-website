@@ -439,10 +439,7 @@ body {
 }
 
 .coming-soon a,
-.coming-soon a:visited,
-.coming-soon a:hover,
-.coming-soon a:active,
-.coming-soon a:focus {
+.coming-soon a.grey-link {
 	text-decoration: none;
 	color: #00000080;
 	white-space: nowrap;
@@ -450,7 +447,11 @@ body {
 .coming-soon a:visited,
 .coming-soon a:hover,
 .coming-soon a:active,
-.coming-soon a:focus {
+.coming-soon a:focus,
+.coming-soon .grey-linka:visited,
+.coming-soon .grey-linka:hover,
+.coming-soon .grey-linka:active,
+.coming-soon .grey-linka:focus {
 	text-decoration: none;
 	color: #000000;
 }

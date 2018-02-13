@@ -26,7 +26,8 @@ class Floorplan extends Component {
       dragdisabled: true,
       flag: 0,
       x: 0,
-      y: 0
+      y: 0,
+      openedInstructions: false
     }
 
     this.onCloseInfo = this.onCloseInfo.bind(this);
@@ -43,6 +44,9 @@ class Floorplan extends Component {
       if(this.tutorial) {
         this.tutorial.classList.remove('hide')
         this.tutorial.classList.add('show');
+        this.setState({
+          openedInstructions: true
+        });
       }
       cookie.cookies.eraseCookie('instructionsShown');
       cookie.cookies.createCookie('instructionsShown', true, 7);
@@ -68,12 +72,19 @@ class Floorplan extends Component {
   }
 
   onCloseInfo(e) {
+    this.setState({
+      openedInstructions: false
+    });
+
     if (this.tutorial.classList.contains('show')) {
       this.tutorial.classList.remove('show')
       this.tutorial.classList.add('hide');
     }
   }
   onOpenInfo(e) {
+    this.setState({
+      openedInstructions: true
+    });
     if (this.tutorial.classList.contains('show')) {
       this.tutorial.classList.remove('show')
       this.tutorial.classList.add('hide');
@@ -237,7 +248,7 @@ class Floorplan extends Component {
                       </div>
                     </div>
                   </div>
-                <button title="Show Intructions" className="dbxd-instructions-icon" onClick={this.onOpenInfo}>
+                <button title="Show Intructions" className={`dbxd-instructions-icon ${this.state.openedInstructions ? 'hide' : 'show'} `} onClick={this.onOpenInfo}>
                   <Img id="info" src={question} loader={<Loader />} alt="info about floorplan plugin button" />
                 </button>
               </div>

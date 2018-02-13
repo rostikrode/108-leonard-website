@@ -583,6 +583,12 @@
   box-shadow: none;
   border: none;
 }
+.dbxd-instructions-icon.hide {
+  display: none;
+}
+.dbxd-instructions-icon.show {
+  display: block;
+}
 
 .dbxd-icon-wrapper {
   position: absolute;

@@ -38,7 +38,7 @@
   text-align: center;
   margin: 0;
   padding-top: 0.45em;
-  bottom: 32px;
+  bottom: 52px;
   left: calc(32px + 35px);
   z-index: 909;
   height: 16px;
@@ -98,7 +98,7 @@
   cursor: pointer;
 }
 .prev-arrow {
-  bottom: 32px;
+  bottom: 52px;
   left: 32px;
   padding: 0.45rem; padding-bottom: 0; padding-left: 0;
   padding-right: 0.3em;
@@ -161,18 +161,32 @@
     display: none;
   }
   .slick-dots {
-    bottom: 32px;
+    bottom: 52px;
   }
   .custom-arrow {
     display: inline-block;
   }
   .next-arrow, .prev-arrow, .next-button {
-    bottom: 32px;
+    bottom: 52px;
   }
 }
 @media (min-width: 1366px) {
+  .next-arrow, .prev-arrow, .next-button {
+    bottom: 32px;
+  }
   .next-arrow {
     padding-left: 0.3em;
+  }
+  .slick-dots {
+    bottom: 32px;
+  }
+}
+@media (min-width: 1366px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .slick-dots {
+    bottom: 52px;
+  }
+  .next-arrow, .prev-arrow, .next-button {
+    bottom: 52px;
   }
 }
 @media (min-width: 1920px) {
@@ -259,10 +273,8 @@
   .slick-slide .inner,
   .slick-intro-slide .inner {
     padding: 32px;
-    padding-top: 52px;
   }
   .slick-slide .inner {
-    padding-top: 52px;
     height: calc(100% - 52px - 32px);
     width: 100%;
     display: flex;
@@ -373,7 +385,7 @@
     width: 100%;
   }
   .slick-intro-slide .inner {
-    padding-top: 52px;
+    padding-top: 32px;
     height: calc(100% - 52px - 32px);
     width: calc(100% - 64px);
     display: flex;
@@ -406,6 +418,7 @@
     height: calc(100vh - 64px - 30px);
   }
 }
+
 @media (min-width: 1366px) {
   .slick-intro-slide .inner {
     padding-top: 32px;
@@ -414,6 +427,12 @@
 
   .slick-intro-slide .inner .image-wrapper img {
     max-height: calc(100vh - 64px - 48px);
+  }
+}
+@media (min-width: 1366px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .slick-slide .inner,
+  .slick-intro-slide .inner {
+    height: calc(100% - 52px - 32px);
   }
 }
 @media (min-width: 1440px) {
@@ -462,7 +481,7 @@
 .slick-intro-slide .caption-wrapper h1 {
     width: 80%;
     z-index: 100;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin: 39px 0;
     margin-top: 0;
     text-transform: uppercase;
@@ -601,12 +620,18 @@
     height: calc(100vh - 64px - 80px - 20px);
   }
 }
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .team-slider .slick-slide .inner .image-group {
+    height: calc(100vh - 32px - 52px - 80px - 20px);
+  }
+}
 @media (min-width: 1920px) {
   .slick-intro-slide .caption-wrapper {
     width: 45%;
   }
   .slick-intro-slide .caption-wrapper h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -635,15 +660,12 @@
   line-height: normal;
   padding: 1px;
   font-weight: 100;
-  transition: opacity 100ms ease-in-out;
 }
-.detail-info-button.serif.fadein{
-  opacity: 1;
-  pointer-events: all;
+.detail-info-button.serif.hide{
+  display: none;
 }
-.detail-info-button.serif.fadeout{
-  opacity: 0;
-  pointer-events: none;
+.detail-info-button.serif.show{
+  display: block;
 }
 .detail-info-wrapper {
   position: absolute;

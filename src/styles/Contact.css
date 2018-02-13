@@ -20,6 +20,11 @@
 .form-page .link:last-child {
   padding: 5px 0 0 0;
 }
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1.5) {
+  .form-page .link:last-child {
+    padding-bottom: 32px;
+  }
+}
 
 .form-chosen {
   max-width: 240px;
@@ -242,8 +247,10 @@ input.select-field:active {
   justify-content: center;
   align-items: center;
   height: auto;
+  min-height: 3rem;
   border-bottom: 1px solid #A1C6CF;
   width: 100%;
+  padding: 10px 0;
 }
 .radio-field {
   display: flex;
@@ -255,6 +262,7 @@ input.select-field:active {
 .radio-label + .radio-field {
   padding-right: 18px;
 }
+
 .radio-field .checkbox {
   padding: 0;
   padding-right: 18px;
@@ -324,6 +332,11 @@ input.select-field:active {
 @media (min-width: 768px) {
   .radio-fieldset {
     height: 44px;
+    min-height: 0;
+  }
+  .radio-fieldset .radio-field:first-child,
+  .radio-label + .radio-field {
+    padding-bottom: 0;
   }
   .radio-label.input.serif {
     display: inline;
@@ -338,5 +351,8 @@ input.select-field:active {
 @media (min-width: 1024px) {
   .contact-form-wrapper {
     height: 100%;
+  }
+  .radio-fieldset {
+    padding: 10px 0;
   }
 }
