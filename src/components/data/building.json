@@ -15,7 +15,7 @@
       "section": "Property",
       "newsection": true,
       "caption": "Grand entrance on Leonard Street",
-      "detail": "Residents can choose from distinct entrances on Leonard Street, Broadway and Lafayette Street."
+      "detail": "Residents may choose from distinct entrances on Leonard Street, Broadway and Lafayette Street."
     }, {
       "src": "/images/2_building/2.3.2_Leonard_Entrance.jpg",
       "section": "Property",
@@ -31,7 +31,8 @@
       "src": "/images/2_building/2.3.4_Motor_Reception.jpg",
       "section": "Entrance",
       "newsection": false,
-      "caption": "Private heated indoor motor reception and private parking (for sale)"
+      "caption": "Motor reception",
+      "detail": "Private heated indoor motor reception and private parking (for sale)."
     }
   ],
   "settings":{

@@ -228,7 +228,7 @@ export default class App extends Component {
             navClicked={this.state.navClicked} 
             subnavs={this.state.subnavs}
             sendSlider={this.sendSlider.bind(this)}
-            availMessage='Please contact the sales gallery for current availability.'
+            availMessage='For current availability, please contact the sales gallery at <a class="grey-link" href="tel:2127751080">212 775 1080</a>.'
           />)} 
         />)
     });

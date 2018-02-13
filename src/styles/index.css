@@ -430,8 +430,7 @@ body {
   text-transform: uppercase;
   color: #000;
   width: calc(100% - 2em);
-  min-height: calc(100vh - 100px);
-  height: 100%;
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -439,9 +438,26 @@ body {
 	padding: 0 1em;
 }
 
+.coming-soon a,
+.coming-soon a:visited,
+.coming-soon a:hover,
+.coming-soon a:active,
+.coming-soon a:focus {
+	text-decoration: none;
+	color: #00000080;
+	white-space: nowrap;
+}
+.coming-soon a:visited,
+.coming-soon a:hover,
+.coming-soon a:active,
+.coming-soon a:focus {
+	text-decoration: none;
+	color: #000000;
+}
+
 @media (min-width: 1024px) {
 	.coming-soon {
-		min-height: 100vh;
+		height: 100vh;
 	}
 }
 
