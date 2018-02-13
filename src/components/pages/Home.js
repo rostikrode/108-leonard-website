@@ -56,20 +56,6 @@ export default class Home extends Component {
         <div className="home-wrapper">
           <div className="image-wrapper" style={{backgroundImage: 'url('+this.props.image+')'}} >
             <Img src={this.props.image} loader={<Loader />} alt={this.props.caption} />
-            <div className="desktop-caption-wrapper caption-wrapper" ref={el => {this.caption = el}}>
-              <div className="sans-bold h1">{this.props.title}</div>
-              <div className="p">
-                <h1 className="serif" dangerouslySetInnerHTML={{__html: this.props.header1}}></h1>
-                <h2 className="serif" dangerouslySetInnerHTML={{__html: this.props.header2}}></h2>
-              </div>
-            </div>
-          </div>
-          <div className="mobile-caption-wrapper caption-wrapper">
-            <div className="sans-bold h1">{this.props.title}</div>
-            <div className="p">
-              <h1 className="serif" dangerouslySetInnerHTML={{__html: this.props.header1}}></h1>
-              <h2 className="serif" dangerouslySetInnerHTML={{__html: this.props.header2}}></h2>
-            </div>
           </div>
           <NavLink className="mobile-goto nav-anchor next-button" strict exact to='/building' onClick={this.onGoTo}>
             <span className="upper serif">Discover the building</span>
