@@ -23,15 +23,18 @@ export default class Home extends Component {
     /** meta data for page */
     document.title = this.props.metaTitle;
     if(document.getElementsByTagName('meta').description) {
-      document.getElementsByTagName('meta').description.content = this.props.metaDescription
+      document.getElementsByTagName('meta').description.content = this.props.metaDescription;
+      document.querySelector("meta[property='og:description']").content = this.props.metaDescription;
+      document.querySelector("meta[property='og:title']").content = this.props.metaTitle;
     }
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href = window.location.href
+      document.querySelector("meta[property='og:url']").content = window.location.href
     }
     var viewport = document.querySelector("meta[name=viewport]");
     if(viewport) {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
-    }  
+    } 
 
     // fade in/out caption only if animation hasn't played 
     if ((window.location.pathname === '/') && this.caption) {
@@ -55,7 +58,7 @@ export default class Home extends Component {
       <div className="home">
         <div className="home-wrapper">
           <div className="image-wrapper" style={{backgroundImage: 'url('+this.props.image+')'}} >
-            <Img src={this.props.image} loader={<Loader />} alt={this.props.caption} />
+            <Img src={this.props.image} loader={<Loader />} alt={this.props.caption} title={this.props.imagetitle} />
           </div>
           <NavLink className="mobile-goto nav-anchor next-button" strict exact to='/building' onClick={this.onGoTo}>
             <span className="upper serif">Discover the building</span>

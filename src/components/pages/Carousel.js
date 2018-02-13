@@ -59,14 +59,17 @@ export default class Carousel extends Component {
 
     /** meta data for page */
     document.title = this.props.metaTitle;
-    if (document.getElementsByTagName('meta').description) {
+    if(document.getElementsByTagName('meta').description) {
       document.getElementsByTagName('meta').description.content = this.props.metaDescription;
+      document.querySelector("meta[property='og:description']").content = this.props.metaDescription;
+      document.querySelector("meta[property='og:title']").content = this.props.metaTitle;
     }
-    if (document.querySelector('link[rel="canonical"]')) {
-      document.querySelector('link[rel="canonical"]').href = window.location.href;
+    if (document.querySelector("link[rel='canonical']")) {
+      document.querySelector("link[rel='canonical']").href = window.location.href
+      document.querySelector("meta[property='og:url']").content = window.location.href
     }
-    var viewport = document.querySelector('meta[name=viewport]');
-    if (viewport) {
+    var viewport = document.querySelector("meta[name=viewport]");
+    if(viewport) {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
     }
 
