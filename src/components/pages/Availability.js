@@ -7,7 +7,6 @@ import '../../styles/Availability.css';
 import ScrollArrow from '../partials/ScrollArrow';
 import Floorplan from '../partials/Floorplan';
 import {VelocityComponent} from 'velocity-react';
-import {Helmet} from "react-helmet";
 
 var tempRes = [];
 var fromChild = false;
@@ -284,16 +283,6 @@ export default class Availability extends Component {
   render() {
     return (
       <div className="availability-page">
-        <Helmet>
-          <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
-          <title>{this.props.metaTitle}</title>
-          <meta name="description" content={this.props.metaDescription} />
-          <link rel="canonical" href={window.location.href} />
-          <meta property="og:title" content={this.props.metaTitle} />
-          <meta property="og:description" content={this.props.metaDescription} />
-          <meta property="og:url" content={window.location.href} />
-        </Helmet>
-
         <div className="filter-button-wrapper">
           <Button btnEl={el=>this.btnElement = el} name="Filter" onClick={this.onFilterClick} idClass="filter-button" />
           <Button name="Share" disabled={this.state.disabledShare} onClick={this.onShareClick} />

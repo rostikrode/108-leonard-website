@@ -16,8 +16,8 @@ const NotFound = () => {
     document.querySelector("meta[property='og:title']").content = '404 Page Not Found';
   }
   if (document.querySelector("link[rel='canonical']")) {
-    document.querySelector("link[rel='canonical']").href = window.location.href
-    document.querySelector("meta[property='og:url']").content = window.location.href
+    document.querySelector("link[rel='canonical']").href = 'https://108leonard.com/404'
+    document.querySelector("meta[property='og:url']").content = 'https://108leonard.com/404'
   }
   var viewport = document.querySelector("meta[name=viewport]");
   if(viewport) {
