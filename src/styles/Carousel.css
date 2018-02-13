@@ -368,6 +368,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-top: -70px;
 }
 .inner .mobile-section {
   display: block;
@@ -386,6 +387,11 @@
   margin-top: 0;
 }
 
+@media (min-width:768px) {
+  .slick-intro-slide .inner .image-wrapper {
+    margin-top: -210px;
+  }
+}
 @media (min-width: 1024px) {
   .inner .mobile-section {
     display: none;
@@ -409,6 +415,7 @@
     max-width: 100%;
     position: relative;
     display: block;
+    margin-top: 0;
   }
   .slick-intro-slide .inner .image-wrapper img {
     width: auto;
@@ -461,7 +468,7 @@
   width: auto;
   height: auto;
   padding-bottom: 60px;
-  padding-top: 40px;
+  padding-top: 30px;
   background-color: #FFF;
   display: flex;
   flex-flow: column nowrap;
