@@ -23,7 +23,8 @@ export default class IntroSlide extends Component {
       <div className="div" ref={c => this.introSlide = c }>
         <div className="inner">
           <div className="image-wrapper">
-            <img className="intro-image" src={this.props.introImage} alt={this.props.introImageCaption} onLoad={this.onImgLoad}/>
+            <img className="desktop intro-image" src={this.props.introImage} alt={this.props.introImageCaption} onLoad={this.onImgLoad}/>
+            <img className="mobile intro-image" src={this.props.introImageMobile} alt={this.props.introImageCaption} onLoad={this.onImgLoad}/>
             <div className="caption-wrapper">
               <h1 className="sans-bold">{this.props.intro.title}</h1>
               <p className="serif" dangerouslySetInnerHTML={{__html: this.props.intro.para}}></p>
