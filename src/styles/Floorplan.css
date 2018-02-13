@@ -76,7 +76,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 60px; margin-bottom: 120px;
+  margin-top: 40px; margin-bottom: 120px;
 }
 .floorplan-sidebar {
   width: 100%;
@@ -109,6 +109,7 @@
   .floorplan-overlay .floorplan-content {
     flex-flow: row nowrap;
     margin-bottom: 0;
+    margin-top: 60px;
   }
   .floorplan-sidebar {
     width: 15%;
@@ -146,13 +147,59 @@
   padding-left: 5px;
   padding-right: 0;
 }
+.mobile-info-label, 
+.mobile-info {
+  display: none;
+}
+.mobile-price {
+  display: none;
+}
+.desktop-info {
+  display: inline;
+}
 @media (max-width: 1023px) {
   .floorplan-sidebar {
     border-top: 2px solid #DADADA; 
+    padding-top: 18px;
+    padding-bottom: 10px;
   }
-  .floorplan-sidebar .floorplan-info .floorplan-bedrooms {
+  .mobile-price {
+    display: flex;
+  }
+  .floorplan-sidebar .floorplan-info.mobile-stacked {
+    padding-left: 40px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 10em;
+    width: 100%;
+  }
+  .floorplan-sidebar .floorplan-info .floorplan-bedrooms,
+  .floorplan-sidebar .floorplan-info .floorplan-bathrooms,
+  .floorplan-sidebar .floorplan-info .floorplan-interior {
     padding-top: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
   }
+  .mobile-info-label, 
+  .mobile-info {
+    display: block;
+  }
+
+  .mobile-info.info.serif {
+    font-size: 16px;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  .desktop-info {
+    display: none;
+  }
+
   .floorplan-sidebar .floorplan-info .floorplan-title {
     position: absolute;
     top: 1.5rem;
@@ -207,7 +254,7 @@
     margin-top: 60px;
   }
   .floorplan-sidebar .floorplan-info .floorplan-title {
-    font-size: 22px;
+    font-size: 18px;
   }
   
   .floorplan-sidebar .floorplan-info .serif {
@@ -652,10 +699,17 @@ button:active, button:focus {
   font-weight: 600;
   position: absolute;
   top: 0;
-  margin-top: 18px;
+  margin-top: 25px;
   left: 0;
   margin-left: 18px;
 }
+@media (max-width: 344px) {  
+  .mobile-title,
+  .mobile-title.sans-medium  {
+    font-size: 12px;
+  }
+}
+
 .desktop-title {
   display: none;
 }
@@ -668,7 +722,8 @@ button:active, button:focus {
   display: none;
 }
 @media (min-width: 1024px) {
-  .mobile-title {
+  .mobile-title,
+  .mobile-title.sans-medium {
     display: none;
   }
   .desktop-title {
@@ -680,4 +735,20 @@ button:active, button:focus {
   .desktop-keys {
     display: block;
   }
+}
+
+.mobile-key {
+  display: inline;
+}
+
+.desktop-key {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .mobile-key {
+    display: none;
+  }
+  .desktop-key {
+    display: inline;
+  } 
 }

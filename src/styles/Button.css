@@ -7,8 +7,8 @@
   border: none;
   border-radius: 0;
   padding: 3px; padding-top: 5px;
-  min-height: 35px;
-  min-width: 87px;
+  min-height: 25px;
+  min-width: 80px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -35,9 +35,9 @@
 }
 
 .button.sans-light-bold {
-  font-size: 17px;
+  font-size: 12px;
   letter-spacing: 2px;
-  line-height: 17px;
+  line-height: 12px;
   text-transform: uppercase;
 }
 .button.disabled {

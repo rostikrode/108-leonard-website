@@ -4,7 +4,7 @@
 
 .floorplan-button {
   height: 35px;
-  padding: 10px 5px 5px 5px;
+  padding: 13px 5px 5px 5px;
 }
 @media (min-width: 1024px) {
   .floorplan-button {
@@ -18,8 +18,7 @@
 
 .list-row .list-row-wrapper {
   padding: 30px 0;
-  border-top: 1px solid #A1C6CF;
-  border-bottom: 1px solid #A1C6CF;
+  border-bottom: 2px solid #DADADA;
   margin-bottom: -1px;
   display: flex;
   flex-flow: column wrap;
@@ -33,7 +32,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 44px;
+  height: 39px;
   width: auto;
   padding-bottom: 15px;
 }

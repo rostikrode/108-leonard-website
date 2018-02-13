@@ -156,6 +156,12 @@ class Floorplan extends Component {
     });
   }
 
+  delimitNumbers(str) {
+    return (str + "").replace(/\b(\d+)((\.\d+)*)\b/g, function(a, b, c) {
+      return (b.charAt(0) > 0 && !(c || ".").lastIndexOf(".") ? b.replace(/(\d)(?=(\d{3})+$)/g, "$1,") : b) + c;
+    });
+  }
+
   render() {
     return (
       <div className={this.props.fstate ? 'floorplan-overlay show' : 'floorplan-overlay hide'} onClick={(e) => {
@@ -170,12 +176,35 @@ class Floorplan extends Component {
 
         <div className="floorplan-content" ref={(e) => this.el = e}>
           <div className="floorplan-sidebar">
-            <div className="floorplan-info">
+            <div className="floorplan-info mobile-stacked">
               <div className="desktop-title floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
-              <div className="floorplan-bedrooms serif">{this.props.bedrooms === 1 ? `${this.props.bedrooms} BEDROOM` : `${this.props.bedrooms} BEDROOMS`}</div>
-              <div className="floorplan-bathrooms serif">{this.props.baths === 1 ? `${this.props.baths} BATHROOM` : `${this.props.baths}  BATHROOMS`}</div>
-              <div className="floorplan-interior serif">{this.props.intft} SQ FT | {this.props.intsqm} SQ M *</div>
+              
+              <div className="floorplan-bedrooms serif">
+                <span className="mobile-info-label label sans">BEDROOMS</span>
+                <span className="mobile-info info serif">{this.props.bedrooms}</span>
+                <span className="desktop-info">{this.props.bedrooms === 1 ? `${this.props.bedrooms} BEDROOM` : `${this.props.bedrooms} BEDROOMS`}</span>  
+              </div>
+
+              <div className="floorplan-bathrooms serif">
+                <span className="mobile-info-label label sans">BATHROOMS</span>
+                <span className="mobile-info info serif">{this.props.baths}</span>
+                <span className="desktop-info">{this.props.baths === 1 ? `${this.props.baths} BATHROOM` : `${this.props.baths}  BATHROOMS`}</span>
+              </div>
+              
+              <div className="floorplan-interior serif">
+                <span className="mobile-info-label label sans">INTERIOR SQ FT/M</span>
+                <span className="mobile-info info serif">{this.props.intft}/{this.props.intsqm} *</span>
+                <span className="desktop-info">{this.props.intft} SQ FT | {this.props.intsqm} SQ M *</span>
+              </div>
+              
+              <div className="floorplan-interior serif">
+                <span className="mobile-info-label label sans">PRICE</span>
+                <span className="mobile-info info serif">${this.delimitNumbers(this.props.price)}</span>
+                <span className="desktop-info">${this.delimitNumbers(this.props.price)}</span>
+              </div>
+
             </div>
+
             <div className="desktop-keys floorplan-keys">
               <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
             </div>
@@ -214,7 +243,8 @@ class Floorplan extends Component {
               </div>
           </div>
           <div className="mobile-keys floorplan-keys">
-            <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
+            <img className="desktop-key" src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Stacked Floor Layout for Residence ${this.props.residence}`} />   
+            <img className="mobile-key" src={`/images/5_availability/keys/residence_${this.props.letter}_key_horizontal.svg`} alt={`Horizontal Floor Layout for Residence ${this.props.residence}`} />   
           </div>
         </div>
       </div>

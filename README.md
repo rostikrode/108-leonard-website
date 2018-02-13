@@ -2,10 +2,26 @@
 
 108leonard-full.dev.dbxd.com
 
+### Need Floorplan SVGs, keys, PDFs for:
+
+* ~~A~~
+* ~~B~~ 
+* ~~C~~
+* D -> need all
+* ~~E~~
+* ~~F~~
+* ~~G~~
+* ~~H~~
+* ~~L~~
+* ~~M~~
+* N -> need SVG
+
 ## TODO:
 
 * use Lambda@Edge for page redirect to index.html and for error
   * ex: https://read.acloud.guru/supercharging-a-static-site-with-lambda-edge-da5a1314238b
+
+
 
 # TODO
 
