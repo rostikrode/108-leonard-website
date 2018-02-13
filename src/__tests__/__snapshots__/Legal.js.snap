@@ -31,182 +31,319 @@ exports[`renders without crashing 1`] = `
     >
       <div>
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "CIVIC CENTER COMMUNITY GROUP BROADWAY LLC PRIVACY POLICY",
+            }
+          }
           style={
             Object {
               "fontWeight": "bold",
             }
           }
-        >
-          CIVIC CENTER COMMUNITY GROUP BROADWAY LLC PRIVACY POLICY
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          "Civic Center Community Group Broadway LLC" (referred to herein as "108 Leonard", "we" or "us") is committed to protecting the privacy of the users of its website. This statement discloses our privacy practices. The purpose of this statement is to inform you:
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "\\"Civic Center Community Group Broadway LLC\\" (referred to herein as \\"108 Leonard\\", \\"we\\" or \\"us\\") is committed to protecting the privacy of the users of its website. This statement discloses our privacy practices. The purpose of this statement is to inform you:",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "What kinds of information we collect from users of \\"web address\\" and how the information is used by us",
+            }
+          }
           style={
             Object {
               "marginLeft": "30px",
             }
           }
-        >
-          What kinds of information we collect from users of "web address" and how the information is used by us
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Whether we disclose any user information to third parties;",
+            }
+          }
           style={
             Object {
               "marginLeft": "30px",
             }
           }
-        >
-          Whether we disclose any user information to third parties;
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "How you can access, update or delete any information that we collect about you; and",
+            }
+          }
           style={
             Object {
               "marginLeft": "30px",
             }
           }
-        >
-          How you can access, update or delete any information that we collect about you; and
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "The security procedures in which we use to protect your personal information",
+            }
+          }
           style={
             Object {
               "marginLeft": "30px",
             }
           }
-        >
-          The security procedures in which we use to protect your personal information
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          By using the Website, you’re agreeing to the 108 Leonard Privacy Policy. We reserve the right to change, modify, add, or remove portions of our Privacy Policy at any time. Please check this page periodically for changes.
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          If you have any questions about our Privacy Policy, please e-mail us at info@108leonard.com
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "By using the Website, you’re agreeing to the 108 Leonard Privacy Policy. We reserve the right to change, modify, add, or remove portions of our Privacy Policy at any time. Please check this page periodically for changes.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "If you have any questions about our Privacy Policy, please e-mail us at info@108leonard.com",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "How We Collect Information",
+            }
+          }
           style={
             Object {
               "fontWeight": "bold",
             }
           }
-        >
-          How We Collect Information
-        </p>
-        <p>
-          You can visit 108leonard.com without revealing any personal information. Our web servers collect the Internet Protocol addresses, but not the e-mail addresses, of visitors. This information can measure the number of visits, average time spent on the site, pages viewed, and other such statistics.
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          In addition, You may be asked for information that identifies you, including your name, e-mail address, mailing address, zip code, telephone number, fax (collectively, "Personal Information"). You may also elect to provide such information to us by sending or responding to e-mails regarding certain listings or services offered on our Website.
-        </p>
-        <p>
-          
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "You can visit 108leonard.com without revealing any personal information. Our web servers collect the Internet Protocol addresses, but not the e-mail addresses, of visitors. This information can measure the number of visits, average time spent on the site, pages viewed, and other such statistics.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "In addition, You may be asked for information that identifies you, including your name, e-mail address, mailing address, zip code, telephone number, fax (collectively, \\"Personal Information\\"). You may also elect to provide such information to us by sending or responding to e-mails regarding certain listings or services offered on our Website.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "How We Use and Disclose Your Information",
+            }
+          }
           style={
             Object {
               "fontWeight": "bold",
             }
           }
-        >
-          How We Use and Disclose Your Information
-        </p>
-        <p>
-          We collect, generate, retain and use your Personal Information for our own internal purposes in connection with the facilitation, recording and processing of any requests, communications, or interactions you may have with our Website. We also automatically collect and store statistics and other information about you and your online activities on an aggregated, non-personally identifiable basis and in a manner that may allow us or our affiliated or related entities to improve our services to you.
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          In addition, your Personal Information may be also be used by us to provide you with information regarding our products and services. For example, we may use your e-mail address to send you special announcements and notifications of new real estate listings, services or promotions that may be of interest to you.
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "We collect, generate, retain and use your Personal Information for our own internal purposes in connection with the facilitation, recording and processing of any requests, communications, or interactions you may have with our Website. We also automatically collect and store statistics and other information about you and your online activities on an aggregated, non-personally identifiable basis and in a manner that may allow us or our affiliated or related entities to improve our services to you.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "In addition, your Personal Information may be also be used by us to provide you with information regarding our products and services. For example, we may use your e-mail address to send you special announcements and notifications of new real estate listings, services or promotions that may be of interest to you.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Cookies",
+            }
+          }
           style={
             Object {
               "fontWeight": "bold",
             }
           }
-        >
-          Cookies
-        </p>
-        <p>
-          Cookies allow websites to recognize you when you return and can keep track of information specific to you. Consistent with standard practices in the Internet industry, you may occasionally receive cookies from third parties to which you link from our Website. If you prefer, you may set your browser to ask for your permission before your receive a cookie. We do not control these third party cookies, and they are not subject to this Privacy Policy.
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
-        <p>
-          
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Cookies allow websites to recognize you when you return and can keep track of information specific to you. Consistent with standard practices in the Internet industry, you may occasionally receive cookies from third parties to which you link from our Website. If you prefer, you may set your browser to ask for your permission before your receive a cookie. We do not control these third party cookies, and they are not subject to this Privacy Policy.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Information Sharing and Disclosure",
+            }
+          }
           style={
             Object {
               "fontWeight": "bold",
             }
           }
-        >
-          Information Sharing and Disclosure
-        </p>
-        <p>
-          When you request information, we need to know your name, e-mail address, and mailing address. This allows us to process and fulfill your request. 108leonard.com does not sell, trade, or rent your personal information to others 108leonard.com may provide aggregate statistics about our customers, sales, traffic patterns, and related site information to reputable third-party vendors, but these statistics will include no personally identifying information.
-        </p>
-        <p>
-          
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "When you request information, we need to know your name, e-mail address, and mailing address. This allows us to process and fulfill your request. 108leonard.com does not sell, trade, or rent your personal information to others 108leonard.com may provide aggregate statistics about our customers, sales, traffic patterns, and related site information to reputable third-party vendors, but these statistics will include no personally identifying information.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Data Security",
+            }
+          }
           style={
             Object {
               "fontWeight": "bold",
             }
           }
-        >
-          Data Security
-        </p>
-        <p>
-          Data security is critical to us and thus all Personal Information is held in a secured database. While it is impossible to guarantee the complete security of any computer system and the data contained therein, our vendors are required to maintain and implement robust security policies and procedures that combine with available technologies in accordance with prevailing industry standards, all of which are designed to protect the confidentiality, integrity, and availability of your Personal Information. To the extent we are provided with social security numbers or personal financial information, we comply with all applicable regulations regarding the confidentiality and safe disposal of such information.
-        </p>
-        <p>
-          
-        </p>
+        />
         <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Data security is critical to us and thus all Personal Information is held in a secured database. While it is impossible to guarantee the complete security of any computer system and the data contained therein, our vendors are required to maintain and implement robust security policies and procedures that combine with available technologies in accordance with prevailing industry standards, all of which are designed to protect the confidentiality, integrity, and availability of your Personal Information. To the extent we are provided with social security numbers or personal financial information, we comply with all applicable regulations regarding the confidentiality and safe disposal of such information.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Accessing, Updating or Deleting Information Collected About You by 108 Leonard",
+            }
+          }
           style={
             Object {
               "fontWeight": "bold",
             }
           }
-        >
-          Accessing, Updating or Deleting Information Collected About You by 108 Leonard
-        </p>
-        <p>
-          If you wish to access, update, or delete contact information or preferences, please send an e-mail to info@108leonard.com. Please be aware, however, that we cannot always ensure that such corrections or deletions will immediately be made in our database.
-        </p>
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "If you wish to access, update, or delete contact information or preferences, please send an e-mail to info@108leonard.com. Please be aware, however, that we cannot always ensure that such corrections or deletions will immediately be made in our database.",
+            }
+          }
+        />
       </div>
     </div>
     <div
@@ -214,9 +351,207 @@ exports[`renders without crashing 1`] = `
       data-id="tab-1"
     >
       <div>
-        <p>
-          The complete offering terms are in an offering plan available from Sponsor File # CD16-0364. Sponsor: Civic Center Community Group Broadway LLC, having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 22nd Floor, New York, New York 10022. Image is an artist rendering. Equal housing opportunity. DBOX
-        </p>
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Rack Brochure Disclaimer:",
+            }
+          }
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": " All artist's or architectural renderings, sketches, graphic materials and photographs depicted or otherwise described herein are proposed and conceptual only, and are based upon preliminary development plans, which are subject to change. Sponsor reserves the right to make changes in accordance with the terms of the offering plan. Sponsor reserves the right to make substitutions of material, equipment, fixtures, finishes and appliances in accordance with the terms of the offering plan.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "The complete offering terms are in an offering plan available from Sponsor. File no. CD16-0364. Sponsor: Civic Center Community Group Broadway LLC, having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 22nd Floor, New York, New York 10022. (Equal Opportunity House)",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Full Brochure:",
+            }
+          }
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "All artist's or architectural renderings, sketches, graphic materials and photographs depicted or otherwise described herein are proposed and conceptual only, and are based upon preliminary development plans, which are subject to change. Sponsor reserves the right to make changes in accordance with the offering plan. Sponsor reserves the right to make substitutions of material, equipment, fixtures, finishes and appliances in accordance with the terms of the offering plan.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "The complete offering terms are in an offering plan available from Sponsor. File no. CD16-0364. Sponsor: Civic Center Community Group Broadway LLC, having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 22nd Floor, New York, New York 10022. (Equal Opportunity House)",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Full Interactive Amenity Roof Plan:",
+            }
+          }
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "This floor plan is subject to construction variances or tolerances. Any furniture, equipment, or landscaping layouts shown are for concept only. Sponsor reserves the right to make changes in accordance with the offering plan. The complete offering terms are in an offering plan available from Sponsor. File no. CD16-0364. Sponsor: Civic Center Community Group Broadway LLC, having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 22nd Floor, New York, New York 10022. (Equal Opportunity House)",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Full Interactive Cellar Amenity Plan:",
+            }
+          }
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "All dimensions and square footages are approximate and subject to construction variances or tolerances. Any furniture or equipment layouts shown are for concept only. Sponsor reserves the right to make changes in accordance with the offering plan. The complete offering terms are in an offering plan available from Sponsor. File no. CD16-0364. Sponsor: Civic Center Community Group Broadway LLC, having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 22nd Floor, New York, New York 10022. (Equal Opportunity House)",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Final Floor Plans:",
+            }
+          }
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "*All square footages are approximate. The complete offering terms are in an offering plan available from Sponsor. File no. CD16-0364. Sponsor: Civic Center Community Group Broadway LLC having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 22nd Floor, New York, New York 10022. Units will not be offered furnished or with landscaping. Furniture and landscaping layouts shown are for concept only and are not coordinated with building systems. No representation or warranty is made that a unit owner will be able to implement the furniture or landscaping layout shown on this floor plan. Due to the unique fa&ccedil;ade of this building, unit area per floor as well as windows in this layout may vary from floor to floor. Refer to the offering plan for dimensions and conditions. Equal Housing Opportunity.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Website Disclaimer:",
+            }
+          }
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "The complete offering terms are in an offering plan available from Sponsor. File no. CD16-0364. Sponsor: Civic Center Community Group Broadway LLC, having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 22nd Floor, New York, New York, 10022. The artist renderings, sketches, graphic materials, photographs, finishes, fixtures, and appliances are provided for concept only. Any floor plans on this site are based on construction drawings; all dimensions and depictions of columns and shaft widths and locations are approximate and subject to normal construction variations and tolerances. Minor inaccuracies in square footage and inaccuracies in layout and room dimensions as shown on any floor plan will not excuse a purchaser from completing the purchase of a unit without abatement in price or recourse against Sponsor. Square footage exceeds the usable floor area. Due to the unique fa&ccedil;ade of this building, unit area per floor as well as windows in a layout may vary from floor to floor. Refer to the offering plan for dimensions and conditions. Any furniture or landscaping shown are for concept only and are not coordinated with the building systems. Sponsor reserves the right to make changes with the offering plan. Equal Housing Opportunity.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Any views shown are photographs taken by a drone prior to construction or photographs taken by a photographer from the vantage point of each floor as construction progressed. No representation is being made as the vantage points are not from a specific unit.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Site Signage Disclaimer:",
+            }
+          }
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "The complete offering terms are in an offering plan available from Sponsor. File no. CD16-0364. Sponsor: Civic Center Community Group Broadway LLC, having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 22nd Floor, New York, New York, 10022.  Equal Housing Opportunity.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Email Disclaimer:",
+            }
+          }
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "This email and any advertisements contained herein or attached hereto are artist's or architectural renderings, sketches, graphic materials and photos and are proposed and conceptual only, and are based upon preliminary development plans, which are subject to change. Any views shown are photographs taken by a drone prior to construction or photographs taken by a photographer from the vantage point of each floor as construction progressed. no representation is being made as the vantage points are not from a specific unit.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "The complete offering terms are in an offering plan available from Sponsor File # CD16-0364. Sponsor: Civic Center Community Group Broadway LLC, having an address c/o El Ad US Holding, Inc., 575 Madison Avenue, 23rd Floor, New York, New York 10022. Equal Housing Opportunity.",
+            }
+          }
+        />
       </div>
     </div>
   </div>
