@@ -21,6 +21,13 @@ exports[`renders without crashing 1`] = `
     >
       Legal Disclaimer
     </button>
+    <button
+      className="tab sans"
+      data-id="tab-2"
+      onClick={[Function]}
+    >
+      Image Credits
+    </button>
   </div>
   <div
     className="content-wrapper"
@@ -362,6 +369,104 @@ exports[`renders without crashing 1`] = `
           dangerouslySetInnerHTML={
             Object {
               "__html": "Any views shown are photographs taken by a drone prior to construction or photographs taken by a photographer from the vantage point of each floor as construction progressed. No representation is being made as the vantage points are not from a specific unit.",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="content sans"
+      data-id="tab-2"
+    >
+      <div>
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "All images, design and text by DBOX, unless noted.",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Aire Baths, courtesy of Aire Ancient Baths",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "American Cut, courtesy of American Cut",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Le Coucou, Ditte Isager, courtesy of Le Coucou",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Todd Merrill, courtesy of Todd Merrill",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "De Vera, courtesy of De Vera",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Taryn Toomey, Jaimie Baird, courtesy of Taryn Toomey",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Ascent Lounge, Steven Menendez, courtesy of Jeffrey Beers International",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "Seared Restaurant, courtesy of Jeffrey Beers International",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "The Cove Atlantis, courtesy of Jeffrey Beers International",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "One West End, Matt Simpkins Photography, courtesy of Elad",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "22 Central Park South, Evan Joseph, courtesy of Elad",
+            }
+          }
+        />
+        <p
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "250 West Street, Evan Joseph, courtesy of Elad",
             }
           }
         />
