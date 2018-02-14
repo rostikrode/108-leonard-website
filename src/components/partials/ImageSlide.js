@@ -42,7 +42,7 @@ export default class ImageSlide extends Component {
             }
             {this.props.slide.detail ? 
               <div className={`detail-info-wrapper ${this.state.slidUp ? 'slideUp' : 'slideDown'}`}>
-                <p className="serif">{this.props.slide.detail}</p>
+                <div className="serif">{this.props.slide.detail}</div>
                 <button className="serif close-detail-info-button" onClick={this.onCloseButtonClick}>
                   <img className="close-img" src={close} alt="close detail caption" />
                 </button>
