@@ -4,7 +4,7 @@ import Loader from './Loader';
 
 const TextSlide = (props) => {
   return (
-    <div className="inner">
+    <div className={`inner ${props.slide.title2 ? 'reverse' : ''}`}>
     {props.slide.images ? 
       <div className="image-group">
     
@@ -18,7 +18,7 @@ const TextSlide = (props) => {
                     backgroundImage: `url(${image.url})`
                   }} 
                 />
-                <Img className="image-tag" src={image.url} loader={<Loader />} alt={image.caption} />
+                <Img className="image-tag" src={image.url} loader={<Loader />} alt={image.caption} onLoad={()=> {props.onIntroImgLoad();}} />
                 <p className="caption serif-bold">{image.caption}</p>
               </div>
               
@@ -38,7 +38,7 @@ const TextSlide = (props) => {
         <div className="caption-wrapper second-team">
           <h1 className="title sans-bold">{props.slide.title2}</h1>
           <h6 className="subtitle serif">{props.slide.subtitle2}</h6>
-          <p className="serif">{props.slide.para2}</p>
+          <p className="serif" dangerouslySetInnerHTML={{__html: props.slide.para2}} />
         </div>
         :
         ''

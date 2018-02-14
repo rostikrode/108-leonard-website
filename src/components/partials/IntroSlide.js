@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import Img from 'react-image';
+import Loader from './Loader';
 
 var introslide, activatesubnav;
 export default class IntroSlide extends Component {
@@ -23,8 +25,8 @@ export default class IntroSlide extends Component {
       <div className="div" ref={c => this.introSlide = c }>
         <div className="inner">
           <div className="image-wrapper">
-            <img className="desktop intro-image" src={this.props.introImage} alt={this.props.introImageCaption} onLoad={this.onImgLoad}/>
-            <img className="mobile intro-image" src={this.props.introImageMobile} alt={this.props.introImageCaption} onLoad={this.onImgLoad}/>
+            <Img className="desktop intro-image" src={this.props.introImage} alt={this.props.introImageCaption} onLoad={() => {this.props.onIntroImgLoad();}} loader={<Loader img={true} />} />
+            <Img className="mobile intro-image" src={this.props.introImageMobile} alt={this.props.introImageCaption} loader={<Loader />} />
             <div className="caption-wrapper">
               <h1 className="sans-bold">{this.props.intro.title}</h1>
               <p className="serif" dangerouslySetInnerHTML={{__html: this.props.intro.para}}></p>

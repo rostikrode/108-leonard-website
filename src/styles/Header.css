@@ -299,6 +299,14 @@ nav {
   position: relative;
   z-index: 100;
 }
+
+@media only screen and (device-width : 375px) and (device-height : 812px) and (-webkit-device-pixel-ratio : 3) {
+  .footer {
+    padding-bottom: 95px;
+  }
+}
+
+
 .footer-pages {
   display: flex;
   flex-flow: row nowrap;
@@ -329,6 +337,7 @@ nav {
     margin: 0 auto; 
   }
 }
+
 @media (min-width: 1024px) {
   .footer-pages {
     width: 100%;

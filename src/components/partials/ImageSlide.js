@@ -34,7 +34,7 @@ export default class ImageSlide extends Component {
           : ''}
           
           <div className="image-wrapper">
-            <Img src={this.props.slide.src} loader={<Loader />} alt={this.props.slide.caption} />
+            <Img src={this.props.slide.src} loader={<Loader />} alt={this.props.slide.caption} onLoad={()=> {this.props.onIntroImgLoad();}} />
 
             {this.props.slide.detail ? 
               <button className={`serif detail-info-button ${this.state.slidUp ? 'hide' : 'show'}`} onClick={this.onInfoButtonClick} ref={e => {this.infobutton = e}}>i</button>

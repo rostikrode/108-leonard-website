@@ -27,14 +27,15 @@
       "src": "/images/3_residences/3.3.2_Waterfall_Kitchen.jpg",
       "section": "Kitchens",
       "newsection": true,
-      "caption": "Kitchen in Sand Palette",
-      "detail": "Open-plan kitchens have been thoughtfully conceived in two palettes, sheathed in marble backsplashes and anchored by stunning marble waterfall islands."
+      "caption": "Kitchen in Ash Palette",
+      "detail": "Kitchens feature top-of-the-line appliances by Miele."
     }, {
       "src": "/images/3_residences/3.3.1_Plinth_Kitchen.jpg",
       "section": "Kitchens",
       "newsection": false,
-      "caption": "Kitchen in Ash Palette",
-      "detail": "Open-plan kitchens have been thoughtfully conceived in two palettes, featuring top-of-the-line Miele appliances."
+      "caption": "Kitchen in Sand Palette",
+      "detail": "Open-plan kitchens have been thoughtfully conceived in two palettes, sheathed in marble backsplashes and anchored by stunning marble waterfall islands."
+      
     }, {
       "src": "/images/3_residences/3.4.1_Master_Bath.jpg",
       "section": "Bathrooms",

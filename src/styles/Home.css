@@ -97,6 +97,12 @@
     max-width: 380px;
   }
 } */
+
+@media (min-width: 768px) {
+  .home-wrapper {
+    height: calc(100vh - 18px - 18px - 120px);
+  }
+}
 @media (min-width: 1024px) {
   .home-wrapper {
     flex-flow: row nowrap;
@@ -315,4 +321,10 @@
   .home-wrapper .image-wrapper img.home-mobile {
     display: none;
   } 
+}
+
+.home-wrapper .next-button,
+.mobile-goto {
+  padding-right: 0;
+  margin-right: -21px;
 }

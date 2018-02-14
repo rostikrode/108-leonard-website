@@ -36,6 +36,7 @@ export default class Carousel extends Component {
     this.activateSubnav = this.activateSubnav.bind(this);
     this.onWindowScroll = this.onWindowScroll.bind(this);
     this.onOrientationChange = this.onOrientationChange.bind(this);
+    this.onIntroImgLoad = this.onIntroImgLoad.bind(this);
   }
   componentWillMount() {
     window.gtag('config', 'UA-113369414-1', {
@@ -156,29 +157,38 @@ export default class Carousel extends Component {
     }
   }
 
+  onIntroImgLoad() {
+    this.updateArrowPosition();
+  }
+
   updateArrowPosition() {
     if (window.matchMedia('(min-width: 1024px)').matches) {
-      setTimeout(() => {
-        if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-          if (this.props) {
-            this.doPlacement();
-          }
-        } else {
-          if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('slick-slider')) {
-            if (this.props) {
-              this.doPlacement();
-            }
-            // then modify once image is loaded
-            let image = new Image();
-            image.onload = () => {
-              if (this.props) {
-                this.doPlacement();
-              }
-            };
-            image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
-          }
-        }
-      }, 100);
+      // setTimeout(() => {
+        this.doPlacement();
+        // if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+        //   if (this.props) {
+        //     this.doPlacement();
+        //   }
+        // } else {
+        //   if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('slick-slider')) {
+        //     // then modify once image is loaded
+        //     let image = new Image();
+        //     image.onload = () => {
+        //       if (this.props) {
+        //         console.log('loaded img');
+        //         this.doPlacement();
+        //       }
+        //     };
+        //     if (parentSliderEl && parentSliderEl.querySelector('.slick-active .inner .image-wrapper img')) {
+        //       console.log('present img');
+        //       image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
+        //     }
+        //     if (this.props) {
+        //       this.doPlacement();
+        //     }
+        //   }
+        // }
+      // }, 100);
     }
   }
   /** custom button events needed for custom buttons */
@@ -340,7 +350,7 @@ export default class Carousel extends Component {
         <Slider ref={(c) => this.slider = c } {...this.props.settings} {...moreSettings}>
           {this.props.intro ?
             <div key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
-              <IntroSlide {...this.props} activateSubnav={this.activateSubnav} />
+              <IntroSlide {...this.props} activateSubnav={this.activateSubnav} onIntroImgLoad={this.onIntroImgLoad} />
             </div>
           : undefined}
 
@@ -348,7 +358,7 @@ export default class Carousel extends Component {
             this.props.slides.map((slide, key) => {
               return (
                 <div key={key+1} data-section={slide.section} className="slick-section">
-                  <ImageSlide slide={slide} page={this.props.page}/>
+                  <ImageSlide slide={slide} page={this.props.page} onIntroImgLoad={this.onIntroImgLoad}/>
                 </div>
               );
             })
@@ -356,7 +366,7 @@ export default class Carousel extends Component {
             this.props.slides.map((slide, key) => {
               return (
                 <div key={key + 1} data-section={slide.section} className="slick-section slick-intro-slide">
-                  <TeamSlide slide={slide} />
+                  <TeamSlide slide={slide} onIntroImgLoad={this.onIntroImgLoad} />
                 </div>
               );
             })
