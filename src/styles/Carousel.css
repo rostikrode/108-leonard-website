@@ -731,7 +731,7 @@
 }
 
 @media (max-width: 767px) {
-  .detail-info-wrapper .serif {
+  .detail-info-wrapper .serif:not(.close-detail-info-button) {
     width: calc(100% - 35px);
     margin-right: auto;
   }
