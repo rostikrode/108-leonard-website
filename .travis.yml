@@ -9,16 +9,16 @@ deploy:
     skip_cleanup: true
     on:
       branch: "develop"
-  # - provider: s3
-  #   cache_control: "max-age=2592000" # 30 days
-  #   access_key_id: $AWS_ACCESS
-  #   secret_access_key: $AWS_SECRET
-  #   bucket: $BUCKET_PROD
-  #   acl: public_read
-  #   local_dir: build
-  #   skip_cleanup: true
-  #   on:
-  #     branch: "master"
+  - provider: s3
+    cache_control: "max-age=2592000" # 30 days
+    access_key_id: $AWS_ACCESS
+    secret_access_key: $AWS_SECRET
+    bucket: $BUCKET_PROD
+    acl: public_read
+    local_dir: build
+    skip_cleanup: true
+    on:
+      branch: "master"
 language: node_js
 node_js:
   - "6"
