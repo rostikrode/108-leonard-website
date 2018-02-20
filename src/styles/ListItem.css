@@ -18,7 +18,7 @@
 
 .list-row .list-row-wrapper {
   padding: 30px 0;
-  border-bottom: 2px solid #DADADA;
+  border-bottom: 1px solid #DADADA;
   margin-bottom: -1px;
   display: flex;
   flex-flow: column wrap;

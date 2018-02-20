@@ -6,7 +6,8 @@ import cookie from './cookies.js';
 
 import '../../styles/Floorplan.css';
 
-import close_thin from '../../assets/close_thin_blue.svg';
+import close_thin from '../../assets/close_thin.svg';
+import close_thin_blue from '../../assets/close_thin_blue.svg';
 import question from '../../assets/floorplan/question.svg';
 
 var zoomAnimation = {};
@@ -180,7 +181,7 @@ class Floorplan extends Component {
         if(e.target.classList.contains('floorplan-overlay')) {
           this.props.onCloseBtnClick(false)
         }}}>
-        <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_thin} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
+        <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_thin_blue} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
         <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.letter}.pdf`} onClick={this.onDownloadClick}>DOWNLOAD</a>
         <div className="mobile-title floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
 
@@ -248,8 +249,9 @@ class Floorplan extends Component {
                       </div>
                     </div>
                   </div>
-                <button title="Show Intructions" className={`dbxd-instructions-icon ${this.state.openedInstructions ? 'hide' : 'show'} `} onClick={this.onOpenInfo}>
-                  <Img id="info" src={question} loader={<Loader />} alt="info about floorplan plugin button" />
+                <button title="Show Intructions" className={`serif detail-info-button dbxd-instructions-icon ${this.state.openedInstructions ? 'hide' : 'show'} `} onClick={this.onOpenInfo}>
+                  {/*<Img id="info" src={question} loader={<Loader />} alt="info about floorplan plugin button" />*/}
+                  i
                 </button>
               </div>
           </div>
