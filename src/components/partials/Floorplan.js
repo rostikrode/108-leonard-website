@@ -8,7 +8,6 @@ import '../../styles/Floorplan.css';
 
 import close_thin from '../../assets/close_thin.svg';
 import close_thin_blue from '../../assets/close_thin_blue.svg';
-import question from '../../assets/floorplan/question.svg';
 
 var zoomAnimation = {};
 const Loader = () => {
