@@ -379,16 +379,28 @@ body {
 		font-size: 14px;
 	}
 	.floorplan-button span {
-		font-size: 0.55vw;
+		font-size: 0.6vw;
+		line-height: 0.6vw;
 		white-space: nowrap;
 	}
 }
 @media (min-width: 1440px) {
 	.floorplan-button span {
+		font-size: 0.55vw;
+		line-height: 0.55vw;
+	}
+}
+@media (min-width: 1740px) {
+	.floorplan-button span {
 		font-size: 0.45vw;
+		line-height: 0.45vw;
 	}
 }
 @media (min-width: 1920px) {
+	.floorplan-button span {
+		font-size: 0.6vw;
+		line-height: 0.6vw;
+	}
 	.sans,
 	.nav-anchor.sans,
 	.sans-bold {

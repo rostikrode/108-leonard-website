@@ -244,7 +244,7 @@ class Floorplan extends Component {
                         <button title="close info window button" className="dbxd-close" onClick={this.onCloseInfo}>
                           <Img src={close_thin} loader={<Loader />} alt="close floorplan" />
                         </button>
-                        <div className="sans dbxd-feat pan_clickdrag">Click floorplan to zoom in and out. While zoomed in, click and drag mouse to pan the&nbsp;floorplan.<br/>On mobile and tablet devices, pinch your screen to zoom&nbsp;in.</div>
+                        <div className="sans dbxd-feat pan_clickdrag">Click to zoom. Click and drag to pan.<br/>Pinch to zoom on mobile and tablet.</div>
                       </div>
                     </div>
                   </div>

@@ -42,11 +42,11 @@ export default class AvailabilityShare extends Component {
     });
 
     /** meta data for page */
-    document.title = this.props.metaTitle;
+    document.title = 'Share 108 Leonard Residences';
     if(document.getElementsByTagName('meta').description) {
-      document.getElementsByTagName('meta').description.content = this.props.metaDescription;
-      document.querySelector("meta[property='og:description']").content = this.props.metaDescription;
-      document.querySelector("meta[property='og:title']").content = this.props.metaTitle;
+      document.getElementsByTagName('meta').description.content = 'Select 108 Leonard residences to email and share with a friend.';
+      document.querySelector("meta[property='og:description']").content = 'Select 108 Leonard residences to email and share with a friend.';
+      document.querySelector("meta[property='og:title']").content = 'Share 108 Leonard Residences';
     }
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href = window.location.href
@@ -155,23 +155,31 @@ export default class AvailabilityShare extends Component {
           if(jsonData.success) {
             console.log("send smart email: success - no error");
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">Your email has been sent to {this.state.toemail}</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Thank you for your interest in 108&nbsp;Leonard.</p><p className="sans-light-bold">Your email has been sent to {this.state.toemail}</p></div>
             });
           } else {
             console.log('send smart email: success - INTERNAL ERROR', jsonData);
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
             });
           }
         })
         .catch((err) => {
           console.log('send smart email error ', err);
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
             });
         });
       }
     });
+  }
+
+  toTitleCase(str) {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str.join(' ');
   }
 
   render() {
@@ -189,11 +197,11 @@ export default class AvailabilityShare extends Component {
         : 
           <div className="form-page">
             <div className="form-chosen">
-              <span className="serif upper">You have requested to share floorplans for residences,&nbsp;</span>
+              <span className="serif upper">You have requested to share {this.state.checkboxArray.length === 1 ? 'the floorplan' : 'floorplans'} for {this.state.checkboxArray.length === 1 ? 'residence' : 'residences'}&nbsp;</span>
               {this.state.checkboxArray.map((res, key) => {
                 return (
                   <span key={key} className="form-chosen-res serif upper serif-bold-same-size">
-                  &nbsp;{key === (this.state.checkboxArray.length - 1) ? (this.state.checkboxArray.length === 1 ? `${res}` : `and ${res}`) : `${res},`}
+                  &nbsp;{key === (this.state.checkboxArray.length - 1) ? (this.state.checkboxArray.length === 1 ? `${res}` : `and ${res}`) : (this.state.checkboxArray.length === 2 ? `${res}` : `${res},`)}
                   </span>
                 );
               })}
@@ -212,15 +220,15 @@ export default class AvailabilityShare extends Component {
               <form noValidate ref={(e) => this.shareform = e} onSubmit={this.handleSubmit}>
                 <label className="form-section serif upper heavy">To:</label>
                 <div className="half-wrapper">
-                  <input onChange={ (e) => this.setState({ tofirst: e.target.value })} name="tofirst" required className="black-ph half" type="text" placeholder="FIRST NAME*" tabIndex="0" />
-                  <input onChange={ (e) => this.setState({ tolast: e.target.value })} name="tolast" required className="black-ph half" type="text" placeholder="LAST NAME*" tabIndex="0" />
+                  <input onChange={ (e) => this.setState({ tofirst: this.toTitleCase(e.target.value) })} name="tofirst" required className="black-ph half" type="text" placeholder="FIRST NAME*" tabIndex="0" />
+                  <input onChange={ (e) => this.setState({ tolast: this.toTitleCase(e.target.value) })} name="tolast" required className="black-ph half" type="text" placeholder="LAST NAME*" tabIndex="0" />
                 </div>
                 <input onChange={ (e) => this.setState({ toemail: e.target.value })} name="toemail" required className="black-ph whole" type="email" placeholder="EMAIL*" tabIndex="0" />
 
                 <label className="form-section serif upper heavy">From:</label>
                 <div className="half-wrapper">
-                  <input onChange={ (e) => this.setState({ fromfirst: e.target.value })} name="fromfirst" required className="black-ph half" type="text" placeholder="FIRST NAME*" tabIndex="0" />
-                  <input onChange={ (e) => this.setState({ fromlast: e.target.value })} name="fromlast" required className="black-ph half" type="text" placeholder="LAST NAME*" tabIndex="0" />
+                  <input onChange={ (e) => this.setState({ fromfirst: this.toTitleCase(e.target.value) })} name="fromfirst" required className="black-ph half" type="text" placeholder="FIRST NAME*" tabIndex="0" />
+                  <input onChange={ (e) => this.setState({ fromlast: this.toTitleCase(e.target.value) })} name="fromlast" required className="black-ph half" type="text" placeholder="LAST NAME*" tabIndex="0" />
                 </div>
                 <input onChange={ (e) => this.setState({ fromemail: e.target.value })} name="fromemail" required className="black-ph whole" type="email" placeholder="EMAIL*" tabIndex="0" />
                 <input type="submit" value="Submit" className="button sans-light-bold"/>

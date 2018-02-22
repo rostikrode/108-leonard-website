@@ -2,28 +2,12 @@
 
 108leonard-full.dev.dbxd.com
 
-### Need Floorplan SVGs, keys, PDFs for:
-
-* ~~A~~
-* ~~B~~ 
-* ~~C~~
-* D -> need all
-* ~~E~~
-* ~~F~~
-* ~~G~~
-* ~~H~~
-* ~~L~~
-* ~~M~~
-* N -> need SVG
-
-## TODO:
-
-* use Lambda@Edge for page redirect to index.html and for error
-  * ex: https://read.acloud.guru/supercharging-a-static-site-with-lambda-edge-da5a1314238b
-
-
-
 # TODO
+
+* share email - remove comma before "and" in the actual email (where the data gets sent, maybe its happening there)
+* share email - find a font that matches the Legal body copy
+* can we fix the team section so that the blue box and the images are aligned vertically? The images and the blue box should also be aligned/fit into the space of the images at the beginning of each section. Also in this section, I think we should vertically align "MARKETING AND SALES" and "BRANDING AND CREATIVE" so that the names below and paragraphs are also aligned vertically.
+
 
 Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web
 Question Document: https://docs.google.com/document/d/1-Y4RTlJCLQ15iYe9DEKmx2u_GWFvjnBUZUbL5rss00w/edit?ts=5982baa3
