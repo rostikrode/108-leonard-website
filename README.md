@@ -4,8 +4,6 @@
 
 # TODO
 
-* share email - remove comma before "and" in the actual email (where the data gets sent, maybe its happening there)
-* share email - find a font that matches the Legal body copy
 * can we fix the team section so that the blue box and the images are aligned vertically? The images and the blue box should also be aligned/fit into the space of the images at the beginning of each section. Also in this section, I think we should vertically align "MARKETING AND SALES" and "BRANDING AND CREATIVE" so that the names below and paragraphs are also aligned vertically.
 
 

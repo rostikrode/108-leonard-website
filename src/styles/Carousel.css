@@ -642,7 +642,7 @@
     margin-top: 5px;
   }
   .team-slider .slick-slide .inner .caption-wrapper {
-    width: 50%; height: calc(100% - 64px - 80px - 20px);
+    width: 50%; height: calc(100vh - 64px - 184px);
     margin: 0;
     background-color: #E5EBEC;
     position: relative;
@@ -657,9 +657,6 @@
   .slick-intro-slide .caption-wrapper p {
     max-width: 425px;
   }
-  /* .team-slider .slick-slide .inner .image-group {
-    height: calc(100vh - 64px - 80px - 20px);
-  } */
 }
 
 @media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape)  and (-webkit-min-device-pixel-ratio: 1.5) {

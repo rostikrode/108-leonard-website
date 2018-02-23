@@ -420,7 +420,7 @@ export default class Contact extends Component {
 
           if(response.status === 200) {
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold">A representative will contact you&nbsp;shortly.</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Thank you for your interest in 108 Leonard.</p><p className="sans-light-bold upper">A representative will contact you&nbsp;shortly.</p></div>
             });
 
             /** Send form to Campaign Monitor as well */
@@ -525,7 +525,7 @@ export default class Contact extends Component {
 
           } else {
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold">An error has occured.</p><p className="sans-light-bold">Please try again&nbsp;later.</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold upper">An error has occured.</p><p className="sans-light-bold upper">Please try again&nbsp;later.</p></div>
             });
           }
 
@@ -537,7 +537,7 @@ export default class Contact extends Component {
         .catch((err) => {
           console.log('Request error ', err);
           this.setState({
-            submitMessage: <div className="response-message"><p className="sans-light-bold">An error has occured.</p><p className="sans-light-bold">Please try again&nbsp;later.</p></div>
+            submitMessage: <div className="response-message"><p className="sans-light-bold upper">An error has occured.</p><p className="sans-light-bold upper">Please try again&nbsp;later.</p></div>
           });
         });
       }

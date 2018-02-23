@@ -35,12 +35,6 @@ export default class AvailabilityShare extends Component {
   }
 
   componentDidMount() {
-    window.gtag('config', 'UA-113369414-1', {
-      'page_title': this.props.metaTitle,
-      'page_location': window.location.href,
-      'page_path': window.location.pathname
-    });
-
     /** meta data for page */
     document.title = 'Share 108 Leonard Residences';
     if(document.getElementsByTagName('meta').description) {
@@ -110,10 +104,19 @@ export default class AvailabilityShare extends Component {
     this.state.checkboxArray.forEach((value, index) => {
       if(index === (this.state.checkboxArray.length - 1)) {
         slug += `${value}`;
-        phrase += `and ${value}`;
+        if (this.state.checkboxArray.length === 1) {
+          phrase += `${value}`;
+        } else {
+          phrase += `and ${value}`;
+        }
+        
       } else {
         slug += `${value}&`;
-        phrase += `${value}, `;
+        if (this.state.checkboxArray.length === 2) {
+          phrase += `${value} `;
+        } else {
+          phrase += `${value}, `;
+        }
       }
     });
     this.setState({
@@ -155,19 +158,19 @@ export default class AvailabilityShare extends Component {
           if(jsonData.success) {
             console.log("send smart email: success - no error");
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Thank you for your interest in 108&nbsp;Leonard.</p><p className="sans-light-bold">Your email has been sent to {this.state.toemail}</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Thank you for your interest in 108&nbsp;Leonard.</p><p className="sans-light-bold upper">Your email has been sent to {this.state.toemail}</p></div>
             });
           } else {
             console.log('send smart email: success - INTERNAL ERROR', jsonData);
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Your email could not be sent at this time.</p><p className="sans-light-bold upper">Please try again later.</p></div>
             });
           }
         })
         .catch((err) => {
           console.log('send smart email error ', err);
             this.setState({
-              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Your email could not be sent at this time.</p><p className="sans-light-bold">Please try again later.</p></div>
+              submitMessage: <div className="response-message"><p className="sans-light-bold upper">Your email could not be sent at this time.</p><p className="sans-light-bold upper">Please try again later.</p></div>
             });
         });
       }

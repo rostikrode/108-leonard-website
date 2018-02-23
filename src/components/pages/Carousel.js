@@ -164,7 +164,9 @@ export default class Carousel extends Component {
   updateArrowPosition() {
     if (window.matchMedia('(min-width: 1024px)').matches) {
       // setTimeout(() => {
-        this.doPlacement();
+        if (this.props !== undefined) {
+          this.doPlacement();
+        }
         // if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
         //   if (this.props) {
         //     this.doPlacement();
