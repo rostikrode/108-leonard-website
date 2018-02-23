@@ -30,15 +30,19 @@ const TextSlide = (props) => {
         }
 
       <div className="caption-wrapper">
-        <h1 className="title sans-bold">{props.slide.title}</h1>
-        <h6 className="subtitle serif" dangerouslySetInnerHTML={{__html: props.slide.subtitle}}></h6>
-        <p className="serif">{props.slide.para}</p>
+        <div className="wrapper">
+          <h1 className="title sans-bold">{props.slide.title}</h1>
+          <h6 className="subtitle serif" dangerouslySetInnerHTML={{__html: props.slide.subtitle}}></h6>
+          <p className="serif">{props.slide.para}</p>
+        </div>
       </div>
       {props.slide.title2 ?
         <div className="caption-wrapper second-team">
-          <h1 className="title sans-bold">{props.slide.title2}</h1>
-          <h6 className="subtitle serif">{props.slide.subtitle2}</h6>
-          <p className="serif" dangerouslySetInnerHTML={{__html: props.slide.para2}} />
+          <div className="wrapper">
+            <h1 className="title sans-bold">{props.slide.title2}</h1>
+            <h6 className="subtitle serif">{props.slide.subtitle2}</h6>
+            <p className="serif" dangerouslySetInnerHTML={{__html: props.slide.para2}} />
+          </div>
         </div>
         :
         ''
