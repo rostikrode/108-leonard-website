@@ -75,6 +75,8 @@ class Floorplan extends Component {
   }
 
   onCloseInfo(e) {
+    e.persist();
+
     this.setState({
       openedInstructions: false
     });
@@ -175,6 +177,23 @@ class Floorplan extends Component {
       return (b.charAt(0) > 0 && !(c || ".").lastIndexOf(".") ? b.replace(/(\d)(?=(\d{3})+$)/g, "$1,") : b) + c;
     });
   }
+  closeBtnClick() {
+    this.props.onCloseBtnClick(false);
+
+    // zoom out on overlay close
+    zoomAnimation = {
+      animation: {
+        scale: 1,
+        top: 0,
+        left: 0
+      }
+    }
+    this.span.style.transform = 'translate(0, 0)'; 
+    this.floorplanimage.runAnimation(zoomAnimation);
+    this.setState({
+      zoomed: false
+    });
+  }
 
   render() {
     return (
@@ -183,7 +202,7 @@ class Floorplan extends Component {
         if(e.target.classList.contains('floorplan-overlay')) {
           this.props.onCloseBtnClick(false)
         }}}>
-        <button className="close-btn" onClick={() => {this.props.onCloseBtnClick(false)}}><img src={close_thin_blue} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
+        <button className="close-btn" onClick={this.closeBtnClick.bind(this)}><img src={close_thin_blue} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
 
         {this.props.planExists ?
         <div>

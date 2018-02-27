@@ -3,7 +3,6 @@
 108leonard-full.dev.dbxd.com
 
 # TODO
-* When I am zoomed into the floor plan and then click to drag, it jumps to a different area of the plan. Can it drag form the area that I am already clicked in rather than jumping?
 * In the team section, can the images and the blue box be aligned to fit into the same space of the images at the beginning of each of the other sections (residences, amenities, etc)?
 
 
