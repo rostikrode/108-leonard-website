@@ -58,7 +58,7 @@ const PAGES = [{
       'Clocktower'
   ]},*/ {
     'title': 'Availability',
-    // 'component': ComingSoon,
+    // 'component': ComingSoon, 
     'component': Availability,
     'slug': '/availability/',
     'data': availabilityJSON,
