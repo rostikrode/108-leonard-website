@@ -2,11 +2,13 @@ import React from 'react';
 import '../../styles/NotFound.css';
 
 const NotFound = () => {
-  window.gtag('config', 'UA-113369414-1', {
-    'page_title': 'Page Not Found',
-    'page_location': window.location.href,
-    'page_path': window.location.pathname
-  });
+  if (window.location.origin === 'https://108leonard.com') {
+    window.gtag('config', 'UA-113369414-1', {
+      'page_title': 'Page Not Found',
+      'page_location': window.location.href,
+      'page_path': window.location.pathname
+    });
+  }
 
   /** meta data for page */
   document.title = '404 Page Not Found';

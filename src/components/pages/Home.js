@@ -10,11 +10,13 @@ import next_arrow from '../../assets/next_arrow.svg';
 
 export default class Home extends Component {
   componentWillMount() {
-    window.gtag('config', 'UA-113369414-1', {
-      'page_title': this.props.metaTitle,
-      'page_location': window.location.href,
-      'page_path': window.location.pathname
-    });
+    if (window.location.origin === 'https://108leonard.com') {
+      window.gtag('config', 'UA-113369414-1', {
+        'page_title': this.props.metaTitle,
+        'page_location': window.location.href,
+        'page_path': window.location.pathname
+      });
+    }
 
     this.onGoTo = this.onGoTo.bind(this);
   }

@@ -22,18 +22,21 @@ export default class Availability extends Component {
       floorplanState: '',
       checkboxArray: [],
       disabledShare: true,
-      floorplanResidenceArray: []
+      floorplanResidenceArray: [],
+      planExists: true
     }
     this.onFilterClick = this.onFilterClick.bind(this);
     this.onShareClick = this.onShareClick.bind(this);
   }
   
   componentWillMount() {
-    window.gtag('config', 'UA-113369414-1', {
-      'page_title': this.props.metaTitle,
-      'page_location': window.location.href,
-      'page_path': window.location.pathname
-    });
+    if (window.location.origin === 'https://108leonard.com') {
+      window.gtag('config', 'UA-113369414-1', {
+        'page_title': '108 Leonard | Available apartments for sale in Tribeca NYC.',
+        'page_location': window.location.href,
+        'page_path': window.location.pathname
+      });
+    }
   }
 
   componentDidMount() {
@@ -44,11 +47,11 @@ export default class Availability extends Component {
     }, 100);
 
     /** meta data for page */
-    document.title = this.props.metaTitle;
+    document.title = '108 Leonard | Available apartments for sale in Tribeca NYC.';
     if(document.getElementsByTagName('meta').description) {
-      document.getElementsByTagName('meta').description.content = this.props.metaDescription;
-      document.querySelector("meta[property='og:description']").content = this.props.metaDescription;
-      document.querySelector("meta[property='og:title']").content = this.props.metaTitle;
+      document.getElementsByTagName('meta').description.content = 'Please contact the sales gallery for current availability.';
+      document.querySelector("meta[property='og:description']").content = 'Please contact the sales gallery for current availability.';
+      document.querySelector("meta[property='og:title']").content = '108 Leonard | Available apartments for sale in Tribeca NYC.';
     }
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href = window.location.href
@@ -229,11 +232,11 @@ export default class Availability extends Component {
     });
   }
 
-  onViewFloorplanClick(fresidence, fstate) {
-    console.log(fresidence, fstate);
+  onViewFloorplanClick(fresidence, fstate, fexists) {
     this.setState({
       activeResidence: fresidence,
-      floorplanState: fstate
+      floorplanState: fstate,
+      planExists: fexists
     });
 
     for(var r = 0; r < this.state.residences.length; r++) {
@@ -298,7 +301,7 @@ export default class Availability extends Component {
           duration={500} 
           easing={this.state.floorplanState ? 'ease-out': 'ease-in'}
           animation={this.state.floorplanState ? 'fadeIn': 'fadeOut'}>
-          <Floorplan {...this.state.floorplanResidenceArray} intft={this.delimitNumbers(this.state.floorplanResidenceArray.interior)} intsqm={this.sqmFormat(this.state.floorplanResidenceArray.interior)} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} />
+          <Floorplan {...this.state.floorplanResidenceArray} intft={this.delimitNumbers(this.state.floorplanResidenceArray.interior)} intsqm={this.sqmFormat(this.state.floorplanResidenceArray.interior)} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} planExists={this.state.planExists} />
       </VelocityComponent>
       </div>
     );

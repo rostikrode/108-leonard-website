@@ -27,11 +27,13 @@ export default class AvailabilityShare extends Component {
   }
   
   componentWillMount() {
-    window.gtag('config', 'UA-113369414-1', {
-      'page_title': 'Share 108 Leonard Residences',
-      'page_location': window.location.href,
-      'page_path': window.location.pathname
-    });
+    if (window.location.origin === 'https://108leonard.com') {
+      window.gtag('config', 'UA-113369414-1', {
+        'page_title': 'Share 108 Leonard Residences',
+        'page_location': window.location.href,
+        'page_path': window.location.pathname
+      });
+    }
   }
 
   componentDidMount() {

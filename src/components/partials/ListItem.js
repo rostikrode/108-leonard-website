@@ -10,7 +10,8 @@ export default class ListItem extends Component {
 
     this.state = {
       floorplanState: true,
-      clickedFloorplan: false
+      clickedFloorplan: false,
+      planExists: true
     };
 
     this.handleCheck = this.handleCheck.bind(this);
@@ -52,15 +53,40 @@ export default class ListItem extends Component {
   }
 
   onViewFloorplanClick(e) {
-    window.gtag('event', 'view_floorplan', {
-      'event_category': 'Availability',
-      'event_label': `Residence ${this.props.residence}`
+    let id = e.currentTarget.dataset.id;
+
+    // check if floorplan exists
+    let exists = true;
+    fetch(`http://108leonard.com.s3-website-us-east-1.amazonaws.com/images/5_availability/floorplans/residence_${this.props.letter}.svg`)
+    .then((res) => {
+      
+
+      if (res.status === 404) {
+        exists = false;
+      } else {
+        exists = true;
+      }
+      
+      this.setState({
+        floorplanState: true,
+        clickedFloorplan: false,
+        planExists: exists
+      });
+
+      this.props.onViewFloorplanClick(id, true, this.state.planExists);
+
+    })
+    .catch((err) => {
+      exists = false;
+      console.log(`error fetching local floorplan ${err}`);
     });
-    this.setState({
-      floorplanState: true,
-      clickedFloorplan: false
-    });
-    this.props.onViewFloorplanClick(e.currentTarget.dataset.id, true);
+
+    if (window.location.origin === 'https://108leonard.com') {
+      window.gtag('event', 'view_floorplan', {
+        'event_category': 'Availability',
+        'event_label': `Residence ${this.props.residence}`
+      });
+    }
   }
 
   onCloseBtnClick() {
@@ -91,8 +117,20 @@ export default class ListItem extends Component {
             <p className="info serif">{this.delimitNumbers(this.props.interior)}/{this.sqmFormat(this.props.interior)}</p>
           </div>
           <div className="list-cell label-with-info">
-            <p className="label sans">EXTERIOR SQ FT/M</p>
-            <p className="info serif">{this.delimitNumbers(this.props.exterior)}/{this.sqmFormat(this.props.exterior)}</p>
+            <p className="label sans">
+            {this.props.exterior < 1 ?
+              ''
+              :
+              'EXTERIOR SQ FT/M'
+            }
+            </p>
+            <p className="info serif">
+              {this.props.exterior < 1 ?
+              ''
+              :
+              this.delimitNumbers(this.props.exterior)/this.sqmFormat(this.props.exterior)
+              }  
+            </p>
           </div>
           <div className="list-cell label-with-info">
             <p className="label sans">PRICE</p>

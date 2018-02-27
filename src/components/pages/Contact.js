@@ -143,11 +143,13 @@ export default class Contact extends Component {
     this.onPhoneNumberEnter = this.onPhoneNumberEnter.bind(this);
   }
   componentWillMount() {
-    window.gtag('config', 'UA-113369414-1', {
-      'page_title': this.props.metaTitle,
-      'page_location': window.location.href,
-      'page_path': window.location.pathname
-    });
+    if (window.location.origin === 'https://108leonard.com') {
+      window.gtag('config', 'UA-113369414-1', {
+        'page_title': this.props.metaTitle,
+        'page_location': window.location.href,
+        'page_path': window.location.pathname
+      });
+    }
   }
 
   componentDidMount() {

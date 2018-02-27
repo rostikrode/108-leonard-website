@@ -3,8 +3,8 @@ import ListItem from './ListItem';
 import '../../styles/List.css';
 
 export default class List extends Component {
-  onViewFloorplanClick(fresidence, fstate) {
-    this.props.onViewFloorplanClick(fresidence, fstate);
+  onViewFloorplanClick(fresidence, fstate, fexists) {
+    this.props.onViewFloorplanClick(fresidence, fstate, fexists);
   }
   sendCheckboxes(checkArray) {
     this.props.sendCheckboxes(checkArray);
