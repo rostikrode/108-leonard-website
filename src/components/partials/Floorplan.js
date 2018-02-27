@@ -188,11 +188,14 @@ class Floorplan extends Component {
         left: 0
       }
     }
-    this.span.style.transform = 'translate(0, 0)'; 
-    this.floorplanimage.runAnimation(zoomAnimation);
-    this.setState({
-      zoomed: false
-    });
+
+    if (this.span !== null) {
+      this.span.style.transform = 'translate(0, 0)'; 
+      this.floorplanimage.runAnimation(zoomAnimation);
+      this.setState({
+        zoomed: false
+      });
+    }
   }
 
   render() {

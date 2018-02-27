@@ -3,7 +3,6 @@
 108leonard-full.dev.dbxd.com
 
 # TODO
-* In the team section, can the images and the blue box be aligned to fit into the same space of the images at the beginning of each of the other sections (residences, amenities, etc)?
 
 
 Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web

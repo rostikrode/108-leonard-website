@@ -57,7 +57,7 @@ export default class ListItem extends Component {
 
     // check if floorplan exists
     let exists = true;
-    fetch(`http://108leonard.com.s3-website-us-east-1.amazonaws.com/images/5_availability/floorplans/residence_${this.props.letter}.svg`)
+    fetch(`https://108leonard.com/images/5_availability/floorplans/residence_${this.props.letter}.svg`)
     .then((res) => {
       
 
@@ -79,6 +79,14 @@ export default class ListItem extends Component {
     .catch((err) => {
       exists = false;
       console.log(`error fetching local floorplan ${err}`);
+      
+      this.setState({
+        floorplanState: true,
+        clickedFloorplan: false,
+        planExists: exists
+      });
+
+      this.props.onViewFloorplanClick(id, true, this.state.planExists);
     });
 
     if (window.location.origin === 'https://108leonard.com') {
