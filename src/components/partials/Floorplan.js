@@ -289,7 +289,11 @@ class Floorplan extends Component {
           </div>
           </div>
         :
-          <ComingSoon availMessage='Please contact the sales gallery at <a class="grey-link" href="tel:2127751080">212 775 1080</a> for more information.'/>
+          <ComingSoon 
+            availMessage='Please contact the sales gallery at <a class="grey-link" href="tel:2127751080">212 775 1080</a> for more information.'
+            metaTitle='108 Leonard | Available apartments for sale in Tribeca NYC.'
+            metaDescription='Please contact the sales gallery for current availability.'
+          />
         }
       </div>
     );
