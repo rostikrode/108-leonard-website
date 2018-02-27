@@ -57,11 +57,11 @@ export default class ListItem extends Component {
 
     // check if floorplan exists
     let exists = true;
-    fetch(`https://108leonard.com/images/5_availability/floorplans/residence_${this.props.letter}.svg`)
+    fetch(`https://s3.amazonaws.com/108leonard.com/images/5_availability/floorplans/residence_${this.props.letter}.svg`)
     .then((res) => {
       
 
-      if (res.status === 404) {
+      if (res.status >= 400) {
         exists = false;
       } else {
         exists = true;
