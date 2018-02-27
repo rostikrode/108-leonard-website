@@ -18,6 +18,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  z-index: 900;
 }
 
 .floating-filter.show {
@@ -51,6 +52,15 @@
 .floating-filter-item span {
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.close-filter-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 800;
 }
 
 @media (min-width: 480px) and (max-width: 767px) and (orientation: landscape) {

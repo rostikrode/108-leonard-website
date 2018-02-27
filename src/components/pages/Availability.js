@@ -89,9 +89,20 @@ export default class Availability extends Component {
           };
         }
       }
+
+      let bedSorted = parsed.sort(
+        function(a, b){
+            return a['bedrooms']-b['bedrooms'];
+        }
+      );
+      let priceSorted = bedSorted.sort(
+        function(a, b){
+            return a['price']-b['price'];
+        }
+      );
       this.setState({
-        residences: tempRes > 0 ? tempRes : parsed,
-        allResidences: parsed
+        residences: tempRes > 0 ? tempRes : priceSorted,
+        allResidences: priceSorted
       });
     });
   }
@@ -152,25 +163,25 @@ export default class Availability extends Component {
   onFilterColumn(filter, arrow) {
     var newSort;
     var that = this;
-    // sort ASC
+    // sort DESC
     if (arrow === 'up') { 
       newSort = this.state.residences.sort(
         function(a, b){
           if (filter === 'residence') {
             return that.naturalSorter(a[filter], b[filter]);
           } else {
-            return parseInt(a[filter], 10) - parseInt(b[filter], 10);
+            return parseInt(b[filter], 10)-parseInt(a[filter], 10);
           }
         }
       );
     } else {
-      //sort DESC
+      //sort ASC
       newSort = this.state.residences.sort(
         function(a, b){
           if (filter === 'residence') {
             return that.naturalSorter(b[filter], a[filter]);
           } else {
-            return parseInt(b[filter], 10)-parseInt(a[filter], 10);
+            return parseInt(a[filter], 10) - parseInt(b[filter], 10); 
           }
         }
       );
@@ -194,6 +205,7 @@ export default class Availability extends Component {
       });
     }
   }
+
   onViewClick(open) {
     // closing the filter overlay when clicking on view btn as well
     this.btnElement.classList.toggle('blue');

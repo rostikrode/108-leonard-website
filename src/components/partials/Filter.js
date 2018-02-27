@@ -123,6 +123,10 @@ export default class Filter extends Component {
     this.props.onViewClick(false);
   }
 
+  closeFilter() {
+    this.props.onViewClick(false);
+  }
+
   render() {
     return (
       <div className="filter">
@@ -175,6 +179,8 @@ export default class Filter extends Component {
           </div>
           <Button name="View" onClick={this.onViewClick} />
         </div>
+
+        {this.props.filterOverlay ? <div className="close-filter-overlay" onClick={this.closeFilter.bind(this)}/>: ''}
         
         <div className="header-filter list-row" ref={e => this.filterlist = e}>
             <button data-filter="residence" className="filter-row list-cell" onClick={this.onFilterColumn}>

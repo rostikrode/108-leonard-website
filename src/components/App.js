@@ -10,8 +10,8 @@ import Availability from './pages/Availability';
 // import ComingSoon from './partials/ComingSoon';
 import AvailabilityShare from './pages/AvailabilityShare';
 import Contact from './pages/Contact';
-import PressList from './pages/PressList';
-import PressArticle from './pages/PressArticle';
+// import PressList from './pages/PressList';
+// import PressArticle from './pages/PressArticle';
 import Legal from './pages/Legal';
 import Home from './pages/Home';
 
@@ -23,7 +23,7 @@ import contactJSON from './data/contact.json';
 import residencesJSON from './data/residences.json';
 import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
-import pressJSON from './data/press.json';
+// import pressJSON from './data/press.json';
 import legalJSON from './data/legal.json';
 import homeJSON from './data/home.json';
 
@@ -258,10 +258,10 @@ export default class App extends Component {
             <Route exact path="/availability/:residence" render={(props) => ( <Availability {...props} {...availabilityJSON} /> )} />
             <Route exact path="/share/" render={(props) => ( <AvailabilityShare {...props} /> )} />
             <Route exact path="/team/" render={(props) =>  ( <Carousel {...teamJSON} sendSlider={this.sendSlider.bind(this)} subnavs={this.state.subnavs} /> )} />
-
+            {/*
             <Route exact path="/press/" render={(props) => ( <PressList {...pressJSON} /> )} />
             <Route path="/press/:publication/:article/" render={(props) => ( <PressArticle {...props} {...pressJSON} /> )} />
-
+            */}
             <Route exact path="/legal/" render={(props) => ( <Legal {...legalJSON} /> )} />
             
             <Route path="/404/" component={NotFound} />
