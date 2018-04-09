@@ -4,6 +4,8 @@ import {NavLink} from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 // import brochure from '../../assets/brochure.svg';
 import logoText from '../../assets/108_leonard_text.svg';
+import insta from '../../assets/insta.svg';
+import facebook from '../../assets/facebook.svg';
 import '../../styles/Header.css';
 
 let currentPage = '';
@@ -252,6 +254,14 @@ this.onSubClick(e);
                   <NavLink data-type="carousel" activeClassName="active" id="team-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e);}} strict exact to="/team/">Team</NavLink>
                   <NavLink data-type="" activeClassName="active" id="press-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e);}} strict exact to="/press/">Press</NavLink>
                   <NavLink data-type="" activeClassName="active" id="legal-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e);}} strict exact to="/legal/">Legal</NavLink>
+                </div>
+                <div className="social-icons">
+                  <a rel="noopener noreferrer" href="https://www.instagram.com/108_leonard/" target="_blank" >
+                    <img className="insta" src={insta} alt="Instagram @108_leonard" />
+                  </a>
+                  <a rel="noopener noreferrer" href="https://www.facebook.com/108leonardst/" target="_blank" >
+                    <img className="facebook" src={facebook} alt="Facebook at 108leonardst" />
+                  </a>
                 </div>
                 {/*<a className="link sans-medium brochure" href="/placeholder.pdf" target="_blank">
                   <img src={brochure} alt="brochure icon" />

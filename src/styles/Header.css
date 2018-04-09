@@ -370,3 +370,30 @@ nav {
   margin-top: -4px;
   margin-right: 4px;
 }
+
+.social-icons {
+  width: 100%;
+  height: auto; max-height: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  display: block;
+  margin: 5px;
+}
+.social-icons a img{
+  opacity: 0.5;
+  display: block;
+  width: 40px; height: 40px;
+}
+
+.social-icons a:hover img {
+  opacity: 0.8;
+}
+
+.social-icons a:active img{
+  opacity: 1;
+}
