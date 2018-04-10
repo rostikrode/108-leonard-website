@@ -252,7 +252,7 @@ this.onSubClick(e);
             <div className="footer" ref={(el) => this.footer = el}>
                 <div className="footer-pages">
                   <NavLink data-type="carousel" activeClassName="active" id="team-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e);}} strict exact to="/team/">Team</NavLink>
-                  <NavLink data-type="" activeClassName="active" id="press-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e);}} strict exact to="/press/">Press</NavLink>
+                  {/*<NavLink data-type="" activeClassName="active" id="press-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e);}} strict exact to="/press/">Press</NavLink>*/}
                   <NavLink data-type="" activeClassName="active" id="legal-0" className="nav-anchor sans-medium" onClick={(e)=>{this.onNavItemClick(e);}} strict exact to="/legal/">Legal</NavLink>
                 </div>
                 <div className="social-icons">
