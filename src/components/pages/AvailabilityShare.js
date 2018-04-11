@@ -20,6 +20,7 @@ export default class AvailabilityShare extends Component {
       fromlast: '',
       fromemail: '',
       residenceurl: '',
+      residencesList: [],
       submitMessage: '',
       error: ''
     };
@@ -104,6 +105,13 @@ export default class AvailabilityShare extends Component {
     var slug = '';
     var phrase = '';
     this.state.checkboxArray.forEach((value, index) => {
+      this.setState(prevState => ({
+        residencesList: [...prevState.residencesList, {
+          res: `${value}`,
+          url: `${window.location.origin}/availability/${value}/`
+        }]
+      }));
+
       if(index === (this.state.checkboxArray.length - 1)) {
         slug += `${value}`;
         if (this.state.checkboxArray.length === 1) {
@@ -137,6 +145,7 @@ export default class AvailabilityShare extends Component {
             toname: `${this.state.tofirst} ${this.state.tolast}`,
             toemail: this.state.toemail,
             residences: this.state.residencephrase,
+            residencesList: this.state.residencesList,
             url: this.state.residenceurl
           },
           To: this.state.toemail,
