@@ -171,6 +171,38 @@ export default class AvailabilityShare extends Component {
             this.setState({
               submitMessage: <div className="response-message"><p className="sans-light-bold upper">Thank you for your interest in 108&nbsp;Leonard.</p><p className="sans-light-bold upper">Your email has been sent to {this.state.toemail}</p></div>
             });
+            
+            // send share email to info@108leonard.com also
+            var secondemaildata = {
+              projectname: '108leonard',
+              Subject: `${this.state.fromfirst} ${this.state.fromlast} shared Residences ${this.state.residencephrase} with  ${this.state.tofirst} ${this.state.tolast}`,
+              From: '108Leonard Web Admin <info@108leonard.com>',
+              To: '108Leonard Sales Team <info@108leonard.com>',
+              Text: `From:\n${this.state.fromfirst} ${this.state.fromlast} <${this.state.fromemail}>\n\nTo:\n${this.state.tofirst} ${this.state.tolast} <${this.state.toemail}>\n\nShared Residences:\n${this.state.residencephrase}`
+            };
+            fetch('https://form.api.dbxd.com/post-email', {
+              method: 'POST',
+              mode: 'cors',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(secondemaildata)
+            }).then((response) => {
+              console.log(response.status === 200 ? `posted ok ${response.status}` : 'error');
+              return response.text();
+            }).then((data) => {
+              var jsonData = JSON.parse(data);
+    
+              if(jsonData.success) {
+                console.log("send second smart email: success - no error");
+              } else {
+                console.log('send second smart email: success - INTERNAL ERROR', jsonData);
+              }
+            }).catch((err) => {
+              console.log('send second smart email error ', err);
+            });
+
           } else {
             console.log('send smart email: success - INTERNAL ERROR', jsonData);
             this.setState({
