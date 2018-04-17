@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import close_thin_blue from '../../assets/close_thin_blue.svg';
 
 export default class PressArticle extends Component {
   constructor(props) {
@@ -57,9 +58,16 @@ export default class PressArticle extends Component {
       .replace(/-+$/, '');            // Trim - from end of text
   }
 
+  closeBtnClick() {
+    console.log('beh');
+    this.props.history.push('/press/');
+  }
+
   render() {
     return (
       <div className='press-article' ref={e => {this.article = e;}}>
+        <button className="close-btn" onClick={this.closeBtnClick.bind(this)}><img src={close_thin_blue} alt="close btn" className="close-btn-img" width="25" height="25" /></button>
+
         <div className="press-item not-active">
           <h2 className="publication sans-light-bold upper">{this.state.entry.publisher}</h2>
           <h5 className="title sans">{this.state.entry.title}</h5>
