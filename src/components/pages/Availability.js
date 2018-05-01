@@ -81,6 +81,15 @@ export default class Availability extends Component {
           let residencePDFFileName = letter;
           let residenceSVGFileName = letter;
           switch(letter) {
+            case 'A':
+              if ((number >= 4) && (number <= 12)) {
+                residenceSVGFileName = 'A';
+                residencePDFFileName = 'A_4-12';
+              } else {
+                residenceSVGFileName =  'A';
+                residencePDFFileName = 'A';
+              }
+              break;
             case 'B':
               if ((number >= 3) && (number <= 6)) {
                 residenceSVGFileName = 'B_3-6';
@@ -88,6 +97,9 @@ export default class Availability extends Component {
               } else if ((number >= 7) && (number <= 12)) {
                 residenceSVGFileName = 'B';
                 residencePDFFileName = 'B_7-12';
+              } else if (number === 12) {
+                residenceSVGFileName =  'B';
+                residencePDFFileName = 'B_12';
               } else {
                 residenceSVGFileName =  'B';
                 residencePDFFileName = 'B';
@@ -103,6 +115,33 @@ export default class Availability extends Component {
               } else {
                 residenceSVGFileName = 'C';
                 residencePDFFileName = 'C';
+              }
+              break;
+            case 'E':
+              if ((number >= 4) && (number <= 12)) {
+                residenceSVGFileName = 'E';
+                residencePDFFileName = 'E_4-12';
+              } else {
+                residenceSVGFileName = 'E';
+                residencePDFFileName = 'E';
+              }
+              break;
+            case 'F':
+              if ((number >= 3) && (number <= 12)) {
+                residenceSVGFileName = 'F';
+                residencePDFFileName = 'F_3-12';
+              } else {
+                residenceSVGFileName = 'F';
+                residencePDFFileName = 'F';
+              }
+              break;
+            case 'G':
+              if ((number >= 7) && (number <= 12)) {
+                residenceSVGFileName = 'G';
+                residencePDFFileName = 'G_7-12';
+              } else {
+                residenceSVGFileName = 'G';
+                residencePDFFileName = 'G';
               }
               break;
             case 'H':
@@ -129,10 +168,16 @@ export default class Availability extends Component {
                 residencePDFFileName = 'L';
               }
               break;
+            case 'M':
+              if ((number >= 5) && (number <= 12)) {
+                residenceSVGFileName = 'M';
+                residencePDFFileName = 'M_5-12';
+              } else {
+                residenceSVGFileName = 'M';
+                residencePDFFileName = 'M';
+              }
+              break;
             case 'N':
-              residenceSVGFileName = 'N';
-              residencePDFFileName = 'N';
-      
               if ((number >= 6) && (number <= 12)) {
                 residenceSVGFileName = 'N_6-12';
                 residencePDFFileName = 'N';
