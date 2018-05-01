@@ -349,10 +349,12 @@ export default class Contact extends Component {
       this.doValidation(e);
       if (_valid) {
         // form submit to Google Analytics too
-        window.gtag('event', 'contact_form_submit', {
-          'event_category': 'forms',
-          'event_label': window.location.href
-        });
+        if (window.location.origin === 'https://108leonard.com') {
+          window.gtag('event', 'contact_form_submit', {
+            'event_category': 'forms',
+            'event_label': window.location.href
+          });
+        }
 
 
         var data = {};
