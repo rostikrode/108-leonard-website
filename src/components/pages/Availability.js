@@ -94,9 +94,9 @@ export default class Availability extends Component {
               if ((number >= 3) && (number <= 6)) {
                 residenceSVGFileName = 'B_3-6';
                 residencePDFFileName = 'B_3-6';
-              } else if ((number >= 7) && (number <= 12)) {
+              } else if ((number >= 7) && (number <= 10)) {
                 residenceSVGFileName = 'B';
-                residencePDFFileName = 'B_7-12';
+                residencePDFFileName = 'B_7-10';
               } else if (number === 12) {
                 residenceSVGFileName =  'B';
                 residencePDFFileName = 'B_12';
@@ -157,7 +157,7 @@ export default class Availability extends Component {
               }
               break;
             case 'L':
-              if ((number >= 3) && (number <= 6)) {
+              if ((number >= 4) && (number <= 6)) {
                 residenceSVGFileName = 'L_4-6';
                 residencePDFFileName = 'L_4-6'; 
               } else if ((number >= 7) && (number <= 12)) {
@@ -180,7 +180,10 @@ export default class Availability extends Component {
             case 'N':
               if ((number >= 6) && (number <= 12)) {
                 residenceSVGFileName = 'N_6-12';
-                residencePDFFileName = 'N';
+                residencePDFFileName = 'N_6-12';
+              } else if (number === 4) {
+                residenceSVGFileName = 'N';
+                residencePDFFileName = 'N_4';
               } else {
                 residenceSVGFileName = 'N';
                 residencePDFFileName = 'N';
