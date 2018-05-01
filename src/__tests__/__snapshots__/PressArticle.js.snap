@@ -4,6 +4,18 @@ exports[`renders without crashing 1`] = `
 <div
   className="press-article"
 >
+  <button
+    className="close-btn"
+    onClick={[Function]}
+  >
+    <img
+      alt="close btn"
+      className="close-btn-img"
+      height="25"
+      src="close_thin_blue.svg"
+      width="25"
+    />
+  </button>
   <div
     className="press-item not-active"
   >

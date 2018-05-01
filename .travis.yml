@@ -21,7 +21,7 @@ deploy:
       branch: "master"
 language: node_js
 node_js:
-  - "6"
+  - "lts/*"
 install: yarn
 script: 
   - yarn run build
