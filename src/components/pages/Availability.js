@@ -75,10 +75,84 @@ export default class Availability extends Component {
       var parsed = [];
       for (var i in json) {
         if (json[i]) {
+          // get the specific floorplan file for PDF or SVG based on both letter AND number
+          let number = parseInt(json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[0], 10);
+          let letter = json[i]['unit_num'].indexOf('PH') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[1];
+          let residencePDFFileName = letter;
+          let residenceSVGFileName = letter;
+          switch(letter) {
+            case 'B':
+              if ((number >= 3) && (number <= 6)) {
+                residenceSVGFileName = 'B_3-6';
+                residencePDFFileName = 'B_3-6';
+              } else if ((number >= 7) && (number <= 12)) {
+                residenceSVGFileName = 'B';
+                residencePDFFileName = 'B_7-12';
+              } else {
+                residenceSVGFileName =  'B';
+                residencePDFFileName = 'B';
+              }
+              break;
+            case 'C':
+              if ((number >= 3) && (number <= 6)) {
+                residenceSVGFileName = 'C_3-6';
+                residencePDFFileName = 'C_3-6';
+              } else if ((number >= 7) && (number <= 12)) {
+                residenceSVGFileName = 'C';
+                residencePDFFileName = 'C_7-12';
+              } else {
+                residenceSVGFileName = 'C';
+                residencePDFFileName = 'C';
+              }
+              break;
+            case 'H':
+              if ((number >= 4) && (number <= 6)) {
+                residenceSVGFileName = 'H_4-6';
+                residencePDFFileName = 'H_4-6';
+              } else if ((number >= 7) && (number <= 12)) {
+                residenceSVGFileName = 'H';
+                residencePDFFileName = 'H_7-12';
+              } else {
+                residenceSVGFileName = 'H';
+                residencePDFFileName = 'H';
+              }
+              break;
+            case 'L':
+              if ((number >= 4) && (number <= 6)) {
+                residenceSVGFileName = 'L_4-6';
+                residencePDFFileName = 'L_4-6'; 
+              } else if ((number >= 7) && (number <= 12)) {
+                residenceSVGFileName = 'L';
+                residencePDFFileName = 'L_7-12';
+              } else {
+                residenceSVGFileName = 'L';
+                residencePDFFileName = 'L';
+              }
+              break;
+            case 'N':
+              residenceSVGFileName = 'N';
+              residencePDFFileName = 'N';
+      
+              if ((number >= 6) && (number <= 12)) {
+                residenceSVGFileName = 'N_6-12';
+                residencePDFFileName = 'N';
+              } else {
+                residenceSVGFileName = 'N';
+                residencePDFFileName = 'N';
+              }
+              break;
+            default: 
+              residenceSVGFileName = letter;
+              residencePDFFileName = letter;
+              break;
+          }
           parsed[i] = {
             'id': json[i]['idx'],
             'residence': json[i]['unit_num'].indexOf('(') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'],
+            'number': parseInt(json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[0], 10),
             'letter': json[i]['unit_num'].indexOf('PH') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[1],
+            'residenceSVGFileName': residenceSVGFileName,
+            'residencePDFFileName': residencePDFFileName,
             'bedrooms': parseInt(json[i]['unit_type'].split('/')[0].split('BR')[0], 10),
             'baths': parseFloat(json[i]['unit_type'].split('/')[1].split('BA')[0]),
             'price': Math.round(json[i]['price']),

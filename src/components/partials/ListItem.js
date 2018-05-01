@@ -11,7 +11,9 @@ export default class ListItem extends Component {
     this.state = {
       floorplanState: true,
       clickedFloorplan: false,
-      planExists: true
+      planExists: true,
+      residenceSVGFileName: '',
+      residencePDFFileName: ''
     };
 
     this.handleCheck = this.handleCheck.bind(this);
