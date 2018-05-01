@@ -10,7 +10,7 @@ exports[`renders without crashing 1`] = `
     <div
       className="form-wrapper contact-form-wrapper"
     >
-      <span
+      <div
         className="velocity-error-wrapper"
       />
       <form
@@ -147,13 +147,13 @@ exports[`renders without crashing 1`] = `
             </span>
           </span>
         </div>
-        <span
+        <div
           className="input-wrapper"
         />
-        <span
+        <div
           className="input-wrapper"
         />
-        <span
+        <div
           className="input-wrapper"
         />
         <div
