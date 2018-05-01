@@ -8,13 +8,15 @@ export default class PressArticle extends Component {
       article: this.slugify(this.props.match ? this.props.match.params.article: ''),
       publication: this.slugify(this.props.match ? this.props.match.params.publication: ''),
       entry: {},
-      overflow: ''
+      overflow: '',
+      title: this.props.metaTitle,
+      desc: this.props.metaDescription
     }
   }
   componentWillMount() {
     if (window.location.origin === 'https://108leonard.com') {
       window.gtag('config', 'UA-113369414-1', {
-        'page_title': this.props.metaTitle,
+        'page_title': this.state.title,
         'page_location': window.location.href,
         'page_path': window.location.pathname
       });
@@ -22,11 +24,11 @@ export default class PressArticle extends Component {
   }
   componentDidMount() {
     /** meta data for page */
-    document.title = this.props.metaTitle;
+    document.title = this.state.title;
     if(document.getElementsByTagName('meta').description) {
-      document.getElementsByTagName('meta').description.content = this.props.metaDescription;
-      document.querySelector("meta[property='og:description']").content = this.props.metaDescription;
-      document.querySelector("meta[property='og:title']").content = this.props.metaTitle;
+      document.getElementsByTagName('meta').description.content = this.state.desc;
+      document.querySelector("meta[property='og:description']").content = this.state.desc;
+      document.querySelector("meta[property='og:title']").content = this.state.title;
     }
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href = window.location.href
@@ -43,10 +45,33 @@ export default class PressArticle extends Component {
       var pubslug = this.slugify(this.slugify(value.publisher));
       if ((artslug === this.state.article) && (pubslug === this.state.publication)) {
         this.setState({
-          entry: value
+          entry: value,
+          title: value.metatitle,
+          desc: value.metadesc
         });
       }
     });
+  }
+
+  componentDidUpdate() {
+    if (window.location.origin === 'https://108leonard.com') {
+      window.gtag('config', 'UA-113369414-1', {
+        'page_title': this.state.title,
+        'page_location': window.location.href,
+        'page_path': window.location.pathname
+      });
+    }
+    
+    document.title = this.state.title;
+    if(document.getElementsByTagName('meta').description) {
+      document.getElementsByTagName('meta').description.content = this.state.desc;
+      document.querySelector("meta[property='og:description']").content = this.state.desc;
+      document.querySelector("meta[property='og:title']").content = this.state.title;
+    }
+    if (document.querySelector("link[rel='canonical']")) {
+      document.querySelector("link[rel='canonical']").href = window.location.href
+      document.querySelector("meta[property='og:url']").content = window.location.href
+    }
   }
 
   slugify(text) {

@@ -1,7 +1,7 @@
 {
   "page": "Press",
-  "metaTitle": "108 Leonard | Press Page",
-  "metaDescription": "Press page of website",
+  "metaTitle": "Lower Manhattan luxury apartments for sale in the press.",
+  "metaDescription": "108 Leonard has attracted global media interest. Below is a small selection of the press reviews and features that have been published",
   "articles":
   [{
     "id": 0,
@@ -10,7 +10,9 @@
     "date": "3.26.18",
     "subtitle": "Amenities abound in these soon-to-open residences",
     "summary": "While 2018 has begun on a higher note, Manhattan had the lowest sales volume in six years in the fourth quarter of 2017, as buyers and sellers waited to see what the results of the new U.S. tax bill would be, according to a report from Douglas Elliman.",
-    "link": "/press/3.26.18_MansionGlobal_108Leonard.pdf"
+    "link": "/press/3.26.18_MansionGlobal_108Leonard.pdf",
+    "metatitle": "Manhattan , Brooklyn welcome new towers, boutique buildings.",
+    "metadesc": "Amenities abound in these soon-to-open residences"
   },
   {
     "id": 1,
@@ -19,7 +21,9 @@
     "date": "3.11.18",
     "subtitle": "108 Leonard launches sales",
     "summary": "De Niro Team at Douglas Elliman Real Estate has launched 108 Leonard. The Tribeca Clock Tower Building is a landmark Italian Renaissance Revival built in 1894 by architect McKin Mead & White.",
-    "link": "/press/3.11.18_REW_108Leonard.pdf"
+    "link": "/press/3.11.18_REW_108Leonard.pdf",
+    "metatitle": "108 Leonard launches sales.",
+    "metadesc": "De Niro Team at Douglas Elliman Real Estate has launched 108 Leonard. The Tribeca Clock Tower Building is a landmark Italian Renaissance Revival"
   },{
     "id": 2,
     "publisher": "Curbed",
@@ -27,7 +31,9 @@
     "date": "3.5.18",
     "subtitle": "The 14-story building will bring a total of 150 apartments to the neighborhood.",
     "summary": "Five years after the project was first announced, the converted condos within Tribeca's famed clock tower building are now ready to launch sales. The conversion, led by the Elad Group, has created 150 apartments inside the McKim, Mead & White landmark, which previously functioned as a criminal court building.",
-    "link": "/press/3.5.18_Curbed_108Leonard.pdf"
+    "link": "/press/3.5.18_Curbed_108Leonard.pdf",
+    "metatitle": "Tribeca's clock tower building conversion finally launches sales.",
+    "metadesc": "Five years after the project was first announced, the converted condos within Tribeca's famed clock tower building are now ready to launch sales"
   },
   {
     "id": 3,
@@ -36,7 +42,9 @@
     "date": "2.22.18",
     "subtitle": "",
     "summary": "The Clock Tower Building at 108 Leonard Street in Tribeca is being transformed into a residential condominium, slated to open for occupancy in early 2019. Designed by McKim, Mead & White and built in 1894 as an office building for the New York Life Insurance Company, it has undergone a complete restoration of its Italian Renaissance Revival façade by Howard L. Zimmerman Architects. The landmarked, 419,000-square-foot, 13-story building is being converted to 150 luxury condominium apartments designed by Jeffrey Beers International, with SLCE serving as architect-of-record. The restoration will complement the history of the building, juxtaposing classic details including oversized moldings and chevron-patterned oak floors with contemporary touches.",
-    "link": "/press/2.22.18_AIANewYork_InThe News_108Leonard.pdf"
+    "link": "/press/2.22.18_AIANewYork_InThe News_108Leonard.pdf",
+    "metatitle": "Clock tower building to be transformed into residential condo.",
+    "metadesc": "The Clock Tower Building at 108 Leonard Street in Tribeca is being transformed into a residential condominium."
   },{
     "id": 4,
     "publisher": "BuzzBuzzNews US",
@@ -44,7 +52,9 @@
     "date": "2.22.18",
     "subtitle": "The Peebles Corporation and Elad Group released a slew of new renderings on the teaser site for the massive redevelopment of 108 Leonard Street.",
     "summary": "The 419,000-square-foot Tribeca landmarked building is undergoing a massive mixed-use redevelopment. Plans include 152 luxury condo residences, a possible boutique hotel, 15,000 square feet of community space and a parking facility.",
-    "link": "/press/2.22.18_BuzzBuzzHome_108Leonard.pdf"
+    "link": "/press/2.22.18_BuzzBuzzHome_108Leonard.pdf",
+    "metatitle": "Tribeca landmarked building is undergoing a massive mixed-use redevelopment.",
+    "metadesc": "Plans include 152 luxury condo residences, a possible boutique hotel, 15,000 square feet of community space and a parking facility."
   },{
     "id": 5,
     "publisher": "Architectural Digest",
@@ -52,7 +62,9 @@
     "date": "2.14.18",
     "subtitle": "The Italian Renaissance Revival Building, once home to the New York Life Insurance Company and a NYC Summons Court, has been transformed by designer Jeffrey Beers.",
     "summary": "When designing apartments inside a 1894 structure, sensitivity is key. Even more so when the structure in question was originally designated for commercial use. After a meticulous facade restoration by Howard L. Zimmerman Architects, the landmarked Clock Tower Building at 108 Leonard Street in New York's TriBeCa neighborhood has been transformed by architect Jeffrey Beers into more than 150 residences. Opening in early 2019, the building posed such interior challenges as a landmarked Italian Renaissance Revival lobby and atypical interior configuration, but Beers set out with a goal in mind: \"Complement the history of the building and contrast it harmoniously\" with contemporary details.",
-    "link": "/press/2.14.18_ArchitecturalDigest_108 Leonard.pdf"
+    "link": "/press/2.14.18_ArchitecturalDigest_108 Leonard.pdf",
+    "metatitle": "White-designed clock tower building in New York City.",
+    "metadesc": "The Italian Renaissance Revival Building, once home to the New York Life Insurance Company and a NYC Summons Court, has been transformed by designer Jeffrey Beers."
   },
   {
     "id": 6,
@@ -61,7 +73,9 @@
     "date": "11.9.17",
     "subtitle": "After 17 years under scaffolding, the Clock Tower Building in Lower Manhattan reveals a restoration by Howard L. Zimmerman Architects",
     "summary": "In New York's TriBeCa neighborhood, a preservationist's dream was finally unveiled after 17 years under scaffolding. The Clock Tower Building at 108 Leonard Street, completed in 1894 by architecture firm McKim, Mead & White—the design team also behind the Brooklyn Museum, the Washington Square Park Arch, and the now-razed Penn Station, among many other iconic 19th century marvels-has revealed a facade that has returned, in a way, much to its original roots. After years of disrepair, the Italian Renaissance Revival exterior of this landmarked property has been meticulously restored by Howard L. Zimmerman Architects, down to the face of the clock on its three-story topper.",
-    "link": "/press/11.9.17_ArchitecturalDigest_108Leonard.pdf"
+    "link": "/press/11.9.17_ArchitecturalDigest_108Leonard.pdf",
+    "metatitle": "The largest landmarked property ever sold by the city of New York.",
+    "metadesc": "After 17 years under scaffolding, the Clock Tower Building in Lower Manhattan reveals a restoration by Howard L. Zimmerman Architects."
   },{
     "id": 7,
     "publisher": "Curbed",
@@ -69,7 +83,9 @@
     "date": "11.6.17",
     "subtitle": "A few small changes have been made to the landmarked building's facade",
     "summary": "Developers of Tribeca's iconic Clocktower Building, the Elad Group and the Peebles Corporation, have settled their legal woes, after the two firms both accused the other of trying to sabotage the project, and are now moving forward with plans to convert the historic building into fancy condos. A new teaser site along with a never-before-seen rendering has surfaced for the conversion project, giving an idea of what's to be expected, once transformed.",
-    "link": "/press/11.6.17_Curbed_108Leonard.pdf"
+    "link": "/press/11.6.17_Curbed_108Leonard.pdf",
+    "metatitle": "Condo conversion of tribeca's clock tower building gets new rendering.",
+    "metadesc": "A few small changes have been made to the landmarked building's facade"
   },
   {
     "id": 8,
@@ -78,6 +94,8 @@
     "date": "11.1.17",
     "subtitle": "Builders in New York's Tribeca look past Broadway for their latest residential developments",
     "summary": "Just diagonally across Broadway from 91 Leonard is a block-long landmark building topped by a clock tower that was created by McKim, Mead & White in the late 19th century as the home office of the New York Life Insurance Co. It was long known as 346 Broadway. But now that the building is being converted to condominiums, it is being marketed as 108 Leonard Street instead.",
-    "link": "/press/WSJ-11.1.17.pdf"
+    "link": "/press/WSJ-11.1.17.pdf",
+    "metatitle": "New condo projects put Leonard street on the map.",
+    "metadesc": "Builders in New York's Tribeca look past Broadway for their latest residential developments"
   }]
 }
