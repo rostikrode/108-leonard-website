@@ -127,6 +127,7 @@
 }
 .press-article .close-btn {
   position: relative;
+  right: auto; top: auto;
   right: unset; top: unset;
   margin-left: auto;
 }

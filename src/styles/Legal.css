@@ -23,7 +23,7 @@
 @media (min-width: 1024px) {
   .tab-wrapper {
     position: relative;
-    top: unset;
+    top: auto; top: unset;
     padding: 30px 0;
     justify-content: flex-start;
   }
