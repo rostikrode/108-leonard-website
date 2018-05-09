@@ -28,7 +28,8 @@ class Floorplan extends Component {
       flag: 0,
       x: 0,
       y: 0,
-      openedInstructions: false
+      openedInstructions: false,
+      resFile: ''
     }
 
     this.onCloseInfo = this.onCloseInfo.bind(this);
@@ -209,7 +210,7 @@ class Floorplan extends Component {
 
         {this.props.planExists ?
         <div>
-          <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.letter}.pdf`} onClick={this.onDownloadClick}>DOWNLOAD</a>
+          <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.residencePDFFileName}.pdf`} onClick={this.onDownloadClick}>DOWNLOAD</a>
           <div className="mobile-title floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
 
 
@@ -262,9 +263,9 @@ class Floorplan extends Component {
                           duration={300}
                           easing="ease-in-out"
                           {...zoomAnimation}>
-                            <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(/images/5_availability/floorplans/residence_${this.props.letter}.svg)` }} />
+                            <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(/images/5_availability/floorplans/residence_${this.props.residenceSVGFileName}.svg)` }} />
                           </VelocityComponent>
-                          <Img src={`/images/5_availability/floorplans/residence_${this.props.letter}.svg`} className="dbxd-floorplan mobile-fp" alt={this.props.residence} loader={<Loader />} />
+                          <Img src={`/images/5_availability/floorplans/residence_${this.props.residenceSVGFileName}.svg`} className="dbxd-floorplan mobile-fp" alt={this.props.residence} loader={<Loader />} />
                         </span>
                       </Draggable>
                       <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>

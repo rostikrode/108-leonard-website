@@ -176,8 +176,8 @@
   .app-header {
     height: calc(100vh - 64px);
     position: relative;
-    top: unset;
-    left: unset;
+    top: auto; top: unset; 
+    left: auto; left: unset;
     padding: 0;
     margin: 32px; 
     margin-right: 0;
