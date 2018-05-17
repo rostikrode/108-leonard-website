@@ -52,7 +52,7 @@ const PAGES = [{
     'data': crowncollectionJSON,
     'subnavs': [
       //'14th Floor',
-      '15th Floor',
+      'Garden Residences',
       //'Crown House',
       //'Cupola',
       //'Clocktower'
