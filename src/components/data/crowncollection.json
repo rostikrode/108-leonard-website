@@ -1,85 +1,21 @@
 {
   "page": "Crown Collection",
-  "metaTitle": "Crown Collection Page",
-  "metaDescription": "Crown Collection page of website",
+  "metaTitle": "108 Leonard | Eleven exclusive homes from The Crown Collection | NYC",
+  "metaDescription": "Eleven one-of-a-kind homes that offer owners the most desirable amenities of a city residence: theatrical volumes, grand master suites, cosseting fireplaces and majestic vistas.",
   "intro": {
-    "title": "CROWN COLLETION VOLORRUM",
-    "para": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Doneclos lacus a elit interdum consectetur. Vivamus pulv ex quis laoreet mollis, quam nisl placerat elit, ut viverra sem enim in nisi. Praest laoreet sapien et erat egestas, at efficitur lacus varius. In venenat erat non arcu semper, at elementum magna molestie. Duis lectus ipsum, scelerisque a posuere ut."
+    "title": "The Crown Collection",
+    "para": "Perched atop the handsomely restored neoclassical building stands an exclusive portfolio of eleven one-of-a-kind homes. All offer owners the most desirable amenities of a city residence: theatrical volumes, grand master suites, cosseting fireplaces and majestic vistas. Then these artfully-designed retreats amplify the luxury, providing rare features—from ceiling heights worthy of a palace to deep patios that evoke the feeling of a lush secret garden—unique to each unit. Three exceptionally-scaled penthouse residences take their cue from the building’s pinnacle architectural adornment, with sweeping wrap terraces, grand staircases and beautifully-scaled layouts. Apartments as ample and elegant as the Crown Collection are near-impossible to find elsewhere in New York City."
   },
-  "introImage": "http://via.placeholder.com/2048x1408x1356/A1C6CF/FFFFFF/?text=PH",
+  "introImage": "/images/4_crown_collection/image_crop_for_crown_collection_landing_page.jpg",
+  "introImageMobile": "/images/4_crown_collection/image_crop_for_crown_collection_landing_page_mobile.jpg",
   "introImageCaption": "",
   "section": "Intro",
   "slides": [
     {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "14th Floor",
-      "newsection": true,
-      "caption": "14th Floor - Caption 1"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "14th Floor",
-      "newsection": false,
-      "caption": "14th Floor - Caption 2"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "14th Floor",
-      "newsection": false,
-      "caption": "14th Floor - Caption 3"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
+      "src": "/images/4_crown_collection/DBOX_108LEONARD_CrownCollection_PHGarden15C.jpg",
       "section": "15th Floor",
       "newsection": true,
-      "caption": "14th Floor - Caption 1"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "15th Floor",
-      "newsection": false,
-      "caption": "15th Floor - Caption 2"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "15th Floor",
-      "newsection": false,
-      "caption": "15th Floor - Caption 3"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "Crown House",
-      "newsection": true,
-      "caption": "Crown House - Caption 1"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "Crown House",
-      "newsection": false,
-      "caption": "Crown House - Caption 2"
-    },{
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "Cupola",
-      "newsection": true,
-      "caption": "Cuppola - Caption 1"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "Cupola",
-      "newsection": false,
-      "caption": "Cuppola - Caption 2"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "Clocktower",
-      "newsection": true,
-      "caption": "Clocktower - Caption 1"
-    }, {
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "Clocktower",
-      "newsection": false,
-      "caption": "Clocktower - Caption 2"
-    },{
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "Clocktower",
-      "newsection": false,
-      "caption": "Clocktower - Caption 3"
-    },{
-      "src": "/images/4_crown_collection/ph.png",
-      "section": "Clocktower",
-      "newsection": false,
-      "caption": "Clocktower - Caption 4"
+      "caption": "Great room with dual exposures and secluded terraces"
     }
   ],
   "settings":{
