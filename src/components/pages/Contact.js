@@ -71,7 +71,7 @@ export default class Contact extends Component {
           id: 29773
         },
         {
-          name: 'PENTHOUSE',
+          name: 'CROWN COLLECTION PENTHOUSE',
           id: 29774
         }
       ],
