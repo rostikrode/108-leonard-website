@@ -4,7 +4,7 @@
   "metaDescription": "Eleven one-of-a-kind homes that offer owners the most desirable amenities of a city residence: theatrical volumes, grand master suites, cosseting fireplaces and majestic vistas.",
   "intro": {
     "title": "The Crown Collection",
-    "para": "Perched atop the handsomely restored neoclassical building stands an exclusive portfolio of eleven one-of-a-kind homes. All offer owners the most desirable amenities of a city residence: theatrical volumes, grand master suites, cosseting fireplaces and majestic vistas. Then these artfully-designed retreats amplify the luxury, providing rare features—from ceiling heights worthy of a palace to deep patios that evoke the feeling of a lush secret garden—unique to each unit."
+    "para": "Perched atop the handsomely restored neoclassical building stands an exclusive portfolio of eleven unparalleled residences. These penthouses offer the most desirable attributes: theatrical volumes, majestic vistas, grand master suites and many have romantic fireplaces. Extraordinary ceiling heights up to over 16 feet are paired with dramatic soaring windows framing shimmering panoramas."
   },
   "introImage": "/images/4_crown_collection/image_crop_for_crown_collection_landing_page.jpg",
   "introImageMobile": "/images/4_crown_collection/image_crop_for_crown_collection_landing_page_mobile.jpg",
@@ -29,7 +29,7 @@
     "arrow": true,
     "responsive": [{ 
         "breakpoint": 1024, 
-        "settings": "unslick" 
+        "settings": "unslick"
     }]
   },
   "nextPageTitle": "Availability",
