@@ -468,6 +468,24 @@
   text-align: center;
   font-size: 14px;
 }
+.crown-copy p a,
+.crown-copy p a.grey-link {
+	text-decoration: none;
+	color: rgba(0,0,0, 0.5);
+	white-space: nowrap;
+}
+.crown-copy p a:visited,
+.crown-copy p a:hover,
+.crown-copy p a:active,
+.crown-copy p a:focus,
+.crown-copy p .grey-linka:visited,
+.crown-copy p .grey-linka:hover,
+.crown-copy p .grey-linka:active,
+.crown-copy p .grey-linka:focus {
+	text-decoration: none;
+	color: #000000;
+}
+
 
 
 @media (min-width: 1366px) {
