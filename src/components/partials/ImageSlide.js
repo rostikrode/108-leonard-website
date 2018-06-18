@@ -36,6 +36,18 @@ export default class ImageSlide extends Component {
           <div className="image-wrapper">
             <Img src={this.props.slide.src} loader={<Loader />} alt={this.props.slide.caption} onLoad={()=> {this.props.onIntroImgLoad();}} />
 
+            {this.props.slide.lastsection ?
+            
+              this.props.page === 'Crown Collection' ?
+                <div className="caption-wrapper crown-copy">
+                  <h1 className="sans-bold">The Crown Collection</h1>
+                  <p className="serif">Please register to receive more information as additional penthouses are revealed.</p>
+                </div>
+              :
+              
+                ''
+            : '' }
+
             {this.props.slide.detail ? 
               <button className={`serif detail-info-button ${this.state.slidUp ? 'hide' : 'show'}`} onClick={this.onInfoButtonClick} ref={e => {this.infobutton = e}}>i</button>
               :''

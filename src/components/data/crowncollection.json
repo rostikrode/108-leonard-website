@@ -16,6 +16,12 @@
       "section": "",
       "newsection": false,
       "caption": "Great room with dual exposures and secluded terraces"
+    }, {
+      "src": "/images/4_crown_collection/blank_white.jpg",
+      "section": "",
+      "newsection": false,
+      "lastsection":true,
+      "caption": ""
     }
   ],
   "settings":{
@@ -32,6 +38,6 @@
         "settings": "unslick"
     }]
   },
-  "nextPageTitle": "Availability",
-  "nextPageSlug": "/availability/"
+  "nextPageTitle": "REGISTER",
+  "nextPageSlug": "/contact/"
 }

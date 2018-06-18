@@ -19,8 +19,12 @@ const NextPage = (props) => {
   return (
     <NavLink className="nav-anchor serif-bold next-button" strict exact to={props.nextPageSlug} onClick={() => {
 props.nextButton(props.nextPageTitle)
-;}}>
+;}}>  
+    {props.page === 'Crown Collection' ?
+      <span>{props.nextPageTitle}</span>
+    :
       <span>Go to {props.nextPageTitle}</span>
+    }
       <img src={next_arrow} alt="arrow to take you to next carousel page"/>
     </NavLink>
   );
@@ -385,7 +389,7 @@ export default class Carousel extends Component {
         </button>
 
         {this.props.nextPageTitle ?
-          <NextPage {...this.props} nextButton={this.onNextButton.bind(this)} />
+          <NextPage {...this.props} page= {this.props.page} nextButton={this.onNextButton.bind(this)} />
         : undefined}
       </div>
     );
