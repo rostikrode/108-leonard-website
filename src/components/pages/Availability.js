@@ -112,6 +112,9 @@ export default class Availability extends Component {
               } else if ((number >= 7) && (number <= 12)) {
                 residenceSVGFileName = 'C';
                 residencePDFFileName = 'C_7-12';
+              } else if (number === 15) {
+                residenceSVGFileName = 'C_15';
+                residencePDFFileName = 'C_15';
               } else {
                 residenceSVGFileName = 'C';
                 residencePDFFileName = 'C';
