@@ -438,7 +438,17 @@ export default class Availability extends Component {
           duration={500} 
           easing={this.state.floorplanState ? 'ease-out': 'ease-in'}
           animation={this.state.floorplanState ? 'fadeIn': 'fadeOut'}>
-          <Floorplan {...this.state.floorplanResidenceArray} intft={this.delimitNumbers(this.state.floorplanResidenceArray.interior)} intsqm={this.sqmFormat(this.state.floorplanResidenceArray.interior)} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} planExists={this.state.planExists} />
+          <Floorplan 
+            {...this.state.floorplanResidenceArray} 
+            intft={this.delimitNumbers(this.state.floorplanResidenceArray.interior)} 
+            intsqm={this.sqmFormat(this.state.floorplanResidenceArray.interior)} 
+            hasext={this.state.floorplanResidenceArray.exterior > 1 ? true : false}
+            extft={this.delimitNumbers(this.state.floorplanResidenceArray.exterior)} 
+            extsqm={this.sqmFormat(this.state.floorplanResidenceArray.exterior)} 
+            fstate={true} 
+            onCloseBtnClick={this.onCloseBtnClick.bind(this)} 
+            planExists={this.state.planExists} 
+          />
       </VelocityComponent>
       </div>
     );

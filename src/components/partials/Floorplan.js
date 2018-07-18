@@ -88,6 +88,7 @@ class Floorplan extends Component {
     }
   }
   onOpenInfo(e) {
+    console.log(this.props.extft, typeof this.props.extft);
     this.setState({
       openedInstructions: true
     });
@@ -236,6 +237,16 @@ class Floorplan extends Component {
                   <span className="mobile-info info serif">{this.props.intft}/{this.props.intsqm} *</span>
                   <span className="desktop-info">{this.props.intft} SQ FT | {this.props.intsqm} SQ M *</span>
                 </div>
+
+                {this.props.hasext ?
+                  <div className="floorplan-interior serif">
+                    <span className="mobile-info-label label sans">EXTERIOR SQ FT/M</span>
+                    <span className="mobile-info info serif">{this.props.extft}/{this.props.extsqm} *</span>
+                    <span className="desktop-info">{this.props.extft} SQ FT | {this.props.extsqm} SQ M *</span>
+                  </div>
+                :
+                  ''
+                }
                 
                 <div className="floorplan-interior serif">
                   <span className="mobile-info-label label sans">PRICE</span>
