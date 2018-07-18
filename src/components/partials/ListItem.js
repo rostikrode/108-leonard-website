@@ -138,7 +138,7 @@ export default class ListItem extends Component {
               {this.props.exterior < 1 ?
               ''
               :
-              this.delimitNumbers(this.props.exterior)/this.sqmFormat(this.props.exterior)
+                `${this.delimitNumbers(this.props.exterior)}/${this.sqmFormat(this.props.exterior)}`
               }  
             </p>
           </div>

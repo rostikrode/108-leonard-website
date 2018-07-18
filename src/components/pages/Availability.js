@@ -197,6 +197,7 @@ export default class Availability extends Component {
               residencePDFFileName = letter;
               break;
           }
+          console.log(json[i]['outdoor_sqft'], parseInt(json[i]['outdoor_sqft'], 10));
           parsed[i] = {
             'id': json[i]['idx'],
             'residence': json[i]['unit_num'].indexOf('(') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'],
