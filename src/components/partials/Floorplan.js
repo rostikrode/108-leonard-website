@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Img from 'react-image';
 import {VelocityComponent} from 'velocity-react';
 import ComingSoon from './ComingSoon';
 import Draggable from 'react-draggable';
@@ -11,13 +10,6 @@ import close_thin from '../../assets/close_thin.svg';
 import close_thin_blue from '../../assets/close_thin_blue.svg';
 
 var zoomAnimation = {};
-const Loader = () => {
-  return (
-    <div className="loading-wrapper">
-      <i className="loading" />
-    </div>
-  );
-}
 
 class Floorplan extends Component {
   constructor(props) {
@@ -276,13 +268,13 @@ class Floorplan extends Component {
                           {...zoomAnimation}>
                             <div className="dbxd-floorplan desktop-fp" onMouseDown={this.onMouseDown} onMouseUp={this.onZoomFloorplan} style={{ backgroundImage: `url(/images/5_availability/floorplans/residence_${this.props.residenceSVGFileName}.svg)` }} />
                           </VelocityComponent>
-                          <Img src={`/images/5_availability/floorplans/residence_${this.props.residenceSVGFileName}.svg`} className="dbxd-floorplan mobile-fp" alt={this.props.residence} loader={<Loader />} />
+                          <img src={`/images/5_availability/floorplans/residence_${this.props.residenceSVGFileName}.svg`} className="dbxd-floorplan mobile-fp" alt={this.props.residence} />
                         </span>
                       </Draggable>
                       <div className="dbxd-tutorial-wrapper hide" ref={e => {this.tutorial = e}}>
                         <div className="dbxd-tutorial-list">
                           <button title="close info window button" className="dbxd-close" onClick={this.onCloseInfo}>
-                            <Img src={close_thin} loader={<Loader />} alt="close floorplan" />
+                            <img src={close_thin} alt="close floorplan" />
                           </button>
                           <div className="sans dbxd-feat pan_clickdrag">Click to zoom. Click and drag to pan.<br/>Pinch to zoom on mobile and tablet.</div>
                         </div>
