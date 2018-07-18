@@ -197,7 +197,6 @@ export default class Availability extends Component {
               residencePDFFileName = letter;
               break;
           }
-          console.log(json[i]['outdoor_sqft'], parseInt(json[i]['outdoor_sqft'], 10));
           parsed[i] = {
             'id': json[i]['idx'],
             'residence': json[i]['unit_num'].indexOf('(') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'],
@@ -439,7 +438,17 @@ export default class Availability extends Component {
           duration={500} 
           easing={this.state.floorplanState ? 'ease-out': 'ease-in'}
           animation={this.state.floorplanState ? 'fadeIn': 'fadeOut'}>
-          <Floorplan {...this.state.floorplanResidenceArray} intft={this.delimitNumbers(this.state.floorplanResidenceArray.interior)} intsqm={this.sqmFormat(this.state.floorplanResidenceArray.interior)} fstate={true} onCloseBtnClick={this.onCloseBtnClick.bind(this)} planExists={this.state.planExists} />
+          <Floorplan 
+            {...this.state.floorplanResidenceArray} 
+            intft={this.delimitNumbers(this.state.floorplanResidenceArray.interior)} 
+            intsqm={this.sqmFormat(this.state.floorplanResidenceArray.interior)} 
+            hasext={this.state.floorplanResidenceArray.exterior > 1 ? true : false}
+            extft={this.delimitNumbers(this.state.floorplanResidenceArray.exterior)} 
+            extsqm={this.sqmFormat(this.state.floorplanResidenceArray.exterior)} 
+            fstate={true} 
+            onCloseBtnClick={this.onCloseBtnClick.bind(this)} 
+            planExists={this.state.planExists} 
+          />
       </VelocityComponent>
       </div>
     );
