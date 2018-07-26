@@ -19,7 +19,7 @@ import buildingJSON from './data/building.json';
 import amenitiesJSON from './data/amenities.json';
 import availabilityJSON from './data/availability.json';
 import contactJSON from './data/contact.json';
-import crowncollectionJSON from './data/crowncollection.json';
+import penthousesJSON from './data/penthouses.json';
 import residencesJSON from './data/residences.json';
 import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
@@ -46,10 +46,10 @@ const PAGES = [{
       'Bathrooms',
       // 'Landmarked Residences'
   ]}, {
-    'title': 'Crown Collection',
+    'title': 'Penthouses',
     'component': Carousel,
-    'slug': '/crown-collection/',
-    'data': crowncollectionJSON,
+    'slug': '/penthouses/',
+    'data': penthousesJSON,
     'subnavs': [
       //'14th Floor',
       // 'Garden Residences',
