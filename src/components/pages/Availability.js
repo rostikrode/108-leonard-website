@@ -69,6 +69,7 @@ export default class Availability extends Component {
   }
 
   loadResidences() {
+    // fetch('https://residences.api.dbxd.com/getunits?projectname=108leonard') /** URL of all res's for testing */
     fetch('https://residences.api.dbxd.com/getunits/available?projectname=108leonard')
     .then(response => response.json())
     .then(json => {
