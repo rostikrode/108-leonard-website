@@ -409,6 +409,9 @@ body {
 	.res,.info {
 		font-size: 24px;
 	}
+	.res {
+		font-size: 20px;
+	}
 	.sans-medium, 
 	.sans-light,
 	.sans-light-bold, 
