@@ -5,6 +5,14 @@
 # TODO
 
 
+* floor 14 and above are Penthouses (as well as 3 random ones that take up 3 whole floors)
+* 14th floor have diff name
+* 15th floor Terrace Penthouse
+* Then there are 3 diff other penthouses: Cupola, Clocktower, and Something Else that are named East, North, etc...not a typical residence name. This will need to be reflected in the avail section when times comes.
+* Penthouses filter in Filter
+* #penthouses hash URL to directly link to penthouses
+
+
 Spreadsheet of Content: https://docs.google.com/a/dbox.com/spreadsheets/d/1zllr-Hu2wBxXvHYTaQmYI32ACilYZlmRxSiFfqtqRcM/edit?usp=drive_web
 Question Document: https://docs.google.com/document/d/1-Y4RTlJCLQ15iYe9DEKmx2u_GWFvjnBUZUbL5rss00w/edit?ts=5982baa3
 Reference (design card on Trello): https://trello.com/c/KAFNvy7m/56-full-site-design

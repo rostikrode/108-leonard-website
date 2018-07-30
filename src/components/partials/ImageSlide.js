@@ -41,6 +41,7 @@ export default class ImageSlide extends Component {
               this.props.page === 'Crown Collection' ?
                 <div className="caption-wrapper crown-copy">
                   <h1 className="sans-bold">The Crown Collection</h1>
+                  <p className="serif">See <a className="grey-link" href="/availability/#penthouses">available penthouses</a>.</p>
                   <p className="serif">Please <a className="grey-link" href="/contact/">register</a> to receive more information as additional penthouses are revealed.</p>
                 </div>
               :
