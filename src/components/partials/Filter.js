@@ -53,8 +53,9 @@ export default class Filter extends Component {
           var quantityInt = parseInt(quantity, 10);
           beds.push(quantityInt);
           break;
-        case 'crowncollection':
+        case 'penthouses':
           // no idea
+          beds.push('penthouses');
           break;
         case 'price':
           var splitQ = quantity.split('-');      
@@ -69,7 +70,15 @@ export default class Filter extends Component {
     }
 
     var filterBeds = (el) => {
-      return el.bedrooms === index;
+      if (index === 'penthouses') {
+        if ((el.residence.indexOf('EAST') > -1) || (el.residence.indexOf('NORTH') > -1)) {
+          return el;
+        } else {
+          return el.number > 13;
+        }
+      } else {
+        return el.bedrooms === index;
+      }
     }
     var filterPriceBeds = (el) => {
       var start = index[0];
@@ -149,10 +158,10 @@ export default class Filter extends Component {
                 <Checkbox value="4_bedrooms" handleCheck={this.handleCheck} index="filter-checkbox-3" />
                 <span className="serif">4 bedroom</span>
               </div>
-              {/*<div className="floating-filter-item">
-                <Checkbox value="0_crowncollection" handleCheck={this.handleCheck} index="filter-checkbox-4" />
-                <span className="serif">crown collection</span>
-              </div>*/}
+              <div className="floating-filter-item">
+                <Checkbox value="0_penthouses" handleCheck={this.handleCheck} index="filter-checkbox-4" />
+                <span className="serif">Penthouses</span>
+              </div>
             </div>
             <div className="floating-filter-group">
               <div className="floating-filter-item">

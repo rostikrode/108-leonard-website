@@ -205,10 +205,16 @@ class Floorplan extends Component {
         <div>
           <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.residencePDFFileName}.pdf`} onClick={this.onDownloadClick}>DOWNLOAD</a>
           <div className="mobile-title floorplan-title sans-medium">
-            {this.props.number > 13 ?
-              'PENTHOUSE ' 
-            :
-              'RESIDENCE ' 
+            {this.props.number !== undefined ?
+              this.props.number > 13 ?
+                'PENTHOUSE ' 
+              :
+                this.props.letter.indexOf('PHNORTH') > -1 || this.props.letter.indexOf('PHEAST') > -1 ?
+                  'PENTHOUSE ' 
+                :
+                  'RESIDENCE ' 
+              :
+              ''
             }
             {this.props.residence}</div>
 
@@ -217,14 +223,20 @@ class Floorplan extends Component {
             <div className="floorplan-sidebar">
               <div className="floorplan-info mobile-stacked">
                 <div className="desktop-title floorplan-title sans-medium">
-                  {this.props.number > 13 ?
-                    this.props.number === 15 ?
-                      <span>TERRACE <br/>PENTHOUSE </span>
+                  {this.props.number !== undefined ?
+                    this.props.number > 13 ?
+                      this.props.number === 15 ?
+                        <span>TERRACE <br/>PENTHOUSE </span>
+                      :
+                        'PENTHOUSE '
+                      
                     :
-                      'PENTHOUSE '
-                    
+                      this.props.letter.indexOf('PHNORTH') > -1 || this.props.letter.indexOf('PHEAST') > -1 ?
+                        'PENTHOUSE '
+                      :
+                        'RESIDENCE '
                   :
-                    'RESIDENCE '
+                    ''
                   }
                   {this.props.residence}
                 </div>
