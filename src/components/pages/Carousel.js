@@ -20,11 +20,7 @@ const NextPage = (props) => {
     <NavLink className="nav-anchor serif-bold next-button" strict exact to={props.nextPageSlug} onClick={() => {
 props.nextButton(props.nextPageTitle)
 ;}}>  
-    {props.page === 'Crown Collection' ?
-      <span>{props.nextPageTitle}</span>
-    :
       <span>Go to {props.nextPageTitle}</span>
-    }
       <img src={next_arrow} alt="arrow to take you to next carousel page"/>
     </NavLink>
   );

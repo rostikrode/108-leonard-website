@@ -108,11 +108,27 @@ export default class ListItem extends Component {
 
   render() {
     return (
-      <div className="list-row" id={this.props.index} ref={(e) => this.listrow = e }>
+      <div className="list-row" id={this.props.id} ref={(e) => this.listrow = e }>
         <div className="list-row-wrapper">
           <div className="list-cell check-cell">
             <Checkbox value={this.props.residence} handleCheck={this.handleCheck} index={this.props.index} />
-            <h4 className="res sans"><span className="desktop-hidden">RESIDENCE</span> {this.props.residence}</h4>
+            {this.props.number > 13 ?
+              <h4 className="res sans">
+                <span className="desktop-hidden">PENTHOUSE </span> 
+                <span className="mobile-hidden">PH</span> {this.props.residence}
+              </h4>
+            :
+              this.props.residence.indexOf('EAST') > -1 || this.props.residence.indexOf('NORTH') > -1  ?
+                <h4 className="res sans">
+                  <span className="desktop-hidden">PENTHOUSE </span> 
+                  <span className="mobile-hidden">PH</span> {this.props.residence}
+                </h4>
+              :
+                <h4 className="res sans">
+                  <span className="desktop-hidden">RESIDENCE </span> 
+                  {this.props.residence}
+                </h4>
+            }
           </div>
           <div className="mobile-padding list-cell label-with-info">
             <p className="label sans">BEDROOMS</p>
@@ -154,7 +170,7 @@ export default class ListItem extends Component {
             <p className="label sans">EST MONTHLY R.E. TAXES</p>
             <p className="info serif">${this.delimitNumbers(this.props.monthlytaxes)}</p>
           </div>
-          <Button id={this.props.residence} idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" dataId={this.props.residence} onClick={this.onViewFloorplanClick} />
+          <Button id={this.props.id} idClass="list-cell floorplan-button desktop" inverted name="View Floorplan" dataId={this.props.id} onClick={this.onViewFloorplanClick} />
         </div>
       </div>
     );

@@ -69,6 +69,7 @@ export default class Availability extends Component {
   }
 
   loadResidences() {
+    // fetch('https://residences.api.dbxd.com/getunits?projectname=108leonard') /** URL of all res's for testing */
     fetch('https://residences.api.dbxd.com/getunits/available?projectname=108leonard')
     .then(response => response.json())
     .then(json => {
@@ -197,10 +198,22 @@ export default class Availability extends Component {
               residencePDFFileName = letter;
               break;
           }
+
+          var res = '';
+          if (json[i]['unit_num'].indexOf('(') > -1) {
+            if (json[i]['unit_num'].indexOf('PH') > -1) {
+              res = json[i]['unit_num'].split(' (')[0].split(' (')[0].split('PH')[1];
+            } else {
+              res = json[i]['unit_num'].split(' (')[0];
+            }
+          } else {
+            res = json[i]['unit_num'];
+          }
+            
           parsed[i] = {
             'id': json[i]['idx'],
-            'residence': json[i]['unit_num'].indexOf('(') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'],
-            'number': parseInt(json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[0], 10),
+            'residence': res,
+            'number': json[i]['unit_num'].indexOf('PH') > -1 ? 0 : parseInt(json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[0], 10),
             'letter': json[i]['unit_num'].indexOf('PH') > -1 ? json[i]['unit_num'].split(' (')[0] : json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[1],
             'residenceSVGFileName': residenceSVGFileName,
             'residencePDFFileName': residencePDFFileName,
@@ -244,21 +257,36 @@ export default class Availability extends Component {
 
   showCertainResidences(residences) {
     setTimeout(() => {
-      var resArray = residences.split('&');
       var newFilteredArray = [];
+      var filterRes;
+      if (residences === 'penthouses') {
+        filterRes = (el) => {
+          if ((el['number'] > 13) || (el.residence.indexOf('EAST') > -1)|| (el.residence.indexOf('NORTH') > -1)) {
+            return true;
+          } else {
+            return false;
+          }
+        };
 
-      var filterRes = (el) => {
-        if (el['residence'] === resArray[res]) {
-          return true;
-        } else {
-          return false;
-        }
-      };
-      for(var res in resArray) {
-        if (resArray[res]) {
-          newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
+        newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
+
+      } else {
+        var resArray = residences.split('&');
+        filterRes = (el) => {
+          if (el['residence'] === resArray[res]) {
+            return true;
+          } else {
+            return false;
+          }
+        };
+        for(var res in resArray) {
+          if (resArray[res]) {
+            newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
+          }
         }
       }
+
+      
       this.setState({
         residences: newFilteredArray
       });
@@ -377,7 +405,7 @@ export default class Availability extends Component {
     });
 
     for(var r = 0; r < this.state.residences.length; r++) {
-      if (this.state.residences[r].residence === fresidence) {
+      if (this.state.residences[r].id === fresidence) {
         this.setState({
           floorplanResidenceArray: this.state.residences[r]
         });

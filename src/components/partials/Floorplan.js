@@ -204,13 +204,42 @@ class Floorplan extends Component {
         {this.props.planExists ?
         <div>
           <a className="button download-btn desktop sans-light-bold" target="_blank" href={`/images/5_availability/pdfs/residence_${this.props.residencePDFFileName}.pdf`} onClick={this.onDownloadClick}>DOWNLOAD</a>
-          <div className="mobile-title floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
+          <div className="mobile-title floorplan-title sans-medium">
+            {this.props.number !== undefined ?
+              this.props.number > 13 ?
+                'PENTHOUSE ' 
+              :
+                this.props.letter.indexOf('PHNORTH') > -1 || this.props.letter.indexOf('PHEAST') > -1 ?
+                  'PENTHOUSE ' 
+                :
+                  'RESIDENCE ' 
+              :
+              ''
+            }
+            {this.props.residence}</div>
 
 
           <div className="floorplan-content" ref={(e) => this.el = e}>
             <div className="floorplan-sidebar">
               <div className="floorplan-info mobile-stacked">
-                <div className="desktop-title floorplan-title sans-medium">RESIDENCE {this.props.residence}</div>
+                <div className="desktop-title floorplan-title sans-medium">
+                  {this.props.number !== undefined ?
+                    this.props.number > 13 ?
+                      this.props.number === 15 ?
+                        <span>TERRACE <br/>PENTHOUSE </span>
+                      :
+                        'PENTHOUSE '
+                      
+                    :
+                      this.props.letter.indexOf('PHNORTH') > -1 || this.props.letter.indexOf('PHEAST') > -1 ?
+                        'PENTHOUSE '
+                      :
+                        'RESIDENCE '
+                  :
+                    ''
+                  }
+                  {this.props.residence}
+                </div>
                 
                 <div className="floorplan-bedrooms serif">
                   <span className="mobile-info-label label sans">BEDROOMS</span>

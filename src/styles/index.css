@@ -409,6 +409,9 @@ body {
 	.res,.info {
 		font-size: 24px;
 	}
+	.res {
+		font-size: 20px;
+	}
 	.sans-medium, 
 	.sans-light,
 	.sans-light-bold, 
@@ -485,8 +488,14 @@ body {
 .desktop-hidden {
 	display: inline;
 }
+.mobile-hidden {
+	display: none
+}
 @media (min-width: 1024px) {
 	.desktop-hidden {
 		display: none;
 	}	
+	.mobile-hidden {
+		display: inline;
+	}
 }

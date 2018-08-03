@@ -86,7 +86,7 @@
     width: 70%;
   }
   .list-cell.check-cell .res {
-    padding-left: 5px
+    padding-left: 5px;
   }
   .info {
     transform: translateY(-90%);
@@ -112,6 +112,7 @@
 
   .checkbox {
     padding-right: 20px;
+    width: 2rem;
   }
 
   .label {
@@ -161,6 +162,9 @@
   .floorplan-button.desktop {
     display: flex;
   }
+  .res {
+    width: 4.5rem;
+  }
 }
 
 @media (min-width: 1366px) {
@@ -188,6 +192,9 @@
   .list-cell, .list-cell.check-cell {
     /* width: 13rem; */
     width: 11%;
+  }
+  .res {
+    width: 7rem;
   }
 }
 /* @media (min-width: 2048px) {
