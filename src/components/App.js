@@ -15,6 +15,8 @@ import PressArticle from './pages/PressArticle';
 import Legal from './pages/Legal';
 import Home from './pages/Home';
 
+import Popup from './partials/Popup';
+
 import buildingJSON from './data/building.json';
 import amenitiesJSON from './data/amenities.json';
 import availabilityJSON from './data/availability.json';
@@ -234,6 +236,8 @@ export default class App extends Component {
     });
     return (
       <div className="App">
+        <Popup/>
+
         <Header 
           pages={PAGES} 
           page={this.state.page} 
