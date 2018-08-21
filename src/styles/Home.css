@@ -302,7 +302,7 @@
   .home-wrapper .caption-wrapper.mobile-caption-wrapper {
     display: none;
   }  */
-  .mobile-goto {
+  .mobile-goto, .next-button.mobile-goto {
     display: none;
   }
 }

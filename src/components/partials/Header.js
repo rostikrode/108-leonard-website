@@ -62,10 +62,10 @@ export default class Header extends Component {
     }
     currentPage = this.props.page;
 
-    if (this.state.alreadyPlayed) {
-      this.header.classList.remove('slide-down');
-      this.appHeader.classList.remove('slide-over');
-    }
+    // if (this.state.alreadyPlayed) {
+    //   this.header.classList.remove('slide-down');
+    //   this.appHeader.classList.remove('slide-over');
+    // }
   }
 
   onAvailabilityPage() {

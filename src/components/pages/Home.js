@@ -39,16 +39,16 @@ export default class Home extends Component {
     } 
 
     // fade in/out caption only if animation hasn't played 
-    if ((window.location.pathname === '/') && this.caption) {
-      if (!Cookies.get('alreadyPlayed')) {
-        this.caption.style.transition = 'opacity 500ms ease-in-out 2s';
-        this.caption.style.opacity = 0;
+    // if ((window.location.pathname === '/') && this.caption) {
+    //   if (!Cookies.get('alreadyPlayed')) {
+    //     this.caption.style.transition = 'opacity 500ms ease-in-out 2s';
+    //     this.caption.style.opacity = 0;
 
-        setTimeout(() => {
-          this.caption.style.opacity = 1;
-        }, 8500);
-      }
-    }
+    //     setTimeout(() => {
+    //       this.caption.style.opacity = 1;
+    //     }, 8500);
+    //   }
+    // }
   }
 
   onGoTo() {
