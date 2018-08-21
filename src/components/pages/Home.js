@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import Img from 'react-image';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import 'velocity-animate/velocity.ui';
 import Loader from '../partials/Loader';
 import '../../styles/Home.css';
@@ -39,16 +39,16 @@ export default class Home extends Component {
     } 
 
     // fade in/out caption only if animation hasn't played 
-    if ((window.location.pathname === '/') && this.caption) {
-      if (!Cookies.get('alreadyPlayed')) {
-        this.caption.style.transition = 'opacity 500ms ease-in-out 2s';
-        this.caption.style.opacity = 0;
+    // if ((window.location.pathname === '/') && this.caption) {
+    //   if (!Cookies.get('alreadyPlayed')) {
+    //     this.caption.style.transition = 'opacity 500ms ease-in-out 2s';
+    //     this.caption.style.opacity = 0;
 
-        setTimeout(() => {
-          this.caption.style.opacity = 1;
-        }, 8500);
-      }
-    }
+    //     setTimeout(() => {
+    //       this.caption.style.opacity = 1;
+    //     }, 8500);
+    //   }
+    // }
   }
 
   onGoTo() {

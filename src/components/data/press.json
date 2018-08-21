@@ -3,8 +3,39 @@
   "metaTitle": "108 Leonard | Lower Manhattan For-Sale Residences In the Press",
   "metaDescription": "108 Leonard has attracted global media interest. Below is a small selection of the press reviews and features that have been published.",
   "articles":
-  [{
-    "id": 0,
+  [
+    {
+      "id": 0,
+      "publisher": "Robb Report",
+      "title": "History Comes Alive in This New York City Penthouse",
+      "date": "7.18.18",
+      "subtitle": "",
+      "summary": "History comes alive in the very first penthouse of the 10-unit Crown Collection to be officially released for sale. Dubbed Terrace Penthouse 15C, the 3,683-square-foot sky palace features four bedrooms and five baths. Outside, over 1,500 square feet of terraces offer unrivaled views of the Big Apple.",
+      "link": "/press/Robb_Report_7.18.18.pdf",
+      "metatitle": "History Comes Alive in This New York City Penthouse",
+      "metadesc": "History comes alive in the very first penthouse of the 10-unit Crown Collection to be officially released for sale."
+    },{
+      "id": 1,
+      "publisher": "Wall Street Journal",
+      "title": "A Honed or Glossy Marble Tub. Who Decides?",
+      "date": "7.13.18",
+      "subtitle": "",
+      "summary": "As the market for high-end condos in New York and California gets crowded, developers seek brokers who understand buyers' needs for input on finishes and layouts. Without their input early on, brokers say, a developer may make critical decisions that will hurt sales. Raphael De Niro, an agent who heads his own team at Douglas Elliman Real Estate, has invested several years in the development of 108 Leonard-a landmark McKim, Mead and White building in New York's Tribeca neighborhood. \"Before the building was even acquired, I was touring it with one of the developers,\" Mr. De Niro said.",
+      "link": "/press/WSJ_7.13.18_Print.pdf",
+      "metatitle": "A Honed or Glossy Marble Tub. Who Decides?",
+      "metadesc": "As the market for high-end condos in New York and California gets crowded, developers seek brokers who understand buyers' needs for input on finishes and layouts."
+    },{
+      "id": 2,
+      "publisher": "Curbed",
+      "title": "15 New Developments Set to Transform Tribeca, Mapped",
+      "date": "5.23.18",
+      "subtitle": "",
+      "summary": "For a while now, Tribeca has reigned supreme as New York City's priciest neighborhood, with artists' lofts-turned-condos and celeb-approved buildings boosting the once-industrial area's cachet. And with a spate of high-end new developments in the works like 108 Leonard Street, that's unlikely to change anytime soon.",
+      "link": "/press/5.23.18_Curbed_108_Leonard.pdf",
+      "metatitle": "15 New Developments Set to Transform Tribeca, Mapped",
+      "metadesc": "For a while now, Tribeca has reigned supreme as New York City's priciest neighborhood, with artists' lofts-turned-condos and celeb-approved buildings boosting the once-industrial area's cachet."
+    },{
+    "id": 3,
     "publisher": "Mansion Global",
     "title": "Manhattan, Brooklyn Welcome New Towers, Boutique Buildings",
     "date": "3.26.18",
@@ -15,7 +46,7 @@
     "metadesc": "Amenities abound in these soon-to-open residences"
   },
   {
-    "id": 1,
+    "id": 4,
     "publisher": "Real Estate Weekly",
     "title": "NEW DEVELOPMENT: Rollins launches at Essex Crossing Elad, Peebles introduce 108 Leonard",
     "date": "3.11.18",
@@ -25,7 +56,7 @@
     "metatitle": "108 Leonard launches sales.",
     "metadesc": "De Niro Team at Douglas Elliman Real Estate has launched 108 Leonard. The Tribeca Clock Tower Building is a landmark Italian Renaissance Revival"
   },{
-    "id": 2,
+    "id": 5,
     "publisher": "Curbed",
     "title": "Tribeca's clock tower building conversion finally launches sales from $1.5M",
     "date": "3.5.18",
@@ -36,7 +67,7 @@
     "metadesc": "Five years after the project was first announced, the converted condos within Tribeca's famed clock tower building are now ready to launch sales"
   },
   {
-    "id": 3,
+    "id": 6,
     "publisher": "AIA New York",
     "title": " Counting the Hours: The Clock Tower Building to be transformed into residential condo",
     "date": "2.22.18",
@@ -46,7 +77,7 @@
     "metatitle": "Clock tower building to be transformed into residential condo.",
     "metadesc": "The Clock Tower Building at 108 Leonard Street in Tribeca is being transformed into a residential condominium."
   },{
-    "id": 4,
+    "id": 7,
     "publisher": "BuzzBuzzNews US",
     "title": "Get an inside look at the conversion of historic 108 Leonard Street",
     "date": "2.22.18",
@@ -56,7 +87,7 @@
     "metatitle": "Tribeca landmarked building is undergoing a massive mixed-use redevelopment.",
     "metadesc": "Plans include 152 luxury condo residences, a possible boutique hotel, 15,000 square feet of community space and a parking facility."
   },{
-    "id": 5,
+    "id": 8,
     "publisher": "Architectural Digest",
     "title": "You Can Now Live in the McKim, Mead & White-Designed Clock Tower Building in New York City",
     "date": "2.14.18",
@@ -67,7 +98,7 @@
     "metadesc": "The Italian Renaissance Revival Building, once home to the New York Life Insurance Company and a NYC Summons Court, has been transformed by designer Jeffrey Beers."
   },
   {
-    "id": 6,
+    "id": 9,
     "publisher": "Architectural Digest",
     "title": "The Largest Landmarked Property Ever Sold by the City of New York Gets a New Face",
     "date": "11.9.17",
@@ -77,7 +108,7 @@
     "metatitle": "The largest landmarked property ever sold by the city of New York.",
     "metadesc": "After 17 years under scaffolding, the Clock Tower Building in Lower Manhattan reveals a restoration by Howard L. Zimmerman Architects."
   },{
-    "id": 7,
+    "id": 10,
     "publisher": "Curbed",
     "title": "Condo conversion of Tribeca's clock tower building gets new rendering",
     "date": "11.6.17",
@@ -88,7 +119,7 @@
     "metadesc": "A few small changes have been made to the landmarked building's facade"
   },
   {
-    "id": 8,
+    "id": 11,
     "publisher": "The Wall Street Journal",
     "title": "New Condo Projects Put Leonard Street on the Map",
     "date": "11.1.17",
