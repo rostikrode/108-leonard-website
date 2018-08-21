@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import Img from 'react-image';
-import Cookies from 'js-cookie';
+// import Cookies from 'js-cookie';
 import 'velocity-animate/velocity.ui';
 import Loader from '../partials/Loader';
 import '../../styles/Home.css';
