@@ -3,7 +3,6 @@ import {NavLink} from 'react-router-dom';
 import Img from 'react-image';
 // import Cookies from 'js-cookie';
 import 'velocity-animate/velocity.ui';
-import Loader from '../partials/Loader';
 import '../../styles/Home.css';
 import next_arrow from '../../assets/next_arrow.svg';
 
@@ -60,8 +59,8 @@ export default class Home extends Component {
       <div className="home">
         <div className="home-wrapper">
           <div className="image-wrapper" >
-            <Img className="home-desktop" src={this.props.image} loader={<Loader />} alt={this.props.caption} title={this.props.imagetitle} />
-            <Img className="home-mobile" src={this.props.imageMobile} loader={<Loader />} alt={this.props.caption} title={this.props.imagetitle} />
+            <Img className="home-desktop" src={this.props.image} alt={this.props.caption} title={this.props.imagetitle} />
+            <Img className="home-mobile" src={this.props.imageMobile} alt={this.props.caption} title={this.props.imagetitle} />
           </div>
           <NavLink className="mobile-goto nav-anchor next-button" strict exact to='/building' onClick={this.onGoTo}>
             <span className="upper serif">Discover the building</span>
