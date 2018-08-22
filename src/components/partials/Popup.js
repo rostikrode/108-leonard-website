@@ -1,28 +1,29 @@
 import React from 'react';
-import Button from '../partials/Button';
+import {NavLink} from 'react-router-dom';
 import Img from 'react-image';
-import Loader from './Loader';
-// import Cookies from 'js-cookie';
+import closeThin from '../../assets/close_thin.svg';
 
 import '../../styles/Popup.css';
 
-const Popup = () => {
+const Popup = (props) => {
   return (
     <div className="popup">
     
       <div className="popup-container">
-        <button className="close-popup"></button>
+        <button className="close-popup" onClick={props.closePopup}><img src={closeThin} alt="close popup icon"/></button>
         <div className="popup-media">
-          <Img src="/images/14_popup/DBOX_108LEONARD_Detail_Interior_Day2.jpg" loader={<Loader />} alt="" />
+          <Img src="/images/14_popup/DBOX_108LEONARD_Detail_Interior_Day2.jpg" alt="" />
         </div>
         <div className="popup-content">
-          <h3 className="popup-title">New One Bedroom Availability</h3>
-          <p className="popup-copy">Prized Tribeca residences<br/>featuring soaring ceiling heights up to 15',<br/>some with classic enfilade arrangements.</p>
-          <Button id="popup-call-to-action" idClass="desktop" inverted name="See Availability" dataId="popup-call-to-action" href="/availability" target="_self" />
+          <h3 className="popup-title publication sans-light-bold upper">New One Bedroom Availability</h3>
+          <p className="popup-copy serif">Prized Tribeca residences<br/>featuring soaring ceiling heights up to 15',<br/>some with classic enfilade arrangements.</p>
+          <NavLink onClick={props.closePopup} strict exact to="/availability" className="button sans-light-bold inverted" id="popup-call-to-action">
+            See Availability
+          </NavLink>
         </div>
       </div>
       
-      <div className="popup-background"></div>
+      <div className="popup-background" onClick={props.closePopup}></div>
     </div>
   );
 };
