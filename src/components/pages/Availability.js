@@ -300,7 +300,7 @@ export default class Availability extends Component {
       this.setState({
         residences: newFilteredArray
       });
-    }, 1000);
+    }, 1500);
   }
 
   naturalSorter(as, bs){
