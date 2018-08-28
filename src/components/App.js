@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { VelocityTransitionGroup } from 'velocity-react';
-// import Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
 // import Animation from './partials/Animation';
@@ -128,11 +128,11 @@ export default class App extends Component {
     this.getPage();
     this.setFooterPageTitle();
 
-    // if (!Cookies.get('closedPopup')) {
+    if (!Cookies.get('closedPopup')) {
       this.setState({
         popupClosed: 'no'
       });
-    // }
+    }
   }
 
   setFooterPageTitle() {
@@ -235,7 +235,7 @@ export default class App extends Component {
     this.setState({
       popupClosed: 'yes'
     }, () => {
-      // Cookies.set('closedPopup', true, { expires: 365 });
+      Cookies.set('closedPopup', true, { expires: 365 });
     });
   }
   
