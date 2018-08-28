@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { VelocityTransitionGroup } from 'velocity-react';
+import Cookies from 'js-cookie';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
 // import Animation from './partials/Animation';
@@ -14,6 +16,8 @@ import PressList from './pages/PressList';
 import PressArticle from './pages/PressArticle';
 import Legal from './pages/Legal';
 import Home from './pages/Home';
+
+import Popup from './partials/Popup';
 
 import buildingJSON from './data/building.json';
 import amenitiesJSON from './data/amenities.json';
@@ -100,12 +104,14 @@ export default class App extends Component {
       navElRef: '',
       subnavs: [],
       slider: null,
-      parentslider: null
+      parentslider: null,
+      popupClosed: ''
     }
 
     this.getPage = this.getPage.bind(this);
     this.onForwardButtonEvent = this.onForwardButtonEvent.bind(this);
     this.onBackButtonEvent = this.onBackButtonEvent.bind(this);
+    this.closePopup = this.closePopup.bind(this);
   }
   componentDidUpate() {
     // remove any leftover active sub pages
@@ -121,6 +127,12 @@ export default class App extends Component {
 
     this.getPage();
     this.setFooterPageTitle();
+
+    if (!Cookies.get('closedPopup')) {
+      this.setState({
+        popupClosed: 'no'
+      });
+    }
   }
 
   setFooterPageTitle() {
@@ -216,6 +228,16 @@ export default class App extends Component {
       console.log('app.js', this.state.page, url)
     });  
   }
+
+  closePopup() {
+    console.log('closed popup');
+
+    this.setState({
+      popupClosed: 'yes'
+    }, () => {
+      Cookies.set('closedPopup', true, { expires: 365 });
+    });
+  }
   
 
   render() {
@@ -234,6 +256,11 @@ export default class App extends Component {
     });
     return (
       <div className="App">
+        
+        <VelocityTransitionGroup className="popup-wrapper" enter={{animation: "fadeIn", delay: 1000 }} leave={{animation: "fadeOut"}}>
+          {this.state.popupClosed === 'no' ? <Popup closePopup={this.closePopup}/> : undefined }
+        </VelocityTransitionGroup>
+
         <Header 
           pages={PAGES} 
           page={this.state.page} 
