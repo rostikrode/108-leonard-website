@@ -270,6 +270,16 @@ export default class Availability extends Component {
 
         newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
 
+      } else if (residences === 'one-bedroom') {
+        filterRes = (el) => {
+          if (el['bedrooms'] === 1) {
+            return true;
+          } else {
+            return false;
+          }
+        };
+
+        newFilteredArray = newFilteredArray.concat(this.state.residences.filter(filterRes));
       } else {
         var resArray = residences.split('&');
         filterRes = (el) => {

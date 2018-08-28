@@ -257,7 +257,7 @@ export default class App extends Component {
     return (
       <div className="App">
         
-        <VelocityTransitionGroup enter={{animation: "fadeIn", delay: 1000 }} leave={{animation: "fadeOut"}}>
+        <VelocityTransitionGroup className="popup-wrapper" enter={{animation: "fadeIn", delay: 1000 }} leave={{animation: "fadeOut"}}>
           {this.state.popupClosed === 'no' ? <Popup closePopup={this.closePopup}/> : undefined }
         </VelocityTransitionGroup>
 

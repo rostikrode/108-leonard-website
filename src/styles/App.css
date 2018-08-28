@@ -6,6 +6,10 @@
   align-items: flex-start;
 }
 
+.popup-wrapper {
+  display: none;
+}
+
 main {
   flex: 1;
   width: auto;
@@ -20,6 +24,9 @@ main {
   main {
     padding-top: 0;
     overflow: hidden;
+  }
+  .popup-wrapper {
+    display: block;
   }
 }
 
