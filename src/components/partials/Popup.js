@@ -17,7 +17,8 @@ const Popup = (props) => {
         <div className="popup-content">
           <h3 className="popup-title publication sans-light-bold upper">New One Bedroom Availability</h3>
           <p className="popup-copy serif">Prized Tribeca residences<br/>featuring soaring ceiling heights up to 15',<br/>some with classic enfilade arrangements.</p>
-          <NavLink onClick={props.closePopup} strict exact to="/availability" className="button sans-light-bold inverted" id="popup-call-to-action">
+          <p className="popup-copy serif">Priced from $1,565,000</p>
+          <NavLink onClick={props.closePopup} strict exact to="/availability/one-bedroom/" className="button sans-light-bold inverted" id="popup-call-to-action">
             See Availability
           </NavLink>
         </div>
