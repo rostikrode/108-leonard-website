@@ -84,7 +84,7 @@ export default class Availability extends Component {
           switch(letter) {
             case 'A':
               if ((number >= 4) && (number <= 12)) {
-                residenceSVGFileName = 'A';
+                residenceSVGFileName = 'A_4-12';
                 residencePDFFileName = 'A_4-12';
               } else {
                 residenceSVGFileName =  'A';
