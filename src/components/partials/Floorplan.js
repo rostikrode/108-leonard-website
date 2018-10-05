@@ -278,7 +278,8 @@ class Floorplan extends Component {
               </div>
 
               <div className="desktop-keys floorplan-keys">
-                <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />   
+                {/* <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt={`Floor Layout for Residence ${this.props.residence}`} />    */}
+                <img src={`/images/5_availability/keys/residence_${this.props.letter}_key.svg`} alt='' />
               </div>
               <div className="floorplan-info floorplan-footer">
                 <p className="serif">* Square footage is approximate</p>
