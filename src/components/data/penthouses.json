@@ -1,30 +1,43 @@
 {
   "page": "Crown Collection",
-  "metaTitle": "108 Leonard | Eleven exclusive homes from The Crown Collection | NYC",
-  "metaDescription": "Eleven one-of-a-kind homes that offer owners the most desirable amenities of a city residence: theatrical volumes, grand master suites, cosseting fireplaces and majestic vistas.",
+  "metaTitle":
+    "108 Leonard | Eleven exclusive homes from The Crown Collection | NYC",
+  "metaDescription":
+    "Eleven one-of-a-kind homes that offer owners the most desirable amenities of a city residence: theatrical volumes, grand master suites, cosseting fireplaces and majestic vistas.",
   "intro": {
     "title": "The Crown Collection",
-    "para": "Perched atop the handsomely restored neoclassical building stands an exclusive portfolio of eleven unparalleled residences. These penthouses offer the most desirable attributes: theatrical volumes, majestic vistas, grand master suites and many have romantic fireplaces. Extraordinary ceiling heights up to over 16 feet are paired with dramatic soaring windows framing shimmering panoramas."
+    "para":
+      "Perched atop the handsomely restored neoclassical building stands an exclusive portfolio of eleven unparalleled residences. These penthouses offer the most desirable attributes: theatrical volumes, majestic vistas, grand master suites and many have romantic fireplaces. Extraordinary ceiling heights up to over 16 feet are paired with dramatic soaring windows framing shimmering panoramas."
   },
-  "introImage": "/images/4_crown_collection/image_crop_for_crown_collection_landing_page.jpg",
-  "introImageMobile": "/images/4_crown_collection/image_crop_for_crown_collection_landing_page_mobile.jpg",
+  "introImage":
+    "/images/4_crown_collection/image_crop_for_crown_collection_landing_page.jpg",
+  "introImageMobile":
+    "/images/4_crown_collection/image_crop_for_crown_collection_landing_page_mobile.jpg",
   "introImageCaption": "",
   "section": "Intro",
   "slides": [
     {
-      "src": "/images/4_crown_collection/DBOX_108LEONARD_CrownCollection_PHGarden15C.jpg",
+      "src":
+        "/images/4_crown_collection/DBOX_108LEONARD_CrownCollection_PHGarden15C.jpg",
       "section": "",
       "newsection": false,
       "caption": "Terrace Penthouse"
-    }, {
+    },
+    {
+      "src": "/images/1_landing/apartments-for-sale-in-tribeca.jpg",
+      "section": "",
+      "newsection": false,
+      "caption": "Terrace Penthouse"
+    },
+    {
       "src": "/images/4_crown_collection/blank_white.jpg",
       "section": "",
       "newsection": false,
-      "lastsection":true,
+      "lastsection": true,
       "caption": ""
     }
   ],
-  "settings":{
+  "settings": {
     "dots": true,
     "className": "crown-collection-slider",
     "swipeToSlide": true,
@@ -33,10 +46,12 @@
     "slidesToShow": 1,
     "slidesToScroll": 1,
     "arrow": true,
-    "responsive": [{ 
-        "breakpoint": 1024, 
+    "responsive": [
+      {
+        "breakpoint": 1024,
         "settings": "unslick"
-    }]
+      }
+    ]
   },
   "nextPageTitle": "AVAILABILITY",
   "nextPageSlug": "/availability/"
