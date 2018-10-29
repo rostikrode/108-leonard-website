@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { VelocityTransitionGroup } from 'velocity-react';
 import Cookies from 'js-cookie';
 import NotFound from './pages/NotFound';
 import Header from './partials/Header';
@@ -16,8 +15,6 @@ import PressList from './pages/PressList';
 import PressArticle from './pages/PressArticle';
 import Legal from './pages/Legal';
 import Home from './pages/Home';
-
-import Popup from './partials/Popup';
 
 import buildingJSON from './data/building.json';
 import amenitiesJSON from './data/amenities.json';
