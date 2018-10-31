@@ -14,7 +14,7 @@ import Contact from './pages/Contact';
 import PressList from './pages/PressList';
 import PressArticle from './pages/PressArticle';
 import Legal from './pages/Legal';
-import Home from './pages/Home';
+// import Home from './pages/Home';
 
 import buildingJSON from './data/building.json';
 import amenitiesJSON from './data/amenities.json';
@@ -26,7 +26,8 @@ import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
 import pressJSON from './data/press.json';
 import legalJSON from './data/legal.json';
-import homeJSON from './data/home.json';
+// import homeJSON from './data/home.json';
+import homeCarouselJSON from './data/home-carousel.json';
 
 const PAGES = [
   {
@@ -304,9 +305,13 @@ export default class App extends Component {
               exact
               path="/"
               render={props => (
-                <Home
-                  {...homeJSON}
+                <Carousel
+                  {...props}
+                  {...homeCarouselJSON}
                   onNextButton={this.onNextButton.bind(this)}
+                  navClicked={this.state.navClicked}
+                  subnavs={this.state.subnavs}
+                  sendSlider={this.sendSlider.bind(this)}
                 />
               )}
             />
