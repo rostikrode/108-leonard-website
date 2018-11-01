@@ -45,6 +45,7 @@
 .slider-parent {
   position: relative;
 }
+
 @media (min-width: 1024px) {
   .slick-dots {
     position: absolute;
@@ -151,6 +152,7 @@
   padding-bottom: 18px;
   padding-right: 18px;
 }
+
 .next-button img {
   margin-top: -3px;
 }

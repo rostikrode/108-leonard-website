@@ -27,7 +27,7 @@ export default class HomeImageSlide extends Component {
         <div className="image-wrapper">
           <Img
             src={
-              window.innerWidth > 768
+              window.innerWidth > 767
                 ? this.props.slide.src
                 : this.props.slide.mobileSrc
             }
