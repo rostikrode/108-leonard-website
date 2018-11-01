@@ -3,6 +3,13 @@
   "metaTitle": "108 Leonard | Tribeca Luxury For-Sale Condominiums | NYC",
   "metaDescription":
     "This one-of-a-kind luxury condominium offers historic architecture by McKim Mead & White plus interiors by Jeffrey Beers International. Over 20,000 square feet of amenities including motor reception.",
+  "intro": {
+    "title": "Home PlaceHolder Title",
+    "para": "Home PlaceHolder Paragraph"
+  },
+  "introImage": "/images/1_landing/1.1_Entrance_Leonard_2048.jpg",
+  "introImageMobile": "/images/1_landing/1.2_Entrance_Leonard_1580.jpg",
+  "introImageCaption": "",
   "section": "Home",
   "slides": [
     {
