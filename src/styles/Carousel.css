@@ -45,24 +45,25 @@
 .slider-parent {
   position: relative;
 }
-.slick-dots {
-  position: absolute;
-  display: flex !important;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  list-style: none;
-  text-align: center;
-  margin: 0;
-  padding-top: 0.45em;
-  bottom: 52px;
-  left: calc(32px + 35px);
-  z-index: 909;
-  height: 16px;
-  background-color: #fff;
+@media (min-width: 1024px) {
+  .slick-dots {
+    position: absolute;
+    display: flex !important;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding-top: 0.45em;
+    height: 16px;
+    z-index: 909;
+    background-color: #fff;
+    bottom: 52px;
+    left: calc(32px + 35px);
+  }
 }
-
 .team-slider .slick-dots {
   left: 120px;
   transform: none;
@@ -236,7 +237,6 @@
   align-items: center;
 }
 .slick-slide img {
-  height: 100%;
   width: auto;
   max-height: 100%;
   max-width: 100%;
@@ -278,11 +278,20 @@
 }
 .slick-slide .inner .caption {
   position: absolute;
-  right: 2em;
-  bottom: 5px;
+  bottom: 5%;
   margin: 0.5em;
   opacity: 1;
   transition: opacity 200ms ease-in-out;
+}
+@media (min-width: 1024px) {
+  .slick-slide .inner .caption {
+    position: absolute;
+    right: 2em;
+    bottom: 5px;
+    margin: 0.5em;
+    opacity: 1;
+    transition: opacity 200ms ease-in-out;
+  }
 }
 @media (min-width: 1024px) {
   .slick-slide,

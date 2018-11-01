@@ -3,59 +3,49 @@
   "metaTitle": "108 Leonard | Tribeca Luxury For-Sale Condominiums | NYC",
   "metaDescription":
     "This one-of-a-kind luxury condominium offers historic architecture by McKim Mead & White plus interiors by Jeffrey Beers International. Over 20,000 square feet of amenities including motor reception.",
-  "intro": {
-    "title": "Home PlaceHolder Title",
-    "para": "Home PlaceHolder Paragraph"
-  },
-  "introImage": "/images/1_landing/1.1_Entrance_Leonard_2048.jpg",
-  "introImageMobile": "/images/1_landing/1.2_Entrance_Leonard_1580.jpg",
-  "introImageCaption": "",
   "section": "Home",
   "slides": [
     {
       "src": "/images/1_landing/1.1_Entrance_Leonard_2048.jpg",
+      "mobileSrc": "/images/1_landing/1.2_Entrance_Leonard_1580.jpg",
       "section": "Home",
       "newsection": false,
-      "caption": "Placeholder Caption",
-      "detail": "Placeholder Details"
+      "caption": "Placeholder Caption"
     },
     {
       "src": "/images/1_landing/2.1_MotorReception_2048.jpg",
+      "mobileSrc": "/images/1_landing/2.2_MotorReception_1580.jpg",
       "section": "Home",
       "newsection": false,
-      "caption": "Placeholder Caption",
-      "detail": "Placeholder Details"
+      "caption": "Placeholder Caption"
     },
     {
       "src": "/images/1_landing/3.1_Detail_interior_2048.jpg",
+      "mobileSrc": "/images/1_landing/3.2_Detail_interior_1580.jpg",
       "section": "Home",
       "newsection": false,
-      "caption": "Placeholder Caption",
-      "detail": "Placeholder Details"
+      "caption": "Placeholder Caption"
     },
     {
       "src": "/images/1_landing/4.1_Amenities_Rooftop_2048.jpg",
+      "mobileSrc": "/images/1_landing/4.2_Amenities_Rooftop_1580.jpg",
       "section": "Home",
       "newsection": false,
-      "caption": "Placeholder Caption",
-      "detail": "Placeholder Details"
+      "caption": "Placeholder Caption"
     }
   ],
   "settings": {
     "dots": true,
-    "className": "residences-slider",
+    "className": "home-slider",
     "swipeToSlide": true,
-    "infinite": false,
+    "infinite": true,
+    "autoplay": true,
     "speed": 500,
+    "autoplaySpeed": 5000,
+    "cssEase": "ease-in-out",
     "slidesToShow": 1,
     "slidesToScroll": 1,
-    "arrow": true,
-    "responsive": [
-      {
-        "breakpoint": 1024,
-        "settings": "unslick"
-      }
-    ]
+    "arrow": true
   },
   "nextPageTitle": "Building",
   "nextPageSlug": "/building/"

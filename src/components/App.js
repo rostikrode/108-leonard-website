@@ -7,6 +7,7 @@ import Header from './partials/Header';
 import '../styles/App.css';
 
 import Carousel from './pages/Carousel';
+import HomeCarousel from './pages/HomeCarousel';
 import Availability from './pages/Availability';
 // import ComingSoon from './partials/ComingSoon';
 import AvailabilityShare from './pages/AvailabilityShare';
@@ -285,7 +286,9 @@ export default class App extends Component {
           passAllSubnavs={this.passAllSubnavs.bind(this)}
         />
 
-        <main>
+        <main
+          style={window.location.pathname === '/' ? { paddingTop: '0' } : {}}
+        >
           <Switch>
             <Route
               exact
@@ -305,7 +308,7 @@ export default class App extends Component {
               exact
               path="/"
               render={props => (
-                <Carousel
+                <HomeCarousel
                   {...props}
                   {...homeCarouselJSON}
                   onNextButton={this.onNextButton.bind(this)}
