@@ -45,6 +45,12 @@
 .slider-parent {
   position: relative;
 }
+.slick-dots {
+  width: 50%;
+  position: absolute;
+  z-index: 999;
+  bottom: 0%;
+}
 
 @media (min-width: 1024px) {
   .slick-dots {
@@ -64,10 +70,10 @@
     bottom: 52px;
     left: calc(32px + 35px);
   }
-}
-.team-slider .slick-dots {
-  left: 120px;
-  transform: none;
+  .team-slider .slick-dots {
+    left: 120px;
+    transform: none;
+  }
 }
 
 .slick-dots .slick-active button {
@@ -129,16 +135,13 @@
 .next-arrow {
   text-align: right;
 }
-.next-arrow,
-.next-button {
-  bottom: 0;
-  padding: 0.45rem;
-  padding-bottom: 0;
-  padding-left: 1.3em;
-}
-
-.team-slider + .prev-arrow {
-  left: 80px;
+@media (max-width: 1023px) {
+  .next-arrow,
+  .next-button {
+    position: absolute;
+    bottom: 0%;
+    right: 0;
+  }
 }
 
 .next-button {
@@ -149,8 +152,25 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding-bottom: 18px;
   padding-right: 18px;
+  padding-bottom: 18px;
+  transform: translateY(18px);
+}
+
+@media (min-width: 1024px) {
+  .next-arrow,
+  .next-button {
+    bottom: 0;
+    padding: 0.45rem;
+    padding-bottom: 0;
+    padding-left: 1.3em;
+  }
+
+  .team-slider + .prev-arrow {
+    left: 80px;
+  }
+  .next-button {
+  }
 }
 
 .next-button img {
@@ -184,9 +204,7 @@
   .next-button img {
     display: none;
   }
-  .slick-dots {
-    bottom: 52px;
-  }
+
   .custom-arrow {
     display: inline-block;
   }
@@ -235,7 +253,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .slick-slide img {
