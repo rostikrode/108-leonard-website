@@ -256,6 +256,12 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .slick-slide .inner {
+    justify-content: space-around;
+  }
+}
+
 .slick-slide img {
   width: auto;
   max-height: 100%;
