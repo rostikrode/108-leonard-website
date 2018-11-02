@@ -935,3 +935,7 @@
   } */
 }
 /* Detail caption styles */
+
+.home-caption {
+  display: none;
+}

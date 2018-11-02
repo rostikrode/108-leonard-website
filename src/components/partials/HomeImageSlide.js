@@ -38,7 +38,7 @@ export default class HomeImageSlide extends Component {
             }}
           />
         </div>
-        <p className="caption serif-bold">{this.props.slide.caption}</p>
+        <p className="home-caption serif-bold">{this.props.slide.caption}</p>
       </div>
     );
   }

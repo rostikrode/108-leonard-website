@@ -61,8 +61,8 @@ export default class HomeCarousel extends Component {
 
     parentSliderEl = this.sliderParent;
     nextPageButton = parentSliderEl.childNodes[3];
-    sliderButtonNextEl = this.btnNext;
-    sliderButtonPrevEl = this.btnPrev;
+    // sliderButtonNextEl = this.btnNext;
+    // sliderButtonPrevEl = this.btnPrev;
 
     /** meta data for page */
     document.title = this.props.metaTitle;
@@ -92,7 +92,7 @@ export default class HomeCarousel extends Component {
     }
 
     /** dynamically setting the next arrow location based on the length of the dots */
-    this.updateArrowPosition();
+    // this.updateArrowPosition();
     window.addEventListener('scroll', this.onWindowScroll);
     window.addEventListener('orientationchange', this.onOrientationChange);
     window.addEventListener('resize', this.updateArrowPosition);
@@ -127,24 +127,24 @@ export default class HomeCarousel extends Component {
     if (window.matchMedia('(min-width: 1024px)').matches) {
       setTimeout(() => {
         if (parentSliderEl) {
-          let dots = parentSliderEl.children[0].querySelector('.slick-dots');
+          // let dots = parentSliderEl.children[0].querySelector('.slick-dots');
 
-          let prevArrow = sliderButtonPrevEl;
-          let nextArrow = sliderButtonNextEl;
+          // let prevArrow = sliderButtonPrevEl;
+          // let nextArrow = sliderButtonNextEl;
           let nextButton = parentSliderEl.childNodes[3];
           let length = 0;
 
-          if (dots !== null && dots) {
-            if (dots) {
-              length = dots.getBoundingClientRect().width;
-            }
-          }
+          // if (dots !== null && dots) {
+          //   if (dots) {
+          //     length = dots.getBoundingClientRect().width;
+          //   }
+          // }
           if (
             parentSliderEl
               .querySelector('.slick-slider')
               .classList.contains('team-slider')
           ) {
-            nextArrow.style.left = `calc(80px + ${length}px + 45px)`;
+            // nextArrow.style.left = `calc(80px + ${length}px + 45px)`;
           } else {
             let captions = parentSliderEl.querySelectorAll(
               '.slick-slide .inner .caption'
@@ -160,14 +160,14 @@ export default class HomeCarousel extends Component {
             );
 
             // left arrow to be under the dynamically sized image
-            prevArrow.style.left = imageOffset + 'px';
+            // prevArrow.style.left = imageOffset + 'px';
 
-            dots.style.left = `calc(${imageOffset}px + 35px)`;
+            // dots.style.left = `calc(${imageOffset}px + 35px)`;
 
-            if (nextButton !== undefined && nextArrow !== undefined) {
-              nextArrow.style.left = `calc(${imageOffset}px + 35px + ${length}px)`;
-              nextButton.style.left = `calc(${imageOffset}px + 35px + 35px + ${length}px)`;
-            }
+            // if (nextButton !== undefined && nextArrow !== undefined) {
+            // nextArrow.style.left = `calc(${imageOffset}px + 35px + ${length}px)`;
+            // nextButton.style.left = `calc(${imageOffset}px + 35px + 35px + ${length}px)`;
+            // }
 
             // caption to be right aligned to dynamic image
             for (let i in captions) {
@@ -341,42 +341,42 @@ export default class HomeCarousel extends Component {
       afterChange: slide => {
         this.updateArrowPosition();
 
-        if (slide === this.props.slides.length) {
-          sliderButtonPrevEl.classList.remove('fade');
-          sliderButtonNextEl.classList.add('fade');
-
-          /** show the next slideshow page button on last slide */
-          if (nextPageButton) {
-            nextPageButton.classList.add('fadein');
-          }
-        } else if (slide === 0) {
-          sliderButtonNextEl.classList.remove('fade');
-          sliderButtonPrevEl.classList.add('fade');
-
-          /** dont't show the next slideshow page button on last slide */
-          if (nextPageButton) {
-            nextPageButton.classList.remove('fadein');
-          }
-        } else {
-          sliderButtonNextEl.classList.remove('fade');
-          sliderButtonPrevEl.classList.remove('fade');
-          /** don't show the next slideshow page button on last slide */
-          if (nextPageButton) {
-            nextPageButton.classList.remove('fadein');
-          }
-
-          // if team carousel, the slide num and total slides is mismatched
-          if (
-            parentSliderEl
-              .querySelector('.slick-slider')
-              .classList.contains('team-slider')
-          ) {
-            if (slide === this.props.slides.length - 1) {
-              sliderButtonPrevEl.classList.remove('fade');
-              sliderButtonNextEl.classList.add('fade');
-            }
-          }
-        }
+        // if (slide === this.props.slides.length) {
+        //   sliderButtonPrevEl.classList.remove('fade');
+        //   sliderButtonNextEl.classList.add('fade');
+        //
+        //   /** show the next slideshow page button on last slide */
+        //   if (nextPageButton) {
+        //     nextPageButton.classList.add('fadein');
+        //   }
+        // } else if (slide === 0) {
+        //   sliderButtonNextEl.classList.remove('fade');
+        //   sliderButtonPrevEl.classList.add('fade');
+        //
+        //   /** dont't show the next slideshow page button on last slide */
+        //   if (nextPageButton) {
+        //     nextPageButton.classList.remove('fadein');
+        //   }
+        // } else {
+        //   sliderButtonNextEl.classList.remove('fade');
+        //   sliderButtonPrevEl.classList.remove('fade');
+        //   /** don't show the next slideshow page button on last slide */
+        //   if (nextPageButton) {
+        //     nextPageButton.classList.remove('fadein');
+        //   }
+        //
+        //   // if team carousel, the slide num and total slides is mismatched
+        //   if (
+        //     parentSliderEl
+        //       .querySelector('.slick-slider')
+        //       .classList.contains('team-slider')
+        //   ) {
+        //     if (slide === this.props.slides.length - 1) {
+        //       sliderButtonPrevEl.classList.remove('fade');
+        //       sliderButtonNextEl.classList.add('fade');
+        //     }
+        //   }
+        // }
         var section = parentSliderEl
           .querySelector('.slick-slide.slick-active')
           .getAttribute('data-section');
@@ -428,30 +428,11 @@ export default class HomeCarousel extends Component {
           })}
         </Slider>
 
-        <button
-          ref={el => (this.btnPrev = el)}
-          onClick={this.previous}
-          className="custom-arrow prev-arrow fade"
-        >
-          <img src={prev_arrow} alt="arrow to prev slide" />
-        </button>
-        <button
-          ref={el => (this.btnNext = el)}
-          onClick={this.next}
-          className="custom-arrow next-arrow"
-        >
-          <img src={next_arrow} alt="arrow to next slide" />
-        </button>
-
-        {this.props.nextPageTitle ? (
-          <NextPage
-            {...this.props}
-            page={this.props.page}
-            nextButton={this.onNextButton.bind(this)}
-          />
-        ) : (
-          undefined
-        )}
+        <NextPage
+          {...this.props}
+          page={this.props.page}
+          nextButton={this.onNextButton.bind(this)}
+        />
       </div>
     );
   }

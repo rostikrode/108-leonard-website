@@ -35,9 +35,10 @@
     }
   ],
   "settings": {
-    "dots": true,
+    "dots": false,
     "className": "home-slider",
-    "swipeToSlide": true,
+    "swipeToSlide": false,
+    "fade": true,
     "infinite": true,
     "autoplay": true,
     "speed": 500,
@@ -45,7 +46,7 @@
     "cssEase": "ease-in-out",
     "slidesToShow": 1,
     "slidesToScroll": 1,
-    "arrow": true
+    "arrow": false
   },
   "nextPageTitle": "Building",
   "nextPageSlug": "/building/"
