@@ -37,7 +37,6 @@
   "settings": {
     "dots": false,
     "className": "home-slider",
-    "swipeToSlide": false,
     "fade": true,
     "infinite": true,
     "autoplay": true,
@@ -46,6 +45,7 @@
     "cssEase": "ease-in-out",
     "slidesToShow": 1,
     "slidesToScroll": 1,
+    "swipeToSlide": false,
     "draggable": false,
     "touchMove": false,
     "arrow": false
