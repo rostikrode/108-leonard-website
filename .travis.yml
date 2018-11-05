@@ -1,6 +1,5 @@
 deploy:
   - provider: s3
-    warnings_are_errors: false
 
     cache_control: "no-cache, max-age=0" # cache and revalidate
     access_key_id: $AWS_ACCESS

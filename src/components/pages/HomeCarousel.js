@@ -30,8 +30,7 @@ const NextPage = props => {
   );
 };
 
-var parentSliderEl, nextPageButton;
-// sliderButtonNextEl, sliderButtonPrevEl,
+var parentSliderEl, sliderButtonNextEl, sliderButtonPrevEl, nextPageButton;
 export default class HomeCarousel extends Component {
   constructor(props) {
     super(props);
@@ -132,8 +131,8 @@ export default class HomeCarousel extends Component {
 
           // let prevArrow = sliderButtonPrevEl;
           // let nextArrow = sliderButtonNextEl;
-          // let nextButton = parentSliderEl.childNodes[3];
-          // let length = 0;
+          let nextButton = parentSliderEl.childNodes[3];
+          let length = 0;
 
           // if (dots !== null && dots) {
           //   if (dots) {
@@ -153,9 +152,9 @@ export default class HomeCarousel extends Component {
             let activeSlide = parentSliderEl.querySelector(
               '.slick-active .inner .image-wrapper'
             );
-            // let imageOffset = Math.round(
-            //   activeSlide.getBoundingClientRect().left + headerOffset
-            // );
+            let imageOffset = Math.round(
+              activeSlide.getBoundingClientRect().left + headerOffset
+            );
             let imageRightOffset = Math.round(
               window.innerWidth - activeSlide.getBoundingClientRect().right - 4
             );
