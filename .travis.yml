@@ -24,7 +24,7 @@ node_js:
   - "lts/*"
 install: npm install
 script:
-  - npm run build
+  - CI= false npm run build
   - npm test
 warnings_are_errors: false
 cache:
