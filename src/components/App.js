@@ -106,7 +106,8 @@ export default class App extends Component {
       subnavs: [],
       slider: null,
       parentslider: null,
-      popupClosed: ''
+      popupClosed: '',
+      headerHeight: 0
     };
 
     this.getPage = this.getPage.bind(this);
@@ -251,6 +252,12 @@ export default class App extends Component {
     );
   }
 
+  updateHeaderHeight = height => {
+    this.setState({
+      headerHeight: height
+    });
+  };
+
   render() {
     const routeComponents = PAGES.map((page, key) => {
       var DynComp = page.component;
@@ -285,6 +292,11 @@ export default class App extends Component {
           parentslider={this.state.parentslider}
           onNavClick={this.onNavClick.bind(this)}
           passAllSubnavs={this.passAllSubnavs.bind(this)}
+          updateHeaderHeight={this.updateHeaderHeight}
+        />
+        <div
+          className="headspacer"
+          style={{ height: this.state.headerHeight }}
         />
 
         <main

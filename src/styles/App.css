@@ -2,14 +2,30 @@
   text-align: center;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
+  /* flex-direction: column; */
+}
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
+
+.headspacer {
+  /* height: 0%; */
 }
 
 .popup-wrapper {
   display: none;
 }
-
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
 main {
   flex: 1;
   width: auto;
@@ -31,9 +47,9 @@ main {
 }
 
 @media (min-width: 1024px) and (min-height: 767px) {
-	main {
-		overflow: hidden;
-	}
+  main {
+    overflow: hidden;
+  }
 }
 
 .carousel-page {
@@ -46,5 +62,5 @@ main {
 .carousel-page .App-intro {
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: auto;  
+  flex-basis: auto;
 }
