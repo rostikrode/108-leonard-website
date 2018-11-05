@@ -1,5 +1,4 @@
 deploy:
-  warnings_are_errors: false
   - provider: s3
     cache_control: "no-cache, max-age=0" # cache and revalidate
     access_key_id: $AWS_ACCESS
@@ -25,7 +24,7 @@ node_js:
   - "lts/*"
 install: yarn
 script:
-  - yarn run build
+  - CI=false yarn run build
   - yarn test
 cache:
   yarn: true
