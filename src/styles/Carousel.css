@@ -50,6 +50,7 @@
   .home-slider-parent {
     position: absolute;
     z-index: 100;
+    box-sizing: border-box;
   }
 }
 
@@ -261,9 +262,12 @@
 
 .slick-slide {
   width: auto;
+  box-sizing: border-box;
 }
 .slick-slide .inner {
   height: 100%;
+  width: 100vw;
+  box-sizing: border-box;
   padding: 32px;
   padding-top: 0;
   position: relative;
@@ -300,7 +304,8 @@
 }
 
 .slick-section .inner {
-  /* padding: 18px; */
+  /* padding: 18px;
+  padding-top: 0; */
 }
 .slick-section .inner .image-wrapper {
   position: relative;

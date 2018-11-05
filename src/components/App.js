@@ -294,10 +294,15 @@ export default class App extends Component {
           passAllSubnavs={this.passAllSubnavs.bind(this)}
           updateHeaderHeight={this.updateHeaderHeight}
         />
-        <div
-          className="headspacer"
-          style={{ height: this.state.headerHeight }}
-        />
+
+        {window.location.pathname === '/' ? (
+          <div
+            className="headspacer"
+            style={{ height: this.state.headerHeight }}
+          />
+        ) : (
+          <div style={{ display: 'none' }} />
+        )}
 
         <main
           style={window.location.pathname === '/' ? { paddingTop: '0' } : {}}
