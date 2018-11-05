@@ -180,6 +180,7 @@ export default class App extends Component {
         }
       }
     }
+    console.log(this.state.page);
   }
   onForwardButtonEvent() {
     this.getPage();

@@ -401,7 +401,7 @@ export default class HomeCarousel extends Component {
     return (
       <div
         ref={c => (this.sliderParent = c)}
-        className="slider-parent"
+        className="slider-parent home-slider-parent"
         onWheel={this.debounceEventHandler(65, e =>
           this.onMouseWheelScroll(e, this)
         )}

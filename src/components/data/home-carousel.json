@@ -46,6 +46,8 @@
     "cssEase": "ease-in-out",
     "slidesToShow": 1,
     "slidesToScroll": 1,
+    "draggable": false,
+    "touchMove": false,
     "arrow": false
   },
   "nextPageTitle": "Building",

@@ -45,6 +45,12 @@
 .slider-parent {
   position: relative;
 }
+@media (max-width: 1024px) {
+  .home-slider-parent {
+    /* position: fixed; */
+  }
+}
+
 .slick-dots {
   width: 50%;
   position: absolute;
@@ -136,11 +142,15 @@
   text-align: right;
 }
 @media (max-width: 1023px) {
-  .next-arrow,
-  .next-button {
+  .next-arrow {
     position: absolute;
     bottom: 0%;
     right: 0;
+  }
+  .next-button {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
   }
 }
 
@@ -216,9 +226,11 @@
 }
 @media (min-width: 1366px) {
   .next-arrow,
-  .prev-arrow,
-  .next-button {
+  .prev-arrow {
     bottom: 32px;
+  }
+  .next-button {
+    bottom: 50px;
   }
   .next-arrow {
     padding-left: 0.3em;
