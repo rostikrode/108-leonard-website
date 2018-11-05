@@ -22,10 +22,10 @@ deploy:
 language: node_js
 node_js:
   - "lts/*"
-install: yarn
+install: npm
 script:
-  - yarn run build
-  - yarn test
+  - npm run build
+  - npm test
 warnings_are_errors: false
 cache:
   yarn: true
