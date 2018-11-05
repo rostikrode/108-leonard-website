@@ -24,7 +24,7 @@ node_js:
   - "lts/*"
 install: yarn
 script:
-  - CI=false yarn run build
+  - yarn run build
   - yarn test
 warnings_are_errors: false
 cache:
