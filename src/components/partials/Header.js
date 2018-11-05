@@ -23,9 +23,8 @@ export default class Header extends Component {
     window.addEventListener('load', this.handleLoad);
     this.onAvailabilityPage();
     this.onPressPage();
-    this.props.updateHeaderHeight(
-      document.getElementById('header').clientHeight
-    );
+    console.log(this.header);
+    this.props.updateHeaderHeight(this.header.clientHeight);
 
     // if (window.location.pathname === '/') {
     //   if (!Cookies.get('alreadyPlayed')) {
@@ -207,7 +206,7 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <header id="header" className="header" ref={c => (this.header = c)}>
+      <header className="header" ref={c => (this.header = c)}>
         <button
           className={`ham-nav-button ${this.props.page ? '' : ''}`}
           onClick={() => {
