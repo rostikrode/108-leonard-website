@@ -142,12 +142,13 @@
   text-align: right;
 }
 @media (max-width: 1023px) {
-  .next-arrow {
+  .next-arrow,
+  .next-button {
     position: absolute;
     bottom: 0%;
     right: 0;
   }
-  .next-button {
+  .home-next-button {
     position: absolute;
     bottom: 5%;
     right: 5%;

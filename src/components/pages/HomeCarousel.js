@@ -16,7 +16,7 @@ var debounce = require('throttle-debounce/debounce');
 const NextPage = props => {
   return (
     <NavLink
-      className="nav-anchor serif-bold next-button"
+      className="nav-anchor serif-bold next-button home-next-button"
       strict
       exact
       to={props.nextPageSlug}
