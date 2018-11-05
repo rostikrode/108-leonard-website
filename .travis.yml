@@ -22,7 +22,7 @@ deploy:
 language: node_js
 node_js:
   - "lts/*"
-install: npm
+install: npm install
 script:
   - npm run build
   - npm test
