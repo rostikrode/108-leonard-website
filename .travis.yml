@@ -22,12 +22,12 @@ deploy:
 language: node_js
 node_js:
   - "lts/*"
+dist: trusty
 install: npm install
 script:
   - npm run build
   - npm test
 warnings_are_errors: false
 cache:
-  yarn: true
   directories:
     - node_modules
