@@ -48,8 +48,7 @@
     "swipeToSlide": false,
     "draggable": false,
     "touchMove": false,
-    "arrow": false,
-    "centerPadding": "18px"
+    "arrow": false
   },
   "nextPageTitle": "Building",
   "nextPageSlug": "/building/"
