@@ -41,7 +41,7 @@
     "infinite": true,
     "autoplay": true,
     "speed": 500,
-    "autoplaySpeed": 5000,
+    "autoplaySpeed": 2000,
     "cssEase": "ease-in-out",
     "slidesToShow": 1,
     "slidesToScroll": 1,
