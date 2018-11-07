@@ -205,6 +205,12 @@
   position: relative;
   z-index: 100;
 }
+
+@media (max-height: 650px) {
+  .app-logo {
+    height: 6em;
+  }
+}
 nav {
   position: relative;
   z-index: 100;
@@ -223,6 +229,12 @@ nav {
   list-style: none;
   width: auto;
   padding: 10px 0;
+}
+
+@media (max-height: 650px) {
+  .nav-anchor-wrapper {
+    padding: 5px 0;
+  }
 }
 
 .nav-anchor {
