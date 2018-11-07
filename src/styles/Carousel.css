@@ -324,7 +324,7 @@
 }
 .slick-slide .inner .caption {
   position: absolute;
-  bottom: 5%;
+  /* bottom: 5%; */
   margin: 0.5em;
   opacity: 1;
   transition: opacity 200ms ease-in-out;
@@ -332,8 +332,8 @@
 @media (min-width: 1024px) {
   .slick-slide .inner .caption {
     position: absolute;
-    right: 2em;
-    bottom: 5px;
+    /* right: 2em; */
+    /* bottom: 5px; */
     margin: 0.5em;
     opacity: 1;
     transition: opacity 200ms ease-in-out;
@@ -384,7 +384,7 @@
   }
   .slick-slide .inner .caption {
     right: 32px;
-    bottom: 32px;
+    bottom: -3%;
     position: absolute;
     text-align: right;
     margin-right: 0;
