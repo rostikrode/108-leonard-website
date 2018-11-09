@@ -249,9 +249,11 @@
     bottom: 52px;
   }
   .next-arrow,
-  .prev-arrow,
-  .next-button {
+  .prev-arrow {
     bottom: 52px;
+  }
+  .next-button {
+    bottom: 70px;
   }
 }
 @media (min-width: 1920px) {
@@ -384,7 +386,7 @@
   }
   .slick-slide .inner .caption {
     right: 32px;
-    bottom: -3%;
+    bottom: 0%;
     position: absolute;
     text-align: right;
     margin-right: 0;
@@ -392,6 +394,7 @@
     margin-bottom: 0;
   }
 }
+
 @media (min-width: 1366px) {
   .slick-section .inner,
   .slick-slide .inner,
@@ -401,6 +404,9 @@
   }
   .slick-slide .inner {
     height: calc(100% - 64px);
+  }
+  .slick-slide .inner .caption {
+    bottom: -3%;
   }
   /* .slick-slide .inner .image-wrapper img {
     max-height: calc(100vh - 64px - 48px);
