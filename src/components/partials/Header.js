@@ -213,6 +213,7 @@ export default class Header extends Component {
             this.openMobileMenu();
           }}
           ref={c => (this.hamNavButton = c)}
+          name="Navigation Menu"
         >
           <div className={`ham-nav ${this.state.open}`}>
             <span />
@@ -253,7 +254,7 @@ export default class Header extends Component {
             to="/"
             href="/"
           >
-            <img src={logo} className="app-logo" alt="logo" />
+            <img src={logo} className="app-logo" alt="108 Leonard Logo" />
           </NavLink>
           <nav ref={el => (this.nav = el)}>
             <ul
@@ -352,6 +353,7 @@ export default class Header extends Component {
             </div>
             <div className="social-icons">
               <a
+                aria-label="Instagram @108_leonard"
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/108_leonard/"
                 target="_blank"
@@ -363,6 +365,7 @@ export default class Header extends Component {
                 />
               </a>
               <a
+                aria-label="Facebook at 108leonardst"
                 rel="noopener noreferrer"
                 href="https://www.facebook.com/108leonardst/"
                 target="_blank"
