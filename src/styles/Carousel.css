@@ -840,7 +840,7 @@
 }
 .detail-info-button.serif.show {
   display: block;
-  filter: drop-shadow(0px 0px 4px #000000);
+  box-shadow: 0px 0px 4px 1px #000000;
 }
 .detail-info-wrapper {
   position: absolute;
