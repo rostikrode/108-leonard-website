@@ -439,7 +439,7 @@ export default class Carousel extends Component {
                   <div
                     key={key + 1}
                     data-section={slide.section}
-                    className="slick-section"
+                    className={`slick-section`}
                   >
                     <ImageSlide
                       slide={slide}

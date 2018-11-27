@@ -840,9 +840,12 @@
 }
 .detail-info-button.serif.show {
   display: block;
-  box-shadow: 0px 0px 15px 1px #000000cc;
-  filter: drop-shadow(0 0 4px #000000cc);
 }
+.dropshadow {
+  box-shadow: 0px 0px 15px 1px #000000cc !important;
+  filter: drop-shadow(0 0 4px #000000cc) !important;
+}
+
 .detail-info-wrapper {
   position: absolute;
   bottom: 0;
