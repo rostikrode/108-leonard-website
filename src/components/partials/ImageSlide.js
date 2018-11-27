@@ -92,7 +92,10 @@ export default class ImageSlide extends Component {
                 this.infobutton = e;
               }}
             >
-              i
+              <img
+                src="/images/15_icons/info_white.svg"
+                alt="more information"
+              />
             </button>
           ) : (
             ''

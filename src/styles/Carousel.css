@@ -828,7 +828,7 @@
   border: none;
   font-size: 20px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   width: 25px;
   height: 25px;
   line-height: normal;
@@ -841,10 +841,10 @@
 .detail-info-button.serif.show {
   display: block;
 }
-.dropshadow {
+/* .dropshadow {
   box-shadow: 0px 0px 15px 1px #000000cc !important;
   filter: drop-shadow(0 0 4px #000000cc) !important;
-}
+} */
 
 .detail-info-wrapper {
   position: absolute;
