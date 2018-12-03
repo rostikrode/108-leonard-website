@@ -40,7 +40,6 @@ exports[`renders without crashing 1`] = `
     />
     <a
       className="url serif-bold upper"
-      href={undefined}
       target="_blank"
     >
       DOWNLOAD FULL ARTICLE

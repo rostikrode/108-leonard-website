@@ -131,7 +131,6 @@ exports[`renders without crashing 1`] = `
                 id="checkbox-client-type-purchaser"
                 name="client_type"
                 onChange={[Function]}
-                required={undefined}
                 tabIndex={7}
                 type="radio"
                 value="29767"
