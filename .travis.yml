@@ -1,6 +1,6 @@
-deploy: 
+deploy:
   - provider: s3
-    cache_control: "no-cache, max-age=0" # cache and revalidate
+    cache_control: 'no-cache, max-age=0' # cache and revalidate
     access_key_id: $AWS_ACCESS
     secret_access_key: $AWS_SECRET
     bucket: $BUCKET_DEV
@@ -8,9 +8,9 @@ deploy:
     local_dir: build
     skip_cleanup: true
     on:
-      branch: "develop"
+      branch: 'develop'
   - provider: s3
-    cache_control: "max-age=2592000" # 30 days
+    cache_control: 'max-age=2592000' # 30 days
     access_key_id: $AWS_ACCESS
     secret_access_key: $AWS_SECRET
     bucket: $BUCKET_PROD
@@ -18,15 +18,16 @@ deploy:
     local_dir: build
     skip_cleanup: true
     on:
-      branch: "master"
+      branch: 'master'
 language: node_js
 node_js:
-  - "lts/*"
-install: yarn
-script: 
-  - yarn run build
-  - yarn test
+  - 'lts/*'
+dist: trusty
+install: npm install
+script:
+  - CI=false npm run build
+  - npm test
+warnings_are_errors: false
 cache:
-  yarn: true
   directories:
     - node_modules
