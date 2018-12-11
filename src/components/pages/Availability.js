@@ -173,9 +173,9 @@ export default class Availability extends Component {
                 }
                 break;
               case 'F':
-                if (number >= 2 && number <= 12) {
-                  residenceSVGFileName = 'F_2-12';
-                  residencePDFFileName = 'F_2-12';
+                if (number >= 3 && number <= 12) {
+                  residenceSVGFileName = 'F_3-12';
+                  residencePDFFileName = 'F_3-12';
                 } else {
                   residenceSVGFileName = 'F';
                   residencePDFFileName = 'F';
@@ -221,27 +221,27 @@ export default class Availability extends Component {
                 }
                 break;
               case 'K':
-                if (number >= 4 && number <= 11) {
-                  residenceSVGFileName = 'K_4-11';
-                  residencePDFFileName = 'K_4-11';
+                if (number >= 3 && number <= 11) {
+                  residenceSVGFileName = 'K_3-11';
+                  residencePDFFileName = 'K_3-11';
                 }
                 break;
               case 'L':
                 if (number >= 4 && number <= 6) {
                   residenceSVGFileName = 'L_4-6';
                   residencePDFFileName = 'L_4-6';
-                } else if (number > 6 && number <= 11) {
-                  residenceSVGFileName = 'L_6-11';
-                  residencePDFFileName = 'L_6-11';
+                } else if (number > 7 && number <= 12) {
+                  residenceSVGFileName = 'L_7-12';
+                  residencePDFFileName = 'L_7-12';
                 } else {
                   residenceSVGFileName = 'L';
                   residencePDFFileName = 'L';
                 }
                 break;
               case 'M':
-                if (number >= 4 && number <= 11) {
-                  residenceSVGFileName = 'M_4-11';
-                  residencePDFFileName = 'M_4-11';
+                if (number >= 5 && number <= 12) {
+                  residenceSVGFileName = 'M_5-12';
+                  residencePDFFileName = 'M_5-12';
                 } else {
                   residenceSVGFileName = 'M';
                   residencePDFFileName = 'M';
@@ -260,9 +260,9 @@ export default class Availability extends Component {
                 }
                 break;
               case 'P':
-                if (number >= 7 && number <= 9) {
-                  residenceSVGFileName = 'P_7-9';
-                  residencePDFFileName = 'P_7-9';
+                if (number >= 7 && number <= 12) {
+                  residenceSVGFileName = 'P_7-12';
+                  residencePDFFileName = 'P_7-12';
                 } else if (number === 4 || number === 6) {
                   residenceSVGFileName = 'P_4&6';
                   residencePDFFileName = 'P_4&6';
