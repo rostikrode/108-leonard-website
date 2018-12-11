@@ -131,7 +131,7 @@ export default class ListItem extends Component {
                 <span className="mobile-hidden">PH</span> {this.props.residence}
               </h4>
             ) : this.props.residence.indexOf('EAST') > -1 ||
-            this.props.residence.indexOf('NORTH') > -1 ? (
+              this.props.residence.indexOf('NORTH') > -1 ? (
               <h4 className="res sans">
                 <span className="desktop-hidden">PENTHOUSE </span>
                 <span className="mobile-hidden">PH</span> {this.props.residence}
@@ -154,9 +154,8 @@ export default class ListItem extends Component {
           <div className="list-cell label-with-info">
             <p className="label sans">INTERIOR SQ FT/M</p>
             <p className="info serif">
-              {this.delimitNumbers(this.props.interior)}/{this.sqmFormat(
-                this.props.interior
-              )}
+              {this.delimitNumbers(this.props.interior)}/
+              {this.sqmFormat(this.props.interior)}
             </p>
           </div>
           <div className="list-cell label-with-info">
