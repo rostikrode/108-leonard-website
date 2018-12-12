@@ -65,7 +65,7 @@ export default class ListItem extends Component {
     let exists = true;
     // CHANGE URL FOR MASTER IF UPDATING FLOORPLANS "108leonard-full.dev.dbxd.com -> 108leonard.com"
     fetch(
-      `https://s3.amazonaws.com/108leonard-full.dev.dbxd.com/images/5_availability/pdfs/residence_${
+      `https://s3.amazonaws.com/108leonard.com/images/5_availability/pdfs/residence_${
         this.props.residencePDFFileName
       }.pdf`
     )
