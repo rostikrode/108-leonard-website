@@ -4,17 +4,20 @@ import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
 import fetch from 'isomorphic-fetch';
 import Availability from '../components/pages/Availability';
-import availJSON from '../components/data/availability.json'
+import availJSON from '../components/data/availability.json';
 import { MemoryRouter } from 'react-router-dom';
 
-window.gtag = window.gtag || function() {
-  return true;
-};
+window.gtag =
+  window.gtag ||
+  function() {
+    return true;
+  };
 
 it('renders without crashing', () => {
   const tree = mount(
-    <MemoryRouter><Availability {...availJSON}  /></MemoryRouter>
+    <MemoryRouter>
+      <Availability {...availJSON} />
+    </MemoryRouter>
   );
-  expect(tree.html()).toMatchSnapshot()
+  expect(tree.html()).toMatchSnapshot();
 });
-

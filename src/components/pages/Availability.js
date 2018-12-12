@@ -85,6 +85,7 @@ export default class Availability extends Component {
     )
       .then(response => response.json())
       .then(json => {
+        console.log(json);
         var parsed = [];
         for (var i in json) {
           if (json[i]) {
@@ -99,11 +100,16 @@ export default class Availability extends Component {
                 : json[i]['unit_num'].split(' (')[0].match(/(\d+|[^\d]+)/g)[1];
             let residencePDFFileName = letter;
             let residenceSVGFileName = letter;
+            let keySVGFileName = letter;
+            // Updates Floorplan File Name
             switch (letter) {
               case 'A':
                 if (number >= 4 && number <= 12) {
                   residenceSVGFileName = 'A_4-12';
                   residencePDFFileName = 'A_4-12';
+                } else if (number === 15) {
+                  residenceSVGFileName = 'A_15-1stFl';
+                  residencePDFFileName = 'A_15-1stFl';
                 } else {
                   residenceSVGFileName = 'A';
                   residencePDFFileName = 'A';
@@ -113,12 +119,9 @@ export default class Availability extends Component {
                 if (number >= 3 && number <= 6) {
                   residenceSVGFileName = 'B_3-6';
                   residencePDFFileName = 'B_3-6';
-                } else if (number >= 7 && number <= 10) {
-                  residenceSVGFileName = 'B_7-10';
-                  residencePDFFileName = 'B_7-10';
-                } else if (number === 12) {
-                  residenceSVGFileName = 'B_12';
-                  residencePDFFileName = 'B_12';
+                } else if (number >= 7 && number <= 12) {
+                  residenceSVGFileName = 'B_7-12';
+                  residencePDFFileName = 'B_7-12';
                 } else if (number === 15) {
                   residenceSVGFileName = 'B_15';
                   residencePDFFileName = 'B_15';
@@ -179,7 +182,10 @@ export default class Availability extends Component {
                 }
                 break;
               case 'G':
-                if (number >= 7 && number <= 12) {
+                if (number >= 4 && number <= 6) {
+                  residenceSVGFileName = 'G_4-6';
+                  residencePDFFileName = 'G_4-6';
+                } else if (number >= 7 && number <= 12) {
                   residenceSVGFileName = 'G_7-12';
                   residencePDFFileName = 'G_7-12';
                 } else {
@@ -224,7 +230,7 @@ export default class Availability extends Component {
                 if (number >= 4 && number <= 6) {
                   residenceSVGFileName = 'L_4-6';
                   residencePDFFileName = 'L_4-6';
-                } else if (number >= 7 && number <= 12) {
+                } else if (number > 7 && number <= 12) {
                   residenceSVGFileName = 'L_7-12';
                   residencePDFFileName = 'L_7-12';
                 } else {
@@ -242,9 +248,15 @@ export default class Availability extends Component {
                 }
                 break;
               case 'N':
-                if (number >= 6 && number <= 12) {
-                  residenceSVGFileName = 'N_6-12';
-                  residencePDFFileName = 'N_6-12';
+                if (number === 6) {
+                  residenceSVGFileName = 'N_6';
+                  residencePDFFileName = 'N_6';
+                } else if (number === 4) {
+                  residenceSVGFileName = 'N_4';
+                  residencePDFFileName = 'N_4';
+                } else if (number >= 7 && number <= 12) {
+                  residenceSVGFileName = 'N_7-12';
+                  residencePDFFileName = 'N_7-12';
                 } else {
                   residenceSVGFileName = 'N';
                   residencePDFFileName = 'N';
@@ -254,15 +266,12 @@ export default class Availability extends Component {
                 if (number >= 7 && number <= 12) {
                   residenceSVGFileName = 'P_7-12';
                   residencePDFFileName = 'P_7-12';
-                } else if (number === 4) {
-                  residenceSVGFileName = 'P_4';
-                  residencePDFFileName = 'P_4';
+                } else if (number === 4 || number === 6) {
+                  residenceSVGFileName = 'P_4&6';
+                  residencePDFFileName = 'P_4&6';
                 } else if (number === 5) {
                   residenceSVGFileName = 'P_5';
                   residencePDFFileName = 'P_5';
-                } else if (number === 6) {
-                  residenceSVGFileName = 'P_6';
-                  residencePDFFileName = 'P_6';
                 } else {
                   residenceSVGFileName = 'P';
                   residencePDFFileName = 'P';
@@ -283,6 +292,160 @@ export default class Availability extends Component {
               default:
                 residenceSVGFileName = letter;
                 residencePDFFileName = letter;
+                break;
+            }
+            //Updates Key File Name
+            switch (letter) {
+              case 'A':
+                if (number === 3 || number === 5 || number === 6) {
+                  keySVGFileName = 'A_3-6';
+                } else if (number === 4) {
+                  keySVGFileName = 'A_4-12';
+                } else if (number >= 7 && number <= 12) {
+                  keySVGFileName = 'A_4-12';
+                } else if (number === 15) {
+                  keySVGFileName = 'A_15';
+                } else if (number === 16) {
+                  keySVGFileName = 'A_16';
+                } else {
+                  keySVGFileName = 'A';
+                }
+                break;
+              case 'B':
+                if (number >= 7 && number <= 10) {
+                  keySVGFileName = 'B_7-10';
+                } else if (number === 15) {
+                  keySVGFileName = 'B_15';
+                } else {
+                  keySVGFileName = 'B';
+                }
+                break;
+              case 'C':
+                if (number >= 3 && number <= 6) {
+                  keySVGFileName = 'C_3-6';
+                } else if (number >= 7 && number <= 12) {
+                  keySVGFileName = 'C_7-12';
+                } else if (number === 15) {
+                  keySVGFileName = 'C_15';
+                } else {
+                  keySVGFileName = 'C';
+                }
+                break;
+              case 'D':
+                if (number >= 3 && number <= 5) {
+                  keySVGFileName = 'D_3-5';
+                } else if (number >= 7 && number <= 8) {
+                  keySVGFileName = 'D_7-8';
+                } else if (number >= 9 && number <= 11) {
+                  keySVGFileName = 'D_9-11';
+                } else if (number === 6) {
+                  keySVGFileName = 'D_6';
+                } else {
+                  keySVGFileName = 'D';
+                }
+                break;
+              case 'E':
+                if (number >= 4 && number <= 12) {
+                  keySVGFileName = 'E_4-12';
+                } else {
+                  keySVGFileName = 'E';
+                }
+                break;
+              case 'F':
+                if (number >= 3 && number <= 12) {
+                  keySVGFileName = 'F_3-12';
+                } else {
+                  keySVGFileName = 'F';
+                }
+                break;
+              case 'G':
+                if (number >= 4 && number <= 6) {
+                  keySVGFileName = 'G_4-6';
+                } else if (number >= 7 && number <= 12) {
+                  keySVGFileName = 'G_7-12';
+                } else {
+                  keySVGFileName = 'G';
+                }
+                break;
+              case 'H':
+                if (number >= 4 && number <= 6) {
+                  keySVGFileName = 'H_4-6';
+                } else if (number >= 7 && number <= 12) {
+                  keySVGFileName = 'H_7-12';
+                } else {
+                  keySVGFileName = 'H';
+                }
+                break;
+              case 'I':
+                if (number >= 4 && number <= 11) {
+                  keySVGFileName = 'I_4-11';
+                } else {
+                  keySVGFileName = 'I';
+                }
+                break;
+              case 'J':
+                if (number >= 4 && number <= 11) {
+                  keySVGFileName = 'J_4-11';
+                } else if (number === 3) {
+                  keySVGFileName = 'J_3';
+                }
+                break;
+              case 'K':
+                if (number >= 3 && number <= 11) {
+                  keySVGFileName = 'K_3-11';
+                } else {
+                  keySVGFileName = 'K';
+                }
+                break;
+              case 'L':
+                if (number >= 4 && number <= 6) {
+                  keySVGFileName = 'L_4-6';
+                } else if (number > 7 && number <= 12) {
+                  keySVGFileName = 'L_7-12';
+                } else {
+                  keySVGFileName = 'L';
+                }
+                break;
+              case 'M':
+                if (number >= 5 && number <= 12) {
+                  keySVGFileName = 'M_5-12';
+                } else {
+                  keySVGFileName = 'M';
+                }
+                break;
+              case 'N':
+                if (number === 6) {
+                  keySVGFileName = 'N_6';
+                } else if (number === 4) {
+                  keySVGFileName = 'N_4';
+                } else if (number >= 7 && number <= 12) {
+                  keySVGFileName = 'N_7-12';
+                } else {
+                  keySVGFileName = 'N';
+                }
+                break;
+              case 'P':
+                if (number >= 7 && number <= 12) {
+                  keySVGFileName = 'P_7-12';
+                } else if (number === 4 || number === 6) {
+                  keySVGFileName = 'P_4&6';
+                } else if (number === 5) {
+                  keySVGFileName = 'P_5';
+                } else {
+                  keySVGFileName = 'P';
+                }
+                break;
+              case 'R':
+                if (number >= 7 && number <= 12) {
+                  keySVGFileName = 'R_7-12';
+                } else if (number === 4) {
+                  keySVGFileName = 'R_4';
+                } else if (number === 6) {
+                  keySVGFileName = 'R_6';
+                }
+                break;
+              default:
+                keySVGFileName = letter;
                 break;
             }
 
@@ -320,6 +483,7 @@ export default class Availability extends Component {
                       .match(/(\d+|[^\d]+)/g)[1],
               residenceSVGFileName: residenceSVGFileName,
               residencePDFFileName: residencePDFFileName,
+              keySVGFileName: keySVGFileName,
               bedrooms: parseInt(
                 json[i]['unit_type'].split('/')[0].split('BR')[0],
                 10
@@ -523,6 +687,7 @@ export default class Availability extends Component {
   }
 
   onViewFloorplanClick(fresidence, fstate, fexists) {
+    console.log(fexists);
     this.setState({
       activeResidence: fresidence,
       floorplanState: fstate,

@@ -6,13 +6,19 @@ import PressArticle from '../components/pages/PressArticle';
 import pressJSON from '../components/data/press.json';
 import { MemoryRouter } from 'react-router-dom';
 
-window.gtag = window.gtag || function() {
-  return true;
-};
+window.gtag =
+  window.gtag ||
+  function() {
+    return true;
+  };
 
 it('renders without crashing', () => {
-  const tree = renderer.create(
-    <MemoryRouter><PressArticle {...pressJSON} /></MemoryRouter>
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <MemoryRouter>
+        <PressArticle {...pressJSON} />
+      </MemoryRouter>
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

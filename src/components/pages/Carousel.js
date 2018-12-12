@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {NavLink} from 'react-router-dom';
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import Slider from 'react-slick';
 
 import IntroSlide from '../partials/IntroSlide.js';
@@ -15,13 +15,19 @@ import prev_arrow from '../../assets/prev_arrow.svg';
 
 var debounce = require('throttle-debounce/debounce');
 
-const NextPage = (props) => {
+const NextPage = props => {
   return (
-    <NavLink className="nav-anchor serif-bold next-button" strict exact to={props.nextPageSlug} onClick={() => {
-props.nextButton(props.nextPageTitle)
-;}}>  
+    <NavLink
+      className="nav-anchor serif-bold next-button"
+      strict
+      exact
+      to={props.nextPageSlug}
+      onClick={() => {
+        props.nextButton(props.nextPageTitle);
+      }}
+    >
       <span>Go to {props.nextPageTitle}</span>
-      <img src={next_arrow} alt="arrow to take you to next carousel page"/>
+      <img src={next_arrow} alt="arrow to take you to next carousel page" />
     </NavLink>
   );
 };
@@ -41,9 +47,9 @@ export default class Carousel extends Component {
   componentWillMount() {
     if (window.location.origin === 'https://108leonard.com') {
       window.gtag('config', 'UA-113369414-1', {
-        'page_title': this.props.metaTitle,
-        'page_location': window.location.href,
-        'page_path': window.location.pathname,
+        page_title: this.props.metaTitle,
+        page_location: window.location.href,
+        page_path: window.location.pathname
       });
     }
   }
@@ -62,18 +68,29 @@ export default class Carousel extends Component {
 
     /** meta data for page */
     document.title = this.props.metaTitle;
-    if(document.getElementsByTagName('meta').description) {
-      document.getElementsByTagName('meta').description.content = this.props.metaDescription;
-      document.querySelector("meta[property='og:description']").content = this.props.metaDescription;
-      document.querySelector("meta[property='og:title']").content = this.props.metaTitle;
+    if (document.getElementsByTagName('meta').description) {
+      document.getElementsByTagName(
+        'meta'
+      ).description.content = this.props.metaDescription;
+      document.querySelector(
+        "meta[property='og:description']"
+      ).content = this.props.metaDescription;
+      document.querySelector(
+        "meta[property='og:title']"
+      ).content = this.props.metaTitle;
     }
     if (document.querySelector("link[rel='canonical']")) {
-      document.querySelector("link[rel='canonical']").href = window.location.href
-      document.querySelector("meta[property='og:url']").content = window.location.href
+      document.querySelector("link[rel='canonical']").href =
+        window.location.href;
+      document.querySelector("meta[property='og:url']").content =
+        window.location.href;
     }
-    var viewport = document.querySelector("meta[name=viewport]");
-    if(viewport) {
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=1');
+    var viewport = document.querySelector('meta[name=viewport]');
+    if (viewport) {
+      viewport.setAttribute(
+        'content',
+        'width=device-width, initial-scale=1, user-scalable=1'
+      );
     }
 
     /** dynamically setting the next arrow location based on the length of the dots */
@@ -91,7 +108,7 @@ export default class Carousel extends Component {
   componentDidUpdate() {
     // sending to first slide on nav click
     if (this.props.navClicked && this.slider) {
-      setTimeout(()=>{
+      setTimeout(() => {
         if (window.matchMedia('(min-width: 1024px)').matches) {
           this.slider.slickGoTo(0);
         }
@@ -100,11 +117,10 @@ export default class Carousel extends Component {
     }
   }
 
-
   doPlacement() {
     let headerOffset = 0;
     if (window.matchMedia('(min-width: 1024px)').matches) {
-      headerOffset = (0);
+      headerOffset = -(225 + 32);
     }
     if (window.matchMedia('(min-width: 1366px)').matches) {
       headerOffset = -(225 + 32);
@@ -123,22 +139,36 @@ export default class Carousel extends Component {
           if (dots !== null && dots) {
             if (dots) {
               length = dots.getBoundingClientRect().width;
+              console.log(`length: ${length}`);
             }
           }
-          if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-            nextArrow.style.left = `calc(80px + ${(length)}px + 45px)`;
+          if (
+            parentSliderEl
+              .querySelector('.slick-slider')
+              .classList.contains('team-slider')
+          ) {
+            nextArrow.style.left = `calc(80px + ${length}px + 45px)`;
           } else {
-            let captions = parentSliderEl.querySelectorAll('.slick-slide .inner .caption');
-            let activeSlide = parentSliderEl.querySelector('.slick-active .inner .image-wrapper');
-            let imageOffset = Math.round(activeSlide.getBoundingClientRect().left + headerOffset);
-            let imageRightOffset = Math.round(window.innerWidth - activeSlide.getBoundingClientRect().right - 4);
-
+            let captions = parentSliderEl.querySelectorAll(
+              '.slick-slide .inner .caption'
+            );
+            let activeSlide = parentSliderEl.querySelector(
+              '.slick-active .inner .image-wrapper'
+            );
+            let imageOffset = Math.round(
+              activeSlide.getBoundingClientRect().left + headerOffset
+            );
+            console.log(`imageOffset: ${imageOffset}`);
+            let imageRightOffset = Math.round(
+              window.innerWidth - activeSlide.getBoundingClientRect().right - 4
+            );
 
             // left arrow to be under the dynamically sized image
-            prevArrow.style.left = imageOffset+'px';
-
+            prevArrow.style.left = imageOffset + 'px';
 
             dots.style.left = `calc(${imageOffset}px + 35px)`;
+
+            console.log(imageOffset + 35);
 
             if (nextButton !== undefined && nextArrow !== undefined) {
               nextArrow.style.left = `calc(${imageOffset}px + 35px + ${length}px)`;
@@ -150,7 +180,7 @@ export default class Carousel extends Component {
               let cap = captions[i];
 
               if (typeof cap === 'object') {
-                cap.style.right = imageRightOffset+'px';
+                cap.style.right = imageRightOffset + 'px';
               }
             }
           }
@@ -166,43 +196,45 @@ export default class Carousel extends Component {
   updateArrowPosition() {
     if (window.matchMedia('(min-width: 1024px)').matches) {
       // setTimeout(() => {
-        if (this.props !== undefined) {
-          this.doPlacement();
-        }
-        // if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
-        //   if (this.props) {
-        //     this.doPlacement();
-        //   }
-        // } else {
-        //   if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('slick-slider')) {
-        //     // then modify once image is loaded
-        //     let image = new Image();
-        //     image.onload = () => {
-        //       if (this.props) {
-        //         console.log('loaded img');
-        //         this.doPlacement();
-        //       }
-        //     };
-        //     if (parentSliderEl && parentSliderEl.querySelector('.slick-active .inner .image-wrapper img')) {
-        //       console.log('present img');
-        //       image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
-        //     }
-        //     if (this.props) {
-        //       this.doPlacement();
-        //     }
-        //   }
-        // }
+      if (this.props !== undefined) {
+        this.doPlacement();
+      }
+      // if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+      //   if (this.props) {
+      //     this.doPlacement();
+      //   }
+      // } else {
+      //   if ((parentSliderEl.querySelector('.slick-slider') !== null) && parentSliderEl.querySelector('.slick-slider').classList.contains('slick-slider')) {
+      //     // then modify once image is loaded
+      //     let image = new Image();
+      //     image.onload = () => {
+      //       if (this.props) {
+      //         console.log('loaded img');
+      //         this.doPlacement();
+      //       }
+      //     };
+      //     if (parentSliderEl && parentSliderEl.querySelector('.slick-active .inner .image-wrapper img')) {
+      //       console.log('present img');
+      //       image.src = parentSliderEl.querySelector('.slick-active .inner .image-wrapper img').src;
+      //     }
+      //     if (this.props) {
+      //       this.doPlacement();
+      //     }
+      //   }
+      // }
       // }, 100);
     }
   }
   /** custom button events needed for custom buttons */
   next() {
-    if (this.slider)
-      {this.slider.slickNext()}
+    if (this.slider) {
+      this.slider.slickNext();
+    }
   }
   previous() {
-    if (this.slider)
-      {this.slider.slickPrev()}
+    if (this.slider) {
+      this.slider.slickPrev();
+    }
   }
 
   /** switch between carousel and scrolling list for portrait vs landscape */
@@ -228,10 +260,13 @@ export default class Carousel extends Component {
       if (sTop <= 70) {
         let sTitle = s.getAttribute('data-section');
         this.activateSubnav(sTitle);
-      }  
+      }
 
       /** if at bottom of page and there's still a new section there */
-      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight)  {
+      if (
+        window.innerHeight + window.pageYOffset >=
+        document.body.offsetHeight
+      ) {
         if (sBottom > -1) {
           // make in page title disappear
           s.style.opacity = '0';
@@ -259,9 +294,9 @@ export default class Carousel extends Component {
     e.persist();
     if (window.matchMedia('(min-width: 1024px)').matches) {
       if (parentSliderEl) {
-        if (e.deltaY < 0 ) {
+        if (e.deltaY < 0) {
           that.previous();
-        } else if (e.deltaY > 0 ) {
+        } else if (e.deltaY > 0) {
           that.next();
         }
 
@@ -295,15 +330,21 @@ export default class Carousel extends Component {
     const moreSettings = {
       arrows: false,
       beforeChange: () => {
-        if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+        if (
+          !parentSliderEl
+            .querySelector('.slick-slider')
+            .classList.contains('team-slider')
+        ) {
           /** to fade out captions NOT on team tho */
-          var allCaps = parentSliderEl.querySelectorAll(`.slick-slide .inner .caption`);
+          var allCaps = parentSliderEl.querySelectorAll(
+            `.slick-slide .inner .caption`
+          );
           for (let i = 0; i < allCaps.length; i++) {
             allCaps[i].classList.add('fade-out');
           }
         }
       },
-      afterChange: (slide) => {
+      afterChange: slide => {
         this.updateArrowPosition();
 
         if (slide === this.props.slides.length) {
@@ -311,84 +352,144 @@ export default class Carousel extends Component {
           sliderButtonNextEl.classList.add('fade');
 
           /** show the next slideshow page button on last slide */
-          if (nextPageButton)
-            {nextPageButton.classList.add('fadein');}
+          if (nextPageButton) {
+            nextPageButton.classList.add('fadein');
+          }
         } else if (slide === 0) {
           sliderButtonNextEl.classList.remove('fade');
           sliderButtonPrevEl.classList.add('fade');
 
           /** dont't show the next slideshow page button on last slide */
-          if (nextPageButton)
-            {nextPageButton.classList.remove('fadein');}
+          if (nextPageButton) {
+            nextPageButton.classList.remove('fadein');
+          }
         } else {
           sliderButtonNextEl.classList.remove('fade');
           sliderButtonPrevEl.classList.remove('fade');
           /** don't show the next slideshow page button on last slide */
-          if (nextPageButton)
-            {nextPageButton.classList.remove('fadein');}
+          if (nextPageButton) {
+            nextPageButton.classList.remove('fadein');
+          }
 
           // if team carousel, the slide num and total slides is mismatched
-          if (parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+          if (
+            parentSliderEl
+              .querySelector('.slick-slider')
+              .classList.contains('team-slider')
+          ) {
             if (slide === this.props.slides.length - 1) {
               sliderButtonPrevEl.classList.remove('fade');
               sliderButtonNextEl.classList.add('fade');
             }
           }
         }
-        var section = parentSliderEl.querySelector('.slick-slide.slick-active').getAttribute('data-section');
+        var section = parentSliderEl
+          .querySelector('.slick-slide.slick-active')
+          .getAttribute('data-section');
         this.activateSubnav(section);
 
-        if (!parentSliderEl.querySelector('.slick-slider').classList.contains('team-slider')) {
+        if (
+          !parentSliderEl
+            .querySelector('.slick-slider')
+            .classList.contains('team-slider')
+        ) {
           /** to fade in captions NOT on team tho */
-          var currentCap = parentSliderEl.querySelector(`.slick-slide.slick-active .inner .caption`);
+          var currentCap = parentSliderEl.querySelector(
+            `.slick-slide.slick-active .inner .caption`
+          );
           if (currentCap) {
             currentCap.classList.remove('fade-out');
           }
         }
-      },
+      }
     };
 
     return (
-      <div ref={(c) => this.sliderParent = c } className="slider-parent" onWheel={this.debounceEventHandler(65, (e) => this.onMouseWheelScroll(e, this))}>
-
-        <Slider ref={(c) => this.slider = c } {...this.props.settings} {...moreSettings}>
-          {this.props.intro ?
-            <div key={0} className="slick-intro-slide slick-section" data-section={this.props.section}>
-              <IntroSlide {...this.props} activateSubnav={this.activateSubnav} onIntroImgLoad={this.onIntroImgLoad} />
+      <div
+        ref={c => (this.sliderParent = c)}
+        className="slider-parent"
+        onWheel={this.debounceEventHandler(65, e =>
+          this.onMouseWheelScroll(e, this)
+        )}
+      >
+        <Slider
+          ref={c => (this.slider = c)}
+          {...this.props.settings}
+          {...moreSettings}
+        >
+          {this.props.intro ? (
+            <div
+              key={0}
+              className="slick-intro-slide slick-section"
+              data-section={this.props.section}
+            >
+              <IntroSlide
+                {...this.props}
+                activateSubnav={this.activateSubnav}
+                onIntroImgLoad={this.onIntroImgLoad}
+              />
             </div>
-          : undefined}
+          ) : (
+            undefined
+          )}
 
-          {!this.props.isteam ?
-            this.props.slides.map((slide, key) => {
-              return (
-                <div key={key+1} data-section={slide.section} className="slick-section">
-                  <ImageSlide slide={slide} page={this.props.page} onIntroImgLoad={this.onIntroImgLoad}/>
-                </div>
-              );
-            })
-          :
-            this.props.slides.map((slide, key) => {
-              return (
-                <div key={key + 1} data-section={slide.section} className="slick-section slick-intro-slide">
-                  <TeamSlide slide={slide} onIntroImgLoad={this.onIntroImgLoad} />
-                </div>
-              );
-            })
-          }
+          {!this.props.isteam
+            ? this.props.slides.map((slide, key) => {
+                return (
+                  <div
+                    key={key + 1}
+                    data-section={slide.section}
+                    className={`slick-section`}
+                  >
+                    <ImageSlide
+                      slide={slide}
+                      page={this.props.page}
+                      onIntroImgLoad={this.onIntroImgLoad}
+                    />
+                  </div>
+                );
+              })
+            : this.props.slides.map((slide, key) => {
+                return (
+                  <div
+                    key={key + 1}
+                    data-section={slide.section}
+                    className="slick-section slick-intro-slide"
+                  >
+                    <TeamSlide
+                      slide={slide}
+                      onIntroImgLoad={this.onIntroImgLoad}
+                    />
+                  </div>
+                );
+              })}
         </Slider>
 
-        <button ref={(el) => this.btnPrev = el } onClick={this.previous} className="custom-arrow prev-arrow fade">
-          <img src={prev_arrow} alt="arrow to prev slide"/>
+        <button
+          ref={el => (this.btnPrev = el)}
+          onClick={this.previous}
+          className="custom-arrow prev-arrow fade"
+        >
+          <img src={prev_arrow} alt="arrow to prev slide" />
         </button>
-        <button ref={(el) => this.btnNext = el } onClick={this.next} className="custom-arrow next-arrow">
-          <img src={next_arrow} alt="arrow to next slide"/>
+        <button
+          ref={el => (this.btnNext = el)}
+          onClick={this.next}
+          className="custom-arrow next-arrow"
+        >
+          <img src={next_arrow} alt="arrow to next slide" />
         </button>
 
-        {this.props.nextPageTitle ?
-          <NextPage {...this.props} page= {this.props.page} nextButton={this.onNextButton.bind(this)} />
-        : undefined}
+        {this.props.nextPageTitle ? (
+          <NextPage
+            {...this.props}
+            page={this.props.page}
+            nextButton={this.onNextButton.bind(this)}
+          />
+        ) : (
+          undefined
+        )}
       </div>
     );
   }
 }
-

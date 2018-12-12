@@ -24,8 +24,9 @@ node_js:
   - 'lts/*'
 dist: trusty
 install: npm install
-script: npm run build
-before_deploy: npm test
+script:
+  - CI=false npm run build
+  - npm test
 warnings_are_errors: false
 cache:
   directories:

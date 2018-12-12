@@ -1,10 +1,13 @@
 {
   "page": "Residences",
-  "metaTitle": "108 Leonard | Luxury For-Sale Condominium Residences Designed by Jeffrey Beers | NYC",
-  "metaDescription": "Take a look inside the residences from the interiors to the kitchens and bathrooms, full pictures of your next home.",
+  "metaTitle":
+    "108 Leonard | Luxury For-Sale Condominium Residences Designed by Jeffrey Beers | NYC",
+  "metaDescription":
+    "Take a look inside the residences from the interiors to the kitchens and bathrooms, full pictures of your next home.",
   "intro": {
     "title": "Romancing Tribeca",
-    "para": "In a nod to this distinguished Italian Renaissance building and its Parisian counterparts, Jeffrey Beers International juxtaposes classic details&mdash;oversized moldings, chevron-patterned oak floors&mdash;with contemporary touches for these 152 highly-appointed residences. From the outside, 108 Leonard is an historic landmark that pays homage to a gilded bygone era; on the inside, it is a bright canvas of modern restraint, ready to adapt to one's individual lifestyle."
+    "para":
+      "In a nod to this distinguished Italian Renaissance building and its Parisian counterparts, Jeffrey Beers International juxtaposes classic details&mdash;oversized moldings, chevron-patterned oak floors&mdash;with contemporary touches for these 152 highly-appointed residences. From the outside, 108 Leonard is an historic landmark that pays homage to a gilded bygone era; on the inside, it is a bright canvas of modern restraint, ready to adapt to one's individual lifestyle."
   },
   "introImage": "/images/3_residences/3.1_DBOX_108LEONARD_EntryDoor2.jpg",
   "introImageMobile": "/images/3_residences/residences_landing_mobile.jpg",
@@ -16,33 +19,48 @@
       "section": "Interiors",
       "newsection": true,
       "caption": "Ceiling heights range from approximately 10' to over 14'",
-      "detail": "Elegantly proportioned windows and five inch wide oak floors bring authentic European glamour to organically flowing layouts."
-    }, {
+      "detail":
+        "Elegantly proportioned windows and five inch wide oak floors bring authentic European glamour to organically flowing layouts."
+    },
+    {
       "src": "/images/3_residences/3.2.1_Greatroom_11N.jpg",
       "section": "Interiors",
       "newsection": false,
       "caption": "Each residence has been optimized for space and warmth",
-      "detail": "Gallery walls are awash in lighting tucked behind recessed coves, offering illuminated spaces for burgeoning art collectors."
-    }, {
+      "detail":
+        "Gallery walls are awash in lighting tucked behind recessed coves, offering illuminated spaces for burgeoning art collectors."
+    },
+    {
+      "src": "/images/3_residences/3.2.3_Master_Bedroom_4J.jpg",
+      "section": "Interiors",
+      "newsection": false,
+      "caption": "Prized one bedroom residences",
+      "detail":
+        "A one-bedroom residence featuring dramatic windows, ambient cove lighting, and soaring ceiling heights."
+    },
+    {
       "src": "/images/3_residences/3.3.1_Plinth_Kitchen.jpg",
       "section": "Kitchens",
       "newsection": true,
       "caption": "Kitchen in Sand Palette",
-      "detail": "Open-plan kitchens have been thoughtfully conceived in two palettes, sheathed in marble backsplashes and anchored by stunning marble waterfall islands."
-    }, {
+      "detail":
+        "Open-plan kitchens have been thoughtfully conceived in two palettes, sheathed in marble backsplashes and anchored by stunning marble waterfall islands."
+    },
+    {
       "src": "/images/3_residences/3.3.2_Waterfall_Kitchen.jpg",
       "section": "Kitchens",
       "newsection": false,
       "caption": "Kitchen in Ash Palette",
       "detail": "Kitchens feature top-of-the-line appliances by Miele."
-    }, {
+    },
+    {
       "src": "/images/3_residences/3.4.1_Master_Bath.jpg",
       "section": "Bathrooms",
       "newsection": true,
       "caption": "Master bath with Calacatta Black feature wall"
     }
   ],
-  "settings":{
+  "settings": {
     "dots": true,
     "className": "residences-slider",
     "swipeToSlide": true,
@@ -51,10 +69,12 @@
     "slidesToShow": 1,
     "slidesToScroll": 1,
     "arrow": true,
-    "responsive": [{ 
-        "breakpoint": 1024, 
-        "settings": "unslick" 
-    }]
+    "responsive": [
+      {
+        "breakpoint": 1024,
+        "settings": "unslick"
+      }
+    ]
   },
   "nextPageTitle": "Penthouses",
   "nextPageSlug": "/penthouses/"
