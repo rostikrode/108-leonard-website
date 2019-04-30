@@ -207,7 +207,7 @@ export default class Contact extends Component {
     });
     codeList.unshift({
       'id': -1,
-			'name': '(+1) United States of America',
+			'name': '(+1) United States',
 			'abbr': '+1'
     })
     this.setState({
@@ -244,7 +244,7 @@ export default class Contact extends Component {
   }
 
   onPhoneNumberEnter(e) {
-    this.validatePhoneNumber(this.state.countrycode+' '+e.target.value);
+    this.validatePhoneNumber(this.state.countrycode + ' ' + e.target.value);
   }
 
   handleCheck(e) {
@@ -582,9 +582,21 @@ export default class Contact extends Component {
                 
                 <input onChange={ (e) => this.setState({ email: e.target.value })} name="email" required className="black-ph whole" type="email" placeholder="EMAIL*" tabIndex={3} />
 
-                <div className="half-wrapper">
+                <div className="half-wrapper" style={{ borderBottom: '1px solid #A1C6CF'}}>
+                  <select 
+                    tabIndex={4} 
+                    className="half" 
+                    value={this.state.countrycodevalue}
+                    onChange={(e) => this.setState({ countrycode: e.target.value, countrycodevalue: e.target.value })}
+                  >
+                    <option value="" disabled selected>COUNTRY CODE *</option>
+                    {this.state.countrycodelist.map(item => (
+                      <option key={item.name} value={item.abbr}>{item.name}</option>
+                    ))}
+                  </select>
                   {/* textfield with dropdown */}
-                  <Autocomplete
+                  {/* <Autocomplete
+                    autoHighlight={false}
                     value={this.state.countrycodevalue}
                     className="half"
                     wrapperStyle={{display: 'block', width: '50%'}}
@@ -592,7 +604,7 @@ export default class Contact extends Component {
                     shouldItemRender={(item, value) => {
                       return (
                         item.name.toLowerCase().indexOf(value.toLowerCase()) !== -1 ||
-                        item.abbr.toLowerCase().indexOf(value.toLowerCase()) !== -1
+                        item.abbr.toLowerCase().indexOf(value.toLowerafdCase()) !== -1
                       )
                     }}
                     items={this.state.countrycodelist}
@@ -611,9 +623,8 @@ export default class Contact extends Component {
                     onSelect={(value, item) => {
                       this.setState({ countrycodevalue: item.abbr, countrycode: item.abbr })
                     }}
-                  />
-
-                  <input ref={e => this.phonefield = e} onChange={this.onPhoneNumberEnter} name="phone" required className="black-ph half" type="tel" placeholder="PHONE NUMBER*" tabIndex={5} />
+                  /> */}
+                  <input ref={e => this.phonefield = e} onChange={this.onPhoneNumberEnter} name="phone" required className="black-ph half" style={{ border: 'none', borderLeft: '1px solid #A1C6CF'}} type="tel" placeholder="PHONE NUMBER*" tabIndex={5} />
                 </div>
                 
                 {/* radio select */}
