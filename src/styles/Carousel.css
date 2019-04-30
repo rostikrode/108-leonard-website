@@ -702,7 +702,7 @@
   }
   .team-slider .slick-slide .inner .caption-wrapper .wrapper,
   .team-slider .slick-intro-slide .inner .caption-wrapper .wrapper {
-    height: 28em;
+    /* height: 28em; */
     transform: translate(-50%, -50%);
     position: absolute;
     left: 50%;

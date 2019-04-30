@@ -12,19 +12,22 @@
       "para": "Jeffery Beers International (JBI) brings experience, vision, and architectural precision to the creation of vibrant social spaces. Internationally recognized as a leader in architecture and design, JBI is a full service studio founded by Jeffrey Beers in 1986. JBI's team of talented and highly trained designers have collaborated with exceptional clients to push the boundaries of design, advancing the hospitality industry through a portfolio of award-winning projects, including the Cove at the Atlantis Resort in Paradise Island, the Bahamas, The 40/40 Club, The Plaza Food Hall in New York City and the Fontainebleau Resort in Miami.",
       "images": [
         {
-          "url":"/images/9_team/jeffrey_beers/JBI_Ascent_Lounge_Steven_Menendez.jpg",
-          "caption":"Ascent Lounge"
-        }, {
-          "url":"/images/9_team/jeffrey_beers/JBI_One&Only_Palmilla_SEARED_Restaurant_Jean-Georges_Vongerichten.jpg",
+          "url": "/images/9_team/jeffrey_beers/JBI_Ascent_Lounge_Steven_Menendez.jpg",
+          "caption": "Ascent Lounge"
+        },
+        {
+          "url": "/images/9_team/jeffrey_beers/JBI_One&Only_Palmilla_SEARED_Restaurant_Jean-Georges_Vongerichten.jpg",
           "half": true,
-          "caption":"Seared Restaurant"
-        }, {
-          "url":"/images/9_team/jeffrey_beers/JBI_The_Cove_GrandLobby-Horizontal_1296.jpg",
+          "caption": "Seared Restaurant"
+        },
+        {
+          "url": "/images/9_team/jeffrey_beers/JBI_The_Cove_GrandLobby-Horizontal_1296.jpg",
           "half": true,
-          "caption":"The Cove Atlantis"
+          "caption": "The Cove Atlantis"
         }
       ]
-    }, {
+    },
+    {
       "title": "Development",
       "subtitle": "Sponsored by C3GBLLC<br/>Managed by Elad Group",
       "section": "Development",
@@ -32,31 +35,34 @@
       "para": "108 Leonard is a 19th century landmarked, building conversion located in the heart of TriBeCa sponsored by C3GB LLC with development managed by Elad Group. Elad Group boasts an impressive portfolio of iconic buildings such as One West End, 22 Central Park South, 250 West Street and The Carlyle Residences on the West Coast. One of the nation’s leading real estate companies, Elad Group has focused on the acquisition, development, and conversion of architecturally significant residential and commercial properties in key markets throughout the United States. Once complete, 108 Leonard will not only offer more than 150 exquisitely designed condominium residences; the property will also be an illustrious addition to Elad’s already distinguished portfolio.",
       "images": [
         {
-          "url":"/images/9_team/elad_group/ELAD_Sunset.jpg",
-          "caption":"One West End"
-        }, {
-          "url":"/images/9_team/elad_group/ELAD_CPS_076.jpg",
+          "url": "/images/9_team/elad_group/ELAD_Sunset.jpg",
+          "caption": "One West End"
+        },
+        {
+          "url": "/images/9_team/elad_group/ELAD_CPS_076.jpg",
           "half": true,
-          "caption":"22 Central Park South"
-        }, {
-          "url":"/images/9_team/elad_group/ELAD_west_PH.jpg",
+          "caption": "22 Central Park South"
+        },
+        {
+          "url": "/images/9_team/elad_group/ELAD_west_PH.jpg",
           "half": true,
-          "caption":"250 West Street"
+          "caption": "250 West Street"
         }
       ]
-    }, {
+    },
+    {
       "title": "Marketing and Sales",
       "subtitle": "Douglas Elliman Development Marketing",
       "section": "Marketing and Sales",
       "newsection": true,
-      "para": "Douglas Elliman Development Marketing, a division of Douglas Elliman Real Estate, offers unmatched expertise in sales, leasing, and marketing for new developments throughout New York City, Long Island, Westchester, the Hamptons, South Florida and California as well as throughout the United States and internationally. The firm ranks amongst New York City's most prominent sales and marketing firms. Drawing upon decades of experience and market-specific knowledge, Douglas Elliman Development Marketing offers a multidisciplinary approach that includes comprehensive in-house research, design and product development, marketing, and sales. Through a strategic global alliance with Knight Frank Residential, the world's largest privately-owned property consultancy, the company markets properties to audiences in 60 countries.",
+      "para": "Douglas Elliman Development Marketing, a division of Douglas Elliman Real Estate, offers unmatched expertise in sales, leasing, and marketing for new developments throughout New York City, Long Island, The Hamptons, Westchester, New Jersey, South Florida, California, and Massachusetts, as well as throughout the United States and internationally. The firm ranks amongst New York City’s most prominent sales and marketing firms with over 100 in-house development professionals and an over $87 billion global new development portfolio. Our hybrid platform of matching experienced new development experts with our skilled brokerage professionals provides unparalleled expertise and real time market intelligence to our clients. Drawing upon decades of experience and market-specific knowledge, Douglas Elliman Development Marketing offers a multidisciplinary approach that includes comprehensive in-house research, planning and design, marketing, and sales. Through a strategic global alliance with Knight Frank Residential, the world’s largest privately-owned property consultancy, the company markets properties to audiences in 60 countries. <br/><br/><a href='http://www.elliman.com/new-developments'>http://www.elliman.com/new-developments</a>",
       "title2": "Branding and Creative",
       "subtitle2": "DBOX",
       "section2": "Branding and Creative",
       "para2": "DBOX builds brands and develops immersive marketing campaigns for the fields of property development, architecture and the arts.<br/><br/>Since being founded in 1996, DBOX has received awards from the Academy of Television Arts & Sciences (Emmy&reg; Awards), The Art Directors Club, World Luxury Award, American Design Awards, Communication Arts and The International Property Awards, and DBOX's work has been exhibited at some of the world's most respected art institutions, such as The Museum of Modern Art (MoMA), The Museum of Contemporary Art in Tokyo, The Art Institute of Chicago, New Museum and The Museum of Contemporary Art in Los Angeles."
     }
   ],
-  "settings":{
+  "settings": {
     "dots": true,
     "className": "team-slider",
     "swipeToSlide": true,
@@ -65,9 +71,11 @@
     "slidesToShow": 1,
     "slidesToScroll": 1,
     "arrow": true,
-    "responsive": [{ 
-        "breakpoint": 1024, 
-        "settings": "unslick" 
-    }]
+    "responsive": [
+      {
+        "breakpoint": 1024,
+        "settings": "unslick"
+      }
+    ]
   }
 }
