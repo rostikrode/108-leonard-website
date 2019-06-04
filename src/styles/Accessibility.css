@@ -1,0 +1,22 @@
+.accessibility-wrapper {
+  padding: 18px;
+  height: calc(100vh - 36px - 90px);
+  font-size: 15px;
+}
+@media (min-width: 1024px) {
+  .accessibility-wrapper {
+    padding: 55px;
+    height: calc(100vh - 110px);
+  }
+}
+
+.accessibility-wrapper .sans {
+  font-size: 12px;
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .accessibility-wrapper .sans {
+    font-size: 15px;
+  }
+}
