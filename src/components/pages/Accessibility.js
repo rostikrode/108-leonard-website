@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import MultilineText from "../partials/MultilineText";
-import ScrollArrow from "../partials/ScrollArrow";
 import "../../styles/Accessibility.css";
 
 export default class Accessibility extends Component {
