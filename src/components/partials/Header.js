@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 // import {VelocityComponent, velocityHelpers} from 'velocity-react';
-import logo from '../../assets/logo.svg';
+import logo from "../../assets/logo.svg";
 // import brochure from '../../assets/brochure.svg';
-import logoText from '../../assets/108_leonard_text.svg';
-import insta from '../../assets/insta.svg';
-import facebook from '../../assets/facebook.svg';
-import '../../styles/Header.css';
+import logoText from "../../assets/108_leonard_text.svg";
+import insta from "../../assets/insta.svg";
+import facebook from "../../assets/facebook.svg";
+import "../../styles/Header.css";
 
-let currentPage = '';
+let currentPage = "";
 export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: '',
-      home: ''
+      open: "",
+      home: ""
     };
     this.sectionOnScroll = this.sectionOnScroll.bind(this);
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.sectionOnScroll);
-    window.addEventListener('load', this.handleLoad);
+    window.addEventListener("scroll", this.sectionOnScroll);
+    window.addEventListener("load", this.handleLoad);
     this.onAvailabilityPage();
     this.onPressPage();
     console.log(this.header);
@@ -46,7 +46,7 @@ export default class Header extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.sectionOnScroll);
+    window.removeEventListener("scroll", this.sectionOnScroll);
   }
 
   componentDidUpdate() {
@@ -54,12 +54,12 @@ export default class Header extends Component {
     this.onPressPage();
     // if new page, remove active classes from subnavs (counts for the next page button too)
     if (this.props.page !== currentPage) {
-      let allsubnavs = this.nav.querySelectorAll('.nav-subnav-item');
+      let allsubnavs = this.nav.querySelectorAll(".nav-subnav-item");
 
       this.props.passAllSubnavs(allsubnavs);
 
       for (let i = 0; i < allsubnavs.length; i++) {
-        allsubnavs[i].classList.remove('active');
+        allsubnavs[i].classList.remove("active");
       }
     }
     currentPage = this.props.page;
@@ -74,21 +74,21 @@ export default class Header extends Component {
     let url = window.location.pathname;
     setTimeout(() => {
       if (
-        url.split('/')[1] === 'availability' ||
-        url === '/availability/' ||
-        url === '/share/'
+        url.split("/")[1] === "availability" ||
+        url === "/availability/" ||
+        url === "/share/"
       ) {
         this.nav
           .querySelector(
             `.nav-list .nav-anchor-wrapper .nav-anchor[href="/availability/"]`
           )
-          .classList.add('active');
+          .classList.add("active");
       } else {
         this.nav
           .querySelector(
             `.nav-list .nav-anchor-wrapper .nav-anchor[href="/availability/"]`
           )
-          .classList.remove('active');
+          .classList.remove("active");
       }
     }, 100);
   }
@@ -105,17 +105,17 @@ export default class Header extends Component {
 
   sectionOnScroll() {
     setTimeout(() => {
-      if (this.nav.querySelector('.nav-subnav-item.active')) {
+      if (this.nav.querySelector(".nav-subnav-item.active")) {
         let current = this.nav
-          .querySelector('.nav-subnav-item.active')
-          .getAttribute('data-id');
+          .querySelector(".nav-subnav-item.active")
+          .getAttribute("data-id");
         /** on new subtitle... */
         if (current !== this.props.section) {
           this.props.newSection(current);
         }
       } else {
-        if (this.props.section !== '') {
-          this.props.newSection('');
+        if (this.props.section !== "") {
+          this.props.newSection("");
         }
       }
     }, 100);
@@ -141,27 +141,27 @@ export default class Header extends Component {
 
   onNavItemClick(e) {
     // send a click signal thru App, and to Carousel
-    let url = e.currentTarget.getAttribute('href');
+    let url = e.currentTarget.getAttribute("href");
     let currUrl = window.location.pathname;
     if (url === currUrl) {
       this.props.onNavClick(true);
     }
 
     this.props.newPage(e.target.text);
-    if (this.state.open === 'open') {
+    if (this.state.open === "open") {
       this.setState({
-        open: ''
+        open: ""
       });
     } else {
       this.setState({
-        open: 'open'
+        open: "open"
       });
     }
 
     // remove any leftover active sub pages
-    let allsubs = this.nav.querySelectorAll('.nav-subnav-item');
+    let allsubs = this.nav.querySelectorAll(".nav-subnav-item");
     for (let i = 0; i < allsubs.length; i++) {
-      allsubs[i].classList.remove('active');
+      allsubs[i].classList.remove("active");
     }
 
     /** scroll to top on mobile */
@@ -171,36 +171,36 @@ export default class Header extends Component {
   onSubClick(e) {
     if (this.props.parentslider) {
       // slider go to slide that corresponds to active subnav
-      let index = e.target.getAttribute('data-id');
+      let index = e.target.getAttribute("data-id");
       let slide = this.props.parentslider.querySelector(
         `.slick-slide[data-section="${index}"]`
       );
       if (slide) {
         /** desktop version, that has a carousel */
-        let slideIndex = parseInt(slide.getAttribute('data-index'), 10);
+        let slideIndex = parseInt(slide.getAttribute("data-index"), 10);
         if (this.props.slider !== null) {
           this.props.slider.slickGoTo(slideIndex);
         }
       }
 
-      let allsubs = this.nav.querySelectorAll('.nav-subnav-item');
+      let allsubs = this.nav.querySelectorAll(".nav-subnav-item");
       for (let i = 0; i < allsubs.length; i++) {
-        allsubs[i].classList.remove('active');
+        allsubs[i].classList.remove("active");
       }
-      e.target.classList.add('active');
+      e.target.classList.add("active");
 
       this.openMobileMenu();
     }
   }
 
   openMobileMenu() {
-    if (this.state.open === 'open') {
+    if (this.state.open === "open") {
       this.setState({
-        open: ''
+        open: ""
       });
     } else {
       this.setState({
-        open: 'open'
+        open: "open"
       });
     }
   }
@@ -208,7 +208,7 @@ export default class Header extends Component {
     return (
       <header className="header" ref={c => (this.header = c)}>
         <button
-          className={`ham-nav-button ${this.props.page ? '' : ''}`}
+          className={`ham-nav-button ${this.props.page ? "" : ""}`}
           onClick={() => {
             this.openMobileMenu();
           }}
@@ -232,8 +232,8 @@ export default class Header extends Component {
               ref={el => (this.subTitle = el)}
               className="come-in sub-title sans-light-bold"
             >
-              {this.props.page ? this.props.page : ''}{' '}
-              {this.props.section ? `| ${this.props.section}` : ''}
+              {this.props.page ? this.props.page : ""}{" "}
+              {this.props.section ? `| ${this.props.section}` : ""}
             </h3>
           </div>
         </div>
@@ -265,7 +265,7 @@ export default class Header extends Component {
                 return (
                   <li key={key} className="nav-anchor-wrapper">
                     <NavLink
-                      data-type={p.subnavs.length > 0 ? 'carousel' : ''}
+                      data-type={p.subnavs.length > 0 ? "carousel" : ""}
                       activeClassName="active"
                       id={`nav-anchor-${key}`}
                       className="nav-anchor sans"
@@ -288,7 +288,7 @@ export default class Header extends Component {
                               key={k}
                               data-id={sub}
                               className="nav-subnav-item sans-light"
-                              style={{ transitionDelay: 100 * k + 'ms' }}
+                              style={{ transitionDelay: 100 * k + "ms" }}
                               onClick={e => {
                                 this.onSubClick(e);
                               }}
@@ -299,7 +299,7 @@ export default class Header extends Component {
                         })}
                       </ul>
                     ) : (
-                      ''
+                      ""
                     )}
                   </li>
                 );
@@ -377,10 +377,20 @@ export default class Header extends Component {
                 />
               </a>
             </div>
-            {/*<a className="link sans-medium brochure" href="/placeholder.pdf" target="_blank">
-                  <img src={brochure} alt="brochure icon" />
-                  <span>VIEW BROCHURE</span>
-                </a>*/}
+            <NavLink
+              data-type="carousel"
+              activeClassName="active"
+              id="accessibility-0"
+              className="nav-anchor sans-medium"
+              onClick={e => {
+                this.onNavItemClick(e);
+              }}
+              strict
+              exact
+              to="/accessibility-statement/"
+            >
+              Accessibility Statement
+            </NavLink>
           </div>
         </div>
       </header>
