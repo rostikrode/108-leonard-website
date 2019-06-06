@@ -307,6 +307,21 @@ export default class Header extends Component {
             </ul>
           </nav>
           <div className="footer" ref={el => (this.footer = el)}>
+            <NavLink
+              style={{ marginBottom: '10px', display: 'block'}}
+              data-type="carousel"
+              activeClassName="active"
+              id="accessibility-0"
+              className="nav-anchor sans-medium"
+              onClick={e => {
+                this.onNavItemClick(e);
+              }}
+              strict
+              exact
+              to="/accessibility-statement/"
+            >
+              Accessibility Statement
+            </NavLink>
             <div className="footer-pages">
               <NavLink
                 data-type="carousel"
@@ -377,20 +392,6 @@ export default class Header extends Component {
                 />
               </a>
             </div>
-            <NavLink
-              data-type="carousel"
-              activeClassName="active"
-              id="accessibility-0"
-              className="nav-anchor sans-medium"
-              onClick={e => {
-                this.onNavItemClick(e);
-              }}
-              strict
-              exact
-              to="/accessibility-statement/"
-            >
-              Accessibility Statement
-            </NavLink>
           </div>
         </div>
       </header>

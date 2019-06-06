@@ -170,24 +170,18 @@
     height: (100vh - 64px);
   }
 }
+
 @media (min-width: 1024px) {
   .app-header {
-    width: 12em;
+    width: calc(12em + 64px);
     overflow: hidden;
-  }
-}
-@media (min-width: 1024px) {
-  .app-header {
     height: calc(100vh - 64px);
     position: relative;
     top: auto;
     top: unset;
     left: auto;
     left: unset;
-    padding: 0;
-    margin: 32px;
     margin-right: 0;
-    padding-right: 32px;
     border-right: 1px solid #a1c6cf;
     transform: translateX(0);
   }
