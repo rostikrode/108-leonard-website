@@ -1,59 +1,59 @@
-import React, { Component } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import Cookies from 'js-cookie';
-import NotFound from './pages/NotFound';
-import Header from './partials/Header';
+import React, { Component } from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
+import Cookies from "js-cookie";
+import NotFound from "./pages/NotFound";
+import Header from "./partials/Header";
 // import Animation from './partials/Animation';
-import '../styles/App.css';
+import "../styles/App.css";
 
-import Carousel from './pages/Carousel';
-import HomeCarousel from './pages/HomeCarousel';
-import Availability from './pages/Availability';
+import Carousel from "./pages/Carousel";
+import HomeCarousel from "./pages/HomeCarousel";
+import Availability from "./pages/Availability";
 // import ComingSoon from './partials/ComingSoon';
-import AvailabilityShare from './pages/AvailabilityShare';
-import Contact from './pages/Contact';
-import PressList from './pages/PressList';
-import PressArticle from './pages/PressArticle';
-import Legal from './pages/Legal';
+import AvailabilityShare from "./pages/AvailabilityShare";
+import Contact from "./pages/Contact";
+import PressList from "./pages/PressList";
+import PressArticle from "./pages/PressArticle";
+import Legal from "./pages/Legal";
 // import Home from './pages/Home';
 
-import buildingJSON from './data/building.json';
-import amenitiesJSON from './data/amenities.json';
-import availabilityJSON from './data/availability.json';
-import contactJSON from './data/contact.json';
-import penthousesJSON from './data/penthouses.json';
-import residencesJSON from './data/residences.json';
-import tribecaJSON from './data/tribeca.json';
-import teamJSON from './data/team.json';
-import pressJSON from './data/press.json';
-import legalJSON from './data/legal.json';
+import buildingJSON from "./data/building.json";
+import amenitiesJSON from "./data/amenities.json";
+import availabilityJSON from "./data/availability.json";
+import contactJSON from "./data/contact.json";
+import penthousesJSON from "./data/penthouses.json";
+import residencesJSON from "./data/residences.json";
+import tribecaJSON from "./data/tribeca.json";
+import teamJSON from "./data/team.json";
+import pressJSON from "./data/press.json";
+import legalJSON from "./data/legal.json";
 // import homeJSON from './data/home.json';
-import homeCarouselJSON from './data/home-carousel.json';
+import homeCarouselJSON from "./data/home-carousel.json";
 
 const PAGES = [
   {
-    title: 'Building',
+    title: "Building",
     component: Carousel,
-    slug: '/building/',
+    slug: "/building/",
     data: buildingJSON,
-    subnavs: ['Property', 'Entrance']
+    subnavs: ["Property", "Entrance"]
   },
   {
-    title: 'Residences',
+    title: "Residences",
     component: Carousel,
-    slug: '/residences/',
+    slug: "/residences/",
     data: residencesJSON,
     subnavs: [
-      'Interiors',
-      'Kitchens',
-      'Bathrooms'
+      "Interiors",
+      "Kitchens",
+      "Bathrooms"
       // 'Landmarked Residences'
     ]
   },
   {
-    title: 'Penthouses',
+    title: "Penthouses",
     component: Carousel,
-    slug: '/penthouses/',
+    slug: "/penthouses/",
     data: penthousesJSON,
     subnavs: [
       //'14th Floor',
@@ -64,31 +64,31 @@ const PAGES = [
     ]
   },
   {
-    title: 'Availability',
+    title: "Availability",
     // 'component': ComingSoon,
     component: Availability,
-    slug: '/availability/',
+    slug: "/availability/",
     data: availabilityJSON,
     subnavs: []
   },
   {
-    title: 'Amenities',
+    title: "Amenities",
     component: Carousel,
-    slug: '/amenities/',
+    slug: "/amenities/",
     data: amenitiesJSON,
-    subnavs: ['Entertaining', 'Wellness', 'Outdoor']
+    subnavs: ["Entertaining", "Wellness", "Outdoor"]
   },
   {
-    title: 'Tribeca',
+    title: "Tribeca",
     component: Carousel,
-    slug: '/tribeca/',
+    slug: "/tribeca/",
     data: tribecaJSON,
-    subnavs: ['Neighborhood', 'Map']
+    subnavs: ["Neighborhood", "Map"]
   },
   {
-    title: 'Contact',
+    title: "Contact",
     component: Contact,
-    slug: '/contact/',
+    slug: "/contact/",
     data: contactJSON,
     subnavs: []
   }
@@ -99,14 +99,14 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      page: '',
-      section: '',
+      page: "",
+      section: "",
       navClicked: false,
-      navElRef: '',
+      navElRef: "",
       subnavs: [],
       slider: null,
       parentslider: null,
-      popupClosed: '',
+      popupClosed: "",
       headerHeight: 0
     };
 
@@ -120,7 +120,7 @@ export default class App extends Component {
     let allsubs = this.state.subnavs;
     console.log(allsubs);
     for (let i = 0; i < allsubs.length; i++) {
-      allsubs[i].classList.remove('active');
+      allsubs[i].classList.remove("active");
     }
   }
   componentDidMount() {
@@ -132,30 +132,38 @@ export default class App extends Component {
     this.getPage();
     this.setFooterPageTitle();
 
-    if (!Cookies.get('closedPopup')) {
+    if (!Cookies.get("closedPopup")) {
       this.setState({
-        popupClosed: 'no'
+        popupClosed: "no"
       });
     }
   }
 
   fetchPressArticles() {
-    fetch('https://cms.dbox.com/wp-json/wp/v2/108_leonard_press')
+    let pressArticles;
+    fetch("https://cms.dbox.com/wp-json/wp/v2/108_leonard_press?per_page=100")
       .then(response => response.json())
       .then(data => {
-        let pressArticles = data.map(article => article.acf);
-
+        console.log("API press fetch success");
+        pressArticles = data.map(article => article.acf);
         this.setState({
           pressArticles
-        })
+        });
       })
+      .catch(error => {
+        console.log(error);
+        pressArticles = pressJSON.map(article => article.acf);
+        this.setState({
+          pressArticles
+        });
+      });
   }
 
   setFooterPageTitle() {
     // getting footer page titles
-    var page = window.location.pathname.replace(new RegExp('/', 'g'), '');
+    var page = window.location.pathname.replace(new RegExp("/", "g"), "");
     page = page.charAt(0).toUpperCase() + page.slice(1);
-    if (page === 'Team' || page === 'Press' || page === 'Legal') {
+    if (page === "Team" || page === "Press" || page === "Legal") {
       this.setState({
         page: page
       });
@@ -167,22 +175,22 @@ export default class App extends Component {
     var url = window.location.pathname;
 
     if (
-      url.split('/')[1] === 'availability' ||
-      url === '/availability/' ||
-      url === '/share/'
+      url.split("/")[1] === "availability" ||
+      url === "/availability/" ||
+      url === "/share/"
     ) {
       this.setState({
-        page: 'Availability'
+        page: "Availability"
       });
     } else {
-      if (url.split('/')[1] === 'press') {
+      if (url.split("/")[1] === "press") {
         this.setState({
-          page: 'Press'
+          page: "Press"
         });
       } else {
-        if (url === '/') {
+        if (url === "/") {
           this.setState({
-            page: ''
+            page: ""
           });
         } else {
           PAGES.forEach(index => {
@@ -208,13 +216,13 @@ export default class App extends Component {
   onNextButton(nextTitle) {
     this.setState({
       page: nextTitle,
-      section: ''
+      section: ""
     });
   }
   newPage(title) {
     this.setState({
       page: title,
-      section: ''
+      section: ""
     });
   }
   newSection(title) {
@@ -247,20 +255,20 @@ export default class App extends Component {
             });
           }
         });
-        console.log('app.js', this.state.page, url);
+        console.log("app.js", this.state.page, url);
       }
     );
   }
 
   closePopup() {
-    console.log('closed popup');
+    console.log("closed popup");
 
     this.setState(
       {
-        popupClosed: 'yes'
+        popupClosed: "yes"
       },
       () => {
-        Cookies.set('closedPopup', true, { expires: 365 });
+        Cookies.set("closedPopup", true, { expires: 365 });
       }
     );
   }
@@ -309,17 +317,17 @@ export default class App extends Component {
           updateHeaderHeight={this.updateHeaderHeight}
         />
 
-        {window.location.pathname === '/' ? (
+        {window.location.pathname === "/" ? (
           <div
             className="headspacer"
             style={{ height: this.state.headerHeight }}
           />
         ) : (
-          <div style={{ display: 'none' }} />
+          <div style={{ display: "none" }} />
         )}
 
         <main
-          style={window.location.pathname === '/' ? { paddingTop: '0' } : {}}
+          style={window.location.pathname === "/" ? { paddingTop: "0" } : {}}
         >
           <Switch>
             <Route
@@ -377,11 +385,18 @@ export default class App extends Component {
             <Route
               exact
               path="/press/"
-              render={props => <PressList pressArticles={this.state.pressArticles} />}
+              render={props => (
+                <PressList pressArticles={this.state.pressArticles} />
+              )}
             />
             <Route
               path="/press/:publication/:article/"
-              render={props => <PressArticle {...props} pressArticles={this.state.pressArticles} />}
+              render={props => (
+                <PressArticle
+                  {...props}
+                  pressArticles={this.state.pressArticles}
+                />
+              )}
             />
 
             <Route
