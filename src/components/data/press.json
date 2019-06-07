@@ -1,150 +1,2762 @@
-{
-  "page": "Press",
-  "metaTitle": "108 Leonard | Lower Manhattan For-Sale Residences In the Press",
-  "metaDescription": "108 Leonard has attracted global media interest. Below is a small selection of the press reviews and features that have been published.",
-  "articles": [
-    {
-      "id": 0,
-      "publisher": "NEW YORK TIMES",
-      "title": "ACT III FOR A LOWER MANHATTAN LANDMARK",
-      "date": "11.23.18",
-      "subtitle": "",
-      "summary": "Many historic office buildings have been converted to residential use in recent years — especially in Lower Manhattan, where some of the oldest commercial structures in New York stand. The latest building to undergo such a transformation is the Clock Tower Building, which is now being called 108 Leonard. Completed in 1898 as the headquarters of the New York Life Insurance Company, the 16-story building occupies an entire city block with its grandest portion, fronting on Broadway, designed by McKim, Mead & White — the starchitects of their day. “The building is a significant, massive work of art,” said John H. Beyer, a founding partner of the architectural firm Beyer Blinder Belle, which has worked on restoring several McKim, Mead & White structures. His practice has been involved in the restoration and renovation of 108 Leonard, which will yield more than 160 condos and a raft of amenities, from an underground motor court to a rooftop Zen garden.",
-      "link": "/press/11.23.18_NYT.pdf",
-      "metatitle": "Act III for a Lower Manhattan Landmark",
-      "metadesc": "It was originally home to an insurance company, then to city courts. Now the Clock Tower Building on lower Broadway will be a condo tower."
+[
+  {
+    "id": 1100,
+    "date": "2019-06-07T18:04:16",
+    "date_gmt": "2019-06-07T18:04:16",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1100"
     },
-    {
-      "id": 1,
-      "publisher": "Robb Report",
-      "title": "History Comes Alive in This New York City Penthouse",
-      "date": "7.18.18",
-      "subtitle": "",
-      "summary": "History comes alive in the very first penthouse of the 10-unit Crown Collection to be officially released for sale. Dubbed Terrace Penthouse 15C, the 3,683-square-foot sky palace features four bedrooms and five baths. Outside, over 1,500 square feet of terraces offer unrivaled views of the Big Apple.",
-      "link": "/press/Robb_Report_7.18.18.pdf",
-      "metatitle": "History Comes Alive in This New York City Penthouse",
-      "metadesc": "History comes alive in the very first penthouse of the 10-unit Crown Collection to be officially released for sale."
+    "modified": "2019-06-07T18:56:06",
+    "modified_gmt": "2019-06-07T18:56:06",
+    "slug": "5-15-19-real-estate-weekly",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/5-15-19-real-estate-weekly/",
+    "title": {
+      "rendered": "5.15.19 Real Estate Weekly"
     },
-    {
-      "id": 2,
-      "publisher": "Wall Street Journal",
-      "title": "A Honed or Glossy Marble Tub. Who Decides?",
-      "date": "7.13.18",
-      "subtitle": "",
-      "summary": "As the market for high-end condos in New York and California gets crowded, developers seek brokers who understand buyers' needs for input on finishes and layouts. Without their input early on, brokers say, a developer may make critical decisions that will hurt sales. Raphael De Niro, an agent who heads his own team at Douglas Elliman Real Estate, has invested several years in the development of 108 Leonard-a landmark McKim, Mead and White building in New York's Tribeca neighborhood. \"Before the building was even acquired, I was touring it with one of the developers,\" Mr. De Niro said.",
-      "link": "/press/WSJ_7.13.18_Print.pdf",
-      "metatitle": "A Honed or Glossy Marble Tub. Who Decides?",
-      "metadesc": "As the market for high-end condos in New York and California gets crowded, developers seek brokers who understand buyers' needs for input on finishes and layouts."
+    "content": {
+      "rendered": "",
+      "protected": false
     },
-    {
-      "id": 3,
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Real Estate Weekly",
+      "title": "Eileen Guggenheim joined a hard hat tour of 108 Leonard",
+      "subtitle": "",
+      "date": "05/15/2019",
+      "summary": "Eileen Guggenheim, chairwoman of the New York Academy of Art (NYAA) Board of Trustees joined a hard hat tour of 108 Leonard, the renowned Tribeca Clock Tower building being converted to condos.  The NYAA has partnered with 108 Leonard to support Andy Warhol's dream of furthering art education to young contemporary artists.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/5.9.19_Real_Estate_Weekly.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1100"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1100"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1098,
+    "date": "2019-06-07T17:59:24",
+    "date_gmt": "2019-06-07T17:59:24",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1098"
+    },
+    "modified": "2019-06-07T17:59:24",
+    "modified_gmt": "2019-06-07T17:59:24",
+    "slug": "3-27-19-cityrealty",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/3-27-19-cityrealty/",
+    "title": {
+      "rendered": "3.27.19 CityRealty"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "CityRealty",
+      "title": "Restored facade revealed at Tribeca's 108 Leonard Street; New condos from $1.565 million",
+      "subtitle": "The historic and iconic building at in Tribeca undergoing a conversion to condominiums has revealed its beautifully restored facade.",
+      "date": "03/27/2019",
+      "summary": "The handsome and ornate structure occupies the entire block of Leonard Street and Catherine Lane between Broadway and Lafayette Street, where the 13-story Renaissance Revival building has stood since 1898. It is perhaps best known for its classical clock overlooking Broadway and is sometimes called New York’s ‘Big Ben.’ The one-time site of New York Life Insurance Company, developers purchased the building from the city in 2014 and the Elad Group and Peebles Corporation are converting the interiors to a collection of condominiums.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/3.27.19_CityRealty.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1098"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1098"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1096,
+    "date": "2019-06-07T17:56:59",
+    "date_gmt": "2019-06-07T17:56:59",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1096"
+    },
+    "modified": "2019-06-07T17:56:59",
+    "modified_gmt": "2019-06-07T17:56:59",
+    "slug": "1-21-19-forbes",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/1-21-19-forbes/",
+    "title": {
+      "rendered": "1.21.19 Forbes"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Forbes ",
+      "title": "These Vacant Bank Buildings In Lower Manhattan Are Being Transformed Into Luxury Homes",
+      "subtitle": "108 Leonard was designed by McKim Mead & White and served as the headquarters of the New York Life Insurance Company.",
+      "date": "01/21/2019",
+      "summary": "With Lower Manhattan becoming more of a draw as a lively residential neighborhood rather than a desert after dark, some of its vacant office buildings and banks, vaults and all, are being turned into luxury residences.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/1.21.19_Forbes.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1096"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1096"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1093,
+    "date": "2019-06-07T17:54:40",
+    "date_gmt": "2019-06-07T17:54:40",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1093"
+    },
+    "modified": "2019-06-07T17:54:40",
+    "modified_gmt": "2019-06-07T17:54:40",
+    "slug": "2-9-19-real-estate-weekly",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/2-9-19-real-estate-weekly/",
+    "title": {
+      "rendered": "2.9.19 Real Estate Weekly"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Real Estate Weekly",
+      "title": "IN PICTURES: Warhol exhibition launched at 108 Leonard",
+      "subtitle": "The New York Academy of Art board of trustees gathered at 108 Leonard for a dinner to celebrate the opening of Andy Warhol: By Hand, Drawings from the 1950s -1980s.",
+      "date": "02/09/2019",
+      "summary": "The exhibition of work by one of the academyʼs earliest supporters was co-curated by Vincent Fremont, Warhol’s right-hand man for two decades, and Academy president David\r\nKratz.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/2.9.19_Real_Estate_Weekly.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1093"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1093"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1091,
+    "date": "2019-06-07T17:51:33",
+    "date_gmt": "2019-06-07T17:51:33",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1091"
+    },
+    "modified": "2019-06-07T17:51:33",
+    "modified_gmt": "2019-06-07T17:51:33",
+    "slug": "2-14-19-modern-luxury",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/2-14-19-modern-luxury/",
+    "title": {
+      "rendered": "2.14.19 Modern Luxury"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Modern Luxury",
+      "title": "ALINA Residences Celebrate the Opening of Its On-Site Sales and Model Gallery",
+      "subtitle": "Boca Raton Boom Panel emphasized the growth of Boca Raton’s culture, economy, and  community",
+      "date": "02/14/2019",
+      "summary": "ALINA Residences celebrated the opening of its new sales and model gallery with a lively symposium discussing Boca Raton’s recent real estate, cultural and economic boom. The event welcomed members of Boca’s community, prospective purchasers, and many top brokers.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/2.14.19_Modern_Luxury.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1091"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1091"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1087,
+    "date": "2019-06-07T17:48:39",
+    "date_gmt": "2019-06-07T17:48:39",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1087"
+    },
+    "modified": "2019-06-07T17:48:39",
+    "modified_gmt": "2019-06-07T17:48:39",
+    "slug": "2-6-19-new-york-post",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/2-6-19-new-york-post/",
+    "title": {
+      "rendered": "2.6.19 New York Post"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "New York Post",
+      "title": "Mark Ronson plans to drop millions on NYC pied-a- terre",
+      "subtitle": "Celebrity DJ/music producer Mark Ronson is looking for a New York pied-a-terre in the “$4 million to $6 million” range, sources tell Gimme Shelter. Ronson certainly has a lot to celebrate. His song “Shallow,” with Lady Gaga and Bradley Cooper for their 2018 remake of “A Star is Born,” has already won best song at the Golden Globes and Critics’ Choice awards.   It’s also poised to win an Oscar for best original song.",
+      "date": "02/06/2019",
+      "summary": "Ronson — whose siblings are fashion designer Charlotte and DJ Samantha — recently expressed interest in a unit at 108 Leonard St., the luxury condo conversion in Tribeca.\r\nThe 2,018-square-foot, three-bedroom apartment Ronson liked — asking $4.85 million — comes with wide-plank gray oak floors in a chevron pattern.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/2.6.19_New_York_Post.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1087"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1087"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1085,
+    "date": "2019-06-07T17:44:23",
+    "date_gmt": "2019-06-07T17:44:23",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1085"
+    },
+    "modified": "2019-06-07T17:50:00",
+    "modified_gmt": "2019-06-07T17:50:00",
+    "slug": "9-17-18-new-york-yimby",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/9-17-18-new-york-yimby/",
+    "title": {
+      "rendered": "9.17.18 New York YIMBY"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "New York YIMBY",
+      "title": "Inside Look At Historic 108 Leonard Street’s Renovation in Lower Manhattan",
+      "subtitle": "Located in Lower Manhattan and bounded by Broadway, Leonard Street, Catherine Lane, and Lafayette Street, the conversion and restoration process at 108 Leonard Street, aka 346 Broadway, is an ongoing and intricate effort. Built on a thin, rectangular block with an Italian Renaissance revival architectural style, it was completed in 1894 by McKim Mead & White, the “starchitects” of the early 20th century in New York.",
+      "date": "09/17/2018",
+      "summary": "Once the home of New York Life Insurance, the structure will soon house over 150 unique residences spread across an array of restored landmarked interiors, and amenities spread from the street level to the rooftop. Elad Group is managing 108 Leonard while marketing and sales are being conducted by Douglas Elliman Development Marketing. Jeffrey Beers International is in charge of the interiors.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/9.17.18_New_York_YIMBY.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1085"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1085"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1083,
+    "date": "2019-06-07T17:42:45",
+    "date_gmt": "2019-06-07T17:42:45",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1083"
+    },
+    "modified": "2019-06-07T17:42:45",
+    "modified_gmt": "2019-06-07T17:42:45",
+    "slug": "9-10-18-livabl",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/9-10-18-livabl/",
+    "title": {
+      "rendered": "9.10.18 Livabl"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Livabl",
+      "title": "Interview with Samantha Sax, Chief Marketing and Design Officer, Elad Group",
+      "subtitle": "Since graduating from Cornell University’s School of Hotel Administration, Samantha Sax has been a trailblazer in the traditionally male-dominated real estate industry. Her commitment to strategic collaborations and keen attention to detail has made Sax one of the most sought after marketing directors.",
+      "date": "09/10/2018",
+      "summary": "After a successful stint at the Douglas Elliman firm, Sax joined Elad Group to oversee all aspects of marketing, sales and interior design for the firm’s portfolio of commercial and residential real estate projects throughout the US.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/9.10.18_Livabl.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1083"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1083"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1081,
+    "date": "2019-06-07T17:41:10",
+    "date_gmt": "2019-06-07T17:41:10",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1081"
+    },
+    "modified": "2019-06-07T17:41:10",
+    "modified_gmt": "2019-06-07T17:41:10",
+    "slug": "9-14-18-haute-residence",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/9-14-18-haute-residence/",
+    "title": {
+      "rendered": "9.14.18 Haute Residence"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Haute Residence ",
+      "title": "New York City Landmark Conversions Blending Old and New Into Perfection",
+      "subtitle": " It is hard to deny the beauty of successfully blending old and new. Taking the best of the past and marrying it with the benefits of the present almost always produces something close to, if not, perfect. In Europe, buildings often outlive generations and remind us of times gone by. In the United States, a building is considered old after a few years and often becomes deemed teardown-worthy within a few decades. But when buildings are built well, technologically and design-wise, it is hard to deny their value. Renovating old is the new trend that New Yorkers should celebrate.",
+      "date": "09/14/2018",
+      "summary": "THE BELNORD: The Belnord is an iconic Upper West Side landmark that occupies an entire city block bounded by West 86th and 87th Streets, Amsterdam Avenue and Broadway. Robert A.M. Stern Architects, the world-renowned architecture firm, is overseeing the restoration of the original architecture and re- imagining the interiors for the residences. Originally designed by Hiss & Weekes and originally constructed in 1908, the Belnord is a superb example of a turn-of-the-century residential building. The 140-story property’s new design will feature 95 residences, ranging from two- to five-bedrooms. In addition, 9,000 square feet of state-of-the-art amenities will be incorporated into the building, and many of The Belnord’s hallmarks – including the courtyard and the exterior architecture – will be restored to their original grandeur with updated features.\r\n",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/9.14.18_Haute_Residence.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1081"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1081"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1076,
+    "date": "2019-06-07T17:34:33",
+    "date_gmt": "2019-06-07T17:34:33",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1076"
+    },
+    "modified": "2019-06-07T17:34:33",
+    "modified_gmt": "2019-06-07T17:34:33",
+    "slug": "10-27-18-the-real-deal",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/10-27-18-the-real-deal/",
+    "title": {
+      "rendered": "10.27.18 The Real Deal"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The Real Deal",
+      "title": "Born again: Bank vaults and gyms are being turned into homes ",
+      "subtitle": "In a city deprived of space, developers are getting creative with rest conversions ",
+      "date": "10/27/2018",
+      "summary": "Bank vaults and gymnasiums are being re-invented as sun- drowned penthouses and secretive party-rooms, as developers transform multiple sites across the city.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/10.27.18_The_Real_Deal.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1076"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1076"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1079,
+    "date": "2019-06-07T17:38:10",
+    "date_gmt": "2019-06-07T17:38:10",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1079"
+    },
+    "modified": "2019-06-07T17:39:41",
+    "modified_gmt": "2019-06-07T17:39:41",
+    "slug": "10-24-18-tribeca-citizen",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/10-24-18-tribeca-citizen/",
+    "title": {
+      "rendered": "10.24.18 Tribeca Citizen"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Tribeca Citizen ",
+      "title": "In the News: Kataoka Jewelry Store Is Open",
+      "subtitle": "The Kataoka jewelry store on Franklin has evidently opened. Full report to come. — Inside Retail Asia",
+      "date": "10/24/2018",
+      "summary": "An article about how “developers are turning old bank vaults into secret party rooms” includes 49 Chambers (“The building’s richly decorated main hall will become an event space, while a walk-in vault on the lower level is being eyed as a speakeasy-style private dining room”); 108 Leonard (“its historic, marble-clad banking hall is slated to become a high-end restaurant or retail space”); and 20 Broad (“Its vault will also become a speakeasy-type amenity, according to architect Nancy Ruddy, who is handling the project. ‘It will have a poker table and be very dark and mysterious'”). Both 49 Chambers and 108 Leonard were previously owned by the city, which probably should’ve insisted on public use for the grand interior spaces when it sold them. Instead, the community “media center” at 108 Leonard will be half in the basement (as well as 10,000 square feet instead of the promised 16,000). — New York Post",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/10.24.18_Tribeca_Citizen.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1079"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1079"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1074,
+    "date": "2019-06-07T17:31:35",
+    "date_gmt": "2019-06-07T17:31:35",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1074"
+    },
+    "modified": "2019-06-07T17:31:56",
+    "modified_gmt": "2019-06-07T17:31:56",
+    "slug": "10-24-18-nyc-informer",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/10-24-18-nyc-informer/",
+    "title": {
+      "rendered": "10.24.18 NYC Informer"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "NYC Informer",
+      "title": "Developers are turning old bank vaults into secret party rooms",
+      "subtitle": "The vault at 108 Leonard will be transformed into a chic amenity space in the posh condo coversion of the former New York Life Insurance Company headquarters.",
+      "date": "10/24/2018",
+      "summary": "Downtown developers are transforming three former financial buildings into luxury condos that cater to the Wall Street crowd — quite literally — with vaults repurposed as swanky speakeasies, wine cellars and game rooms.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/10.24.18_NYC_Informer.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1074"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1074"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1072,
+    "date": "2019-06-07T17:29:39",
+    "date_gmt": "2019-06-07T17:29:39",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1072"
+    },
+    "modified": "2019-06-07T17:29:39",
+    "modified_gmt": "2019-06-07T17:29:39",
+    "slug": "10-24-18-new-york-post",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/10-24-18-new-york-post/",
+    "title": {
+      "rendered": "10.24.18 New York Post"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "New York Post",
+      "title": "IN THE BANK",
+      "subtitle": "At 108 Leonard, a walk-in vault from the late 1890's will be transformed into a chic amenity space in the posh condo conversion of the former New York Life Insurance Company headquarters.  Residents of the new luxury rental at 20 Broad Street, a former extension of the New York Stock Exchange, will be able to host poker nights in its former banking vault.",
+      "date": "10/24/2018",
+      "summary": "Downtown developers are transforming three former financial buildings into luxury condos that cater to the Wall Street crowd — quite literally — with vaults repurposed as swanky speakeasies, wine cellars and game rooms. ",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/10.24.18_New_York_Post.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1072"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1072"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1070,
+    "date": "2019-06-07T17:24:49",
+    "date_gmt": "2019-06-07T17:24:49",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1070"
+    },
+    "modified": "2019-06-07T17:24:49",
+    "modified_gmt": "2019-06-07T17:24:49",
+    "slug": "10-23-18-new-york-post",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/10-23-18-new-york-post/",
+    "title": {
+      "rendered": "10.23.18 New York Post"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "New York Post",
+      "title": "Developers are turning old bank vaults into secret party rooms",
+      "subtitle": "108 Leonard will be transformed into a chic amenity space in the posh condo conversion of the former New York Life Insurance Company headquarters",
+      "date": "10/23/2018",
+      "summary": "Downtown developers are transforming three former financial buildings into luxury condos that cater to the Wall Street crowd — quite literally — with vaults repurposed as swanky speakeasies, wine cellars and game rooms.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/10.23.18_New_York_Post.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1070"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1070"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1066,
+    "date": "2019-06-07T17:22:08",
+    "date_gmt": "2019-06-07T17:22:08",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1066"
+    },
+    "modified": "2019-06-07T17:22:08",
+    "modified_gmt": "2019-06-07T17:22:08",
+    "slug": "10-15-18-cityrealty",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/10-15-18-cityrealty/",
+    "title": {
+      "rendered": "10.15.18 CityRealty"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "CityRealty",
+      "title": "NYC's Great New Condo Conversions and Listings Inside Them",
+      "subtitle": "NYC's Great New Conversions ",
+      "date": "10/15/2018",
+      "summary": " As New York City's virgin buildable land gets gobbled up by new buildings built to their maximum zoning allowances, converting more antiquated structures into new uses has become a more popular options for developers looking to bring 'new' residential space to the market.  For the most part, developers and designers have had the good sense to maintain attractive original historic details while adapting the buildings with modern updates and amenities.  And as the market shows, a building with characterful element works wonders to attract interest from buyers, history buffs, architecture aficionados, and real estate enthusiasts alike.  Today, we take a look at availabilities in some of the city's most exciting condo conversions of recent times.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/10.15.18_CityRealty.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1066"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1066"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1064,
+    "date": "2019-06-07T17:16:34",
+    "date_gmt": "2019-06-07T17:16:34",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1064"
+    },
+    "modified": "2019-06-07T17:16:34",
+    "modified_gmt": "2019-06-07T17:16:34",
+    "slug": "11-26-18-skyrisecities",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/11-26-18-skyrisecities/",
+    "title": {
+      "rendered": "11.26.18 SkyriseCities"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "SkyriseCities",
+      "title": " Historic 108 Leonard Street to be Reborn  ",
+      "subtitle": "Known until recently as the Clock Tower Building, and long before that as the 1898- built headquarters of the New York Life Insurance Company, 108 Leonard Street is today in the midst of a massive restoration and redevelopment effort. Conducted by a team that includes the C3BG, Elad Group, Beyer Blinder Belle Architects & Planners, SLCE Architects, and Jeffrey Beers International, the work now underway will see the magnificent, marble-clad, Beaux-Arts pile fully restored and transformed into luxury condos.",
+      "date": "11/26/2018",
+      "summary": "Faced in white marble, the intricate facade and interior of the structure are currently undergoing a comprehensive, highly-sensitive restoration effort, with nylon scrubbers now hard at work removing more than a century of grit and grime from ever column, corbel, and crevice. Extensive repair work has also been conducted upon the roof, including the restoration of a collection of impressive, 7,000-pound decorative eagles which are perched atop the base of the iconic Clock Tower.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/11.26.18_SkyriseCities.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1064"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1064"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1062,
+    "date": "2019-06-07T17:14:11",
+    "date_gmt": "2019-06-07T17:14:11",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1062"
+    },
+    "modified": "2019-06-07T17:14:11",
+    "modified_gmt": "2019-06-07T17:14:11",
+    "slug": "11-23-18-the-new-york-times",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/11-23-18-the-new-york-times/",
+    "title": {
+      "rendered": "11.23.18 The New York Times"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The New York Times",
+      "title": "Act III for a Lower Manhattan Landmark",
+      "subtitle": "It was originally home to an insurance company, then to city courts. Now the Clock Tower Building on lower Broadway will be a condo tower.",
+      "date": "11/23/2018",
+      "summary": "Plenty of historic office buildings have been converted to residential use in recent years — especially in Lower Manhattan, where some of the oldest commercial structures in New York stand. The latest building to undergo such a transformation is the Clock Tower Building, which is now being called 108 Leonard.\r\n",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/11.23.18_The_New_York_Times.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1062"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1062"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1059,
+    "date": "2019-06-07T17:12:18",
+    "date_gmt": "2019-06-07T17:12:18",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1059"
+    },
+    "modified": "2019-06-07T17:12:18",
+    "modified_gmt": "2019-06-07T17:12:18",
+    "slug": "11-7-18-new-york-post",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/11-7-18-new-york-post/",
+    "title": {
+      "rendered": "11.7.18 New York Post"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "New York Post",
+      "title": "Bar owner is selling massive $11M Bushwick party palace",
+      "subtitle": "",
+      "date": "11/07/2018",
+      "summary": "Charlie Kaim, the owner of Williamsburg’s Maracuja Bar, is listing an 8,000-square-foot Bushwick building at 428 Troutman St. for $10.9 million. He bought it for $900,000 in 2011. The property includes a 1,400-square-foot apartment as well as commercial space with bars and a 30-foot stage.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/11.7.18_New_York_Post.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1059"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1059"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1056,
+    "date": "2019-06-07T17:10:27",
+    "date_gmt": "2019-06-07T17:10:27",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1056"
+    },
+    "modified": "2019-06-07T17:10:27",
+    "modified_gmt": "2019-06-07T17:10:27",
+    "slug": "11-9-18-new-york-gossip-gal",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/11-9-18-new-york-gossip-gal/",
+    "title": {
+      "rendered": "11.9.18 New York Gossip Gal"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "New York Gossip Gal",
+      "title": "Cristina Cuomo Hosts Melissa Errico Celebrating Sondheim Sublime ",
+      "subtitle": "Luminaries from the Broadway and music industries gathered at the magnificent landmark condominium conversion, 108 Leonard Street in Tribeca to celebrate the release of Sondheim Sublime, the new album from Tony Award-nominated singer & actress Melissa Errico.",
+      "date": "11/09/2018",
+      "summary": "Co-Hosted by Cristina Cuomo, guests included music icon Peter Yarrow (Peter, Paul & Mary), Errico’s husband tennis star and ESPN commentator Patrick McEnroe, acclaimed NYC\r\nartist Rachel Feinstein, Apple VP Doug Beck, handbag designer Kathy Kwei, restaurateur & burlesque star Marja Sampson, Tony Award-winners Karen Ziemba & Alice Ripley, Tony Award- nominees Stephen Bogardus, Robert Cuccioli & Will Swenson, Broadway stars Ben\r\nDavis and Ken Jennings (one of the original stars of Sweeney Todd on Broadway opposite Angela Lansbury), Met Opera star tenor Richard Troxell, singer Sasha Lazard, Indian film star & producerRitu Pande, million dollar Met Museum donor Ellen Marcus, and the album’s\r\nproducer Rob Mathes (who is also the main producer for Sting and Elvis Costello).\r\nErrico treated partygoers at this intimate soirée to a beautiful live performance of 3 songs from the album including “Sooner or Later” (originally written for and performed by Madonna for the film Dick Tracy), and she was introduced by her friend Adam Gopnik of The New Yorker.\r\nThe album is officially released on and is available at www.SondheimSublime.com.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/11.9.18_New_York_Gossip_Gal.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1056"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1056"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1054,
+    "date": "2019-06-07T17:07:47",
+    "date_gmt": "2019-06-07T17:07:47",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1054"
+    },
+    "modified": "2019-06-07T17:07:47",
+    "modified_gmt": "2019-06-07T17:07:47",
+    "slug": "11-2-18-citybizlist",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/11-2-18-citybizlist/",
+    "title": {
+      "rendered": "11.2.18 Citybizlist"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Citybizlist",
+      "title": "108 Leonard Street Hosts Melissa Errico Album Release Event with Cristina Cuomo",
+      "subtitle": "",
+      "date": "11/02/2018",
+      "summary": "Tuesday night, luminaries from the Broadway and music industries gathered at the magnificent landmark condominium conversion, 108 Leonard Street in Tribeca to celebrate the release\r\nof Sondheim Sublime, the new album from Tony Award-nominated singer & actress Melissa Errico. Co-Hosted by Cristina Cuomo, guests included music icon Peter Yarrow(Peter, Paul & Mary), Errico’s husband tennis star and ESPN commentator Patrick McEnroe, acclaimed NYC artist Rachel Feinstein, Apple VP Doug Beck, handbag designer Kathy Kwei, restaurateur & burlesque star Marja Sampson, Tony Award-winners Karen Ziemba & Alice Ripley, Tony Award-nominees Stephen Bogardus, Robert Cuccioli & Will Swenson, Broadway stars Ben Davis and Ken Jennings (one of the original stars of Sweeney Todd on Broadway opposite Angela Lansbury), Met Opera star tenor Richard Troxell, singer Sasha Lazard, Indian film star & producer Ritu Pande, million dollar Met Museum donor Ellen Marcus, and the album’s producer Rob Mathes (who is also the main producer for Sting and Elvis Costello). Errico treated partygoers at this intimate soirée to a beautiful live performance of 3 songs from the album including “Sooner or Later” (originally written for and performed by Madonna for the film Dick Tracy), she was introduced by her friend Adam Gopnik of The New Yorker. The album is officially released on 11/2 and is available at www.SondheimSublime.com.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/11.2.18_Citybizlist.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1054"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1054"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1052,
+    "date": "2019-06-07T17:05:58",
+    "date_gmt": "2019-06-07T17:05:58",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1052"
+    },
+    "modified": "2019-06-07T17:22:49",
+    "modified_gmt": "2019-06-07T17:22:49",
+    "slug": "11-8-18-city-realty",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/11-8-18-city-realty/",
+    "title": {
+      "rendered": "11.8.18 CityRealty"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "CityRealty",
+      "title": "Melissa Errico Holds Album Release at Swank Tribeca Condo, 108 Leonard",
+      "subtitle": "The stars were bright last Tuesday in Tribeca. On Tuesday night, the Jeffrey Beers    International restoration of the McKim Mead & White’s Italian Renaissance Revival landmark, 108 Leonard , hosted a party for the release of Sondheim Sublime, the new album from Tony Award-nominated singer & actress Melissa Errico. ",
+      "date": "11/08/2018",
+      "summary": "The event was co-hosted by Cristina Cuomo and guests included music icon Peter Yarrow (Peter, Paul & Mary), Errico’s husband tennis star and ESPN commentator Patrick McEnroe, acclaimed NYC artist Rachel Feinstein, Apple VP Doug Beck, handbag designer Kathy Kwei, Broadway stars Ben Davis and Ken Jennings (one of the original stars of Sweeney Todd on Broadway opposite Angela Lansbury) and many more.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/11.8.18_CityRealty.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1052"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1052"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1050,
+    "date": "2019-06-07T17:03:46",
+    "date_gmt": "2019-06-07T17:03:46",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1050"
+    },
+    "modified": "2019-06-07T17:03:46",
+    "modified_gmt": "2019-06-07T17:03:46",
+    "slug": "11-1-18-broadway-world",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/11-1-18-broadway-world/",
+    "title": {
+      "rendered": "11.1.18 Broadway World"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Broadway World",
+      "title": "Photo Flash: Stars Toast Melissa Errico on Release of New Album, 'Sondheim Sublime'",
+      "subtitle": "",
+      "date": "11/01/2018",
+      "summary": "Tuesday night, luminaries from the Broadway and music industries gathered at the stunning new landmark building 108 Leonard Street in Tribeca to celebrate the release of Sondheim Sublime, the new album from Tony Award-nominated singer & actress Melissa Errico. Co- Hosted by Cristina Cuomo, guests included music icon Peter Yarrow (Peter, Paul & Mary), Errico's husband tennis star and ESPN commentator Patrick McEnroe, acclaimed NYC artist Rachel Feinstein, Apple VP Doug Beck, handbag designer Kathy Kwei, restaurateur & burlesque star Marja Sampson, Tony Award-winners Karen Ziemba & Alice Ripley, Tony Award-nominees Stephen Bogardus, Robert Cuccioli & Will Swenson, Broadway stars Ben Davis and Ken Jennings(one of the original stars of Sweeney Todd on Broadway\r\nopposite Angela Lansbury), Met Opera star tenor Richard Troxell, singer Sasha Lazard, Indian film star & producer Ritu Pande, million dollar Met Museum donor Ellen Marcus, and the album's producer Rob Mathes (who is also the main producer for Sting and Elvis Costello).",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/11.1.18_Broadway_World.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1050"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1050"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1047,
+    "date": "2019-06-07T17:01:29",
+    "date_gmt": "2019-06-07T17:01:29",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1047"
+    },
+    "modified": "2019-06-07T18:05:31",
+    "modified_gmt": "2019-06-07T18:05:31",
+    "slug": "5-23-18",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/5-23-18/",
+    "title": {
+      "rendered": "5.23.18 Curbed"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
       "publisher": "Curbed",
-      "title": "15 New Developments Set to Transform Tribeca, Mapped",
-      "date": "5.23.18",
-      "subtitle": "",
-      "summary": "For a while now, Tribeca has reigned supreme as New York City's priciest neighborhood, with artists' lofts-turned-condos and celeb-approved buildings boosting the once-industrial area's cachet. And with a spate of high-end new developments in the works like 108 Leonard Street, that's unlikely to change anytime soon.",
-      "link": "/press/5.23.18_Curbed_108_Leonard.pdf",
-      "metatitle": "15 New Developments Set to Transform Tribeca, Mapped",
-      "metadesc": "For a while now, Tribeca has reigned supreme as New York City's priciest neighborhood, with artists' lofts-turned-condos and celeb-approved buildings boosting the once-industrial area's cachet."
+      "title": "15 new developments set to transform Tribeca, mapped",
+      "subtitle": "One of Manhattan's priciest neighborhoods is getting more deluxe developments ",
+      "date": "05/23/2018",
+      "summary": "For a while now, Tribeca has reigned supreme as New York City's priciest neighborhood, with artists' lofts-turned-condos and celeb-approved buildings boosting the once-industrial area's cachet.  And with a spate of high-end new developments in the works, that's unlikely to change anytime soon.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/5.23.18_Curbed.pdf"
     },
-    {
-      "id": 4,
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1047"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1047"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1045,
+    "date": "2019-06-07T16:58:42",
+    "date_gmt": "2019-06-07T16:58:42",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1045"
+    },
+    "modified": "2019-06-07T16:58:42",
+    "modified_gmt": "2019-06-07T16:58:42",
+    "slug": "3-26-18-mansion-global",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/3-26-18-mansion-global/",
+    "title": {
+      "rendered": "3.26.18 Mansion Global"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
       "publisher": "Mansion Global",
       "title": "Manhattan, Brooklyn Welcome New Towers, Boutique Buildings",
-      "date": "3.26.18",
-      "subtitle": "Amenities abound in these soon-to-open residences",
+      "subtitle": "Amenities abound in these soon-to-open residences ",
+      "date": "03/26/2018",
       "summary": "While 2018 has begun on a higher note, Manhattan had the lowest sales volume in six years in the fourth quarter of 2017, as buyers and sellers waited to see what the results of the new U.S. tax bill would be, according to a report from Douglas Elliman.",
-      "link": "/press/3.26.18_MansionGlobal_108Leonard.pdf",
-      "metatitle": "Manhattan , Brooklyn welcome new towers, boutique buildings.",
-      "metadesc": "Amenities abound in these soon-to-open residences"
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/3.26.18_Mansion_Global.pdf"
     },
-    {
-      "id": 5,
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1045"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1045"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1043,
+    "date": "2019-06-07T16:56:35",
+    "date_gmt": "2019-06-07T16:56:35",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1043"
+    },
+    "modified": "2019-06-07T16:56:35",
+    "modified_gmt": "2019-06-07T16:56:35",
+    "slug": "3-11-18-real-estate-weekly",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/3-11-18-real-estate-weekly/",
+    "title": {
+      "rendered": "3.11.18 Real Estate Weekly"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
       "publisher": "Real Estate Weekly",
-      "title": "NEW DEVELOPMENT: Rollins launches at Essex Crossing Elad, Peebles introduce 108 Leonard",
-      "date": "3.11.18",
-      "subtitle": "108 Leonard launches sales",
-      "summary": "De Niro Team at Douglas Elliman Real Estate has launched 108 Leonard. The Tribeca Clock Tower Building is a landmark Italian Renaissance Revival built in 1894 by architect McKin Mead & White.",
-      "link": "/press/3.11.18_REW_108Leonard.pdf",
-      "metatitle": "108 Leonard launches sales.",
-      "metadesc": "De Niro Team at Douglas Elliman Real Estate has launched 108 Leonard. The Tribeca Clock Tower Building is a landmark Italian Renaissance Revival"
+      "title": "NEW DEVELOPMENT: Rollins launches at Essex Crossing; Lead, Peebles introduce 108 Leonard",
+      "subtitle": "De Niro Team at Douglas Elliman Real Estate has launched 108 Leonard.",
+      "date": "03/11/2018",
+      "summary": "The Tribeca Clock Tower Building is a landmark Italian Renaissance Revival built in 1894 by architect McKim Mead & White.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/3.11.18_Real_Estate_Weekly.pdf"
     },
-    {
-      "id": 6,
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1043"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1043"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1041,
+    "date": "2019-06-07T16:53:56",
+    "date_gmt": "2019-06-07T16:53:56",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1041"
+    },
+    "modified": "2019-06-07T16:53:56",
+    "modified_gmt": "2019-06-07T16:53:56",
+    "slug": "3-5-18-curbed",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/3-5-18-curbed/",
+    "title": {
+      "rendered": "3.5.18 Curbed"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
       "publisher": "Curbed",
       "title": "Tribeca's clock tower building conversion finally launches sales from $1.5M",
-      "date": "3.5.18",
-      "subtitle": "The 14-story building will bring a total of 150 apartments to the neighborhood.",
-      "summary": "Five years after the project was first announced, the converted condos within Tribeca's famed clock tower building are now ready to launch sales. The conversion, led by the Elad Group, has created 150 apartments inside the McKim, Mead & White landmark, which previously functioned as a criminal court building.",
-      "link": "/press/3.5.18_Curbed_108Leonard.pdf",
-      "metatitle": "Tribeca's clock tower building conversion finally launches sales.",
-      "metadesc": "Five years after the project was first announced, the converted condos within Tribeca's famed clock tower building are now ready to launch sales"
+      "subtitle": "The 14-story building will bring a total of 150 apartments to the neighborhood ",
+      "date": "03/05/2018",
+      "summary": "Five years after the project was first announced, the converted condos within Tribeca’s famed clock tower building are now ready to launch sales. The conversion, led by the Elad Group, has created 150 apartments inside the McKim, Mead & White landmark, which previously functioned as a criminal court building.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/3.5.18_Curbed.pdf"
     },
-    {
-      "id": 7,
-      "publisher": "AIA New York",
-      "title": " Counting the Hours: The Clock Tower Building to be transformed into residential condo",
-      "date": "2.22.18",
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1041"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1041"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1039,
+    "date": "2019-06-07T16:50:48",
+    "date_gmt": "2019-06-07T16:50:48",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1039"
+    },
+    "modified": "2019-06-07T16:50:48",
+    "modified_gmt": "2019-06-07T16:50:48",
+    "slug": "6-29-18-beverly-hills-courier",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/6-29-18-beverly-hills-courier/",
+    "title": {
+      "rendered": "6.29.18 Beverly Hills Courier"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Beverly Hills Courier",
+      "title": "New York Comes ‘A-Selling’ to Los Angeles Crowd At The SoHo House",
       "subtitle": "",
-      "summary": "The Clock Tower Building at 108 Leonard Street in Tribeca is being transformed into a residential condominium, slated to open for occupancy in early 2019. Designed by McKim, Mead & White and built in 1894 as an office building for the New York Life Insurance Company, it has undergone a complete restoration of its Italian Renaissance Revival façade by Howard L. Zimmerman Architects. The landmarked, 419,000-square-foot, 13-story building is being converted to 150 luxury condominium apartments designed by Jeffrey Beers International, with SLCE serving as architect-of-record. The restoration will complement the history of the building, juxtaposing classic details including oversized moldings and chevron-patterned oak floors with contemporary touches.",
-      "link": "/press/2.22.18_AIANewYork_InThe News_108Leonard.pdf",
-      "metatitle": "Clock tower building to be transformed into residential condo.",
-      "metadesc": "The Clock Tower Building at 108 Leonard Street in Tribeca is being transformed into a residential condominium."
+      "date": "06/29/2018",
+      "summary": "Last week, the SoHo House was the backdrop for an exclusive preview of two new properties in New York City.\r\nThe Elad Group show- cased 108 Leonard, and One West End, the newest launch in their extensive portfolio and the first LA launch event of its kind.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/6.29.18_Beverly_Hills_Courier.pdf"
     },
-    {
-      "id": 8,
-      "publisher": "BuzzBuzzNews US",
-      "title": "Get an inside look at the conversion of historic 108 Leonard Street",
-      "date": "2.22.18",
-      "subtitle": "The Peebles Corporation and Elad Group released a slew of new renderings on the teaser site for the massive redevelopment of 108 Leonard Street.",
-      "summary": "The 419,000-square-foot Tribeca landmarked building is undergoing a massive mixed-use redevelopment. Plans include 152 luxury condo residences, a possible boutique hotel, 15,000 square feet of community space and a parking facility.",
-      "link": "/press/2.22.18_BuzzBuzzHome_108Leonard.pdf",
-      "metatitle": "Tribeca landmarked building is undergoing a massive mixed-use redevelopment.",
-      "metadesc": "Plans include 152 luxury condo residences, a possible boutique hotel, 15,000 square feet of community space and a parking facility."
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1039"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1039"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1037,
+    "date": "2019-06-07T16:48:28",
+    "date_gmt": "2019-06-07T16:48:28",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1037"
     },
-    {
-      "id": 9,
+    "modified": "2019-06-07T16:48:28",
+    "modified_gmt": "2019-06-07T16:48:28",
+    "slug": "6-6-18-brick-underground",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/6-6-18-brick-underground/",
+    "title": {
+      "rendered": "6.6.18 Brick Underground"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Brick Underground ",
+      "title": "Steam ovens are an amenity at luxury condos. Should you buy one for your apartment?",
+      "subtitle": "",
+      "date": "06/06/2018",
+      "summary": "If you know your way around a kitchen even just a little, you’re likely to think of steam as something you do to vegetables, but it’s actually part of a trend in small appliances. Meet the steam oven, which New York City developers are using to\r\nreplace traditional microwaves in luxury condos.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/6.6.18_Brick_Underground.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1037"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1037"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1035,
+    "date": "2019-06-07T16:46:48",
+    "date_gmt": "2019-06-07T16:46:48",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1035"
+    },
+    "modified": "2019-06-07T16:46:48",
+    "modified_gmt": "2019-06-07T16:46:48",
+    "slug": "7-13-18-the-wall-street-journal",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/7-13-18-the-wall-street-journal/",
+    "title": {
+      "rendered": "7.13.18 The Wall Street Journal"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The Wall Street Journal",
+      "title": "A Honed or Glossy Marble Tub? Who Decides?",
+      "subtitle": "In a crowded luxury market, developers enlist agents, even before construction, to learn what buyers want",
+      "date": "07/13/2018",
+      "summary": "Although real-estate agent Frederick Eklund hobnobs with celebrities as a star of reality television's \"Million Dollar Listings New York,\" he is perhaps most in his element when scrutinizing burnished-brass door handles and marble bathroom tile for planned luxury condominium developments — often years before he is able to earn a commission selling them. ",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/7.13.18_The_Wall_Street_Journal.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1035"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1035"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1031,
+    "date": "2019-06-07T16:38:47",
+    "date_gmt": "2019-06-07T16:38:47",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1031"
+    },
+    "modified": "2019-06-07T16:38:47",
+    "modified_gmt": "2019-06-07T16:38:47",
+    "slug": "7-12-18-the-wall-street-journal",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/7-12-18-the-wall-street-journal/",
+    "title": {
+      "rendered": "7.12.18 The Wall Street Journal"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The Wall Street Journal",
+      "title": "Like Your Apartment’s Design? Thank Your Agent",
+      "subtitle": "As the market for high-end condos in New York and California gets crowded, developers seek brokers who understand buyers’ needs for input on finishes and layouts",
+      "date": "07/12/2018",
+      "summary": "Although real-estate agent Fredrik Eklund hobnobs with celebrities as a star of reality television’s “Million Dollar Listing New York,” he is perhaps most in his element when scrutinizing burnished-brass door handles and marble bathroom tile for planned luxury condominium developments—often years before he is able to earn a commission selling them.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/7.12.18_The_Wall_Street_Journal.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1031"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1031"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1029,
+    "date": "2019-06-07T16:31:59",
+    "date_gmt": "2019-06-07T16:31:59",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1029"
+    },
+    "modified": "2019-06-07T16:31:59",
+    "modified_gmt": "2019-06-07T16:31:59",
+    "slug": "7-18-18-robb-report",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/7-18-18-robb-report/",
+    "title": {
+      "rendered": "7.18.18 Robb Report"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Robb Report",
+      "title": "History Comes Alive in This New York City Penthouse",
+      "subtitle": "The sun-drenched abode is on the market for $11.5 million.",
+      "date": "07/20/2018",
+      "summary": "Built in 1894 by architecture firm McKim, Mead & White (the team behind the Brooklyn Museum, Penn Station, and the Washington Square Arch), 108 Leonard Street is a striking example of New York City’s 19th-century architecture. The Tribeca tower shows off carved columns, arched windows, and a beloved clock tower that long ago cemented the building’s landmark status. Originally designed as the headquarters for the New York Life Insurance Company and then as a summons court, the Italian Renaissance Revival landmark has been painstakingly restored by Howard L. Zimmerman Architects and converted into luxury condominiums.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/7.18.18_Robb_Report.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1029"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1029"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1027,
+    "date": "2019-06-07T16:30:32",
+    "date_gmt": "2019-06-07T16:30:32",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1027"
+    },
+    "modified": "2019-06-07T16:33:15",
+    "modified_gmt": "2019-06-07T16:33:15",
+    "slug": "7-20-18-livabl",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/7-20-18-livabl/",
+    "title": {
+      "rendered": "7.20.18 Livabl"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Livabl",
+      "title": "108 Leonard in Tribeca releases first unit in its Crown Collection",
+      "subtitle": "108 Leonard released the first luxury residence in their 11-unit premier Crown Collection. The sprawling Terrace Penthouse sports an $11.5 million price tag for its 3,683 square feet of indoor space along with an additional 1,509 square feet of private outdoor space on two grand terraces. 108 Leonard has been meticulously restored with a distinctly contemporary flair and sensibility within Tribeca’s most iconic century-old building. The building was designed by SLCE Architects with interiors by Jeffrey Beers.",
+      "date": "07/20/2018",
+      "summary": "Developed by Peebles Corporation and Elad Group, 108 Leonard houses 152 residences in total, ranging in size from 851 square feet to 3,683 square feet (the Terrace Penthouse).\r\n",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/7.20.18_Livabl.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1027"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1027"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1025,
+    "date": "2019-06-07T16:27:56",
+    "date_gmt": "2019-06-07T16:27:56",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1025"
+    },
+    "modified": "2019-06-07T16:35:16",
+    "modified_gmt": "2019-06-07T16:35:16",
+    "slug": "7-10-18-appliances-connection-blog",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/7-10-18-appliances-connection-blog/",
+    "title": {
+      "rendered": "7.10.18 Appliances Connection Blog"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Appliances Connection Blog",
+      "title": "Top Real Estate Broker, Frances Katzen, Reveals the Luxury Kitchens and Appliances Manhattan Craves",
+      "subtitle": "",
+      "date": "07/10/2018",
+      "summary": "Ranked in the top 10 of total commissions at brokerage firm Douglas Elliman for over a decade, Frances Katzen is a true power player in NYC real estate. She’s on the cutting edge of design in Manhattan’s ever demanding market, where tastes in kitchens and appliances can change yearly. Routinely clocking in sales in excess of $150 million annually, Ms. Katzen’s total transactions are creeping towards the $2 billion mark. She landed in New York from Australia (her family relocated from their native South Africa, disapproving of apartheid) in the 1990s. As a 16-year-old, she sought to pursue a career as a ballet dancer but ended up pirouetting her way to real estate riches. She became the exclusive broker on many of NYC’s newest luxury developments with a global clientele.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/7.10.18_Appliances_Connection_Blog.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1025"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1025"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1023,
+    "date": "2019-06-07T16:25:13",
+    "date_gmt": "2019-06-07T16:25:13",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1023"
+    },
+    "modified": "2019-06-07T16:25:13",
+    "modified_gmt": "2019-06-07T16:25:13",
+    "slug": "2-28-18-mansion-global",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/2-28-18-mansion-global/",
+    "title": {
+      "rendered": "2.28.18 Mansion Global"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Mansion Global",
+      "title": "Designing a Terrace or Balcony With Distinction",
+      "subtitle": "From furniture to lighting to color schemes, here's what you need to know",
+      "date": "02/28/2018",
+      "summary": "Whether you have a sprawling roof deck or a tiny balcony, having an outdoor space to call your own adds instant Zen to daily life.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/2.28.18_Mansion_Global.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1023"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1023"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1021,
+    "date": "2019-06-07T16:19:37",
+    "date_gmt": "2019-06-07T16:19:37",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1021"
+    },
+    "modified": "2019-06-07T16:19:37",
+    "modified_gmt": "2019-06-07T16:19:37",
+    "slug": "2-15-18-world-journal",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/2-15-18-world-journal/",
+    "title": {
+      "rendered": "2.15.18 World Journal"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "World Journal",
+      "title": "108 LEONARD legendary again",
+      "subtitle": "",
+      "date": "02/15/2018",
+      "summary": "New York is a historic city, many buildings are listed as landmarks, permanent preservations. In the modern metropolis, landmarked buildings have their own unique charm; there is an eternal beauty that does not change over time. In today's fast-paced culture, it is impossible to recreate with the same workmanship and materials, and the cost will be substantial.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/2.15.18_World_Journal.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1021"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1021"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1017,
+    "date": "2019-06-07T16:17:46",
+    "date_gmt": "2019-06-07T16:17:46",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1017"
+    },
+    "modified": "2019-06-07T16:17:46",
+    "modified_gmt": "2019-06-07T16:17:46",
+    "slug": "2-14-18-architectural-digest",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/2-14-18-architectural-digest/",
+    "title": {
+      "rendered": "2.14.18 Architectural Digest"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": " Architectural Digest",
+      "title": " You Can Now Live in the McKim, Mead & White-Designed Clock Tower Building in New York City",
+      "subtitle": "The Italian Renaissance Revival building, once home to the New York Life Insurance Company and NYC Summons Court, has been transformed by designer Jeffrey Beers",
+      "date": "02/14/2018",
+      "summary": "When designing apartments inside a 1894 structure, sensitivity is key. Even more so when the structure in question was originally designated for commercial use. After a meticulous façade restoration by Howard L. Zimmerman Architects, the landmarked Clock Tower Building at 108 Leonard Street in New York's TriBeCa neighborhood has been transformed by architect Jeffrey Beers into more than 150 residences. Opening in early 2019, the building posed such interior challenges as a landmarked Italian Renaissance Revival lobby and atypical interior configuration, but Beers set out with a goal in mind: \"Complement the history of the building and contrast it harmoniously\" with contemporary details.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/2.14.18_Architectural_Digest-1.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1017"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1017"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1015,
+    "date": "2019-06-07T16:13:22",
+    "date_gmt": "2019-06-07T16:13:22",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1015"
+    },
+    "modified": "2019-06-07T16:13:22",
+    "modified_gmt": "2019-06-07T16:13:22",
+    "slug": "12-6-18-whitewall",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/12-6-18-whitewall/",
+    "title": {
+      "rendered": "12.6.18 Whitewall"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Whitewall",
+      "title": "Whitewall Presents: Douglas Elliman in New York, Los Angeles, and Boca Raton",
+      "subtitle": "",
+      "date": "12/06/2018",
+      "summary": "Steinway Hall is being reimagined and integrated with the modern new tower as remarkable residences and amenity spaces. Rising 1,428 feet above the historic site, 111 West 57th Street is a bold new landmark on the Manhattan skyline featuring unrivaled, perfectly centered, 360-degree views of Central Park, Midtown Manhattan, and beyond. The soaring tower, designed by SHoP Architects, will feature 46 beautifully proportioned full-floor and duplex residences, with interiors by Studio Sofield. The intricate facade of terra cotta, glass, and bronze brings back the materials and detailing of the classic New York City skyscraper.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/12.6.18_Whitewall.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1015"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1015"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1013,
+    "date": "2019-06-07T16:11:26",
+    "date_gmt": "2019-06-07T16:11:26",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1013"
+    },
+    "modified": "2019-06-07T16:41:04",
+    "modified_gmt": "2019-06-07T16:41:04",
+    "slug": "8-16-18-wallpaper",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/8-16-18-wallpaper/",
+    "title": {
+      "rendered": "8.16.18 Wallpaper*"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Wallpaper*",
+      "title": "New York City’s latest crop of luxury residential developments",
+      "subtitle": " House in a historic building originally constructed in 1894 by the McKim, Mead & White, 108 Leonard is now transformed into 150 state of the art condominiums by Jeffrey beers, with the assistance of SLCE Architects. The Tribeca building is a venture by the Elad Group. Sales are currently already underway,  ",
+      "date": "08/16/2018",
+      "summary": "The building’s landmark elaborate limestone entrances - all three of them - are maintained and lavishly highlighted, guiding the visitor into communal areas that hint to the glamour of a bygone era. The apartments on the other hand were designed to be more restrained so as to be flexible enough to adapt to each individual new owner’s needs.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/8.16.18_Wallpaper.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1013"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1013"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1010,
+    "date": "2019-06-07T16:07:50",
+    "date_gmt": "2019-06-07T16:07:50",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1010"
+    },
+    "modified": "2019-06-07T16:42:04",
+    "modified_gmt": "2019-06-07T16:42:04",
+    "slug": "new-york-lifestyles",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/new-york-lifestyles/",
+    "title": {
+      "rendered": "8.2.18 New York Lifestyles Magazine"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "New York Lifestyles Magazine",
+      "title": "108 LEONARD Elegantly Defining Tribeca",
+      "subtitle": "As the NYC real estate market cools down and the competition in the luxury sector heats up, 108 Leonard is a masterpiece of design and architecture. In these market times, one usually sees a flight to quality meaning the act of moving capital away from risky investments and toward safer investments due to uncertainty about the overall economy. 108 Leonard is waiting with open arms.",
+      "date": "08/02/2018",
+      "summary": "This project is sponsored by C3GB, with development managed by Elad Group, while Jeffrey Beers International (JBI) has designed the interiors. The building has been completely restored and re-designed inside. In fact, the building is an Italian Renaissance Revival landmark spanning an entire city block and initially built in 1894 by renowned architects McKim Mead & White. This is one of Tribeca’s most iconic century-old buildings, which has been restored with all the timely attributes of that century including dramatic details of scale, proportion, and volume paired with updated, modern forms and contemporary design details. The impressive one-to-four bedroom condos are currently available at prices starting at $1.6 million.\r\n",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/8.2.18_New_York_Lifestyles_Magazine.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1010"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1010"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1008,
+    "date": "2019-06-07T16:04:00",
+    "date_gmt": "2019-06-07T16:04:00",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1008"
+    },
+    "modified": "2019-06-07T16:04:00",
+    "modified_gmt": "2019-06-07T16:04:00",
+    "slug": "4-12-18-the-hollywood-reporter",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/4-12-18-the-hollywood-reporter/",
+    "title": {
+      "rendered": "4.12.18 The Hollywood Reporter"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The Hollywood Reporter",
+      "title": "'Buyers Aren't Just Going to Write a Check for Any Amount'",
+      "subtitle": "Sales are down 25 percent in Manhattan amid a superluxury boom hangover, but these 10 real estate stars are still scoring eight - figure deals.",
+      "date": "04/12/2018",
+      "summary": "A flurry of $30 million-plus transactions — including the $39 million February sale of the Vanderbilt Mansion, which was owned by late Johnson & Johnson heiress Elizabeth Ross Johnson, to game developer Tianqiao Chen — can’t mask a hard New York real estate truth: Total sales across Manhattan are down nearly 25 percent in the first quarter of 2018, the steepest decline since 2009, and prices in the luxury sector dipped 15 percent in that same period, according to a Douglas Elliman report. Inventory, meanwhile, is up more than 4 percent.  It's still New York — which boasts three of the U.S.' too 20 priciest ZIP codes (10013, 10007, 10282), according to a recent ranking by Property Shark — but \"buyers aren't just going to write a check for any amount,\" says Compass' Leonard Steinberg.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/4.12.18_The_-Hollywood_Reporter.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1008"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1008"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1004,
+    "date": "2019-06-07T15:56:39",
+    "date_gmt": "2019-06-07T15:56:39",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1004"
+    },
+    "modified": "2019-06-07T16:01:57",
+    "modified_gmt": "2019-06-07T16:01:57",
+    "slug": "4-14-18-the-hollywood-reporter",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/4-14-18-the-hollywood-reporter/",
+    "title": {
+      "rendered": "4.14.18 The Hollywood Reporter"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The Hollywood Reporter",
+      "title": "10 Real Estate Pros at the Top of NYC's Market",
+      "subtitle": "Sales are down 25 percent in Manhattan amid a superluxury boom hangover (\"a not - so - robust period driven largely by uncertainty\"), but these real estate stars are still scoring eight - figure deals.",
+      "date": "04/14/2018",
+      "summary": "A flurry of $30 million-plus transactions — including the $39 million February sale of the Vanderbilt Mansion, which was owned by late Johnson & Johnson heiress Elizabeth Ross Johnson, to game developer Tianqiao Chen — can’t mask a hard New York real estate truth: Total sales across Manhattan are down nearly 25 percent in the first quarter of 2018, the steepest decline since 2009, and prices in the luxury sector dipped 15 percent in that same period, according to a Douglas Elliman report. Inventory, meanwhile, is up more than 4 percent.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/4.14.18_The_Hollywood_Reporter.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1004"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1004"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1002,
+    "date": "2019-06-07T15:52:26",
+    "date_gmt": "2019-06-07T15:52:26",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1002"
+    },
+    "modified": "2019-06-07T15:52:26",
+    "modified_gmt": "2019-06-07T15:52:26",
+    "slug": "4-13-18-the-hollywood-reporter",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/4-13-18-the-hollywood-reporter/",
+    "title": {
+      "rendered": "4.13.18 The Hollywood Reporter"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The Hollywood Reporter",
+      "title": "Inside Hollywood Reporter's New York Party With Savannah Guthrie, Gayle King, Sean Hannity, Spike Lee, Ronan Farrow and More",
+      "subtitle": "The event, held in conjunction with the publication of the magazine’s 35 Most Powerful People in New York Media list, also hosted Lester Holt, Omarosa Manigault Newman, New York Attorney General Eric Schneiderman and magazine cover stars Hoda Kotb and Norah O’Donnell.",
+      "date": "04/13/2018",
+      "summary": "Former Donald Trump confidantes Omarosa Manigault Newman, Anthony Scaramucci and even ex-wife Marla Maples mingled with Stormy Daniels’ (real name Stephanie Clifford) lawyer and the media stars who cover the president at The Hollywood Reporter’s annual New York Power event on Thursday night.\r\n",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/4.13.18_The_Hollywood_Reporter.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1002"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1002"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1000,
+    "date": "2019-06-07T15:49:00",
+    "date_gmt": "2019-06-07T15:49:00",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=1000"
+    },
+    "modified": "2019-06-07T15:49:00",
+    "modified_gmt": "2019-06-07T15:49:00",
+    "slug": "4-18-mann-publications",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/4-18-mann-publications/",
+    "title": {
+      "rendered": "4.18 Mann Publications"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "Mann Publications",
+      "title": "Lavish 108 Leonard Launches in Tribeca",
+      "subtitle": "Photo Series",
+      "date": "04/01/2018",
+      "summary": "More than 220 guest packed the elegant sales gallery at 108 Leonard to celebrate the McKim, Mead & White landmark restoration that will now offer more than 150 condominium homes masterfully designed by hospitality visionary Jeffrey Beers.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/4.18_Mann_Publications.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/1000"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=1000"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 998,
+    "date": "2019-06-07T15:39:03",
+    "date_gmt": "2019-06-07T15:39:03",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=998"
+    },
+    "modified": "2019-06-07T15:39:03",
+    "modified_gmt": "2019-06-07T15:39:03",
+    "slug": "12-28-17-the-real-deal",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/12-28-17-the-real-deal/",
+    "title": {
+      "rendered": "12.28.17 The Real Deal"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The Real Deal",
+      "title": "The 10 most valuable Manhattan condo filings accepted in 2017",
+      "subtitle": "Gary Barnett's Central Park Tower tops the list with a projected sellout of $4B",
+      "date": "12/28/2017",
+      "summary": "In one important way, condominiums had a banner year in 2017. Though closings were about par for the course and contract volume was nothing to write home about, a single Manhattan building finally crossed the $4 billion threshold. Thanks to a familiar face, 2017 gave us the most expensive condo building in Manhattan history, when Gary Barnett’s Central Park Tower was approved to hit the market at $4 billion. The eye-popping total exceeded its limestone rival at 220 Central Park South by about $600 million. Despite a sagging luxury market, Barnett and a handful of other developers are shooting for ambitious sellouts. Appearing on this list are Bizzi & Partners’ long-delayed supertall at 125 Greenwich Street, the Elad Group and Peebles Corporation’s drama- soaked Clock Tower conversion in Tribeca, and HFZ Capital’s conversion of the historic Belnord on the Upper West Side. After Central Park Tower, the prices drop off quickly. HFZ’s Belnord conversion was the only other condo project with a targeted price tag above $1 billion in 2017, with a projected sellout of $1.35 billion. Following that, a trio of waterfront condo towers at GID Development’s Waterline Square have a combined sellout of $1.15 billion, and two of the condo towers made the list independently. Here is the full list of the most valuable condo offering plans accepted by the New York State Attorney General’s office in 2017.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/12.28.17_The_Real_Deal.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/998"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=998"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 989,
+    "date": "2019-06-06T20:53:25",
+    "date_gmt": "2019-06-06T20:53:25",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=989"
+    },
+    "modified": "2019-06-07T14:47:34",
+    "modified_gmt": "2019-06-07T14:47:34",
+    "slug": "989",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/989/",
+    "title": {
+      "rendered": "11.1.17 The Wall Street Journal"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
+      "publisher": "The Wall Street Journal",
+      "title": "NEW CONDO PROJECTS PUT LEONARD STREET ON THE MAP",
+      "subtitle": "Builders in New York's Tribeca look past Broadway for their latest residential developments",
+      "date": "11/01/2017",
+      "summary": "Just diagonally across Broadway from 91 Leonard is a block-long landmark building topped by a clock tower that was created by McKim, Mead & White in the late 19th century as the home office of the New York Life Insurance Co. It was long known as 346 Broadway. But now that the building is being converted to condominiums, it is being marketed as 108 Leonard Street instead.",
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/11.1.17_Wall_Street_Journal.pdf"
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/989"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=989"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 987,
+    "date": "2019-06-06T20:10:39",
+    "date_gmt": "2019-06-06T20:10:39",
+    "guid": {
+      "rendered": "http://cms.dbox.com/?post_type=108_leonard_press&#038;p=987"
+    },
+    "modified": "2019-06-07T14:51:11",
+    "modified_gmt": "2019-06-07T14:51:11",
+    "slug": "10-18-18-architectural-digest",
+    "status": "publish",
+    "type": "108_leonard_press",
+    "link": "https://cms.dbox.com/108_leonard_press/10-18-18-architectural-digest/",
+    "title": {
+      "rendered": "2.14.18 Architectural Digest"
+    },
+    "content": {
+      "rendered": "",
+      "protected": false
+    },
+    "featured_media": 0,
+    "template": "",
+    "acf": {
       "publisher": "Architectural Digest",
       "title": "You Can Now Live in the McKim, Mead & White-Designed Clock Tower Building in New York City",
-      "date": "2.14.18",
       "subtitle": "The Italian Renaissance Revival Building, once home to the New York Life Insurance Company and a NYC Summons Court, has been transformed by designer Jeffrey Beers.",
+      "date": "02/14/2018",
       "summary": "When designing apartments inside a 1894 structure, sensitivity is key. Even more so when the structure in question was originally designated for commercial use. After a meticulous facade restoration by Howard L. Zimmerman Architects, the landmarked Clock Tower Building at 108 Leonard Street in New York's TriBeCa neighborhood has been transformed by architect Jeffrey Beers into more than 150 residences. Opening in early 2019, the building posed such interior challenges as a landmarked Italian Renaissance Revival lobby and atypical interior configuration, but Beers set out with a goal in mind: \"Complement the history of the building and contrast it harmoniously\" with contemporary details.",
-      "link": "/press/2.14.18_ArchitecturalDigest_108 Leonard.pdf",
-      "metatitle": "White-designed clock tower building in New York City.",
-      "metadesc": "The Italian Renaissance Revival Building, once home to the New York Life Insurance Company and a NYC Summons Court, has been transformed by designer Jeffrey Beers."
+      "pdf": "https://cms.dbox.com/wp-content/uploads/2019/06/2.14.18_Architectural_Digest.pdf"
     },
-    {
-      "id": 10,
-      "publisher": "Architectural Digest",
-      "title": "The Largest Landmarked Property Ever Sold by the City of New York Gets a New Face",
-      "date": "11.9.17",
-      "subtitle": "After 17 years under scaffolding, the Clock Tower Building in Lower Manhattan reveals a restoration by Howard L. Zimmerman Architects",
-      "summary": "In New York's TriBeCa neighborhood, a preservationist's dream was finally unveiled after 17 years under scaffolding. The Clock Tower Building at 108 Leonard Street, completed in 1894 by architecture firm McKim, Mead & White—the design team also behind the Brooklyn Museum, the Washington Square Park Arch, and the now-razed Penn Station, among many other iconic 19th century marvels-has revealed a facade that has returned, in a way, much to its original roots. After years of disrepair, the Italian Renaissance Revival exterior of this landmarked property has been meticulously restored by Howard L. Zimmerman Architects, down to the face of the clock on its three-story topper.",
-      "link": "/press/11.9.17_ArchitecturalDigest_108Leonard.pdf",
-      "metatitle": "The largest landmarked property ever sold by the city of New York.",
-      "metadesc": "After 17 years under scaffolding, the Clock Tower Building in Lower Manhattan reveals a restoration by Howard L. Zimmerman Architects."
-    },
-    {
-      "id": 11,
-      "publisher": "Curbed",
-      "title": "Condo conversion of Tribeca's clock tower building gets new rendering",
-      "date": "11.6.17",
-      "subtitle": "A few small changes have been made to the landmarked building's facade",
-      "summary": "Developers of Tribeca's iconic Clocktower Building, the Elad Group and the Peebles Corporation, have settled their legal woes, after the two firms both accused the other of trying to sabotage the project, and are now moving forward with plans to convert the historic building into fancy condos. A new teaser site along with a never-before-seen rendering has surfaced for the conversion project, giving an idea of what's to be expected, once transformed.",
-      "link": "/press/11.6.17_Curbed_108Leonard.pdf",
-      "metatitle": "Condo conversion of tribeca's clock tower building gets new rendering.",
-      "metadesc": "A few small changes have been made to the landmarked building's facade"
-    },
-    {
-      "id": 12,
-      "publisher": "The Wall Street Journal",
-      "title": "New Condo Projects Put Leonard Street on the Map",
-      "date": "11.1.17",
-      "subtitle": "Builders in New York's Tribeca look past Broadway for their latest residential developments",
-      "summary": "Just diagonally across Broadway from 91 Leonard is a block-long landmark building topped by a clock tower that was created by McKim, Mead & White in the late 19th century as the home office of the New York Life Insurance Co. It was long known as 346 Broadway. But now that the building is being converted to condominiums, it is being marketed as 108 Leonard Street instead.",
-      "link": "/press/WSJ-11.1.17.pdf",
-      "metatitle": "New condo projects put Leonard street on the map.",
-      "metadesc": "Builders in New York's Tribeca look past Broadway for their latest residential developments"
+    "_links": {
+      "self": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press/987"
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/108_leonard_press"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/types/108_leonard_press"
+        }
+      ],
+      "wp:attachment": [
+        {
+          "href": "https://cms.dbox.com/wp-json/wp/v2/media?parent=987"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
     }
-  ]
-}
+  }
+]

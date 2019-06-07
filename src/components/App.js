@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
 import NotFound from "./pages/NotFound";
-import SkipLinks from './partials/SkipLinks';
+import SkipLinks from "./partials/SkipLinks";
 import Header from "./partials/Header";
 // import Animation from './partials/Animation';
 import "../styles/App.css";
@@ -144,15 +144,23 @@ export default class App extends Component {
   }
 
   fetchPressArticles() {
-    fetch('https://cms.dbox.com/wp-json/wp/v2/108_leonard_press')
+    let pressArticles;
+    fetch("https://cms.dbox.com/wp-json/wp/v2/108_leonard_press?per_page=100")
       .then(response => response.json())
       .then(data => {
-        let pressArticles = data.map(article => article.acf);
-
+        console.log("API press fetch success");
+        pressArticles = data.map(article => article.acf);
         this.setState({
           pressArticles
-        })
+        });
       })
+      .catch(error => {
+        console.log(error);
+        pressArticles = pressJSON.map(article => article.acf);
+        this.setState({
+          pressArticles
+        });
+      });
   }
 
   setFooterPageTitle() {
@@ -382,11 +390,18 @@ export default class App extends Component {
             <Route
               exact
               path="/press/"
-              render={props => <PressList pressArticles={this.state.pressArticles} />}
+              render={props => (
+                <PressList pressArticles={this.state.pressArticles} />
+              )}
             />
             <Route
               path="/press/:publication/:article/"
-              render={props => <PressArticle {...props} pressArticles={this.state.pressArticles} />}
+              render={props => (
+                <PressArticle
+                  {...props}
+                  pressArticles={this.state.pressArticles}
+                />
+              )}
             />
 
             <Route
