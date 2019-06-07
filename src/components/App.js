@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
 import NotFound from "./pages/NotFound";
+import SkipLinks from './partials/SkipLinks';
 import Header from "./partials/Header";
 // import Animation from './partials/Animation';
 import "../styles/App.css";
@@ -285,6 +286,7 @@ export default class App extends Component {
     });
     return (
       <div className="App">
+        <SkipLinks />
         <h1 className="visuallyhidden">108 Leonard</h1>
         <Header
           pages={PAGES}
