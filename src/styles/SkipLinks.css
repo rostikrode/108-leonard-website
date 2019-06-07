@@ -1,0 +1,25 @@
+#skiplinks a {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
+#skiplinks a:focus, #skiplinks a:active {
+  color: #fff;
+  background-color: #000;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: auto;
+  overflow: auto;
+  padding: 5px;
+  border: 4px solid red;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 999;
+}

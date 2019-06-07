@@ -307,7 +307,7 @@ export default class Header extends Component {
           </nav>
           <div className="footer" ref={el => (this.footer = el)}>
             <NavLink
-              style={{ marginBottom: '10px', display: 'block'}}
+              style={{ marginBottom: '15px', display: 'block'}}
               data-type="carousel"
               activeClassName="active"
               id="accessibility-0"
