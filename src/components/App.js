@@ -5,6 +5,7 @@ import NotFound from "./pages/NotFound";
 import Header from "./partials/Header";
 // import Animation from './partials/Animation';
 import "../styles/App.css";
+import parsePressData from "../helpers/parsePressData";
 
 import Carousel from "./pages/Carousel";
 import HomeCarousel from "./pages/HomeCarousel";
@@ -145,14 +146,14 @@ export default class App extends Component {
       .then(response => response.json())
       .then(data => {
         console.log("API press fetch success");
-        pressArticles = data.map(article => article.acf);
+        pressArticles = parsePressData(data);
         this.setState({
           pressArticles
         });
       })
       .catch(error => {
         console.log(error);
-        pressArticles = pressJSON.map(article => article.acf);
+        pressArticles = parsePressData(pressJSON);
         this.setState({
           pressArticles
         });
