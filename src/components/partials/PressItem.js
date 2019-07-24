@@ -12,14 +12,18 @@ export default class PressItem extends Component {
   }
 
   render() {
+    let { publisher, title, date } = this.props;
+    date = date.replace(/\//g,'.')    
+
     var slug = this.slugify(this.props.title);
     var pubslug = this.slugify(this.props.publisher);
+
     return (
       <div className="press-item">
         <NavLink strict exact to={`/press/${pubslug}/${slug}/`}>
-          <h2 className="publication sans-light-bold upper">{this.props.publisher}</h2>
-          <h5 className="title sans">{this.props.title}</h5>
-          <h5 className="date sans">{this.props.date}</h5>
+          <h2 className="publication sans-light-bold upper">{publisher}</h2>
+          <h5 className="title sans">{title}</h5>
+          <h5 className="date sans">{date}</h5>
         </NavLink>
       </div>
     );

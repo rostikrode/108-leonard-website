@@ -21,12 +21,14 @@ export default class Press extends Component {
   }
 
   componentDidMount() {
+    const metaDescription = "108 Leonard has attracted global media interest. Below is a small selection of the press reviews and features that have been published."
+    const metaTitle = "108 Leonard | Lower Manhattan For-Sale Residences In the Press";
     /** meta data for page */
-    document.title = this.props.metaTitle;
+    document.title = metaTitle;
     if(document.getElementsByTagName('meta').description) {
-      document.getElementsByTagName('meta').description.content = this.props.metaDescription;
-      document.querySelector("meta[property='og:description']").content = this.props.metaDescription;
-      document.querySelector("meta[property='og:title']").content = this.props.metaTitle;
+      document.getElementsByTagName('meta').description.content = metaDescription;
+      document.querySelector("meta[property='og:description']").content = metaDescription;
+      document.querySelector("meta[property='og:title']").content = metaTitle;
     }
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href = window.location.href
@@ -49,18 +51,24 @@ export default class Press extends Component {
       });
     }
   }
-
   render() {
+    const renderPressArticles = () => {
+      if (this.props.pressArticles) {
+        let articleList =  this.props.pressArticles.map((article, key) => {
+          return (
+            <li className="press-item-wrapper" key={key}>
+              <PressItem {...article} {...this.props} />
+            </li>  
+          );
+        })
+        return articleList; 
+      }
+    }
+
     return (
       <div className={`press-wrapper ${this.state.overflowClass}`}>
         <ul className={`press-list ${this.state.overflowClass}`} ref={e => {this.presslist = e;}}>
-          {this.props.articles.map((art, key) => {
-            return (
-              <li className="press-item-wrapper" key={key}>
-                <PressItem {...art} {...this.props} />
-              </li>  
-            );
-          })}        
+          {renderPressArticles()}     
         </ul>
         <ScrollArrow listElementRef={this.presslist} isOverflowing={this.isOverflowing.bind(this)} />
       </div>
