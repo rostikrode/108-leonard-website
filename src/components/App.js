@@ -124,8 +124,6 @@ export default class App extends Component {
     }
   }
   componentDidMount() {
-    this.fetchPressArticles();
-
     window.onpopstate = this.onBackButtonEvent;
     window.onpushstate = this.onForwardButtonEvent;
 
@@ -137,18 +135,6 @@ export default class App extends Component {
         popupClosed: 'no'
       });
     }
-  }
-
-  fetchPressArticles() {
-    fetch('https://cms.dbox.com/wp-json/wp/v2/108_leonard_press')
-      .then(response => response.json())
-      .then(data => {
-        let pressArticles = data.map(article => article.acf);
-
-        this.setState({
-          pressArticles
-        })
-      })
   }
 
   setFooterPageTitle() {
@@ -195,6 +181,7 @@ export default class App extends Component {
         }
       }
     }
+    console.log(this.state.page);
   }
   onForwardButtonEvent() {
     this.getPage();
@@ -377,11 +364,11 @@ export default class App extends Component {
             <Route
               exact
               path="/press/"
-              render={props => <PressList pressArticles={this.state.pressArticles} />}
+              render={props => <PressList {...pressJSON} />}
             />
             <Route
               path="/press/:publication/:article/"
-              render={props => <PressArticle {...props} pressArticles={this.state.pressArticles} />}
+              render={props => <PressArticle {...props} {...pressJSON} />}
             />
 
             <Route
