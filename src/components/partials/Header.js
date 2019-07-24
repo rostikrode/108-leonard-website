@@ -23,6 +23,7 @@ export default class Header extends Component {
     window.addEventListener('load', this.handleLoad);
     this.onAvailabilityPage();
     this.onPressPage();
+    console.log(this.header);
     this.props.updateHeaderHeight(this.header.clientHeight);
 
     // if (window.location.pathname === '/') {
