@@ -380,7 +380,7 @@ export default class App extends Component {
             <Route
               exact
               path="/team/"
-              render={props => (
+              render={() => (
                 <Carousel
                   {...teamJSON}
                   sendSlider={this.sendSlider.bind(this)}
@@ -392,7 +392,7 @@ export default class App extends Component {
             <Route
               exact
               path="/press/"
-              render={props => (
+              render={() => (
                 <PressList pressArticles={this.state.pressArticles} />
               )}
             />
@@ -409,13 +409,13 @@ export default class App extends Component {
             <Route
               exact
               path="/legal/"
-              render={props => <Legal {...legalJSON} />}
+              render={() => <Legal {...legalJSON} />}
             />
 
             <Route
               exact
               path="/accessibility-statement/"
-              render={props => <Accessibility {...accessibilityJSON} />}
+              render={() => <Accessibility {...accessibilityJSON} />}
             />
 
             <Route path="/404/" component={NotFound} />
