@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Cookies from 'js-cookie';
 import NotFound from './pages/NotFound';
+import SkipLinks from './partials/SkipLinks';
 import Header from './partials/Header';
 // import Animation from './partials/Animation';
 import '../styles/App.css';
+import parsePressData from '../helpers/parsePressData';
 
 import Carousel from './pages/Carousel';
 import HomeCarousel from './pages/HomeCarousel';
@@ -15,6 +17,8 @@ import Contact from './pages/Contact';
 import PressList from './pages/PressList';
 import PressArticle from './pages/PressArticle';
 import Legal from './pages/Legal';
+import Accessibility from './pages/Accessibility';
+
 // import Home from './pages/Home';
 
 import buildingJSON from './data/building.json';
@@ -27,6 +31,7 @@ import tribecaJSON from './data/tribeca.json';
 import teamJSON from './data/team.json';
 import pressJSON from './data/press.json';
 import legalJSON from './data/legal.json';
+import accessibilityJSON from './data/accessibility.json';
 // import homeJSON from './data/home.json';
 import homeCarouselJSON from './data/home-carousel.json';
 
@@ -107,7 +112,8 @@ export default class App extends Component {
       slider: null,
       parentslider: null,
       popupClosed: '',
-      headerHeight: 0
+      headerHeight: 0,
+      pressArticles: []
     };
 
     this.getPage = this.getPage.bind(this);
@@ -129,12 +135,33 @@ export default class App extends Component {
 
     this.getPage();
     this.setFooterPageTitle();
+    this.fetchPressArticles();
 
     if (!Cookies.get('closedPopup')) {
       this.setState({
         popupClosed: 'no'
       });
     }
+  }
+
+  fetchPressArticles() {
+    let pressArticles;
+    fetch('https://cms.dbox.com/wp-json/wp/v2/108_leonard_press?per_page=100')
+      .then(response => response.json())
+      .then(data => {
+        console.log('API press fetch success');
+        pressArticles = parsePressData(data);
+        this.setState({
+          pressArticles
+        });
+      })
+      .catch(error => {
+        console.log(error);
+        pressArticles = parsePressData(pressJSON);
+        this.setState({
+          pressArticles
+        });
+      });
   }
 
   setFooterPageTitle() {
@@ -282,6 +309,7 @@ export default class App extends Component {
     });
     return (
       <div className="App">
+        <SkipLinks />
         <h1 className="visuallyhidden">108 Leonard</h1>
         <Header
           pages={PAGES}
@@ -364,17 +392,30 @@ export default class App extends Component {
             <Route
               exact
               path="/press/"
-              render={props => <PressList {...pressJSON} />}
+              render={props => (
+                <PressList pressArticles={this.state.pressArticles} />
+              )}
             />
             <Route
               path="/press/:publication/:article/"
-              render={props => <PressArticle {...props} {...pressJSON} />}
+              render={props => (
+                <PressArticle
+                  {...props}
+                  pressArticles={this.state.pressArticles}
+                />
+              )}
             />
 
             <Route
               exact
               path="/legal/"
               render={props => <Legal {...legalJSON} />}
+            />
+
+            <Route
+              exact
+              path="/accessibility-statement/"
+              render={props => <Accessibility {...accessibilityJSON} />}
             />
 
             <Route path="/404/" component={NotFound} />

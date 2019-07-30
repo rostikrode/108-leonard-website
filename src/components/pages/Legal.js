@@ -42,11 +42,11 @@ export default class Legal extends Component {
     var tabs = this.tabref.querySelectorAll('.tab');
     for (var t = 0; t < tabs.length; t++) {
       tabs[t].classList.remove('active');
-    };
+    }
     var contents = this.contentref.querySelectorAll('.content');
     for (var c = 0; c < contents.length; c++) {
       contents[c].classList.remove('active');
-    };
+    }
 
     e.currentTarget.classList.toggle('active');
     this.contentref.querySelector(`.content[data-id="${e.currentTarget.dataset.id}"]`).classList.toggle('active');

@@ -1,0 +1,24 @@
+.accessibility-wrapper {
+  padding: 18px;
+  text-align: left;
+  height: calc(100vh - 36px - 90px);
+  font-size: 15px;
+  font-family: 'Calibre', sans;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+
+.accessibility-wrapper h3 {
+  font-size: 15px;
+}
+
+.accessibility-wrapper a {
+  color: black;
+}
+
+@media (min-width: 1024px) {
+  .accessibility-wrapper {
+    padding: 85px 55px;
+    height: calc(100vh - 110px);
+  }
+}

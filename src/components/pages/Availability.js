@@ -84,7 +84,7 @@ export default class Availability extends Component {
     )
       .then(response => response.json())
       .then(json => {
-        console.log(json);
+        // console.log(json);
         var parsed = [];
         for (var i in json) {
           if (json[i]) {
@@ -121,6 +121,12 @@ export default class Availability extends Component {
                 } else if (number >= 7 && number <= 12) {
                   residenceSVGFileName = 'B_7-12';
                   residencePDFFileName = 'B_7-12';
+                } else if (number === 11) {
+                  residenceSVGFileName = 'B_11';
+                  residencePDFFileName = 'B_11';
+                } else if (number === 14) {
+                  residenceSVGFileName = 'B_14';
+                  residencePDFFileName = 'B_14';
                 } else if (number === 15) {
                   residenceSVGFileName = 'B_15';
                   residencePDFFileName = 'B_15';
@@ -136,6 +142,9 @@ export default class Availability extends Component {
                 } else if (number >= 7 && number <= 12) {
                   residenceSVGFileName = 'C_7-12';
                   residencePDFFileName = 'C_7-12';
+                } else if (number === 14) {
+                  residenceSVGFileName = 'C_14';
+                  residencePDFFileName = 'C_14';
                 } else if (number === 15) {
                   residenceSVGFileName = 'C_15';
                   residencePDFFileName = 'C_15';
@@ -157,13 +166,19 @@ export default class Availability extends Component {
                 } else if (number === 6) {
                   residenceSVGFileName = 'D_6';
                   residencePDFFileName = 'D_6';
+                } else if (number === 14) {
+                  residenceSVGFileName = 'D_14';
+                  residencePDFFileName = 'D_14';
                 } else {
                   residenceSVGFileName = 'D';
                   residencePDFFileName = 'D';
                 }
                 break;
               case 'E':
-                if (number >= 4 && number <= 12) {
+                if (number === 14) {
+                  residenceSVGFileName = 'E_14';
+                  residencePDFFileName = 'E_14';
+                } else if (number >= 4 && number <= 12) {
                   residenceSVGFileName = 'E_4-12';
                   residencePDFFileName = 'E_4-12';
                 } else {
@@ -181,7 +196,10 @@ export default class Availability extends Component {
                 }
                 break;
               case 'G':
-                if (number >= 4 && number <= 6) {
+                if (number === 3) {
+                  residenceSVGFileName = 'G_3';
+                  residencePDFFileName = 'G_3';
+                } else if (number >= 4 && number <= 6) {
                   residenceSVGFileName = 'G_4-6';
                   residencePDFFileName = 'G_4-6';
                 } else if (number >= 7 && number <= 12) {
@@ -220,13 +238,19 @@ export default class Availability extends Component {
                 }
                 break;
               case 'K':
-                if (number >= 3 && number <= 11) {
+                if (number === 12) {
+                  residenceSVGFileName = 'K_12';
+                  residencePDFFileName = 'K_12';
+                } else if (number >= 3 && number <= 11) {
                   residenceSVGFileName = 'K_3-11';
                   residencePDFFileName = 'K_3-11';
                 }
                 break;
               case 'L':
-                if (number >= 4 && number <= 6) {
+                if (number === 3) {
+                  residenceSVGFileName = 'L_3';
+                  residencePDFFileName = 'L_3';
+                } else if (number >= 4 && number <= 6) {
                   residenceSVGFileName = 'L_4-6';
                   residencePDFFileName = 'L_4-6';
                 } else if (number > 7 && number <= 12) {
@@ -241,6 +265,9 @@ export default class Availability extends Component {
                 if (number >= 5 && number <= 12) {
                   residenceSVGFileName = 'M_5-12';
                   residencePDFFileName = 'M_5-12';
+                } else if (number === 4) {
+                  residenceSVGFileName = 'M_4';
+                  residencePDFFileName = 'M_4';
                 } else {
                   residenceSVGFileName = 'M';
                   residencePDFFileName = 'M';
