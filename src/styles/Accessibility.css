@@ -1,11 +1,18 @@
 .accessibility-wrapper {
-  padding: 18px;
+  padding: 64px;
+  box-sizing: border-box;
   text-align: left;
   font-size: 15px;
   font-family: 'Calibre', sans;
   line-height: 25px;
   letter-spacing: 1px;
   overflow: scroll;
+}
+
+@media screen and (max-width: 734px) {
+  .accessibility-wrapper {
+    padding: 16px;
+  }
 }
 
 .font-size {
