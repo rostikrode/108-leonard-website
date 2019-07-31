@@ -46,22 +46,33 @@ export default class Accessibility extends Component {
       <main className="accessibility-wrapper">
         <div>
           <div>
-            <h1>Accessibility Statement</h1>
+            <h1 className="font-size">Accessibility Statement</h1>
             <p>
               This Accessibility Statement applies to:{' '}
               <span>108leonard.com</span>
             </p>
           </div>
-          <hr />
-          <div>
+          <hr className="tall-margin" />
+          <div className="photo-row">
             <img
-              src="/images/16_accessibility/AudioEye_Accessibility_ADAevolution.png"
+              className="photo-row-image"
+              src="/images/16_accessibility/108Leonard_AS_Icon_1.svg"
+              alt="Accessibility Logos"
+            />
+            <img
+              className="photo-row-image"
+              src="/images/16_accessibility/108Leonard_AS_Icon_2.svg"
+              alt="Accessibility Logos"
+            />
+            <img
+              className="photo-row-image"
+              src="/images/16_accessibility/108Leonard_AS_Icon_3.svg"
               alt="Accessibility Logos"
             />
           </div>
-          <hr />
+          <hr className="tall-margin" />
           <div>
-            <h2> We Value Digital Inclusion</h2>
+            <h2 className="font-size">We Value Digital Inclusion</h2>
             <div>
               <p>
                 In our effort to provide a fully accessible and optimized user
@@ -83,9 +94,10 @@ export default class Accessibility extends Component {
                 experience.
               </p>
             </div>
-            <hr />
-            <h2>AudioEye Accessibility Certification</h2>
+            <hr className="tall-margin" />
+            <h2 className="font-size">AudioEye Accessibility Certification</h2>
             <img
+              className="audioeye-badge"
               src="/images/16_accessibility/AudioEye_AccessibilityStatement_Graphics_Trusted.png"
               alt="AudioEye Certification - AudioEye Trusted"
             />
@@ -108,22 +120,26 @@ export default class Accessibility extends Component {
                 user experience for all users.
               </p>
             </div>
-            <hr />
+            <hr className="tall-margin" />
             <div>
               <p>
                 Last updated <span>Month DD, YYYY</span>
               </p>
             </div>
-            <hr />
+            <hr className="tall-margin" />
             <div>
               <p>
                 Notice something wrong? Please Provide your{' '}
-                <a data-ae-client-feedback-link="true" href="#">
+                <a
+                  className="accessibility-link"
+                  data-ae-client-feedback-link="true"
+                  href="#"
+                >
                   feedback
                 </a>
               </p>
             </div>
-            <hr />
+            <hr className="tall-margin" />
             <div>
               <p>
                 This website is regularly tested using a variety of assistive
@@ -147,7 +163,7 @@ export default class Accessibility extends Component {
                 </ul>
               </div>
             </div>
-            <hr />
+            <hr className="tall-margin" />
             <div>
               <p>
                 <strong>
@@ -156,12 +172,15 @@ export default class Accessibility extends Component {
                 </strong>
               </p>
             </div>
-            <hr />
-            <h2>Web Accessibility Guidelines</h2>
+            <hr className="tall-margin" />
+            <h2 className="font-size">Web Accessibility Guidelines</h2>
             <div>
               <p>
                 <span>Name</span> has leveraged the{' '}
-                <a href="https://www.audioeye.com/understanding-wcag-2-0/">
+                <a
+                  className="accessibility-link"
+                  href="https://www.audioeye.com/understanding-wcag-2-0/"
+                >
                   Web Content Accessibility Guidelines (WCAG) 2.0
                 </a>{' '}
                 as reference to ensure the web content made available from this
@@ -177,7 +196,10 @@ export default class Accessibility extends Component {
               </p>
               <div>
                 <p>Related Links:</p>
-                <a href="https://www.w3.org/WAI/">
+                <a
+                  className="accessibility-link"
+                  href="https://www.w3.org/WAI/"
+                >
                   Web Accessibility Initiative (WAI)
                 </a>
                 <p>
@@ -187,7 +209,7 @@ export default class Accessibility extends Component {
                 </p>
               </div>
             </div>
-            <hr />
+            <hr className="tall-margin" />
             <div>
               <p>
                 <strong>
@@ -196,12 +218,15 @@ export default class Accessibility extends Component {
                 </strong>
               </p>
             </div>
-            <hr />
-            <h2>Feedback</h2>
+            <hr className="tall-margin" />
+            <h2 className="font-size">Feedback</h2>
             <div>
               <p>
                 <span>Name</span> has leveraged the{' '}
-                <a href="https://www.audioeye.com/understanding-wcag-2-0/">
+                <a
+                  className="accessibility-link"
+                  href="https://www.audioeye.com/understanding-wcag-2-0/"
+                >
                   Web Content Accessibility Guidelines (WCAG) 2.0
                 </a>
                 as reference to ensure the web content made available from this
@@ -218,13 +243,19 @@ export default class Accessibility extends Component {
               <p>
                 If you encounter issues with any page on our site that presents
                 a challenge for individuals with disabilities,{' '}
-                <a data-ae-client-feedback-link="true" href="#">
+                <a
+                  className="accessibility-link"
+                  data-ae-client-feedback-link="true"
+                  href="#"
+                >
                   please submit your feedback
                 </a>
               </p>
             </div>
-            <hr />
-            <h2>Providing Users with a Free Customizable Assistive Utility</h2>
+            <hr className="tall-margin" />
+            <h2 className="font-size">
+              Providing Users with a Free Customizable Assistive Utility
+            </h2>
             <div>
               <p>
                 <strong>Ally Toolbar</strong>
@@ -245,7 +276,8 @@ export default class Accessibility extends Component {
                 Toolbar button in the bottom right hand corner.
               </p>
               <img
-                src="/images/16_accessibility/AudioEye_AccessibilityStatement_Graphics_CTA.png"
+                className="experience-image"
+                src="/images/16_accessibility/108Leonard_AS_Icon_CTA.svg"
                 alt="Cutomize your experience with AudioEye Tools."
               />
               <p>
@@ -258,13 +290,17 @@ export default class Accessibility extends Component {
                 visitors with diverse abilities to customize their user
                 experience:
               </p>
-              <a href="https://www.audioeye.com/technology/">
+              <a
+                className="accessibility-link"
+                href="https://www.audioeye.com/technology/"
+              >
                 Browse All Features
               </a>
               <p>The following tools may be available in the Ally Toolbar:</p>
-              <div>
+              <div className="icon-row">
                 <img
-                  src="/images/16_accessibility/AudioEye_AccessibilityStatement_Graphics_Player.png"
+                  className="icon"
+                  src="/images/16_accessibility/108Leonard_AS_Icon_Player.svg"
                   alt=""
                 />
                 <div>
@@ -274,9 +310,10 @@ export default class Accessibility extends Component {
                   <p>Listen to the content of a web page read aloud </p>
                 </div>
               </div>
-              <div>
+              <div className="icon-row">
                 <img
-                  src="/images/16_accessibility/AudioEye_AccessibilityStatement_Graphics_Reader.png"
+                  className="icon"
+                  src="/images/16_accessibility/108Leonard_AS_Icon_Reader.svg"
                   alt=""
                 />
                 <div>
@@ -286,9 +323,10 @@ export default class Accessibility extends Component {
                   <p>Customize the visual display of the website</p>
                 </div>
               </div>
-              <div>
+              <div className="icon-row">
                 <img
-                  src="/images/16_accessibility/AudioEye_AccessibilityStatement_Graphics_Voice.png"
+                  className="icon"
+                  src="/images/16_accessibility/108Leonard_AS_Icon_Microphone.svg"
                   alt=""
                 />
                 <div>
@@ -298,9 +336,10 @@ export default class Accessibility extends Component {
                   <p>Command the browser using your voice </p>
                 </div>
               </div>
-              <div>
+              <div className="icon-row">
                 <img
-                  src="/images/16_accessibility/AudioEye_AccessibilityStatement_Graphics_SiteMenu.png"
+                  className="icon"
+                  src="/images/16_accessibility/108Leonard_AS_Icon_SiteMenu.svg"
                   alt=""
                 />
                 <div>
@@ -310,9 +349,10 @@ export default class Accessibility extends Component {
                   <p>Navigate simplified menus using your keyboard or mouse </p>
                 </div>
               </div>
-              <div>
+              <div className="icon-row">
                 <img
-                  src="/images/16_accessibility/AudioEye_AccessibilityStatement_Graphics_PageElementsMenu.png"
+                  className="icon"
+                  src="/images/16_accessibility/108Leonard_AS_Icon_PageElement.svg"
                   alt=""
                 />
                 <div>
@@ -324,9 +364,10 @@ export default class Accessibility extends Component {
                   </p>
                 </div>
               </div>
-              <div>
+              <div className="icon-row">
                 <img
-                  src="/images/16_accessibility/AudioEye_AccessibilityStatement_Graphics_HelpDesk.png"
+                  className="icon"
+                  src="/images/16_accessibility/108Leonard_AS_Icon_HelpDesk.svg"
                   alt=""
                 />
                 <div>
@@ -337,8 +378,8 @@ export default class Accessibility extends Component {
                 </div>
               </div>
             </div>
-            <hr />
-            <h2>Third-Party Sites</h2>
+            <hr className="tall-margin" />
+            <h2 className="font-size">Third-Party Sites</h2>
             <div>
               <p>
                 Throughout this website, we make use of different third-party
@@ -351,12 +392,18 @@ export default class Accessibility extends Component {
                 provided from these third-party sites:
               </p>
               <p>
-                <a href="https://www.facebook.com/help/141636465971794/">
+                <a
+                  className="accessibility-link"
+                  href="https://www.facebook.com/help/141636465971794/"
+                >
                   Facebook Accessibility Policy
                 </a>
               </p>
               <p>
-                <a href="https://support.google.com/youtube/answer/189278?hl=en">
+                <a
+                  className="accessibility-link"
+                  href="https://support.google.com/youtube/answer/189278?hl=en"
+                >
                   YouTube Accessibility Policy
                 </a>
               </p>
