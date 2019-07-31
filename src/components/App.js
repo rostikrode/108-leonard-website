@@ -189,6 +189,7 @@ export default class App extends Component {
       });
     } else {
       if (url.split('/')[1] === 'press') {
+        console.log('press');
         this.setState({
           page: 'Press'
         });
