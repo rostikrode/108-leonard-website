@@ -22,7 +22,7 @@ export default class Press extends Component {
 
   componentDidMount() {
     /** meta data for page */
-    document.title = this.props.metaTitle;
+    document.title = '108 Leonard | Press';
     if (document.getElementsByTagName('meta').description) {
       document.getElementsByTagName(
         'meta'
@@ -30,9 +30,8 @@ export default class Press extends Component {
       document.querySelector(
         "meta[property='og:description']"
       ).content = this.props.metaDescription;
-      document.querySelector(
-        "meta[property='og:title']"
-      ).content = this.props.metaTitle;
+      document.querySelector("meta[property='og:title']").content =
+        '108 Leonard | Press';
     }
     if (document.querySelector("link[rel='canonical']")) {
       document.querySelector("link[rel='canonical']").href =
