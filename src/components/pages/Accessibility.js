@@ -123,7 +123,7 @@ export default class Accessibility extends Component {
             <hr className="tall-margin" />
             <div>
               <p>
-                Last updated <span>Month DD, YYYY</span>
+                Last updated <span>July 31, 2019</span>
               </p>
             </div>
             <hr className="tall-margin" />
