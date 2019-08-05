@@ -76,17 +76,17 @@ export default class Accessibility extends Component {
             <div>
               <p>
                 In our effort to provide a fully accessible and optimized user
-                experience for all site visitors, <span>Name</span> has taken
-                careful measure to ensure an excellent user experience,
-                regardless of the assistive technology being used to access this
-                site or the specific abilities of those individuals seeking
-                access to this site.
+                experience for all site visitors, <span>108Leonard.com</span>{' '}
+                has taken careful measure to ensure an excellent user
+                experience, regardless of the assistive technology being used to
+                access this site or the specific abilities of those individuals
+                seeking access to this site.
               </p>
               <p>
-                The <span>Name</span> website is monitored and tested regularly
-                by internal resources and by AudioEye, a third-party provider of
-                Web Accessibility testing and monitoring. As issues of
-                accessibility are identified, results of automated and manual
+                The <span>108Leonard.com</span> website is monitored and tested
+                regularly by internal resources and by AudioEye, a third-party
+                provider of Web Accessibility testing and monitoring. As issues
+                of accessibility are identified, results of automated and manual
                 testing are managed through the AudioEye® Digital Accessibility
                 Platform. As new solutions are discovered to improve the user
                 experience, remediation is tracked through the AudioEye system
@@ -115,9 +115,9 @@ export default class Accessibility extends Component {
                 Success Criteria to the greatest extent possible.
               </p>
               <p>
-                AudioEye and <span>Name</span> continue to collaborate in an
-                ongoing effort to maintain conformance and provide an accessible
-                user experience for all users.
+                AudioEye and <span>108Leonard.com</span> continue to collaborate
+                in an ongoing effort to maintain conformance and provide an
+                accessible user experience for all users.
               </p>
             </div>
             <hr className="tall-margin" />
@@ -176,7 +176,7 @@ export default class Accessibility extends Component {
             <h2 className="font-size">Web Accessibility Guidelines</h2>
             <div>
               <p>
-                <span>Name</span> has leveraged the{' '}
+                <span>108Leonard.com</span> has leveraged the{' '}
                 <a
                   className="accessibility-link"
                   href="https://www.audioeye.com/understanding-wcag-2-0/"
@@ -191,8 +191,8 @@ export default class Accessibility extends Component {
                 These globally recognized best practices (as recommended by the
                 World Wide Web Consortium) consist of three levels of
                 accessibility measurement (A, AA, and AAA). To the greatest
-                extent feasible, <span>Name</span> has elected to conform to
-                Level AA of these guidelines.
+                extent feasible, <span>108Leonard.com</span> has elected to
+                conform to Level AA of these guidelines.
               </p>
               <div>
                 <p>Related Links:</p>
@@ -222,7 +222,7 @@ export default class Accessibility extends Component {
             <h2 className="font-size">Feedback</h2>
             <div>
               <p>
-                <span>Name</span> has leveraged the{' '}
+                <span>108Leonard.com</span> has leveraged the{' '}
                 <a
                   className="accessibility-link"
                   href="https://www.audioeye.com/understanding-wcag-2-0/"
@@ -237,8 +237,8 @@ export default class Accessibility extends Component {
                 These globally recognized best practices (as recommended by the
                 World Wide Web Consortium) consist of three levels of
                 accessibility measurement (A, AA, and AAA). To the greatest
-                extent feasible, <span>Name</span> has elected to conform to
-                Level AA of these guidelines.
+                extent feasible, <span>108Leonard.com</span> has elected to
+                conform to Level AA of these guidelines.
               </p>
               <p>
                 If you encounter issues with any page on our site that presents
@@ -267,6 +267,25 @@ export default class Accessibility extends Component {
                 that allow site visitors to customize their user experience.
                 Activate the Ally Toolbar to access each tool listed below.
               </p>
+              <div>
+                <p
+                  id="audioeye_activate_msg"
+                  data-ae-cta-opted-in-copy="Ally Toolbar is active"
+                  data-ae-cta-opted-out-copy="Ally Toolbar is not active"
+                >
+                  AudioEye Tools are off
+                </p>
+                <button
+                  id="audioeye_activate_btn"
+                  className="activate-button"
+                  data-ae-cta-optin-button="true"
+                  data-ae-cta-opted-in-copy="Deactivate Ally Toolbar"
+                  data-ae-cta-opted-out-copy="Activate Ally Toolbar"
+                  type="button"
+                >
+                  Activate Ally Toolbar
+                </button>
+              </div>
 
               <p>
                 <strong>Experience the Ally Toolbar</strong>
@@ -384,8 +403,8 @@ export default class Accessibility extends Component {
               <p>
                 Throughout this website, we make use of different third-party
                 websites such as Instagram, YouTube, Twitter, and Facebook to
-                spread news and information about <span>Name</span> products and
-                services.
+                spread news and information about <span>108Leonard.com</span>{' '}
+                products and services.
               </p>
               <p>
                 As made publicly available, here are the Accessibility Policies

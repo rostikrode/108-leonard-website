@@ -30,7 +30,7 @@
   top: 80px;
   left: 0;
   width: 100%;
-  background-color: #FFF;
+  background-color: #fff;
   z-index: 800;
 }
 .filter-button-wrapper button {
@@ -44,7 +44,7 @@
   padding-top: 44px;
 }
 
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   .arrow-down-scroll {
     display: block;
   }
@@ -68,7 +68,7 @@
   }
 }
 
-@media (min-width:1366px) {
+@media (min-width: 1366px) {
   .filter-button-wrapper {
     position: absolute;
   }
@@ -77,5 +77,26 @@
   }
   .list-wrapper {
     padding-top: 50px;
+  }
+}
+
+.activate-button {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Calibre';
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 60%;
+  padding: 5%;
+}
+@media (min-width: 1024px) {
+  .activate-button {
+    padding: 2%;
+    width: 20%;
   }
 }
