@@ -286,6 +286,13 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
+.sans-small {
+  font-family: 'Calibre', sans;
+	font-weight: normal;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
 .sans-medium {
 	font-family: 'Calibre', sans;
 	font-weight: 500;
@@ -366,12 +373,18 @@ body {
 	}
 	.sans, .sans-bold {
 		font-size: 13px;
-	}	
+  }	
+  .sans-small {
+    font-size: 11px;
+  }
 }
 @media (min-width: 1366px) {
 	.sans, .label {
 		font-size: 10px;
-	}
+  }
+  .sans-small {
+    font-size: 8px;
+  }
 	.nav-anchor.sans {
 		font-size: 12px;
 	}
@@ -405,7 +418,10 @@ body {
 	.nav-anchor.sans,
 	.sans-bold {
 		font-size: 15px;
-	}
+  }
+  .sans-small {
+    font-size: 12px;
+  }
 	.res,.info {
 		font-size: 24px;
 	}

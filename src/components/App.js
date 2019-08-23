@@ -18,6 +18,7 @@ import PressList from './pages/PressList';
 import PressArticle from './pages/PressArticle';
 import Legal from './pages/Legal';
 import Accessibility from './pages/Accessibility';
+import Magazine from './pages/Magazine';
 
 // import Home from './pages/Home';
 
@@ -96,6 +97,13 @@ const PAGES = [
     slug: '/contact/',
     data: contactJSON,
     subnavs: []
+  },
+  {
+    title: <span>Tribeca<br/>Magazine</span>,
+    component: Magazine,
+    slug: '/tribeca-magazine/',
+    subnavs: [],
+    className: 'sans-small'
   }
 ];
 

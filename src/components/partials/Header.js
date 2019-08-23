@@ -268,7 +268,7 @@ export default class Header extends Component {
                       data-type={p.subnavs.length > 0 ? 'carousel' : ''}
                       activeClassName="active"
                       id={`nav-anchor-${key}`}
-                      className="nav-anchor sans"
+                      className={`nav-anchor ${p.className === 'sans-small' ? 'sans-small' : 'sans'}`}
                       onClick={e => {
                         this.onNavItemClick(e);
                       }}
