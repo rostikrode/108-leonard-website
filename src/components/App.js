@@ -103,7 +103,7 @@ const PAGES = [
     component: Magazine,
     slug: '/tribeca-magazine/',
     subnavs: [],
-    className: 'sans-small'
+    subNavStyle: true
   }
 ];
 

@@ -52,6 +52,7 @@ export default class Header extends Component {
   componentDidUpdate() {
     this.onAvailabilityPage();
     this.onPressPage();
+    this.onMagazinePage();
     // if new page, remove active classes from subnavs (counts for the next page button too)
     if (this.props.page !== currentPage) {
       let allsubnavs = this.nav.querySelectorAll('.nav-subnav-item');
@@ -91,6 +92,28 @@ export default class Header extends Component {
           .classList.remove('active');
       }
     }, 100);
+  }
+
+  onMagazinePage() {
+    let url = window.location.pathname;
+    setTimeout(() => {
+    if (
+      url.split('/')[1] === 'tribeca-magazine' ||
+      url === '/tribeca-magazine/'
+    ) {
+      this.nav
+          .querySelector(
+            `.nav-list .nav-anchor-wrapper .nav-subnav-item[href="/tribeca-magazine/"]`
+          )
+          .classList.add('active');
+    } else {
+      this.nav
+          .querySelector(
+            `.nav-list .nav-anchor-wrapper .nav-subnav-item[href="/tribeca-magazine/"]`
+          )
+          .classList.remove('active');
+    }
+  }, 100);
   }
   onPressPage() {
     // let url = window.location.pathname;
@@ -268,7 +291,7 @@ export default class Header extends Component {
                       data-type={p.subnavs.length > 0 ? 'carousel' : ''}
                       activeClassName="active"
                       id={`nav-anchor-${key}`}
-                      className={`nav-anchor ${p.className === 'sans-small' ? 'sans-small' : 'sans'}`}
+                      className={`${p.subNavStyle ? 'nav-subnav-item sans-light' : 'nav-anchor sans'}`}
                       onClick={e => {
                         this.onNavItemClick(e);
                       }}
